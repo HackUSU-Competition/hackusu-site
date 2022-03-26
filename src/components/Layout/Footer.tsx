@@ -1,5 +1,5 @@
 import { Anchor, Box, Container, createStyles, Group, Text, Title } from '@mantine/core';
-import { footerLinkGroups } from 'content/navigation';
+import { footerLinkGroups } from 'content/navigationContent';
 import React from 'react';
 import { NavLink } from './Header';
 

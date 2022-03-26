@@ -9,7 +9,7 @@ import {
   Title,
 } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
-import { headerLinks, paths } from 'content/navigation';
+import { headerLinks, paths } from 'content/navigationContent';
 import React, { FC } from 'react';
 
 // import logo from './logo.png';

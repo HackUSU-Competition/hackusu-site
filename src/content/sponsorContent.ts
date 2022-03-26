@@ -40,7 +40,7 @@ export interface Sponsor {
   url?: string;
 }
 
-export const currentSponsors: Sponsor[] = [
+export const sponsors2022: Sponsor[] = [
   {
     name: 'Jon M. Huntsman School of Business',
     logo: require('images/sponsors/huntsman-dais.png').default,

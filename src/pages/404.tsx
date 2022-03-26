@@ -1,6 +1,6 @@
 import { Anchor, Button, Container, createStyles, Group, Text, Title } from '@mantine/core';
 import Layout from 'components/Layout/Layout';
-import { paths } from 'content/navigation';
+import { paths } from 'content/navigationContent';
 import React from 'react';
 
 const useStyles = createStyles((theme) => ({

@@ -11,7 +11,7 @@ import {
   Title,
   useMantineTheme,
 } from '@mantine/core';
-import { categorySpending, currentSponsors } from 'content/sponsors';
+import { categorySpending, sponsors2022 } from 'content/sponsorContent';
 import React from 'react';
 import { CircleCheck } from 'tabler-icons-react';
 import Layout from '../components/Layout/Layout';
@@ -90,10 +90,10 @@ export default function Sponsor() {
         </Group>
 
         <Title order={2} className={classes.title}>
-          CURRENT SPONSORS
+          2022 SPONSORS
         </Title>
         <Group position="center" spacing={theme.spacing.xl * 2} mt={50}>
-          {currentSponsors
+          {sponsors2022
             .filter((sponsor) => sponsor.logo)
             .map((sponsor) => (
               <Image key={sponsor.name} src={sponsor.logo} width={240} />
