@@ -1,32 +1,17 @@
-import React, { useState } from 'react';
-import { useHotkeys } from '@mantine/hooks';
-import {
-  MantineProvider,
-  ColorSchemeProvider,
-  ColorScheme,
-  GlobalStyles,
-  NormalizeCSS,
-} from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
+import React, { FC } from 'react';
+import theme from 'theme';
+import FooterLinks from './Footer';
+import HeaderNav from './Header';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-export function Layout({ children }: LayoutProps) {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
-  const toggleColorScheme = (value?: ColorScheme) =>
-    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
-
-  useHotkeys([['mod+J', () => toggleColorScheme()]]);
-
+const Layout: FC = (props) => {
   return (
-    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-      {/* Add your theme here */}
-      <MantineProvider theme={{ colorScheme }}>
-        <GlobalStyles />
-        <NormalizeCSS />
-        {children}
-      </MantineProvider>
-    </ColorSchemeProvider>
+    <MantineProvider withNormalizeCSS withGlobalStyles theme={theme}>
+      <HeaderNav />
+      {props.children}
+      <FooterLinks />
+    </MantineProvider>
   );
-}
+};
+
+export default Layout;
