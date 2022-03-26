@@ -1,21 +1,16 @@
 import { Anchor, Button, Container, createStyles, Group, Text, Title } from '@mantine/core';
+import Layout from 'components/Layout/Layout';
 import { paths } from 'content/navigation';
 import React from 'react';
-import Layout from '../components/Layout/Layout';
 
 const useStyles = createStyles((theme) => ({
-  root: {
-    paddingTop: 80,
-    paddingBottom: 80,
-  },
-
   label: {
     textAlign: 'center',
     fontWeight: 900,
     fontSize: 220,
     lineHeight: 1,
     marginBottom: theme.spacing.xl * 1.5,
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2],
+    color: theme.colors.gray[2],
 
     [theme.fn.smallerThan('sm')]: {
       fontSize: 120,
@@ -23,7 +18,6 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     textAlign: 'center',
     fontWeight: 900,
     fontSize: 38,
@@ -32,13 +26,6 @@ const useStyles = createStyles((theme) => ({
       fontSize: 32,
     },
   },
-
-  description: {
-    maxWidth: 500,
-    margin: 'auto',
-    marginTop: theme.spacing.xl,
-    marginBottom: theme.spacing.xl * 1.5,
-  },
 }));
 
 export default function NotFoundTitle() {
@@ -46,10 +33,10 @@ export default function NotFoundTitle() {
 
   return (
     <Layout>
-      <Container className={classes.root}>
+      <Container py={80} size="sm">
         <div className={classes.label}>404</div>
-        <Title className={classes.title}>You have found a secret place.</Title>
-        <Text color="dimmed" size="lg" align="center" className={classes.description}>
+        <Title className={classes.title}>You have found a hidden page.</Title>
+        <Text color="dimmed" size="lg" align="center" mx="auto" my={20}>
           Unfortunately, this is only a 404 page. You may have mistyped the address, or the page has
           been moved to another URL.
         </Text>
