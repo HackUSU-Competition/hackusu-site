@@ -1,11 +1,16 @@
+import { Container } from '@mantine/core';
 import React from 'react';
-import { Layout } from '../components/Layout/Layout';
 import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import Layout from '../components/Layout/Layout';
+
+import '../css/main.css';
 
 export default function HomePage() {
   return (
     <Layout>
-      <ColorSchemeToggle />
+      <Container>
+        <ColorSchemeToggle />
+      </Container>
     </Layout>
   );
 }
