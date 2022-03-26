@@ -25,13 +25,13 @@ const useStyles = createStyles((t) => ({
   },
 
   links: {
-    [t.fn.smallerThan('sm')]: {
+    [t.fn.smallerThan('md')]: {
       display: 'none',
     },
   },
 
   burger: {
-    [t.fn.largerThan('sm')]: {
+    [t.fn.largerThan('md')]: {
       display: 'none',
     },
   },
@@ -68,7 +68,7 @@ const HeaderNav: FC = () => {
   const [opened, toggleOpened] = useBooleanToggle(false);
 
   return (
-    <Header height={HEADER_HEIGHT} sx={{ borderColor: 'grey' }} mb={50}>
+    <Header height={HEADER_HEIGHT} sx={{ borderColor: 'grey', boxShadow: '0 0 5 0 black' }} mb={50}>
       <Container className={classes.container} fluid>
         <Group>
           <Burger

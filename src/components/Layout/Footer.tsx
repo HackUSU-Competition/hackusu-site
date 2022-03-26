@@ -16,23 +16,26 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
 
-    [theme.fn.smallerThan('sm')]: {
-      flexDirection: 'column',
+    [theme.fn.smallerThan('md')]: {
+      gap: theme.spacing.xl * 2,
+      flexDirection: 'column-reverse',
       alignItems: 'center',
     },
   },
 
   groups: {
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('xs')]: {
       width: '100%',
+      gap: theme.spacing.xl * 2,
     },
   },
 
   wrapper: {
     width: 160,
 
-    [theme.fn.smallerThan('sm')]: {
+    [theme.fn.smallerThan('xs')]: {
       width: '100%',
+      textAlign: 'center',
     },
   },
 }));
@@ -56,7 +59,7 @@ export default function FooterLinks() {
         <Group align="start" className={classes.groups}>
           {footerLinkGroups.map((group) => (
             <div className={classes.wrapper} key={group.title}>
-              <Title order={5} mb={3} sx={{ fontWeight: 800, textTransform: 'uppercase' }}>
+              <Title order={5} sx={{ fontWeight: 800, textTransform: 'uppercase' }}>
                 {group.title}
               </Title>
               {group.links.map((link, index) => (
