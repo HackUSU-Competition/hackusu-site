@@ -1,15 +1,13 @@
-import { Container } from '@mantine/core';
+import { Container, Title } from '@mantine/core';
+import Layout from 'components/Layout/Layout';
 import React from 'react';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
-import Layout from '../components/Layout/Layout';
-
 import '../css/main.css';
 
 export default function HomePage() {
   return (
     <Layout>
       <Container>
-        <ColorSchemeToggle />
+        <Title align="center">HOME</Title>
       </Container>
     </Layout>
   );
