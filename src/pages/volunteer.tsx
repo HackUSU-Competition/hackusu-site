@@ -1,6 +1,7 @@
 import { Box, Container, createStyles, Divider, Group, Image, Text, Title } from '@mantine/core';
 import VolunteerForm from 'components/Forms/VolunteerForm';
 import GradientButton from 'components/GradientButton';
+import PageTitle from 'components/PageTitle';
 import { volunteerOpportunities } from 'content/volunteerContent';
 import React from 'react';
 import { ChevronDown } from 'tabler-icons-react';
@@ -42,7 +43,7 @@ export default function About() {
   return (
     <Layout>
       <Container>
-        <Title align="center">VOLUNTEER OPPORTUNITIES</Title>
+        <PageTitle>VOLUNTEER OPPORTUNITIES</PageTitle>
         <Box>
           {volunteerOpportunities.map((opportunity) => {
             return (
@@ -60,7 +61,8 @@ export default function About() {
                   <Text>{opportunity.description}</Text>
                   <GradientButton
                     rightIcon={<ChevronDown size={14} />}
-                    onClick={() => (window.location.href = '#sign-up-form')}
+                    component="a"
+                    href="#sign-up-form"
                   >
                     {opportunity.cta}
                   </GradientButton>

@@ -1,4 +1,5 @@
-import { Container, Title } from '@mantine/core';
+import { Container } from '@mantine/core';
+import PageTitle from 'components/PageTitle';
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 
@@ -6,7 +7,7 @@ export default function About() {
   return (
     <Layout>
       <Container>
-        <Title align='center'>ABOUT</Title>
+        <PageTitle>ABOUT</PageTitle>
       </Container>
     </Layout>
   );

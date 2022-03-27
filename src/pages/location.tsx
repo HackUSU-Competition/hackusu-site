@@ -1,4 +1,5 @@
-import { Container, Paper, Title } from '@mantine/core';
+import { Container, Paper } from '@mantine/core';
+import PageTitle from 'components/PageTitle';
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 
@@ -6,7 +7,7 @@ export default function Location() {
   return (
     <Layout>
       <Container>
-        <Title align="center">LOCATION</Title>
+        <PageTitle>LOCATION</PageTitle>
         <Paper shadow="sm" withBorder mt="xl" p="0">
           <iframe
             style={{ border: 0 }}

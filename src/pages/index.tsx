@@ -1,5 +1,6 @@
-import { Container, Title } from '@mantine/core';
+import { Container } from '@mantine/core';
 import Layout from 'components/Layout/Layout';
+import PageTitle from 'components/PageTitle';
 import React from 'react';
 import '../css/main.css';
 
@@ -7,7 +8,7 @@ export default function HomePage() {
   return (
     <Layout>
       <Container>
-        <Title align="center">HOME</Title>
+        <PageTitle>HOME</PageTitle>
       </Container>
     </Layout>
   );
