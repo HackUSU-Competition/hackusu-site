@@ -1,13 +1,15 @@
-import { Box, Container, createStyles, Group, Image, Text, Title } from '@mantine/core';
+import { Box, Container, createStyles, Divider, Group, Image, Text, Title } from '@mantine/core';
+import VolunteerForm from 'components/Forms/VolunteerForm';
+import GradientButton from 'components/GradientButton';
 import { volunteerOpportunities } from 'content/volunteerContent';
 import React from 'react';
+import { ChevronDown } from 'tabler-icons-react';
 import Layout from '../components/Layout/Layout';
 
 const useStyles = createStyles((styles) => ({
   opportunity: {
     flexWrap: 'nowrap',
     marginBlock: styles.spacing.xl * 4,
-    gap: styles.spacing.xl * 3,
 
     // Desktop
     [styles.fn.largerThan('xs')]: {
@@ -40,9 +42,9 @@ export default function About() {
   return (
     <Layout>
       <Container>
-        <Title align="center">VOLUNTEER</Title>
+        <Title align="center">VOLUNTEER OPPORTUNITIES</Title>
         <Box>
-          {volunteerOpportunities.map((opportunity, index) => {
+          {volunteerOpportunities.map((opportunity) => {
             return (
               <Group key={opportunity.title} className={classes.opportunity}>
                 <Image
@@ -56,11 +58,19 @@ export default function About() {
                     {opportunity.title}
                   </Title>
                   <Text>{opportunity.description}</Text>
+                  <GradientButton
+                    rightIcon={<ChevronDown size={14} />}
+                    onClick={() => (window.location.href = '#sign-up-form')}
+                  >
+                    {opportunity.cta}
+                  </GradientButton>
                 </Box>
               </Group>
             );
           })}
         </Box>
+        <Divider />
+        <VolunteerForm mt={50} />
       </Container>
     </Layout>
   );

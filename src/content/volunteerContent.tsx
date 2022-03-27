@@ -6,11 +6,14 @@ export interface VolunteerOpportunity {
   title: string;
   description: ReactChild;
   image: string;
+  cta: string;
 }
 
 export const volunteerOpportunities: VolunteerOpportunity[] = [
   {
     title: 'Event Organizer',
+    image: require('images/illustrations/meeting.svg').default,
+    cta: 'Become an Event Organizer',
     description: (
       <>
         <p>
@@ -22,10 +25,11 @@ export const volunteerOpportunities: VolunteerOpportunity[] = [
         </p>
       </>
     ),
-    image: require('images/illustrations/meeting.svg').default,
   },
   {
     title: 'Workshop Host',
+    image: require('images/illustrations/teaching.svg').default,
+    cta: 'Host a Workshop',
     description: (
       <>
         <p>
@@ -40,10 +44,11 @@ export const volunteerOpportunities: VolunteerOpportunity[] = [
         </p>
       </>
     ),
-    image: require('images/illustrations/teaching.svg').default,
   },
   {
     title: 'Project Judge',
+    image: require('images/illustrations/performance-overview.svg').default,
+    cta: 'Become a Project Judge',
     description: (
       <p>
         As a judge, you'll review all project submissions for a specific category to select the
@@ -51,16 +56,16 @@ export const volunteerOpportunities: VolunteerOpportunity[] = [
         information on each category.
       </p>
     ),
-    image: require('images/illustrations/performance-overview.svg').default,
   },
   {
     title: 'Mentor',
+    image: require('images/illustrations/pair-programming.svg').default,
+    cta: 'Become a Mentor',
     description: (
       <p>
         We'll have mentors available throughout the competition whenever teams need help on their
         project or need to learn more about a specific technology.
       </p>
     ),
-    image: require('images/illustrations/pair-programming.svg').default,
   },
 ];

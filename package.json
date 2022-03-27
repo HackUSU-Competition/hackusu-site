@@ -13,10 +13,12 @@
   },
   "dependencies": {
     "@mantine/core": "4.0.8",
+    "@mantine/form": "^4.0.8",
     "@mantine/hooks": "4.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "tabler-icons-react": "^1.41.0"
+    "tabler-icons-react": "^1.41.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@mantine/eslint-config": "3.6.14",
