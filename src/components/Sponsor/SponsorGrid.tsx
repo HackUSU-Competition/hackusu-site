@@ -1,5 +1,5 @@
 import { Group, Image, Title, useMantineTheme } from '@mantine/core';
-import { Sponsor } from 'content/sponsorContent';
+import { Sponsor } from 'content/sponsor/sponsorCompaniesContent';
 import React, { FC } from 'react';
 
 export interface SponsorGridProps {

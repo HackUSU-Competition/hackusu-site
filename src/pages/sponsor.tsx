@@ -2,7 +2,7 @@ import { Container } from '@mantine/core';
 import PageTitle from 'components/PageTitle';
 import BudgetChart from 'components/Sponsor/BudgetChart';
 import SponsorGrid from 'components/Sponsor/SponsorGrid';
-import { sponsors2022 } from 'content/sponsorContent';
+import { sponsors2022 } from 'content/sponsor/sponsorCompaniesContent';
 import React from 'react';
 import Layout from '../components/Layout/Layout';
 
