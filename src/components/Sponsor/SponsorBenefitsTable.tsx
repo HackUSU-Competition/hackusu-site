@@ -1,4 +1,4 @@
-import { Container, createStyles, Table, Text, Title } from '@mantine/core';
+import { Alert, Container, createStyles, Table, Text, Title } from '@mantine/core';
 import {
   Benefit,
   BenefitGroup,
@@ -7,7 +7,7 @@ import {
   sponsorLevelTableData,
 } from 'content/sponsor/sponsorLevelsContent';
 import React, { FC } from 'react';
-import { CircleCheck } from 'tabler-icons-react';
+import { CircleCheck, Star } from 'tabler-icons-react';
 var abbreviate = require('number-abbreviate');
 
 const useStyles = createStyles((t) => ({
@@ -92,6 +92,9 @@ const BenefitsTable: FC = () => {
             ))}
           </tbody>
         </Table>
+        <Alert icon={<Star size={16} />} title="Want something else?" mb={30}>
+          Contact us to build a custom sponsorship plan. We want to work together with you to help as many students as possible at this year's HackUSU event!
+        </Alert>
       </Container>
     </>
   );
