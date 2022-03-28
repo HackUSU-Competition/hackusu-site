@@ -46,11 +46,26 @@ export const pressArticles: PressArticle[] = [
     year: 2015,
   },
   {
+    title: 'USU students team with youngsters for Hack Day',
+    link: 'https://www.hjnews.com/family/usu-students-team-with-youngsters-for-hack-day/article_05501846-ace3-5740-a1c1-ae2ed1e35c10.html',
+    image:
+      'https://bloximages.chicago2.vip.townnews.com/hjnews.com/content/tncms/assets/v3/editorial/f/30/f30baa8a-4b7f-5ec3-9925-bc9b2bbd4d78/56193d91f0af7.image.jpg?resize=1433%2C500',
+    source: 'The Herald Journal',
+    year: 2015,
+  },
+  {
     title: "USU students create 'Tron'-inspired virtual world as part of hackUstate competition",
     link: 'https://www.cachevalleydaily.com/news/archive/2015/11/10/f534ed30-8785-11e5-8ef7-3f115cda475c/#.YkHlfhDMLzc',
     image:
       'https://www.cachevalleydaily.com/wp-content/uploads/2015/11/3d15ee9b64077cc4f972487355721afa-970x546.jpg',
     source: 'Cache Valley Daily',
+    year: 2015,
+  },
+  {
+    title: 'Hackathons — Through the Eyes of a Statistician',
+    link: 'https://medium.com/the-data-experience/hackathons-through-the-eyes-of-a-statistician-b53ad0e6ecba',
+    image: 'https://miro.medium.com/max/1400/1*V7h8B0wec__R2sY2CjwunQ.jpeg',
+    source: 'Medium',
     year: 2015,
   },
 ];
