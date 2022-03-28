@@ -1,12 +1,9 @@
 import {
   Alert,
   Anchor,
-  Checkbox,
-  CheckboxGroup,
   Container,
   ContainerProps,
   Group,
-  SimpleGrid,
   Textarea,
   TextInput,
   Title,
@@ -22,16 +19,15 @@ import * as Yup from 'yup';
 const schema = Yup.object().shape({
   name: Yup.string().required('Required'),
   email: Yup.string().required('Required').email('Invalid email'),
+  message: Yup.string().required('Required'),
 });
 
-const VolunteerForm: FC<ContainerProps> = (props) => {
+const ContactForm: FC<ContainerProps> = (props) => {
   const form = useForm({
     schema: yupResolver(schema),
     initialValues: {
       name: '',
       email: '',
-      organization: '',
-      volunteer: [],
       message: '',
     },
   });
@@ -50,7 +46,7 @@ const VolunteerForm: FC<ContainerProps> = (props) => {
           setIsSubmitting(true);
           setIsError(false);
           setDidSubmit(false);
-          const { name, email, organization, volunteer, message } = values;
+          const { name, email, message } = values;
           sendEmail({
             from: name,
             subject: 'Volunteer Form Submission',
@@ -58,8 +54,6 @@ const VolunteerForm: FC<ContainerProps> = (props) => {
             data: {
               Name: name,
               Email: email,
-              Organization: organization,
-              'Volunteer as': volunteer.join(', '),
             },
           })
             .then(() => {
@@ -71,39 +65,19 @@ const VolunteerForm: FC<ContainerProps> = (props) => {
         })}
         noValidate
       >
-        <SimpleGrid
-          cols={2}
-          spacing={50}
-          mb="md"
-          breakpoints={[{ maxWidth: 'sm', cols: 1, spacing: 'md' }]}
-        >
-          <Group direction="column" spacing="md" grow>
-            <TextInput required label="Name" {...form.getInputProps('name')} />
-            <TextInput required label="Email" {...form.getInputProps('email')} />
-            <TextInput
-              label="Company / Organization / School"
-              {...form.getInputProps('organization')}
-            />
-          </Group>
-          <CheckboxGroup
-            orientation="vertical"
-            label="How would you like to volunteer?"
-            color="blue"
-            {...form.getInputProps('volunteer')}
-          >
-            <Checkbox value="Event Organizer" label="Event Organizer" />
-            <Checkbox value="Workshop Host" label="Workshop Host" />
-            <Checkbox value="Project Judge" label="Project Judge" />
-            <Checkbox value="Mentor" label="Mentor" />
-          </CheckboxGroup>
-        </SimpleGrid>
-        <Textarea
-          placeholder="Your message..."
-          label="Message"
-          autosize
-          minRows={3}
-          {...form.getInputProps('message')}
-        />
+        <Group direction="column" spacing="md" grow>
+          <TextInput required label="Name" {...form.getInputProps('name')} />
+          <TextInput required label="Email" {...form.getInputProps('email')} />
+          <Textarea
+            required
+            placeholder="Your message..."
+            label="Message"
+            autosize
+            minRows={3}
+            {...form.getInputProps('message')}
+          />
+        </Group>
+
         {isError && (
           <Alert icon={<AlertCircle size={16} />} title="Submission Error" color="red" mt="xl">
             There was a problem with the service used to handle form submissions. Please email us at{' '}
@@ -117,8 +91,7 @@ const VolunteerForm: FC<ContainerProps> = (props) => {
             color="green"
             mt="xl"
           >
-            Thank you for your interest in volunteering at HackUSU! If you have any additional
-            questions, you can email us at{' '}
+            Thank you for contacting us! If you have any additional questions, you can email us at{' '}
             <Anchor href={`mailto:${HACKUSU_EMAIL}`}>{HACKUSU_EMAIL}</Anchor>.
           </Alert>
         )}
@@ -132,4 +105,4 @@ const VolunteerForm: FC<ContainerProps> = (props) => {
   );
 };
 
-export default VolunteerForm;
+export default ContactForm;
