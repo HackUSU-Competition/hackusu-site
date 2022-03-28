@@ -1,6 +1,7 @@
 import { Container } from '@mantine/core';
 import PageTitle from 'components/PageTitle';
 import BudgetChart from 'components/Sponsor/BudgetChart';
+import BenefitsTable from 'components/Sponsor/SponsorBenefitsTable';
 import SponsorGrid from 'components/Sponsor/SponsorGrid';
 import { sponsors2022 } from 'content/sponsor/sponsorCompaniesContent';
 import React from 'react';
@@ -11,6 +12,7 @@ export default function Sponsor() {
     <Layout>
       <Container>
         <PageTitle>SPONSOR HACKUSU</PageTitle>
+        <BenefitsTable />
         <BudgetChart />
         <SponsorGrid title="2022 SPONSORS" sponsors={sponsors2022} />
       </Container>
