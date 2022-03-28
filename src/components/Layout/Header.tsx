@@ -10,6 +10,7 @@ import {
 } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
 import { headerLinks, paths } from 'content/navigationContent';
+import { Link } from 'gatsby';
 import React, { FC } from 'react';
 
 // import logo from './logo.png';
@@ -78,13 +79,13 @@ const HeaderNav: FC = () => {
             size="sm"
           />
           {/* <Image src={logo} alt='Mantine Logo' width={120} /> */}
-          <Anchor href={paths.home} underline={false}>
+          <Anchor component={Link} to={paths.home}>
             <Title>HackUSU</Title>
           </Anchor>
         </Group>
         <Group spacing={5} className={classes.links}>
           {headerLinks.map((link) => (
-            <Anchor underline={false} key={link.label} href={link.href} className={classes.link}>
+            <Anchor component={Link} key={link.label} to={link.href} className={classes.link}>
               {link.label}
             </Anchor>
           ))}

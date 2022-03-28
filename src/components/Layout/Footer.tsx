@@ -1,5 +1,6 @@
 import { Anchor, Box, Container, createStyles, Group, Text, Title } from '@mantine/core';
 import { footerLinkGroups } from 'content/navigationContent';
+import { Link } from 'gatsby';
 import React from 'react';
 import { NavLink } from './Header';
 
@@ -65,8 +66,8 @@ export default function FooterLinks() {
               {group.links.map((link, index) => (
                 <Anchor
                   key={index}
-                  component="a"
-                  href={link.href}
+                  component={Link}
+                  to={link.href}
                   color="dimmed"
                   py={3}
                   sx={{ display: 'block' }}

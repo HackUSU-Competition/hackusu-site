@@ -8,6 +8,7 @@ import {
 } from 'content/sponsor/sponsorLevelsContent';
 import React, { FC } from 'react';
 import { CircleCheck } from 'tabler-icons-react';
+var abbreviate = require('number-abbreviate');
 
 const useStyles = createStyles((t) => ({
   checkBoxCell: {
@@ -64,7 +65,7 @@ const BenefitsTable: FC = () => {
           {levelName}
         </Text>
         <Text color={color} weight={400} align="center" size="sm">
-          ${amount}
+          ${abbreviate(amount)}
         </Text>
       </th>
     );

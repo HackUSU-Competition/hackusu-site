@@ -11,6 +11,7 @@ srcDirs.forEach((srcDir) => {
 });
 
 module.exports = {
+  pathPrefix: "/hackusu-site",
   plugins: [
     'gatsby-plugin-mantine',
     {
