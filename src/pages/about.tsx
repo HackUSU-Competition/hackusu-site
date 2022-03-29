@@ -6,9 +6,8 @@ import Layout from '../components/Layout/Layout';
 export default function About() {
   return (
     <Layout>
-      <Container>
-        <PageTitle>ABOUT</PageTitle>
-      </Container>
+      <PageTitle>ABOUT</PageTitle>
+      <Container></Container>
     </Layout>
   );
 }

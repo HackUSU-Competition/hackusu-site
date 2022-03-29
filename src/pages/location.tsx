@@ -6,8 +6,8 @@ import Layout from '../components/Layout/Layout';
 export default function Location() {
   return (
     <Layout>
+      <PageTitle>LOCATION</PageTitle>
       <Container>
-        <PageTitle>LOCATION</PageTitle>
         <Paper shadow="sm" withBorder mt="xl" p="0">
           <iframe
             style={{ border: 0 }}

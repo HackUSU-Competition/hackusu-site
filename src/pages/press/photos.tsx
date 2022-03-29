@@ -9,11 +9,11 @@ import { Download } from 'tabler-icons-react';
 export default function About() {
   return (
     <Layout>
+      <PageTitle>PRESS PHOTOS</PageTitle>
       <Container>
         <Anchor component={Link} to={paths.press}>
           &larr; Press Resources
         </Anchor>
-        <PageTitle>PRESS PHOTOS</PageTitle>
         {/* TODO: Make images available for download */}
 
         <Text my={20}>

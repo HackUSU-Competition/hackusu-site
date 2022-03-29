@@ -8,8 +8,8 @@ import '../css/main.css';
 export default function HomePage() {
   return (
     <Layout>
+      <PageTitle>HOME</PageTitle>
       <Container>
-        <PageTitle>HOME</PageTitle>
         <ContactForm my={30} />
       </Container>
     </Layout>

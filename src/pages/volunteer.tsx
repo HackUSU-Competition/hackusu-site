@@ -42,8 +42,8 @@ export default function About() {
   const { classes } = useStyles();
   return (
     <Layout>
+      <PageTitle>VOLUNTEER OPPORTUNITIES</PageTitle>
       <Container>
-        <PageTitle>VOLUNTEER OPPORTUNITIES</PageTitle>
         <Box>
           {volunteerOpportunities.map((opportunity) => {
             return (

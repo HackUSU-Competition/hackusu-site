@@ -10,8 +10,8 @@ import Layout from '../components/Layout/Layout';
 export default function Sponsor() {
   return (
     <Layout>
+      <PageTitle>SPONSOR HACKUSU</PageTitle>
       <Container>
-        <PageTitle>SPONSOR HACKUSU</PageTitle>
         <BenefitsTable />
         <BudgetChart />
         <SponsorGrid title="2022 SPONSORS" sponsors={sponsors2022} />

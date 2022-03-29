@@ -11,9 +11,8 @@ export default function About() {
 
   return (
     <Layout>
+      <PageTitle>PRESS RESOURCES</PageTitle>
       <Container>
-        <PageTitle>PRESS RESOURCES</PageTitle>
-
         <Title order={2} my="xl">
           About Hackusu
         </Title>

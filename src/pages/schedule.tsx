@@ -6,9 +6,8 @@ import Layout from '../components/Layout/Layout';
 export default function Schedule() {
   return (
     <Layout>
-      <Container>
-        <PageTitle>SCHEDULE</PageTitle>
-      </Container>
+      <PageTitle>SCHEDULE</PageTitle>
+      <Container></Container>
     </Layout>
   );
 }

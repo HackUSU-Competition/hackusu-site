@@ -1,23 +1,18 @@
-import {
-  Anchor,
-  Burger,
-  Button,
-  Container,
-  createStyles,
-  Group,
-  Header,
-  Title,
-} from '@mantine/core';
+import { Anchor, Burger, Container, createStyles, Group, Header, Image } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
+import GradientButton from 'components/GradientButton';
 import { headerLinks, paths } from 'content/navigationContent';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
 
-// import logo from './logo.png';
-
-const HEADER_HEIGHT = 60;
+const HEADER_HEIGHT = 80;
 
 const useStyles = createStyles((t) => ({
+  header: {
+    backgroundColor: t.colors.navy[9],
+    border: 0,
+  },
+
   container: {
     height: HEADER_HEIGHT,
     display: 'flex',
@@ -38,15 +33,15 @@ const useStyles = createStyles((t) => ({
   },
 
   link: {
-    display: 'block',
-    lineHeight: 1,
+    color: t.colors.gray[4],
     padding: '8px 12px',
     borderRadius: t.radius.sm,
     fontSize: t.fontSizes.sm,
     fontWeight: 500,
+    textDecoration: 'none !important',
 
     '&:hover': {
-      backgroundColor: t.colorScheme === 'dark' ? t.colors.dark[6] : t.colors.gray[0],
+      backgroundColor: t.colors.navy[8],
     },
   },
 
@@ -69,18 +64,23 @@ const HeaderNav: FC = () => {
   const [opened, toggleOpened] = useBooleanToggle(false);
 
   return (
-    <Header height={HEADER_HEIGHT} sx={{ borderColor: 'grey', boxShadow: '0 0 5 0 black' }} mb={50}>
-      <Container className={classes.container} fluid>
+    <Header height={HEADER_HEIGHT} className={classes.header}>
+      <Container className={classes.container}>
         <Group>
           <Burger
             opened={opened}
             onClick={() => toggleOpened()}
             className={classes.burger}
             size="sm"
+            color='white'
           />
-          {/* <Image src={logo} alt='Mantine Logo' width={120} /> */}
           <Anchor component={Link} to={paths.home}>
-            <Title>HackUSU</Title>
+            <Image
+              src={require('images/logo-white.svg').default}
+              alt="HackUSU Logo"
+              fit="contain"
+              height={HEADER_HEIGHT * 0.7}
+            />
           </Anchor>
         </Group>
         <Group spacing={5} className={classes.links}>
@@ -90,7 +90,7 @@ const HeaderNav: FC = () => {
             </Anchor>
           ))}
         </Group>
-        <Button sx={{ height: 30 }}>Register</Button>
+        <GradientButton sx={{ height: 30 }}>Register</GradientButton>
       </Container>
     </Header>
   );
