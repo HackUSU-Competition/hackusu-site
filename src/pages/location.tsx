@@ -1,4 +1,4 @@
-import { Container, Paper } from '@mantine/core';
+import { Container, Image, Paper } from '@mantine/core';
 import PageTitle from 'components/PageTitle';
 import React from 'react';
 import Layout from '../components/Layout/Layout';
@@ -16,9 +16,9 @@ export default function Location() {
             height={300}
             frameBorder="0"
             allowFullScreen={true}
-            className="mb-2"
           />
         </Paper>
+        <Image fit="cover" height={400} src={require('images/scenes/huntsman-hall.jpg').default} />
       </Container>
     </Layout>
   );
