@@ -39,7 +39,7 @@ const ContactForm: FC<ContainerProps> = (props) => {
   return (
     <Container size="sm" {...props}>
       <Title order={2} mb="xl" id="sign-up-form">
-        Sign Up to Volunteer
+        Send us a message
       </Title>
       <form
         onSubmit={form.onSubmit((values) => {

@@ -66,13 +66,13 @@ const HeaderNav: FC = () => {
   return (
     <Header height={HEADER_HEIGHT} className={classes.header}>
       <Container className={classes.container}>
-        <Group>
+        <Group grow={false}>
           <Burger
             opened={opened}
             onClick={() => toggleOpened()}
             className={classes.burger}
             size="sm"
-            color='white'
+            color="white"
           />
           <Anchor component={Link} to={paths.home}>
             <Image
@@ -80,6 +80,7 @@ const HeaderNav: FC = () => {
               alt="HackUSU Logo"
               fit="contain"
               height={HEADER_HEIGHT * 0.7}
+              width="auto"
             />
           </Anchor>
         </Group>
