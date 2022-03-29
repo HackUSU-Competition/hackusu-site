@@ -1,21 +1,18 @@
 import { Anchor, Container, Text, Title, useMantineTheme } from '@mantine/core';
 import Layout from 'components/Layout/Layout';
+import About from 'components/Layout/Press/About';
 import FeaturedArticles from 'components/Layout/Press/FeaturedArticles';
 import PageTitle from 'components/PageTitle';
 import { paths } from 'content/navigationContent';
 import { Link } from 'gatsby';
 import React from 'react';
 
-export default function About() {
-  const theme = useMantineTheme();
-
+export default function Press() {
   return (
     <Layout>
       <PageTitle>PRESS RESOURCES</PageTitle>
       <Container>
-        <Title order={2} my="xl">
-          About Hackusu
-        </Title>
+        <About />
         <Title order={2} my="xl">
           Parking at HackUSU
         </Title>
