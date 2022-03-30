@@ -15,6 +15,7 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: theme.spacing.xl * 2,
     letterSpacing: '0.05em',
     fontSize: theme.fontSizes.xl * 2,
+    textAlign: 'center',
 
     [theme.fn.smallerThan('sm')]: {
       fontSize: theme.fontSizes.xl * 1.5,

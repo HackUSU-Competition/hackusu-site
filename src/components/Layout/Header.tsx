@@ -79,7 +79,7 @@ const HeaderNav: FC = () => {
               src={require('images/logo-white.svg').default}
               alt="HackUSU Logo"
               fit="contain"
-              height={HEADER_HEIGHT * 0.7}
+              height={HEADER_HEIGHT * 0.6}
               width="auto"
             />
           </Anchor>
