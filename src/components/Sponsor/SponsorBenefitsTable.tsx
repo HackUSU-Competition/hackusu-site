@@ -1,4 +1,5 @@
-import { Alert, Container, createStyles, Table, Text, Title } from '@mantine/core';
+import { Alert, Box, Container, createStyles, Table, Text, Title } from '@mantine/core';
+import SectionHead from 'components/SectionHead';
 import {
   Benefit,
   BenefitGroup,
@@ -60,22 +61,29 @@ const BenefitsTable: FC = () => {
     const { amount, color } = levelData[levelName];
 
     return (
-      <th>
-        <Text color={color} weight={800} align="center" size="lg">
-          {levelName}
-        </Text>
-        <Text color={color} weight={400} align="center" size="sm">
-          ${abbreviate(amount)}
-        </Text>
-      </th>
+      <Box component="th" p="0 !important">
+        <Box
+          sx={{
+            paddingBlock: '0.25rem',
+            backgroundColor: color,
+            margin: '0 0.25rem !important',
+            borderRadius: '0.5rem 0.5rem 0 0',
+          }}
+        >
+          <Text color="white" weight={800} align="center" size="lg">
+            {levelName}
+          </Text>
+          <Text color="white" weight={400} align="center" size="sm">
+            ${abbreviate(amount)}
+          </Text>
+        </Box>
+      </Box>
     );
   };
 
   return (
     <>
-      <Title order={2} align="center" mt={50}>
-        SPONSORSHIP BENEFITS
-      </Title>
+      <SectionHead title="Sponsorship Benefits">We can help you promote your brand, recruit students, and provide presentation opportunities!</SectionHead>
       <Container size="sm">
         <Table my={30} highlightOnHover>
           <thead>
@@ -93,7 +101,8 @@ const BenefitsTable: FC = () => {
           </tbody>
         </Table>
         <Alert icon={<Star size={16} />} title="Want something else?" mb={30}>
-          Contact us to build a custom sponsorship plan. We want to work together with you to help as many students as possible at this year's HackUSU event!
+          Contact us to build a custom sponsorship plan. We want to work together with you to help
+          as many students as possible at this year's HackUSU event!
         </Alert>
       </Container>
     </>

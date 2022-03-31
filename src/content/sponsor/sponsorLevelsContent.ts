@@ -48,7 +48,7 @@ export const sponsorLevelTableData: BenefitGroup[] = [
         levels: levelsAbove(LevelName.BRONZE),
       },
       {
-        name: 'Promotional tech-talks or workshops',
+        name: 'Promotional tech-talks and workshops',
         levels: levelsAbove(LevelName.GOLD),
       },
     ],
@@ -56,10 +56,6 @@ export const sponsorLevelTableData: BenefitGroup[] = [
   {
     groupName: 'Recruiting',
     benefits: [
-      {
-        name: 'Send recruiters',
-        levels: levelsAbove(LevelName.BRONZE),
-      },
       {
         name: 'Recruiting table',
         levels: levelsAbove(LevelName.BRONZE),
@@ -77,7 +73,7 @@ export const sponsorLevelTableData: BenefitGroup[] = [
     groupName: 'Branding',
     benefits: [
       {
-        name: 'Logo on t-shirts',
+        name: 'Logo on t-shirts and website',
         levels: levelsAbove(LevelName.SILVER),
         details: {
           [LevelName.SILVER]: 'Small',
