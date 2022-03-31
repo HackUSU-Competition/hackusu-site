@@ -3,6 +3,7 @@ import {
   Blockquote,
   Box,
   Button,
+  Center,
   Container,
   createStyles,
   Paper,
@@ -15,6 +16,7 @@ import { paths } from 'content/navigationContent';
 import { stats } from 'content/stats';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
+import { ArrowRight } from 'tabler-icons-react';
 
 const useStyles = createStyles((theme) => ({
   stats: {
@@ -87,6 +89,17 @@ const About: FC = () => {
         hours!
       </Text>
 
+      <Center>
+        <Button
+          component={Link}
+          to={paths.pressPhotos}
+          mt={20}
+          rightIcon={<ArrowRight size={18} />}
+        >
+          Download images from past events
+        </Button>
+      </Center>
+
       <Title order={3} mt={30}>
         What is hacking?
       </Title>
@@ -138,7 +151,7 @@ const About: FC = () => {
         website provides general photos of USU campus. We also have photos from past HackUSU events
         available for media use.
       </Text>
-      <Button component={Link} to={paths.pressPhotos} mt={10}>
+      <Button component={Link} to={paths.pressPhotos} mt={10} rightIcon={<ArrowRight size={18} />}>
         Download images from past events
       </Button>
 

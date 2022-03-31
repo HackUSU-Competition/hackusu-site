@@ -37,7 +37,7 @@ export default function About() {
 
   return (
     <Layout>
-      <PageTitle>PRESS PHOTOS</PageTitle>
+      <PageTitle>PAST PHOTOS</PageTitle>
       <Container>
         <Space h="lg" />
         <Anchor component={Link} to={paths.press}>
