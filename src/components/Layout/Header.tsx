@@ -1,5 +1,16 @@
-import { Anchor, Burger, Container, createStyles, Group, Header, Image } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import {
+  Anchor,
+  Burger,
+  Container,
+  createStyles,
+  Drawer,
+  Group,
+  Header,
+  Image,
+  Portal,
+  Stack,
+} from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 import GradientButton from 'components/GradientButton';
 import { headerLinks, paths } from 'content/navigationContent';
 import { Link } from 'gatsby';
@@ -61,7 +72,7 @@ export interface HeaderProps {
 
 const HeaderNav: FC = () => {
   const { classes } = useStyles();
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, handlers] = useDisclosure(false);
 
   return (
     <Header height={HEADER_HEIGHT} className={classes.header}>
@@ -69,7 +80,7 @@ const HeaderNav: FC = () => {
         <Group grow={false}>
           <Burger
             opened={opened}
-            onClick={() => toggleOpened()}
+            onClick={handlers.open}
             className={classes.burger}
             size="sm"
             color="white"
@@ -93,6 +104,25 @@ const HeaderNav: FC = () => {
         </Group>
         <GradientButton sx={{ height: 30 }}>Register</GradientButton>
       </Container>
+      <Portal>
+        <Drawer
+          opened={opened}
+          onClose={handlers.close}
+          padding="xl"
+          size="sm"
+          styles={(theme) => ({
+            drawer: { backgroundColor: theme.colors.navy[9], color: theme.colors.gray[4] },
+          })}
+        >
+          <Stack>
+            {headerLinks.map((link) => (
+              <Anchor component={Link} key={link.label} to={link.href} className={classes.link}>
+                {link.label}
+              </Anchor>
+            ))}
+          </Stack>
+        </Drawer>
+      </Portal>
     </Header>
   );
 };
