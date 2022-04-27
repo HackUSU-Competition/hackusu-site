@@ -65,7 +65,7 @@ const BenefitsTable: FC = () => {
         <Box
           sx={{
             padding: '0.25rem',
-            backgroundColor: color,
+            background: color,
             margin: '0 0.25rem !important',
             borderRadius: '0.5rem 0.5rem 0 0',
           }}

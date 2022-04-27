@@ -6,8 +6,12 @@ export enum LevelName {
 }
 
 export const levelData: Record<LevelName, { amount: number; color: string }> = {
+  // [LevelName.BRONZE]: { amount: 500, color: 'linear-gradient(280deg, rgba(141,99,87,1) 0%, rgba(162,119,107,1) 100%)' },
+  // [LevelName.SILVER]: { amount: 1500, color: 'linear-gradient(280deg, rgba(144,144,160,1) 0%, rgba(163,163,179,1) 100%)' },
+  // [LevelName.GOLD]: { amount: 5000, color: 'linear-gradient(280deg, rgba(240,173,78,1) 0%, rgba(255,220,145,1) 100%)' },
+  // [LevelName.PARTNER]: { amount: 8000, color: 'linear-gradient(280deg, rgba(71,129,228,1) 0%, rgba(111,175,231,1) 100%)' },
   [LevelName.BRONZE]: { amount: 500, color: '#9D7367' },
-  [LevelName.SILVER]: { amount: 1500, color: '#8080a0' },
+  [LevelName.SILVER]: { amount: 1500, color: '#9090A0' },
   [LevelName.GOLD]: { amount: 5000, color: '#f0ad4e' },
   [LevelName.PARTNER]: { amount: 8000, color: '#4781E4' },
 };
