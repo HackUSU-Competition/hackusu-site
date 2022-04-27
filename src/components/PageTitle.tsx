@@ -1,5 +1,5 @@
 import { Box, Container, createStyles, Title } from '@mantine/core';
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 
 const useStyles = createStyles((theme) => ({
   container: {
@@ -23,7 +23,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const PageTitle: FC = ({ children }) => {
+const PageTitle: FC<{ children: ReactNode }> = ({ children }) => {
   const { classes } = useStyles();
 
   return (
