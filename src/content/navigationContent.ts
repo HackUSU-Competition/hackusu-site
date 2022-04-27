@@ -1,6 +1,3 @@
-import { FooterLinkGroup } from 'components/Layout/Footer';
-import { NavLink } from 'components/Layout/Header';
-
 export const DISCORD_INVITE = 'https://discord.gg/DpjrzqBwq5';
 
 export enum paths {
@@ -13,6 +10,7 @@ export enum paths {
   volunteer = '/volunteer',
   press = '/press',
   pressPhotos = '/press/photos',
+  safety = '/safety',
 }
 
 export const headerLinks: NavLink[] = [
@@ -20,9 +18,20 @@ export const headerLinks: NavLink[] = [
   { label: 'Competition', href: paths.competition },
   { label: 'Location', href: paths.location },
   { label: 'Schedule', href: paths.schedule },
-	{ label: 'Volunteer', href: paths.volunteer },
+  { label: 'Volunteer', href: paths.volunteer },
   { label: 'Sponsor', href: paths.sponsor },
 ];
+
+export interface NavLink {
+  href: string;
+  label: string;
+  external?: boolean;
+}
+
+export interface FooterLinkGroup {
+  title: string;
+  links: NavLink[];
+}
 
 export const footerLinkGroups: FooterLinkGroup[] = [
   {
@@ -43,6 +52,10 @@ export const footerLinkGroups: FooterLinkGroup[] = [
       {
         label: 'Schedule',
         href: paths.schedule,
+      },
+      {
+        label: 'Safety',
+        href: paths.safety,
       },
     ],
   },
@@ -69,10 +82,12 @@ export const footerLinkGroups: FooterLinkGroup[] = [
       {
         label: 'Join Discord',
         href: DISCORD_INVITE,
+        external: true,
       },
       {
         label: 'GitHub',
         href: 'https://github.com/HackUSU-Competition',
+        external: true,
       },
     ],
   },

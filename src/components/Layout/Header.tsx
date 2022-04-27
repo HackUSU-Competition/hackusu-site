@@ -12,7 +12,7 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import GradientButton from 'components/GradientButton';
-import { headerLinks, paths } from 'content/navigationContent';
+import { headerLinks, NavLink, paths } from 'content/navigationContent';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
 
@@ -60,11 +60,6 @@ const useStyles = createStyles((t) => ({
     marginRight: 5,
   },
 }));
-
-export interface NavLink {
-  href: string;
-  label: string;
-}
 
 export interface HeaderProps {
   links: NavLink[];

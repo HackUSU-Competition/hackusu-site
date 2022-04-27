@@ -2,7 +2,6 @@ import { Anchor, Box, Container, createStyles, Group, Text, Title } from '@manti
 import { footerLinkGroups } from 'content/navigationContent';
 import { Link } from 'gatsby';
 import React from 'react';
-import { NavLink } from './Header';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -41,11 +40,6 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export interface FooterLinkGroup {
-  title: string;
-  links: NavLink[];
-}
-
 export default function FooterLinks() {
   const { classes } = useStyles();
 
@@ -63,18 +57,30 @@ export default function FooterLinks() {
               <Title order={5} sx={{ fontWeight: 800, textTransform: 'uppercase' }}>
                 {group.title}
               </Title>
-              {group.links.map((link, index) => (
-                <Anchor
-                  key={index}
-                  component={Link}
-                  to={link.href}
-                  color="dimmed"
-                  py={3}
-                  sx={{ display: 'block' }}
-                >
-                  {link.label}
-                </Anchor>
-              ))}
+              {group.links.map((link, index) =>
+                link.external ? (
+                  <Anchor
+                    key={index}
+                    href={link.href}
+                    color="dimmed"
+                    py={3}
+                    sx={{ display: 'block' }}
+                  >
+                    {link.label}
+                  </Anchor>
+                ) : (
+                  <Anchor
+                    key={index}
+                    component={Link}
+                    to={link.href}
+                    color="dimmed"
+                    py={3}
+                    sx={{ display: 'block' }}
+                  >
+                    {link.label}
+                  </Anchor>
+                )
+              )}
             </div>
           ))}
         </Group>
