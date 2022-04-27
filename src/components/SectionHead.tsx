@@ -16,6 +16,7 @@ const useStyles = createStyles((theme) => ({
 
 export interface SectionHeadProps {
   title: string;
+  children?: React.ReactNode;
 }
 
 const SectionHead: FC<SectionHeadProps> = ({ title, children }) => {

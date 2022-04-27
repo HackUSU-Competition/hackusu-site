@@ -1,6 +1,6 @@
 import { Button, Card, Group, Image, SimpleGrid, Text, Title } from '@mantine/core';
 import SectionHead from 'components/SectionHead';
-import { PressArticle, pressArticles } from 'content/pressArticles';
+import { PressArticle, pressArticles } from 'content/press/pressArticles';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
 

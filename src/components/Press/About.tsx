@@ -13,7 +13,7 @@ import {
 } from '@mantine/core';
 import SectionHead from 'components/SectionHead';
 import { paths } from 'content/navigationContent';
-import { stats } from 'content/stats';
+import { stats } from 'content/press/stats';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
 import { ArrowRight } from 'tabler-icons-react';
