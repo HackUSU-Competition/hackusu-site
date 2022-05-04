@@ -23,7 +23,7 @@ const SectionHead: FC<SectionHeadProps> = ({ title, children }) => {
   const { classes } = useStyles();
 
   return (
-    <Box mt={70} mb={40}>
+    <Box mb={40}>
       <Title order={2} className={classes.title}>
         {title}
       </Title>

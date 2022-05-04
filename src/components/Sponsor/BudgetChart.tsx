@@ -1,4 +1,4 @@
-import { Box, Group, List, RingProgress, Text, ThemeIcon } from '@mantine/core';
+import { Box, Group, List, RingProgress, ThemeIcon } from '@mantine/core';
 import { categorySpending } from 'content/sponsor/spendingContent';
 import React, { FC } from 'react';
 import { CircleCheck } from 'tabler-icons-react';
@@ -10,12 +10,7 @@ const BudgetChart: FC = () => {
       <Box>
         <RingProgress
           size={300}
-          thickness={40}
-          label={
-            <Text size="xs" align="center">
-              2022 Budget Allocation
-            </Text>
-          }
+          thickness={50}
           sections={categorySpending.map((category) => ({
             color: category.color,
             value: (100 * category.amount) / totalSpend,

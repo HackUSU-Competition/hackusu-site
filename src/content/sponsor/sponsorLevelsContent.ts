@@ -27,7 +27,8 @@ const levelsAbove = (minLevel: LevelName): LevelName[] => {
 export interface Benefit {
   name: string;
   levels: LevelName[];
-  details?: Partial<Record<LevelName, string>>;
+  levelsDetails?: Partial<Record<LevelName, string>>;
+  tooltip?: string;
 }
 
 export interface BenefitGroup {
@@ -50,10 +51,13 @@ export const sponsorLevelTableData: BenefitGroup[] = [
       {
         name: 'Host workshops',
         levels: levelsAbove(LevelName.BRONZE),
+        tooltip:
+          'Workshops do not promote any specifc product or service, but instead focus on generally applicable skills',
       },
       {
-        name: 'Promotional tech-talks and workshops',
+        name: 'Promotional tech-talks',
         levels: levelsAbove(LevelName.GOLD),
+        tooltip: 'Promotional tech-talks allow you to promote your company, products, or services.',
       },
     ],
   },
@@ -63,7 +67,7 @@ export const sponsorLevelTableData: BenefitGroup[] = [
       {
         name: 'Recruiting table',
         levels: levelsAbove(LevelName.BRONZE),
-        details: {
+        levelsDetails: {
           [LevelName.BRONZE]: 'Sat. Afternoon Only',
         },
       },
@@ -79,11 +83,13 @@ export const sponsorLevelTableData: BenefitGroup[] = [
       {
         name: 'Logo on t-shirts and website',
         levels: levelsAbove(LevelName.SILVER),
-        details: {
+        levelsDetails: {
           [LevelName.SILVER]: 'Small',
           [LevelName.GOLD]: 'Medium',
           [LevelName.PARTNER]: 'Large',
         },
+        tooltip:
+          'Your sponsorship must be confirmed at least 6 weeks prior to the event to include your logo on t-shirts',
       },
       {
         name: 'Your swag included in swag bags',

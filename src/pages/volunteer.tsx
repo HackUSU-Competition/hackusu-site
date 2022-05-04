@@ -1,4 +1,5 @@
 import { Box, Container, createStyles, Divider, Group, Image, Text, Title } from '@mantine/core';
+import AnimateUpOnce from 'components/AnimateUpOnce';
 import VolunteerForm from 'components/Forms/VolunteerForm';
 import GradientButton from 'components/GradientButton';
 import PageTitle from 'components/PageTitle';
@@ -45,29 +46,31 @@ export default function About() {
       <PageTitle>VOLUNTEER OPPORTUNITIES</PageTitle>
       <Container>
         <Box>
-          {volunteerOpportunities.map((opportunity) => {
+          {volunteerOpportunities.map((opportunity, idx) => {
             return (
-              <Group key={opportunity.title} className={classes.opportunity}>
-                <Image
-                  src={opportunity.image}
-                  alt={opportunity.title}
-                  width={300}
-                  className={classes.image}
-                />
-                <Box>
-                  <Title order={3} my={10}>
-                    {opportunity.title}
-                  </Title>
-                  <Text>{opportunity.description}</Text>
-                  <GradientButton
-                    rightIcon={<ChevronDown size={14} />}
-                    component="a"
-                    href="#sign-up-form"
-                  >
-                    {opportunity.cta}
-                  </GradientButton>
-                </Box>
-              </Group>
+              <AnimateUpOnce key={idx}>
+                <Group key={opportunity.title} className={classes.opportunity}>
+                  <Image
+                    src={opportunity.image}
+                    alt={opportunity.title}
+                    width={300}
+                    className={classes.image}
+                  />
+                  <Box>
+                    <Title order={3} my={10}>
+                      {opportunity.title}
+                    </Title>
+                    <Text>{opportunity.description}</Text>
+                    <GradientButton
+                      rightIcon={<ChevronDown size={14} />}
+                      component="a"
+                      href="#sign-up-form"
+                    >
+                      {opportunity.cta}
+                    </GradientButton>
+                  </Box>
+                </Group>
+              </AnimateUpOnce>
             );
           })}
         </Box>

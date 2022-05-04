@@ -10,11 +10,9 @@ export default function Press() {
   return (
     <Layout>
       <PageTitle>PRESS RESOURCES</PageTitle>
-      <Container>
-        <About />
-        <Attending />
-        <FeaturedArticles />
-      </Container>
+      <About />
+      <Attending />
+      <FeaturedArticles />
     </Layout>
   );
 }

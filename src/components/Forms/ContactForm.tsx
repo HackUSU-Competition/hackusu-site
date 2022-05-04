@@ -10,6 +10,7 @@ import {
 } from '@mantine/core';
 import { useForm, yupResolver } from '@mantine/form';
 import GradientButton from 'components/GradientButton';
+import Section from 'components/Layout/Section';
 import SectionHead from 'components/SectionHead';
 import React, { FC } from 'react';
 import { sendEmail } from 'services/formspark';
@@ -38,8 +39,7 @@ const ContactForm: FC<ContainerProps> = (props) => {
   const [didSubmit, setDidSubmit] = React.useState(false);
 
   return (
-    <Container size="sm" {...props}>
-      <SectionHead title="Have a question?">Send us a message!</SectionHead>
+    <Section title="Have a question?" subtitle="Send us a message!" width="sm" {...props}>
       <form
         onSubmit={form.onSubmit((values) => {
           setIsSubmitting(true);
@@ -100,7 +100,7 @@ const ContactForm: FC<ContainerProps> = (props) => {
           </GradientButton>
         </Group>
       </form>
-    </Container>
+    </Section>
   );
 };
 

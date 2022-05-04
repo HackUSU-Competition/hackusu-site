@@ -1,5 +1,15 @@
-import { Alert, Box, Container, createStyles, ScrollArea, Table, Text, Title } from '@mantine/core';
-import SectionHead from 'components/SectionHead';
+import {
+  ActionIcon,
+  Alert,
+  Box,
+  createStyles,
+  ScrollArea,
+  Table,
+  Text,
+  Title,
+  Tooltip,
+} from '@mantine/core';
+import Section from 'components/Layout/Section';
 import {
   Benefit,
   BenefitGroup,
@@ -8,7 +18,7 @@ import {
   sponsorLevelTableData,
 } from 'content/sponsor/sponsorLevelsContent';
 import React, { FC } from 'react';
-import { CircleCheck, Star } from 'tabler-icons-react';
+import { CircleCheck, InfoCircle, Star } from 'tabler-icons-react';
 var abbreviate = require('number-abbreviate');
 
 const useStyles = createStyles((t) => ({
@@ -32,11 +42,20 @@ const BenefitsTable: FC = () => {
 
   const BenefitRow: FC<{ benefit: Benefit }> = ({ benefit }) => (
     <tr>
+      <td>
+        {benefit.tooltip && (
+          <Tooltip label={benefit.tooltip} width={300} position="right" withArrow wrapLines>
+            <ActionIcon variant="transparent" color="blue">
+              <InfoCircle size={18} />
+            </ActionIcon>
+          </Tooltip>
+        )}
+      </td>
       <td className={classes.firstCell}>{benefit.name}</td>
       {levelNames.map((levelName) => (
         <td key={levelName} className={classes.checkBoxCell}>
           <Text size="xs" color="green">
-            {benefit.details?.[levelName] ||
+            {benefit.levelsDetails?.[levelName] ||
               (benefit.levels.includes(levelName) && <CircleCheck size={20} />)}
           </Text>
         </td>
@@ -44,9 +63,10 @@ const BenefitsTable: FC = () => {
     </tr>
   );
 
-  const Section: FC<{ group: BenefitGroup }> = ({ group }) => (
+  const TableSection: FC<{ group: BenefitGroup }> = ({ group }) => (
     <>
       <tr className={classes.sectionHead}>
+        <td></td>
         <td colSpan={Object.entries(levelData).length + 1}>
           <Title order={5}>{group.groupName}</Title>
         </td>
@@ -82,35 +102,32 @@ const BenefitsTable: FC = () => {
   };
 
   return (
-    <>
-      <SectionHead title="Sponsorship Benefits">
-        We can help you promote your brand, recruit students, and provide presentation
-        opportunities!
-      </SectionHead>
-      <Container size="sm">
-        <ScrollArea type="auto">
-          <Table my={30} highlightOnHover>
-            <thead>
-              <tr>
-                <th>{/* EMPTY */}</th>
-                {levelNames.map((levelName) => (
-                  <LevelHeader key={levelName} levelName={levelName} />
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {sponsorLevelTableData.map((group) => (
-                <Section key={group.groupName} group={group} />
+    <Section
+      title="Sponsorship Benefits"
+      subtitle="We can help you promote your brand, recruit students, and provide presentation"
+    >
+      <ScrollArea type="auto">
+        <Table my={30}>
+          <thead>
+            <tr>
+              <th colSpan={2}>{/* EMPTY */}</th>
+              {levelNames.map((levelName) => (
+                <LevelHeader key={levelName} levelName={levelName} />
               ))}
-            </tbody>
-          </Table>
-        </ScrollArea>
-        <Alert icon={<Star size={16} />} title="Want something else?" mb={30}>
-          Contact us to build a custom sponsorship plan. We want to work together with you to help
-          as many students as possible at this year's HackUSU event!
-        </Alert>
-      </Container>
-    </>
+            </tr>
+          </thead>
+          <tbody>
+            {sponsorLevelTableData.map((group) => (
+              <TableSection key={group.groupName} group={group} />
+            ))}
+          </tbody>
+        </Table>
+      </ScrollArea>
+      <Alert icon={<Star size={16} />} title="Want something else?" mb={30}>
+        Contact us to build a custom sponsorship plan. We want to work together with you to help as
+        many students as possible at this year's HackUSU event!
+      </Alert>
+    </Section>
   );
 };
 

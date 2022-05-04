@@ -1,4 +1,5 @@
 import { Anchor, createStyles, Text, Title } from '@mantine/core';
+import Section from 'components/Layout/Section';
 import SectionHead from 'components/SectionHead';
 import React, { FC } from 'react';
 import { HACKUSU_EMAIL } from 'utils/constants';
@@ -9,9 +10,7 @@ const Attending: FC = () => {
   const { classes } = useStyles();
 
   return (
-    <>
-      <SectionHead title="Attending HackUSU" />
-
+    <Section title="Attending HackUSU" background="light">
       <Title order={3} mt={30}>
         Registration
       </Title>
@@ -38,7 +37,7 @@ const Attending: FC = () => {
         After arriving, please check-in at the north entrance of Huntsman Hall to pick up your
         badge. You are welcome to attend all portions of the event and join us for any of the meals.
       </Text>
-    </>
+    </Section>
   );
 };
 

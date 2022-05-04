@@ -11,6 +11,8 @@ import {
   Text,
   Title,
 } from '@mantine/core';
+import AnimateUpOnce from 'components/AnimateUpOnce';
+import Section from 'components/Layout/Section';
 import SectionHead from 'components/SectionHead';
 import { paths } from 'content/navigationContent';
 import { stats } from 'content/press/stats';
@@ -76,12 +78,10 @@ const About: FC = () => {
   const { classes } = useStyles();
 
   return (
-    <>
-      <SectionHead title="About HackUSU">
-        Started in 2015, HackUSU is an annual 24 hr technology competiton and conference hosted at
-        Utah State University (USU).
-      </SectionHead>
-
+    <Section
+      title="About HackUSU"
+      subtitle="Started in 2015, HackUSU is an annual 24 hr technology competiton and conference hosted at Utah State University (USU)."
+    >
       <Text size="xl">
         Every year, hundreds of students come to USU from across Utah and Idaho to build projects
         and attend workshops related to topics from game development and data analytics to hardware
@@ -171,18 +171,22 @@ const About: FC = () => {
       </Paper>
 
       <Container size="sm">
-        <Blockquote my={40} cite="– Chandler Peterson, Student">
-          I really loved the workshops, they helped me get a foot in the door for many concepts I
-          wanted to learn more about but did not know where I could learn about it.
-        </Blockquote>
+        <AnimateUpOnce>
+          <Blockquote my={40} cite="– Chandler Peterson, Student">
+            I really loved the workshops, they helped me get a foot in the door for many concepts I
+            wanted to learn more about but did not know where I could learn about it.
+          </Blockquote>
+        </AnimateUpOnce>
 
-        <Blockquote my={40} cite="– Cory Christensen, Student">
-          Hackathons aren't just about gaining programming skills. They are about building up our
-          communities, and becoming an innovative generation. This is something awesome, and I'm
-          proud to be a part of it.
-        </Blockquote>
+        <AnimateUpOnce>
+          <Blockquote my={40} cite="– Cory Christensen, Student">
+            Hackathons aren't just about gaining programming skills. They are about building up our
+            communities, and becoming an innovative generation. This is something awesome, and I'm
+            proud to be a part of it.
+          </Blockquote>
+        </AnimateUpOnce>
       </Container>
-    </>
+    </Section>
   );
 };
 

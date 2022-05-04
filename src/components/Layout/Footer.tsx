@@ -8,8 +8,8 @@ const useStyles = createStyles((theme) => ({
     marginTop: 120,
     paddingTop: theme.spacing.xl * 2,
     paddingBottom: theme.spacing.xl * 2,
-    backgroundColor: theme.colors.gray[0],
-    borderTop: `1px solid ${theme.colors.gray[2]}`,
+    backgroundColor: theme.colors.gray[1],
+    borderTop: `1px solid ${theme.colors.gray[3]}`,
   },
 
   inner: {
@@ -64,7 +64,7 @@ export default function FooterLinks() {
                     href={link.href}
                     color="dimmed"
                     py={3}
-                    sx={{ display: 'block' }}
+                    sx={{ display: 'block', fontWeight: 'normal' }}
                   >
                     {link.label}
                   </Anchor>
@@ -75,7 +75,7 @@ export default function FooterLinks() {
                     to={link.href}
                     color="dimmed"
                     py={3}
-                    sx={{ display: 'block' }}
+                    sx={{ display: 'block', fontWeight: 'normal' }}
                   >
                     {link.label}
                   </Anchor>

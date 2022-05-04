@@ -1,8 +1,6 @@
-import { Container } from '@mantine/core';
+import Section from 'components/Layout/Section';
 import PageTitle from 'components/PageTitle';
-import SectionHead from 'components/SectionHead';
 import About from 'components/Sponsor/About';
-import BudgetChart from 'components/Sponsor/BudgetChart';
 import BenefitsTable from 'components/Sponsor/SponsorBenefitsTable';
 import SponsorGrid from 'components/Sponsor/SponsorGrid';
 import { pastSponsors } from 'content/sponsor/sponsorCompaniesContent';
@@ -13,12 +11,11 @@ export default function Sponsor() {
   return (
     <Layout>
       <PageTitle>SPONSOR HACKUSU</PageTitle>
-      <Container>
-        <About />
-        <BenefitsTable />
-        <SectionHead title="Previous Sponsors" />
+      <About />
+      <BenefitsTable />
+      <Section title="Previous Sponsors">
         <SponsorGrid sponsors={pastSponsors} />
-      </Container>
+      </Section>
     </Layout>
   );
 }

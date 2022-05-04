@@ -14,8 +14,12 @@
     "@mantine/core": "^4.1.0",
     "@mantine/form": "^4.1.0",
     "@mantine/hooks": "^4.1.0",
+    "animate.css": "^4.1.1",
+    "i": "^0.3.7",
+    "npm": "^8.8.0",
     "number-abbreviate": "^2.0.0",
     "react": "^17.0.2",
+    "react-animation-on-scroll": "^5.1.0",
     "react-dom": "^17.0.2",
     "tabler-icons-react": "^1.41.0",
     "yup": "^0.32.11"
