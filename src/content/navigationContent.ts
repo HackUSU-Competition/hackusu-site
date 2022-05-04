@@ -54,7 +54,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
         href: paths.schedule,
       },
       {
-        label: 'Safety',
+        label: 'Code of Conduct & Risk Management',
         href: paths.safety,
       },
     ],
