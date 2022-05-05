@@ -10,9 +10,7 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: theme.spacing.xl * 2,
     backgroundColor: theme.colors.gray[1],
     background: `url(${require('../../images/backgrounds/light-triangles-large.svg').default})`,
-    backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
-    border: `1px solid ${theme.colors.gray[3]}`,
     borderTop: `1px solid ${theme.colors.gray[3]}`,
   },
 

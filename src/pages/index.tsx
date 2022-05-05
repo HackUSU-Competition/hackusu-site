@@ -20,7 +20,6 @@ export default function HomePage() {
           backgroundColor: theme.colors.navy[8],
           background: `url(${require('../images/backgrounds/triangles.svg').default})`,
           backgroundSize: 'cover',
-          backgroundAttachment: 'fixed',
         })}
       >
         <Container size={800} pt={50} px={50}>
@@ -70,6 +69,10 @@ export default function HomePage() {
         title="Competition Categories"
         subtitle="We'll award prizes for both beginner and experienced teams in each cateogry!"
         background="light"
+        sx={{
+          background: `url(${require('../images/backgrounds/light-triangles-large.svg').default})`,
+          backgroundSize: 'cover',
+        }}
       >
         <Center>
           <GradientButton component={Link} to={paths.competition} variant="gradient">

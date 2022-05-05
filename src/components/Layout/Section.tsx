@@ -16,9 +16,6 @@ const boxSX: Record<SectionProps['background'], BoxSx> = {
   white: {},
   light: (theme) => ({
     backgroundColor: theme.colors.gray[1],
-    background: `url(${require('../../images/backgrounds/light-triangles-large.svg').default})`,
-    backgroundAttachment: 'fixed',
-    backgroundSize: 'cover',
     border: `1px solid ${theme.colors.gray[3]}`,
   }),
 };
