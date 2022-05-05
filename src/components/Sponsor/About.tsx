@@ -40,7 +40,7 @@ const About: FC = () => {
         </List>
       </Section>
 
-      <Section title="Why sponsor?" background="light">
+      <Section title="Why Sponsor?" background="light">
         <Text mt={10}>
           HackUSU provides a unique medium to bring your company to center stage as well as interact
           with the next generation of innovators from around the Midwest. Here are 3 ways that our

@@ -3,7 +3,7 @@ import React, { FC, ReactNode } from 'react';
 
 const useStyles = createStyles((theme) => ({
   container: {
-    // backgroundImage: `url(${require('images/backgrounds/circuit-board.svg').default})`,
+    backgroundImage: `url(${require('images/backgrounds/circuit-board.svg').default})`,
     backgroundColor: theme.colors.navy[8],
     // backgroundImage: `linear-gradient(-60deg, ${theme.colors[theme.primaryColor][4]} 0%, ${
     //   theme.colors[theme.primaryColor][7]
