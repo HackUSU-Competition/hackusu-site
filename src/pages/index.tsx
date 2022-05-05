@@ -18,8 +18,9 @@ export default function HomePage() {
         pt={50}
         sx={(theme) => ({
           backgroundColor: theme.colors.navy[8],
-          // minHeight: '80vh',
-          // boxShadow: 'inset 0 0 40vw 0 rgba(0,0,0,0.6)',
+          background: `url(${require('../images/backgrounds/triangles.svg').default})`,
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed',
         })}
       >
         <Container size={800} pt={50} px={50}>
@@ -54,8 +55,8 @@ export default function HomePage() {
 
       <Section title="What is HackUSU?" subtitle="300+ Students • 24 Hours">
         <SimpleGrid breakpoints={[{ maxWidth: 'xs', cols: 1 }]} cols={2} spacing="xl">
-          {aboutTiles.map(({ title, description }) => (
-            <Box mx="auto" sx={{ maxWidth: 300 }}>
+          {aboutTiles.map(({ title, description }, idx) => (
+            <Box mx="auto" sx={{ maxWidth: 300 }} key={idx}>
               <Title order={3} align="center">
                 {title}
               </Title>
@@ -85,8 +86,8 @@ export default function HomePage() {
       </Section>
 
       <Section title="FAQ">
-        {faqContent.map(({ question, answer }) => (
-          <Box mb="lg">
+        {faqContent.map(({ question, answer }, idx) => (
+          <Box mb="lg" key={idx}>
             <Title order={3}>{question}</Title>
             <Text>{answer}</Text>
           </Box>

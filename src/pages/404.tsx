@@ -1,6 +1,7 @@
 import { Anchor, Button, Container, createStyles, Group, Text, Title } from '@mantine/core';
 import Layout from 'components/Layout/Layout';
 import { paths } from 'content/navigationContent';
+import { Link } from 'gatsby';
 import React from 'react';
 
 const useStyles = createStyles((theme) => ({
@@ -41,7 +42,7 @@ export default function NotFoundTitle() {
           been moved to another URL.
         </Text>
         <Group position="center">
-          <Anchor href={paths.home}>
+          <Anchor component={Link} to={paths.home}>
             <Button variant="subtle" size="md">
               Take me back to home page
             </Button>
