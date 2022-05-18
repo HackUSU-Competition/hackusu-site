@@ -1,4 +1,4 @@
-import { Anchor, List, Text, Title } from '@mantine/core';
+import { Anchor, Image, List, Text, Title } from '@mantine/core';
 import Section from 'components/Layout/Section';
 import { paths } from 'content/navigationContent';
 import { Link } from 'gatsby';
@@ -41,17 +41,32 @@ const About: FC = () => {
       </Section>
 
       <Section title="Why Sponsor?" background="light">
-        <Text mt={10}>
-          HackUSU provides a unique medium to bring your company to center stage as well as interact
-          with the next generation of innovators from around the Midwest. Here are 3 ways that our
+        <Text size="xl" mt={10} weight={500}>
+          HackUSU provides a unique medium to bring your company to center stage and interact with
+          the next generation of innovators from around the Midwest. Here are 3 ways that our
           sponsors benefit the most by getting involved:
         </Text>
+        <Image
+          src={require('images/maiden-voyage-table.jpeg').default}
+          mt={30}
+          ml="lg"
+          mb="lg"
+          sx={(theme) => ({
+            borderRadius: 10,
+            overflow: 'hidden',
+            float: 'right',
+            width: '50%',
+            '@media (max-width: 755px)': {
+              width: '100%',
+            },
+          })}
+        />
         <Title order={3} mt={30}>
           Recruiting
         </Title>
         <Text mt={10}>
           What could be better than a building full of ambitious students willing to spend an entire
-          weekend building and hacking together new tech? Set up a table with us and get
+          weekend creating and hacking together new tech? Set up a table with us and get
           unparalleled access to university talent, resumes, interview rooms, and non-stop
           networking opportunities!
         </Text>
@@ -61,7 +76,8 @@ const About: FC = () => {
         <Text mt={10}>
           Sponsorship is a great way to accelerate brand recognition and allow students to explore
           your product's potential. We have arranged a variety of options for getting your name in
-          front of our hackers ranging from swag, meals, to workshops.
+          front of our hackers including keynote presentations, swag, and custom competition
+          categories!
         </Text>
         <Title order={3} mt={30}>
           Appraisal
