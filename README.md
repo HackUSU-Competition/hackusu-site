@@ -1,16 +1,25 @@
-# Mantine + Gatsby.js template
+# HackUSU Site
 
-[Read documentation](https://mantine.dev/theming/gatsby/)
+## Installing and Running Locally
 
-Get started with Mantine + Gatsby with just a few button clicks.
-Click `Use this template` button at the header of repository or [follow this link](https://github.com/mantinedev/mantine-gatsby-template/generate) and
-create new repository with all @mantine packages.
+### Clone the repository
 
-## What's included
+    $ git clone git@github.com:HackUSU-Competition/hackusu-site.git
+    $ cd hackusu-site
 
-- `gatsby-plugin-mantine` – server side rendering setup for gatsby
-- `@mantine/core` and `@mantine/hooks` packages
-- Color scheme toggle example (`Ctrl + J` shortcut or button click)
+### Using a compatable Node version
+
+Currently, Node 16 (16.15.0 LTS) is required for compatibility with Gatsby. Using NVM to manage Node versions is recommended.
+
+Install NVM: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
+
+    $ nvm install 16
+    $ nvm use 16
+
+### Start the project locally
+
+    $ npm install
+    $ npm start
 
 ## npm scripts
 
