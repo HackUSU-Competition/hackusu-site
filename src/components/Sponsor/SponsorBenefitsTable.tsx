@@ -104,7 +104,7 @@ const BenefitsTable: FC = () => {
   return (
     <Section
       title="Sponsorship Benefits"
-      subtitle="We can help you promote your brand, recruit students, and provide presentation"
+      subtitle="We can help you promote your brand, recruit students, and provide presentation opportunities"
     >
       <ScrollArea type="auto">
         <Table my={30}>

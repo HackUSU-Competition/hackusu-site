@@ -15,6 +15,7 @@ import GradientButton from 'components/GradientButton';
 import { headerLinks, NavLink, paths } from 'content/navigationContent';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
+import { REGISTRATION_OPEN } from 'utils/constants';
 
 const HEADER_HEIGHT = 80;
 
@@ -97,7 +98,7 @@ const HeaderNav: FC = () => {
             </Anchor>
           ))}
         </Group>
-        <GradientButton sx={{ height: 30 }}>Register</GradientButton>
+        {REGISTRATION_OPEN && <GradientButton sx={{ height: 30 }}>Register</GradientButton>}
       </Container>
       <Portal>
         <Drawer

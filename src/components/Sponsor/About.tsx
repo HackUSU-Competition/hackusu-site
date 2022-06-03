@@ -1,7 +1,5 @@
-import { Anchor, Image, List, Text, Title } from '@mantine/core';
+import { Image, List, Text, Title } from '@mantine/core';
 import Section from 'components/Layout/Section';
-import { paths } from 'content/navigationContent';
-import { Link } from 'gatsby';
 import React, { FC } from 'react';
 import { ArrowRight } from 'tabler-icons-react';
 
@@ -27,10 +25,10 @@ const About: FC = () => {
         </Text>
         <List icon={<ArrowRight />} mt={10}>
           <List.Item>
-            <Anchor component={Link} to={paths.competition}>
+            {/* <Anchor component={Link} to={paths.competition}>
               Team competitions
-            </Anchor>{' '}
-            in a variety of categories
+            </Anchor>{' '} */}
+            Team competitions in a variety of categories
           </List.Item>
           <List.Item>
             Workshops on topics related to software engineering, data analytics, and hardware

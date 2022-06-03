@@ -1,12 +1,8 @@
-import { Box, Center, Container, Image, SimpleGrid, Text, Title } from '@mantine/core';
+import { Box, Container, Image, SimpleGrid, Text, Title } from '@mantine/core';
 import ContactForm from 'components/Forms/ContactForm';
-import GradientButton from 'components/GradientButton';
 import Layout from 'components/Layout/Layout';
 import Section from 'components/Layout/Section';
-import SectionHead from 'components/SectionHead';
 import { aboutTiles, faqContent } from 'content/homeContent';
-import { paths } from 'content/navigationContent';
-import { Link } from 'gatsby';
 import React from 'react';
 import { EVENT_DATES } from 'utils/constants';
 import '../css/main.css';
@@ -74,11 +70,11 @@ export default function HomePage() {
           backgroundSize: 'cover',
         }}
       >
-        <Center>
+        {/* <Center>
           <GradientButton component={Link} to={paths.competition} variant="gradient">
             Competition Details
           </GradientButton>
-        </Center>
+        </Center> */}
         <ul>
           <li>Game Dev</li>
           <li>Data Analytics & Visualization</li>
