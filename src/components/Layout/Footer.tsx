@@ -1,7 +1,9 @@
-import { Anchor, Box, Container, createStyles, Group, Text, Title } from '@mantine/core';
+import { Anchor, Container, createStyles, Group, Stack, Text, Title } from '@mantine/core';
 import { footerLinkGroups } from 'content/navigationContent';
 import { Link } from 'gatsby';
 import React from 'react';
+import { Mail } from 'tabler-icons-react';
+import { HACKUSU_EMAIL } from 'utils/constants';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -48,11 +50,21 @@ export default function FooterLinks() {
   return (
     <footer className={classes.footer}>
       <Container className={classes.inner}>
-        <Box mb={30}>
+        <Stack spacing="lg" mb={30}>
           <Text color="dimmed" size="sm">
             © {new Date().getFullYear()} HackUSU, Utah State University
           </Text>
-        </Box>
+          <Text
+            component={Link}
+            to={`mailto:${HACKUSU_EMAIL}`}
+            color="dimmed"
+            size="sm"
+            sx={{ ':hover': { textDecoration: 'underline' } }}
+          >
+            <Mail size={16} style={{ position: 'relative', top: 4, marginRight: 6 }} />
+            {HACKUSU_EMAIL}
+          </Text>
+        </Stack>
         <Group align="start" className={classes.groups}>
           {footerLinkGroups.map((group) => (
             <div className={classes.wrapper} key={group.title}>
