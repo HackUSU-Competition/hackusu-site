@@ -1,9 +1,6 @@
 import {
-  Anchor,
   Blockquote,
   Box,
-  Button,
-  Center,
   Container,
   createStyles,
   Paper,
@@ -13,12 +10,8 @@ import {
 } from '@mantine/core';
 import AnimateUpOnce from 'components/AnimateUpOnce';
 import Section from 'components/Layout/Section';
-import SectionHead from 'components/SectionHead';
-import { paths } from 'content/navigationContent';
 import { stats } from 'content/press/stats';
-import { Link } from 'gatsby';
 import React, { FC } from 'react';
-import { ArrowRight } from 'tabler-icons-react';
 
 const useStyles = createStyles((theme) => ({
   stats: {
@@ -80,16 +73,16 @@ const About: FC = () => {
   return (
     <Section
       title="About HackUSU"
-      subtitle="Started in 2015, HackUSU is an annual 24 hr technology competiton and conference hosted at Utah State University (USU)."
+      subtitle="Started in 2015, HackUSU is an annual 24 hr technology competiton and conference hosted at Utah State University."
     >
-      <Text size="xl">
+      <Text size="xl" mb={60}>
         Every year, hundreds of students come to USU from across Utah and Idaho to build projects
         and attend workshops related to topics from game development and data analytics to hardware
         and security. The event venue is open overnight, and many teams stay up working all 24
         hours!
       </Text>
 
-      <Center>
+      {/* <Center>
         <Button
           component={Link}
           to={paths.pressPhotos}
@@ -98,7 +91,7 @@ const About: FC = () => {
         >
           Download images from past events
         </Button>
-      </Center>
+      </Center> */}
 
       <Title order={3} mt={30}>
         What is hacking?
@@ -122,7 +115,7 @@ const About: FC = () => {
         What can students do at the event?
       </Title>
       <Text mt={10}>
-        HackUSU is a 24 hour overnight event with plenty of things offered including:
+        HackUSU is a 24 hour overnight event with plenty of activities offered including:
         <ul>
           <li>
             Competitions to build projects related to software development, data analytics,
@@ -135,7 +128,7 @@ const About: FC = () => {
         </ul>
       </Text>
 
-      <Title order={3} mt={30}>
+      {/* <Title order={3} mt={30}>
         What recources are available for media use?
       </Title>
       <Text mt={10}>
@@ -153,7 +146,7 @@ const About: FC = () => {
       </Text>
       <Button component={Link} to={paths.pressPhotos} mt={10} rightIcon={<ArrowRight size={18} />}>
         Download images from past events
-      </Button>
+      </Button> */}
 
       <Paper shadow="sm" className={classes.stats} radius="lg" my={40}>
         <Title order={3} align="center" mb="lg">

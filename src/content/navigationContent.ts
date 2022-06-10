@@ -9,7 +9,7 @@ export enum paths {
   sponsor = '/sponsor',
   volunteer = '/volunteer',
   press = '/press',
-  pressPhotos = '/press/photos',
+  // pressPhotos = '/press/photos',
   safety = '/safety',
 }
 
