@@ -63,8 +63,9 @@ export default function HomePage() {
 
       <Section
         title="Competition Categories"
-        subtitle="We'll award prizes for both beginner and experienced teams in each cateogry!"
+        subtitle="We'll award separate prizes for both beginner and experienced teams in each cateogry!"
         background="pattern"
+        width="sm"
       >
         {/* <Center>
           <GradientButton component={Link} to={paths.competition} variant="gradient">
@@ -80,9 +81,9 @@ export default function HomePage() {
         </ul>
       </Section>
 
-      <Section title="FAQ">
+      <Section title="FAQ" width="sm">
         {faqContent.map(({ question, answer }, idx) => (
-          <Box mb="lg" key={idx}>
+          <Box mb="xl" key={idx}>
             <Title order={3}>{question}</Title>
             <Text>{answer}</Text>
           </Box>
