@@ -1,6 +1,7 @@
 import Section from 'components/Layout/Section';
 import PageTitle from 'components/PageTitle';
 import About from 'components/Sponsor/About';
+import GetStarted from 'components/Sponsor/GetStarted';
 import BenefitsTable from 'components/Sponsor/SponsorBenefitsTable';
 import SponsorGrid from 'components/Sponsor/SponsorGrid';
 import { pastSponsors } from 'content/sponsor/sponsorCompaniesContent';
@@ -13,6 +14,7 @@ export default function Sponsor() {
       <PageTitle>SPONSOR HACKUSU</PageTitle>
       <About />
       <BenefitsTable />
+      <GetStarted />
       <Section title="Previous Sponsors">
         <SponsorGrid sponsors={pastSponsors} />
       </Section>
