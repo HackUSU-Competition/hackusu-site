@@ -77,6 +77,7 @@ export default function FooterLinks() {
                     key={index}
                     href={link.href}
                     color="dimmed"
+                    target="_blank"
                     py={3}
                     sx={{ display: 'block', fontWeight: 'normal' }}
                   >
