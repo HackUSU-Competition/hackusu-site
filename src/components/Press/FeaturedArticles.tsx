@@ -1,6 +1,5 @@
 import { Button, Card, Group, Image, SimpleGrid, Text, Title } from '@mantine/core';
 import Section from 'components/Layout/Section';
-import SectionHead from 'components/SectionHead';
 import { PressArticle, pressArticles } from 'content/press/pressArticles';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
@@ -8,7 +7,7 @@ import React, { FC } from 'react';
 const ArticleCard: FC<{ article: PressArticle }> = ({ article }) => (
   <Card shadow="sm" p="lg">
     <Card.Section>
-      <Image src={article.image} height={160} alt="Norway" />
+      <Image src={article.image} height={160} withPlaceholder />
     </Card.Section>
 
     <Group direction="column" position="apart" sx={{ height: '120px' }}>

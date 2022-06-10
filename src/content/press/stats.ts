@@ -19,6 +19,6 @@ export const stats: Stat[] = [
   {
     label: 'Projects',
     value: '80',
-		description: 'Competition categories include game development, security, data analytics, and more!',
+		description: 'Competition categories included game development, security, data analytics, and more!',
   },
 ];
