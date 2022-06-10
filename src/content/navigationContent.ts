@@ -5,7 +5,7 @@ export enum paths {
   // about = '/about',
   // competition = '/competition',
   location = '/location',
-  schedule = '/schedule',
+  // schedule = '/schedule',
   sponsor = '/sponsor',
   volunteer = '/volunteer',
   press = '/press',
@@ -14,10 +14,11 @@ export enum paths {
 }
 
 export const headerLinks: NavLink[] = [
+  { label: 'Home', href: paths.home },
   // { label: 'About', href: paths.about },
   // { label: 'Competition', href: paths.competition },
   { label: 'Location', href: paths.location },
-  { label: 'Schedule', href: paths.schedule },
+  // { label: 'Schedule', href: paths.schedule },
   { label: 'Volunteer', href: paths.volunteer },
   { label: 'Sponsor', href: paths.sponsor },
 ];
@@ -53,10 +54,10 @@ export const footerLinkGroups: FooterLinkGroup[] = [
         label: 'Location',
         href: paths.location,
       },
-      {
-        label: 'Schedule',
-        href: paths.schedule,
-      },
+      // {
+      //   label: 'Schedule',
+      //   href: paths.schedule,
+      // },
       {
         label: 'Code of Conduct & Risk Management',
         href: paths.safety,
