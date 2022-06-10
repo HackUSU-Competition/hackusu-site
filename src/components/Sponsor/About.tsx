@@ -10,14 +10,14 @@ const About: FC = () => {
         <Text size="xl" mt={10} weight={500}>
           We're HackUSU, Utah's largest and oldest student-run hackathon. Each year, hundreds of
           students and professionals meet at Utah State University for competitions and workshops
-          related software, data analytics, security, hardware, and more!
+          related software, data analytics, hardware, and more!
         </Text>
         <Text mt={40}>
           You won't find malicious basement hackers trying to break into private servers at
           hackathons. Hackathons are weekend-long events hosted by a variety of universities and
-          colleges across the country who pride themselves on encouraging students to 'hack' a
-          solution to difficult technical problems. The 'hackathon' nomenclature has risen in recent
-          years to represent student collaboration and interaction around hardware and software.
+          colleges across the country who pride themselves in encouraging students to 'hack' a
+          solution to difficult technical problems. The 'hackathon' name has risen in recent years
+          to represent student collaboration and interaction around hardware and software.
         </Text>
 
         <Text mt={40} weight="bold" size="xl">
