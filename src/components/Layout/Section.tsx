@@ -7,7 +7,7 @@ export interface SectionProps extends BoxProps<'div'> {
   title?: string;
   subtitle?: string;
   children: ReactNode;
-  background?: 'white' | 'light';
+  background?: 'white' | 'light' | 'pattern';
   fullWidth?: boolean;
   width?: MantineNumberSize;
 }
@@ -18,11 +18,16 @@ const boxSX: Record<SectionProps['background'], BoxSx> = {
     backgroundColor: theme.colors.gray[1],
     border: `1px solid ${theme.colors.gray[3]}`,
   }),
+  pattern: {
+    background: `url(${require('../../images/backgrounds/light-triangles-large.svg').default})`,
+    backgroundSize: 'cover',
+  },
 };
 
 const defaultProps: Record<SectionProps['background'], Record<string, Record<string, any>>> = {
   white: {},
   light: {},
+  pattern: {},
 };
 
 const Section: FC<SectionProps> = (props) => {

@@ -64,11 +64,7 @@ export default function HomePage() {
       <Section
         title="Competition Categories"
         subtitle="We'll award prizes for both beginner and experienced teams in each cateogry!"
-        background="light"
-        sx={{
-          background: `url(${require('../images/backgrounds/light-triangles-large.svg').default})`,
-          backgroundSize: 'cover',
-        }}
+        background="pattern"
       >
         {/* <Center>
           <GradientButton component={Link} to={paths.competition} variant="gradient">
