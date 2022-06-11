@@ -10,7 +10,6 @@ import {
 } from '@mantine/core';
 import AnimateUpOnce from 'components/AnimateUpOnce';
 import Section from 'components/Layout/Section';
-import { stats } from 'content/press/stats';
 import React, { FC } from 'react';
 
 const useStyles = createStyles((theme) => ({
@@ -153,7 +152,25 @@ const About: FC = () => {
           HackUSU 2022 Stats
         </Title>
         <SimpleGrid cols={3} spacing={0} breakpoints={[{ maxWidth: 'xs', cols: 1 }]}>
-          {stats.map((stat) => (
+          {[
+            {
+              label: 'Students',
+              value: '279',
+              description: 'From high school seniors, all the way to Ph.D. students!',
+            },
+            {
+              label: 'Schools',
+              value: '12',
+              description:
+                'Students attended from 12 different universities, community colleges, and high schools from across Utah and Idaho',
+            },
+            {
+              label: 'Projects',
+              value: '80',
+              description:
+                'Competition categories included game development, security, data analytics, and more!',
+            },
+          ].map((stat) => (
             <Box className={classes.stat}>
               <Text className={classes.value}>{stat.value}</Text>
               <Text className={classes.label}>{stat.label}</Text>
