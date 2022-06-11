@@ -1,8 +1,20 @@
-import { Box, Container, Image, SimpleGrid, Text, Title } from '@mantine/core';
+import {
+  Avatar,
+  Box,
+  Card,
+  Container,
+  Group,
+  Image,
+  SimpleGrid,
+  Stack,
+  Text,
+  Title,
+} from '@mantine/core';
 import ContactForm from 'components/Forms/ContactForm';
 import Layout from 'components/Layout/Layout';
 import Section from 'components/Layout/Section';
 import React from 'react';
+import { Bulb, ChartDots, Code, DeviceGamepad2, Robot } from 'tabler-icons-react';
 import { EVENT_DATES } from 'utils/constants';
 import '../css/main.css';
 
@@ -92,13 +104,62 @@ export default function HomePage() {
             Competition Details
           </GradientButton>
         </Center> */}
-        <ul>
-          <li>Game Dev</li>
-          <li>Data Analytics & Visualization</li>
-          <li>Hardware</li>
-          <li>AI</li>
-          <li>General</li>
-        </ul>
+        <Stack spacing="xl">
+          {[
+            {
+              title: 'Game Dev',
+              icon: DeviceGamepad2,
+              description:
+                "Any game, any technology. Try recreating a retro game, or design a brand new one we haven't seen before!",
+            },
+            {
+              title: 'Data Analytics & Visualization',
+              icon: ChartDots,
+              description:
+                'Find a dataset online, then demonstrate ways of gaining interesting insights or displaying data in a creative way!',
+            },
+            {
+              title: 'Hardware',
+              icon: Robot,
+              description:
+                "Show us your creation utilizing physical hardware including Raspberry Pi's, PCB's, or microcontrollers!",
+            },
+            {
+              title: 'AI & Machine Learning',
+              icon: Bulb,
+              description: 'Can you write a program that learns how to solve a problem?',
+            },
+            {
+              title: 'General',
+              icon: Code,
+              description: "All projects that  are too unique and don't fit the other categories!",
+            },
+          ].map(({ title, icon, description }) => (
+            <Card sx={{ overflow: 'visible' }} shadow="sm" ml={25} mr={10} py="lg">
+              <Group>
+                <Avatar
+                  color="blue"
+                  size="lg"
+                  radius="xl"
+                  sx={{
+                    position: 'absolute',
+                    left: -28,
+                    border: '5px solid white',
+                    boxShadow: '2px 2px 5px 0 rgba(0, 0, 0, 0.2)',
+                  }}
+                >
+                  {icon({ size: 24 })}
+                </Avatar>
+                <Box pl={30}>
+                  <Text weight="bold" size="lg">
+                    {title}
+                  </Text>
+                  <Text color="gray">{description}</Text>
+                </Box>
+              </Group>
+            </Card>
+          ))}
+        </Stack>
       </Section>
 
       <Section title="FAQ" width="sm">
