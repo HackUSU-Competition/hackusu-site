@@ -165,13 +165,24 @@ export default function HomePage() {
       <Section title="FAQ" width="sm">
         {[
           {
+            question: 'Are there other things to do besides the competition?',
+            answer:
+              "Yes, we'll have workshops and other activities running the whole time! You'll also be able to network with employers, and get help from experts on other projects.",
+          },
+          {
+            question: 'Do I need to know how to code?',
+            answer:
+              'Nope, there will be workshops for all skill levels from introductory to graduate level.',
+          },
+          {
             question: 'Can I start now?',
             answer:
-              "You can't use any code that was written before the start of the hackathon. However, you can begin thinking of ideas and forming teams now!",
+              "You can't use any code that was written before the start of the hackathon. However, you can form your team and begin thinking of ideas now!",
           },
           {
             question: 'What is the max team size?',
-            answer: 'You can have up to 4 students on your team.',
+            answer:
+              'Each team can have 1 to 4 students. Only team members present at the award ceremony will be eligible to receive prizes.',
           },
           {
             question: 'Who can attend HackUSU?',
@@ -182,6 +193,11 @@ export default function HomePage() {
             question: 'Does it cost anything to attend?',
             answer:
               "HackUSU is completely free! There's no entry fee, and we'll provide enough food and snacks for the entire 24 hours. How neat is that?",
+          },
+          {
+            question: 'Can I stay in the building overnight?',
+            answer:
+              'Absolutely! You can stay up all night working, bring a sleeping bag, or leave to sleep off-campus.',
           },
         ].map(({ question, answer }, idx) => (
           <Box mb="xl" key={idx}>
