@@ -1,10 +1,7 @@
 import { MantineThemeOverride } from '@mantine/core';
-require('./fonts/roboto-slab.ttf');
+import './fonts/roboto-slab.ttf';
 
 const theme: MantineThemeOverride = {
-  headings: {
-    fontFamily: '"Roboto Slab", sans-serif',
-  },
   colors: {
     navy: [
       '#EBF2FA',
