@@ -170,8 +170,8 @@ const About: FC = () => {
               description:
                 'Competition categories included game development, security, data analytics, and more!',
             },
-          ].map((stat) => (
-            <Box className={classes.stat}>
+          ].map((stat, index) => (
+            <Box className={classes.stat} key={index}>
               <Text className={classes.value}>{stat.value}</Text>
               <Text className={classes.label}>{stat.label}</Text>
               <Text className={classes.description}>{stat.description}</Text>

@@ -55,8 +55,8 @@ export default function FooterLinks() {
             © {new Date().getFullYear()} HackUSU, Utah State University
           </Text>
           <Text
-            component={Link}
-            to={`mailto:${HACKUSU_EMAIL}`}
+            component="a"
+            href={`mailto:${HACKUSU_EMAIL}`}
             color="dimmed"
             size="sm"
             sx={{ ':hover': { textDecoration: 'underline' } }}

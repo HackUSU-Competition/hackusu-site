@@ -135,7 +135,7 @@ export default function HomePage() {
               description: "All projects that  are too unique and don't fit the other categories!",
             },
           ].map(({ title, icon, description }) => (
-            <Card sx={{ overflow: 'visible' }} shadow="sm" ml={25} mr={10} py="lg">
+            <Card key={title} sx={{ overflow: 'visible' }} shadow="sm" ml={25} mr={10} py="lg">
               <Group>
                 <Avatar
                   color="blue"
