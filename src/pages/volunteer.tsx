@@ -54,8 +54,8 @@ const volunteerOpportunities: VolunteerOpportunity[] = [
           or anything else interesting to the HackUSU community!
         </p>
         <p>
-          Workshops should be on non-branded topics generally applicable to many students. To
-          promote your own company's software products, check out our several{' '}
+          Workshops should be on topics generally applicable to many students. If you'd instead like
+          to promote your own company's products, check out our several{' '}
           <Anchor href={paths.sponsor}>sponsorship options</Anchor>.
         </p>
       </>
