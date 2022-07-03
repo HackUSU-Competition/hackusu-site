@@ -1,5 +1,5 @@
-import { CSSProperties } from '@mantine/styles/lib/tss/types/css-object';
-import { FunctionComponent, ReactElement } from 'react';
+import { DefaultMantineColor } from '@mantine/core';
+import { FunctionComponent } from 'react';
 import { CalendarEvent, colors, DaySchedule } from 'react-schedule-view';
 import {
   CalendarEvent as CalendarEventIcon,
@@ -11,40 +11,48 @@ import {
 
 const appleColors = colors.apple;
 
-enum EventType {
-  GENERAL = 'General',
-  FOOD = 'Food',
-  WORKSHOP = 'Workshop',
-  ACTIVITY = 'Activity',
+interface EventType {
+  name: string;
+  color: string;
+  icon: FunctionComponent<IconProps>;
 }
 
-export interface HackUSUCalendarEvent extends CalendarEvent {
-  presenter?: string;
-  type: EventType;
-  location?: string;
-  locationVerbose?: string;
-}
-
-export const eventColorMap: Record<
-  EventType,
-  { color: string; icon: FunctionComponent<IconProps> }
-> = {
-  [EventType.GENERAL]: { color: appleColors.blue, icon: CalendarEventIcon },
-  [EventType.WORKSHOP]: { color: appleColors.purple, icon: School },
-  [EventType.FOOD]: { color: appleColors.red, icon: Pizza },
-  [EventType.ACTIVITY]: { color: appleColors.green, icon: Confetti },
+export const eventTypes: Record<'general' | 'workshop' | 'food' | 'activity', EventType> = {
+  general: { name: 'General', color: appleColors.blue, icon: CalendarEventIcon },
+  workshop: { name: 'Workshop', color: appleColors.purple, icon: School },
+  food: { name: 'Food', color: appleColors.red, icon: Pizza },
+  activity: { name: 'Activity', color: appleColors.green, icon: Confetti },
 };
 
-const withEventColors = (daySchedules: DaySchedule<HackUSUCalendarEvent>[]) =>
-  daySchedules.map((daySchedule) => ({
-    ...daySchedule,
-    events: daySchedule.events.map((event) => ({
-      ...event,
-      color: eventColorMap[event.type]?.color ?? undefined,
-    })),
-  }));
+interface SkillLevel {
+  name: string;
+  color: DefaultMantineColor;
+}
 
-export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = withEventColors([
+export const skillLevels: Record<
+  'everyone' | 'beginner' | 'intermediate' | 'advanced',
+  SkillLevel
+> = {
+  everyone: { name: 'Everyone', color: 'blue' },
+  beginner: { name: 'Beginner', color: 'green' },
+  intermediate: { name: 'Intermediate', color: 'orange' },
+  advanced: { name: 'Advanced', color: 'red' },
+};
+
+export interface HackUSUCalendarEvent extends CalendarEvent {
+  presenter?: {
+    name: string;
+    profileImage?: string;
+    organization?: string;
+  };
+  type: EventType;
+  skillLevel?: SkillLevel;
+  location?: string;
+  locationVerbose?: string;
+  coverImage?: string;
+}
+
+export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
   {
     name: 'Friday',
     events: [
@@ -52,27 +60,35 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = withEventColo
         startTime: 16,
         endTime: 18,
         title: 'Check-in',
-        type: EventType.GENERAL,
-        presenter: 'Troy DeSpain',
+        type: eventTypes.general,
+        presenter: { name: 'Troy DeSpain' },
       },
       {
         startTime: 16.5,
         endTime: 17.75,
         title: 'Dinner - Pizza',
-        type: EventType.FOOD,
+        type: eventTypes.food,
       },
       {
         startTime: 18,
         endTime: 18.75,
         title: 'Opening Keynote',
-        type: EventType.GENERAL,
+        type: eventTypes.general,
+        skillLevel: skillLevels.everyone,
       },
       {
         startTime: 19,
         endTime: 20,
         title: 'Firebase: Cloud Services Simplified',
-        presenter: 'Joseph Ditton',
-        type: EventType.WORKSHOP,
+        presenter: {
+          name: 'Joseph Ditton',
+          organization: 'USU Computer Science',
+          profileImage: 'https://www.usu.edu/cs/images/directory/faculty/ditton-joseph.jpeg',
+        },
+        skillLevel: skillLevels.beginner,
+        coverImage:
+          'https://www.talentica.com/wp-content/uploads/2021/04/Firebase-blog-feature-image-1.png',
+        type: eventTypes.workshop,
         location: '#126',
         locationVerbose: 'Room #126',
         description:
@@ -82,55 +98,57 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = withEventColo
         startTime: 19,
         endTime: 20,
         title: 'Intro to Kotlin',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
+        skillLevel: skillLevels.intermediate,
       },
       {
         startTime: 19,
         endTime: 20,
         title: 'Robotics Showcase',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
+        skillLevel: skillLevels.advanced,
       },
       {
         startTime: 20,
         endTime: 21,
         title: 'Khrysalis: Advanced Source-to-Source Transpilation',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
       },
       {
         startTime: 21,
         endTime: 22,
         title: 'Khrysalis: Intro Hands-on Workshop',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
       },
       {
         startTime: 22,
         endTime: 24,
         title: 'Movie',
-        type: EventType.ACTIVITY,
+        type: eventTypes.activity,
       },
       {
         startTime: 22,
         endTime: 23,
         title: 'Collaborative Software Development',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
       },
       {
         startTime: 22,
         endTime: 23,
         title: 'Pizza: Round 2',
-        type: EventType.FOOD,
+        type: eventTypes.food,
       },
       {
         startTime: 24,
         endTime: 25,
         title: 'Aggie Ice Cream',
-        type: EventType.FOOD,
+        type: eventTypes.food,
       },
     ],
   },
-]);
+];
 
-export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = withEventColors([
+export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
   {
     name: 'Saturday',
     events: [
@@ -138,80 +156,80 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = withEventCo
         startTime: 8,
         endTime: 9.5,
         title: 'Breakfast - Einstein Bros. Bagels',
-        type: EventType.FOOD,
+        type: eventTypes.food,
       },
       {
         startTime: 9,
         endTime: 10,
         title: 'Resumes and Cover Letters that Work!',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
       },
       {
         startTime: 10,
         endTime: 11,
         title: 'Wikipedia Race',
-        type: EventType.ACTIVITY,
+        type: eventTypes.activity,
       },
       {
         startTime: 10,
         endTime: 11,
         title: 'How to Build Awesome Web APIs',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
       },
       {
         startTime: 10,
         endTime: 11,
         title: 'Effective Interviewing Skills',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
       },
       {
         startTime: 11,
         endTime: 12,
         title: 'Career & Internship Search Strategies',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
       },
       {
         startTime: 12,
         endTime: 13.5,
         title: 'Lunch - Sandwiches',
-        type: EventType.FOOD,
+        type: eventTypes.food,
       },
       {
         startTime: 13,
         endTime: 14,
         title: 'Kotlin Server',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
       },
       {
         startTime: 14,
         endTime: 15,
         title: 'Reactive Programming with RX',
-        type: EventType.WORKSHOP,
+        type: eventTypes.workshop,
       },
       {
         startTime: 16,
         endTime: 18,
         title: 'Dinner - Costa Vida',
-        type: EventType.FOOD,
+        type: eventTypes.food,
       },
       {
         startTime: 16,
         endTime: 18,
         title: 'Networking Event',
-        type: EventType.GENERAL,
+        type: eventTypes.general,
       },
       {
         startTime: 17,
         endTime: 18,
         title: 'Judging for Finalists',
-        type: EventType.GENERAL,
+        type: eventTypes.general,
       },
       {
         startTime: 18.5,
         endTime: 19.25,
         title: 'Award Ceremony',
-        type: EventType.GENERAL,
+        type: eventTypes.general,
       },
     ],
   },
-]);
+];

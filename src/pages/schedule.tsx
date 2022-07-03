@@ -1,14 +1,25 @@
-import { Avatar, Box, ColorSwatch, Container, Group, Modal, Portal, Text } from '@mantine/core';
+import {
+  Avatar,
+  Box,
+  Card,
+  ColorSwatch,
+  Container,
+  Group,
+  Modal,
+  Image,
+  Badge,
+  Text,
+} from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import PageTitle from 'components/PageTitle';
 import {
   HackUSUCalendarEvent,
   fridaySchedule,
   saturdaySchedule,
-  eventColorMap,
+  eventTypes,
 } from 'content/scheduleContent';
 import React, { FC, useContext, useState } from 'react';
-import { ScheduleView, createTheme, ThemeContext, themes, colors } from 'react-schedule-view';
+import { ScheduleView, createTheme, ThemeContext, themes } from 'react-schedule-view';
 import { Clock, Pin } from 'tabler-icons-react';
 import Layout from '../components/Layout/Layout';
 
@@ -30,7 +41,7 @@ const EventContent: FC<{ event: HackUSUCalendarEvent }> = ({ event }) => {
           fontWeight: 'lighter',
         }}
       >
-        {theme.eventTiles.timeRangeFormatter(event.startTime, event.endTime)}
+        {theme.timeRangeFormatter(event.startTime, event.endTime)}
         <div>{event.location}</div>
       </Group>
       <div style={{ fontWeight: 'bold', fontSize: '0.8rem', lineHeight: 1.2 }}>{event.title}</div>
@@ -39,9 +50,10 @@ const EventContent: FC<{ event: HackUSUCalendarEvent }> = ({ event }) => {
 };
 
 const customCalendarTheme = createTheme('apple', {
-  grid: { hourHeight: '95px' },
-  dayLabels: {
-    style: {
+  hourHeight: '95px',
+  style: {
+    timeScaleLabels: { color: '#555' },
+    dayLabels: {
       fontWeight: 'bold',
       fontFamily: 'Roboto Slab',
       textTransform: 'uppercase',
@@ -49,14 +61,8 @@ const customCalendarTheme = createTheme('apple', {
       marginBottom: '1rem',
     },
   },
-  eventTiles: {
-    tileContent: EventContent,
-  },
-  timeScale: {
-    style: {
-      color: '#555',
-    },
-  },
+  themeTileContent: EventContent,
+  defaultTileColor: (event: HackUSUCalendarEvent) => event.type.color,
 });
 
 export default function Schedule() {
@@ -68,12 +74,12 @@ export default function Schedule() {
       <PageTitle>SCHEDULE</PageTitle>
       <Container style={{ marginTop: '3rem' }} size="lg">
         <Group spacing="xl" position="center">
-          {Object.entries(eventColorMap).map(([key, value]) => (
-            <Group key={key} spacing="xs">
-              <ColorSwatch color={value.color}>
-                {<value.icon color="#ddd" size="16px" style={{ mixBlendMode: 'luminosity' }} />}
+          {Object.values(eventTypes).map((event) => (
+            <Group key={event.name} spacing="xs">
+              <ColorSwatch color={event.color}>
+                {<event.icon color="#ddd" size="16px" style={{ mixBlendMode: 'luminosity' }} />}
               </ColorSwatch>
-              <Text>{key}</Text>
+              <Text>{event.name}</Text>
             </Group>
           ))}
         </Group>
@@ -103,73 +109,91 @@ export default function Schedule() {
         </Box>
       </Container>
 
-      <Portal>
-        <Modal
-          opened={!!selectedEvent}
-          onClose={() => setSelectedEvent(null)}
-          title={selectedEvent?.title}
-          styles={{
-            title: {
-              fontWeight: 'bold',
-              fontSize: '1.2rem',
-            },
-            header: {
-              margin: 0,
-            },
-          }}
-        >
-          {(() => {
-            if (!selectedEvent) return null;
+      <Modal
+        centered
+        opened={!!selectedEvent}
+        onClose={() => setSelectedEvent(null)}
+        withCloseButton={false}
+        overlayBlur={1}
+        styles={{
+          modal: {
+            padding: '0 !important',
+          },
+        }}
+      >
+        {(() => {
+          if (!selectedEvent) return null;
 
-            const selectedColor = eventColorMap[selectedEvent?.type]?.color;
-            const SelectedIcon = eventColorMap[selectedEvent?.type]?.icon;
+          const location = selectedEvent.locationVerbose ?? selectedEvent.location;
 
-            return (
-              <>
-                {selectedEvent.presenter && (
-                  <Group spacing={4}>
-                    <Avatar src={null} radius="xl" alt={selectedEvent.presenter} color="primary">
-                      {getInitials(selectedEvent.presenter)}
-                    </Avatar>
-                    <Text color="dimmed">Presented by </Text>
-                    <Text>{selectedEvent.presenter}</Text>
-                  </Group>
+          return (
+            <Card>
+              <Card.Section style={{ borderBottom: '1px solid #AAA' }}>
+                <Image
+                  withPlaceholder
+                  src={
+                    selectedEvent.coverImage ||
+                    require('../images/backgrounds/triangles.svg').default
+                  }
+                  height={selectedEvent.coverImage ? 160 : 80}
+                />
+              </Card.Section>
+
+              <Group position="apart" style={{ marginBlock: 16 }}>
+                <div style={{ flexGrow: 1, textAlign: 'center' }}>
+                  {themes.apple.timeRangeFormatter(selectedEvent.startTime, selectedEvent.endTime)}
+                </div>
+                <div>•</div>
+                {location && (
+                  <>
+                    <div style={{ flexGrow: 1, textAlign: 'center' }}>{location}</div>
+                    <div>•</div>
+                  </>
                 )}
 
-                <Box style={{ marginBlock: '1rem' }}>
-                  <Group>
-                    <Clock size="1.2rem" color="grey" />
-                    <Text>
-                      {themes.apple.eventTiles.timeRangeFormatter(
-                        selectedEvent.startTime,
-                        selectedEvent.endTime
-                      )}
+                <div style={{ flexGrow: 1, textAlign: 'center' }}>{selectedEvent.type.name}</div>
+              </Group>
+
+              <Group noWrap position="apart" align="top">
+                <Text weight="bold" size="xl" style={{ lineHeight: 1.2 }}>
+                  {selectedEvent.title}
+                </Text>
+
+                {selectedEvent.skillLevel && (
+                  <div>
+                    <Badge variant="filled" color={selectedEvent.skillLevel.color}>
+                      {selectedEvent.skillLevel.name}
+                    </Badge>
+                  </div>
+                )}
+              </Group>
+
+              <Text size="sm" style={{ lineHeight: 1.5, marginTop: '1rem' }}>
+                {selectedEvent.description}
+              </Text>
+
+              {selectedEvent.presenter && (
+                <Group style={{ marginBlock: '1rem' }}>
+                  <Avatar
+                    src={selectedEvent.presenter.profileImage}
+                    radius="xl"
+                    alt={selectedEvent.presenter.name}
+                    color="primary"
+                  >
+                    {getInitials(selectedEvent.presenter.name)}
+                  </Avatar>
+                  <Box>
+                    <Text size="lg" weight="bold">
+                      {selectedEvent.presenter.name}
                     </Text>
-                  </Group>
-
-                  {(() => {
-                    const location = selectedEvent.locationVerbose || selectedEvent.location;
-                    if (location)
-                      return (
-                        <Group>
-                          <Pin size="1.2rem" color="grey" />
-                          <Text>{location}</Text>
-                        </Group>
-                      );
-                  })()}
-
-                  <Group>
-                    <SelectedIcon size="1.2rem" color="grey" />
-                    <Text>{selectedEvent.type}</Text>
-                  </Group>
-                </Box>
-
-                <Text>{selectedEvent.description}</Text>
-              </>
-            );
-          })()}
-        </Modal>
-      </Portal>
+                    <Text color="dimmed">{selectedEvent.presenter.organization}</Text>
+                  </Box>
+                </Group>
+              )}
+            </Card>
+          );
+        })()}
+      </Modal>
     </Layout>
   );
 }
