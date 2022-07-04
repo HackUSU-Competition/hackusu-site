@@ -57,22 +57,29 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
     name: 'Friday',
     events: [
       {
+        title: 'Check-in',
         startTime: 16,
         endTime: 18,
-        title: 'Check-in',
+        locationVerbose: 'North Entrance',
         type: eventTypes.general,
-        presenter: { name: 'Troy DeSpain' },
+        description:
+          'Check-in will be inside the north entrance of Huntsman Hall, Utah State University. Follow the signs to the front desk to get your swag!',
+        coverImage: require('../images/scenes/huntsman-hall.jpg').default,
       },
       {
         startTime: 16.5,
         endTime: 17.75,
         title: 'Dinner - Pizza',
         type: eventTypes.food,
+        location: '2nd Floor',
+        description: 'After you check-in and find a spot for your group, come enjoy some pizza!',
       },
       {
         startTime: 18,
         endTime: 18.75,
         title: 'Opening Keynote',
+        location: '4th Floor',
+        locationVerbose: 'Perry Pavilion (4th floor)',
         type: eventTypes.general,
         skillLevel: skillLevels.everyone,
       },

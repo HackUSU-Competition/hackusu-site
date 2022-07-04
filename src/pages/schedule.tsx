@@ -1,17 +1,8 @@
-import {
-  Avatar,
-  Box,
-  Card,
-  ColorSwatch,
-  Container,
-  Group,
-  Modal,
-  Image,
-  Badge,
-  Text,
-} from '@mantine/core';
+import { Box, ColorSwatch, Container, Group, Text, useMantineTheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import PageTitle from 'components/PageTitle';
+import EventModal from 'components/Schedule/EventModal';
+import EventTileContent from 'components/Schedule/EventTileContent';
 import {
   HackUSUCalendarEvent,
   fridaySchedule,
@@ -20,34 +11,8 @@ import {
 } from 'content/scheduleContent';
 import React, { FC, useContext, useState } from 'react';
 import { ScheduleView, createTheme, ThemeContext, themes } from 'react-schedule-view';
-import { Clock, Pin } from 'tabler-icons-react';
+import { ScheduleViewProps } from 'react-schedule-view/ScheduleView';
 import Layout from '../components/Layout/Layout';
-
-const getInitials = (name: string) => {
-  const names = name.split(' ');
-  const initials = names.map((n) => n[0]).join('');
-  return initials;
-};
-
-const EventContent: FC<{ event: HackUSUCalendarEvent }> = ({ event }) => {
-  const theme = useContext(ThemeContext);
-
-  return (
-    <>
-      <Group
-        position="apart"
-        style={{
-          fontSize: '0.8rem',
-          fontWeight: 'lighter',
-        }}
-      >
-        {theme.timeRangeFormatter(event.startTime, event.endTime)}
-        <div>{event.location}</div>
-      </Group>
-      <div style={{ fontWeight: 'bold', fontSize: '0.8rem', lineHeight: 1.2 }}>{event.title}</div>
-    </>
-  );
-};
 
 const customCalendarTheme = createTheme('apple', {
   hourHeight: '95px',
@@ -61,13 +26,21 @@ const customCalendarTheme = createTheme('apple', {
       marginBottom: '1rem',
     },
   },
-  themeTileContent: EventContent,
+  timeFormatter: (time: number) =>
+    time === 0 || time === 24 ? 'Midnight' : themes.apple.timeFormatter(time),
+  themeTileContent: EventTileContent,
   defaultTileColor: (event: HackUSUCalendarEvent) => event.type.color,
 });
 
 export default function Schedule() {
   const smallScreen = useMediaQuery('(max-width: 900px)');
+
   const [selectedEvent, setSelectedEvent] = useState<HackUSUCalendarEvent | null>(null);
+
+  const commonScheduleProps: Partial<ScheduleViewProps<HackUSUCalendarEvent>> = {
+    theme: customCalendarTheme,
+    handleEventClick: (event) => setSelectedEvent(event),
+  };
 
   return (
     <Layout>
@@ -96,104 +69,18 @@ export default function Schedule() {
             viewStartTime={15}
             viewEndTime={25}
             daySchedules={fridaySchedule}
-            theme={customCalendarTheme}
-            handleEventClick={(event) => setSelectedEvent(event)}
+            {...commonScheduleProps}
           />
           <ScheduleView
             viewStartTime={7}
             viewEndTime={20}
             daySchedules={saturdaySchedule}
-            theme={customCalendarTheme}
-            handleEventClick={(event) => setSelectedEvent(event)}
+            {...commonScheduleProps}
           />
         </Box>
       </Container>
 
-      <Modal
-        centered
-        opened={!!selectedEvent}
-        onClose={() => setSelectedEvent(null)}
-        withCloseButton={false}
-        overlayBlur={1}
-        styles={{
-          modal: {
-            padding: '0 !important',
-          },
-        }}
-      >
-        {(() => {
-          if (!selectedEvent) return null;
-
-          const location = selectedEvent.locationVerbose ?? selectedEvent.location;
-
-          return (
-            <Card>
-              <Card.Section style={{ borderBottom: '1px solid #AAA' }}>
-                <Image
-                  withPlaceholder
-                  src={
-                    selectedEvent.coverImage ||
-                    require('../images/backgrounds/triangles.svg').default
-                  }
-                  height={selectedEvent.coverImage ? 160 : 80}
-                />
-              </Card.Section>
-
-              <Group position="apart" style={{ marginBlock: 16 }}>
-                <div style={{ flexGrow: 1, textAlign: 'center' }}>
-                  {themes.apple.timeRangeFormatter(selectedEvent.startTime, selectedEvent.endTime)}
-                </div>
-                <div>•</div>
-                {location && (
-                  <>
-                    <div style={{ flexGrow: 1, textAlign: 'center' }}>{location}</div>
-                    <div>•</div>
-                  </>
-                )}
-
-                <div style={{ flexGrow: 1, textAlign: 'center' }}>{selectedEvent.type.name}</div>
-              </Group>
-
-              <Group noWrap position="apart" align="top">
-                <Text weight="bold" size="xl" style={{ lineHeight: 1.2 }}>
-                  {selectedEvent.title}
-                </Text>
-
-                {selectedEvent.skillLevel && (
-                  <div>
-                    <Badge variant="filled" color={selectedEvent.skillLevel.color}>
-                      {selectedEvent.skillLevel.name}
-                    </Badge>
-                  </div>
-                )}
-              </Group>
-
-              <Text size="sm" style={{ lineHeight: 1.5, marginTop: '1rem' }}>
-                {selectedEvent.description}
-              </Text>
-
-              {selectedEvent.presenter && (
-                <Group style={{ marginBlock: '1rem' }}>
-                  <Avatar
-                    src={selectedEvent.presenter.profileImage}
-                    radius="xl"
-                    alt={selectedEvent.presenter.name}
-                    color="primary"
-                  >
-                    {getInitials(selectedEvent.presenter.name)}
-                  </Avatar>
-                  <Box>
-                    <Text size="lg" weight="bold">
-                      {selectedEvent.presenter.name}
-                    </Text>
-                    <Text color="dimmed">{selectedEvent.presenter.organization}</Text>
-                  </Box>
-                </Group>
-              )}
-            </Card>
-          );
-        })()}
-      </Modal>
+      <EventModal event={selectedEvent} handleClose={() => setSelectedEvent(null)} />
     </Layout>
   );
 }
