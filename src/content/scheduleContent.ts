@@ -60,6 +60,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Check-in',
         startTime: 16,
         endTime: 18,
+        location: 'N. Entrance',
         locationVerbose: 'North Entrance',
         type: eventTypes.general,
         description:
@@ -129,7 +130,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       },
       {
         startTime: 22,
-        endTime: 24,
+        endTime: 23.75,
         title: 'Movie',
         type: eventTypes.activity,
       },
@@ -145,12 +146,6 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Pizza: Round 2',
         type: eventTypes.food,
       },
-      {
-        startTime: 24,
-        endTime: 25,
-        title: 'Aggie Ice Cream',
-        type: eventTypes.food,
-      },
     ],
   },
 ];
@@ -159,6 +154,18 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
   {
     name: 'Saturday',
     events: [
+      {
+        startTime: 0,
+        endTime: 1,
+        title: 'Aggie Ice Cream',
+        type: eventTypes.food,
+      },
+      {
+        startTime: 1,
+        endTime: 2.75,
+        title: 'Movie',
+        type: eventTypes.activity,
+      },
       {
         startTime: 8,
         endTime: 9.5,

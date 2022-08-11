@@ -1,16 +1,16 @@
-import { Box, ColorSwatch, Container, Group, Text, useMantineTheme } from '@mantine/core';
+import { ColorSwatch, Container, Group, Space, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import PageTitle from 'components/PageTitle';
 import EventModal from 'components/Schedule/EventModal';
 import EventTileContent from 'components/Schedule/EventTileContent';
 import {
-  HackUSUCalendarEvent,
-  fridaySchedule,
-  saturdaySchedule,
   eventTypes,
+  fridaySchedule,
+  HackUSUCalendarEvent,
+  saturdaySchedule,
 } from 'content/scheduleContent';
-import React, { FC, useContext, useState } from 'react';
-import { ScheduleView, createTheme, ThemeContext, themes } from 'react-schedule-view';
+import React, { useState } from 'react';
+import { createTheme, ScheduleView, themes } from 'react-schedule-view';
 import { ScheduleViewProps } from 'react-schedule-view/ScheduleView';
 import Layout from '../components/Layout/Layout';
 
@@ -33,7 +33,7 @@ const customCalendarTheme = createTheme('apple', {
 });
 
 export default function Schedule() {
-  const smallScreen = useMediaQuery('(max-width: 900px)');
+  const smallScreen = useMediaQuery('screen and (max-width: 900px)');
 
   const [selectedEvent, setSelectedEvent] = useState<HackUSUCalendarEvent | null>(null);
 
@@ -45,7 +45,7 @@ export default function Schedule() {
   return (
     <Layout>
       <PageTitle>SCHEDULE</PageTitle>
-      <Container style={{ marginTop: '3rem' }} size="lg">
+      <Container style={{ marginTop: '3rem' }} size="sm">
         <Group spacing="xl" position="center">
           {Object.values(eventTypes).map((event) => (
             <Group key={event.name} spacing="xs">
@@ -56,28 +56,12 @@ export default function Schedule() {
             </Group>
           ))}
         </Group>
-        <Box
-          style={{
-            display: 'grid',
-            gap: '3rem',
-            alignItems: 'flex-start',
-            gridTemplateColumns: smallScreen ? 'auto' : 'auto auto',
-            marginTop: '3rem',
-          }}
-        >
-          <ScheduleView
-            viewStartTime={15}
-            viewEndTime={25}
-            daySchedules={fridaySchedule}
-            {...commonScheduleProps}
-          />
-          <ScheduleView
-            viewStartTime={7}
-            viewEndTime={20}
-            daySchedules={saturdaySchedule}
-            {...commonScheduleProps}
-          />
-        </Box>
+
+        <Space h="xl" />
+
+        <ScheduleView viewStartTime={15} daySchedules={fridaySchedule} {...commonScheduleProps} />
+        <Space h="xl" />
+        <ScheduleView viewEndTime={20} daySchedules={saturdaySchedule} {...commonScheduleProps} />
       </Container>
 
       <EventModal event={selectedEvent} handleClose={() => setSelectedEvent(null)} />
