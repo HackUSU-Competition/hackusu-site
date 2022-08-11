@@ -1,10 +1,10 @@
 import { MantineProvider } from '@mantine/core';
+import 'animate.css/animate.min.css';
 import { globalStyles } from 'globalStyles';
 import React, { FC, ReactNode } from 'react';
 import theme from 'theme';
 import FooterLinks from './Footer';
 import HeaderNav from './Header';
-import 'animate.css/animate.min.css';
 
 const Layout: FC<{ children: ReactNode }> = (props) => {
   return (
