@@ -94,7 +94,7 @@ const BenefitsTable: FC = () => {
             {levelName}
           </Text>
           <Text color="white" weight={400} align="center" size="sm">
-            ${abbreviate(amount)}
+            {amount ? `$${abbreviate(amount)}` : 'Contact us'}
           </Text>
         </Box>
       </Box>

@@ -5,7 +5,7 @@ export enum LevelName {
   TITLE = 'Title',
 }
 
-export const levelData: Record<LevelName, { amount: number; color: string; limit?: number }> = {
+export const levelData: Record<LevelName, { amount?: number; color: string; limit?: number }> = {
   // [LevelName.BRONZE]: { amount: 500, color: 'linear-gradient(280deg, rgba(141,99,87,1) 0%, rgba(162,119,107,1) 100%)' },
   // [LevelName.SILVER]: { amount: 1500, color: 'linear-gradient(280deg, rgba(144,144,160,1) 0%, rgba(163,163,179,1) 100%)' },
   // [LevelName.GOLD]: { amount: 5000, color: 'linear-gradient(280deg, rgba(240,173,78,1) 0%, rgba(255,220,145,1) 100%)' },
@@ -13,7 +13,7 @@ export const levelData: Record<LevelName, { amount: number; color: string; limit
   [LevelName.AFFILIATE]: { amount: 500, color: '#9D7367' },
   [LevelName.PARTNER]: { amount: 1000, color: '#9090A0' },
   [LevelName.TRACK]: { amount: 5000, color: '#f0ad4e', limit: 4 },
-  [LevelName.TITLE]: { amount: 20000, color: '#4781E4', limit: 1 },
+  [LevelName.TITLE]: { amount: undefined, color: '#4781E4', limit: 1 },
 };
 
 // Returns a list of the levels above the given level, including the level
