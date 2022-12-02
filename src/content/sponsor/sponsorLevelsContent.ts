@@ -20,7 +20,7 @@ export const levelData: Record<LevelName, { amount?: number; color: string; limi
 const levelsAbove = (minLevel: LevelName): LevelName[] => {
   const minAmount = levelData[minLevel].amount;
   return Object.keys(levelData).filter(
-    (level) => levelData[level].amount >= minAmount
+    (level) => levelData[level].amount === undefined || levelData[level].amount >= minAmount
   ) as LevelName[];
 };
 
