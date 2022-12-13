@@ -165,6 +165,11 @@ export default function HomePage() {
       <Section title="FAQ" width="sm">
         {[
           {
+            question: 'When and where is HackUSU?',
+            answer:
+              'HackUSU is March 24-25 2023 in Huntsman Hall, Utah State University. Check-in will open at 3:00 pm.',
+          },
+          {
             question: 'Are there other things to do besides the competition?',
             answer:
               "Yes, we'll have workshops and other activities running the whole time! You'll also be able to network with employers, and get help from experts on other projects.",
