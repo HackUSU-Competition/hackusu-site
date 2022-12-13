@@ -15,7 +15,7 @@ import { ScheduleViewProps } from 'react-schedule-view/ScheduleView';
 import Layout from '../components/Layout/Layout';
 
 const customCalendarTheme = createTheme('apple', {
-  hourHeight: '95px',
+  hourHeight: '75px',
   style: {
     timeScaleLabels: { color: '#555' },
     dayLabels: {
@@ -24,6 +24,9 @@ const customCalendarTheme = createTheme('apple', {
       textTransform: 'uppercase',
       fontSize: '22px',
       marginBottom: '1rem',
+    },
+    eventTiles: {
+      maxWidth: '450px',
     },
   },
   timeFormatter: (time: number) =>
