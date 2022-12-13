@@ -18,9 +18,7 @@ export default function Registration() {
           breakpoints={[{ maxWidth: 'xs', cols: 1, spacing: 'sm' }]}
         >
           <Box>
-            <Text component="p">
-              We'll publish the registration form near the end of fall semester!
-            </Text>
+            <Text component="p">We'll publish the registration form in January!</Text>
             <Text component="p">
               In the meantime, we're looking for help preparing for the event! Let us know if you
               have connections with people at any companies who are interested in partnering with
