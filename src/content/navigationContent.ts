@@ -54,10 +54,10 @@ export const footerLinkGroups: FooterLinkGroup[] = [
         label: 'Location',
         href: paths.location,
       },
-      // {
-      //   label: 'Schedule',
-      //   href: paths.schedule,
-      // },
+      {
+        label: 'Schedule',
+        href: paths.schedule,
+      },
       {
         label: 'Code of Conduct & Risk Management',
         href: paths.safety,
