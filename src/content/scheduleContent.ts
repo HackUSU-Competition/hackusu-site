@@ -58,7 +58,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
     events: [
       {
         title: 'Check-in',
-        startTime: 15,
+        startTime: 16,
         endTime: 17,
         location: 'N. Entrance',
         locationVerbose: 'North Entrance',

@@ -6,7 +6,7 @@ import { ArrowRight } from 'tabler-icons-react';
 const About: FC = () => {
   return (
     <>
-      <Section title="What is HackUSU" subtitle="300+ Students • 24 Hours • March 24-25, 2023">
+      <Section title="What is HackUSU?" subtitle="300+ Students • 24 Hours • March 24-25, 2023">
         <Text size="xl" mt={10} weight={500}>
           We're HackUSU, Utah's largest and oldest student-run hackathon. Each year, hundreds of
           students and professionals meet at Utah State University for competitions and workshops
