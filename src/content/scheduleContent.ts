@@ -296,7 +296,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       },
       {
         startTime: 8,
-        endTime: 9.5,
+        endTime: 9,
         title: 'Breakfast - Bagels & Breakfast Sandwiches',
         description: 'Come get some breakfast from Einstein Bros. Bagels!',
         type: eventTypes.food,
@@ -304,6 +304,21 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 9,
         endTime: 10,
+        title: 'A Wholly Remarkable Orientation to the Corporate Universe',
+        type: eventTypes.workshop,
+        skillLevel: skillLevels.everyone,
+        description:
+          'This presentation will take a dive into the corporate universe and provide you with a wholly remarkable orientation to help you understand what corporate life will be like. Should you work for that company? Diagnose and understand what life will be like for you as you pursue your successful career. Will you enjoy the fast paced company? or would you like something more structured? We will weigh the pros and cons of each and help you know before you go!',
+        location: '3rd Floor',
+        presenter: {
+          name: 'Mike Judy',
+          profileImage: undefined,
+          organization: 'iFit',
+        },
+      },
+      {
+        startTime: 10,
+        endTime: 11,
         title: 'Making a Kotlin Library',
         skillLevel: skillLevels.intermediate,
         type: eventTypes.workshop,
@@ -316,26 +331,32 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
       },
       {
-        startTime: 10,
+        startTime: 11,
         endTime: 12,
-        title: 'Saturday Morning Workshops',
+        title: 'Technical Writing in STEM',
+        skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        description:
-          "Join us for workshops and talks related to software, hardware, data science, and more! We'll post more details closer to the event.",
         location: '3rd Floor',
+        description: undefined,
+        presenter: {
+          name: 'Colin Geslin',
+          profileImage: undefined,
+          organization: 'Space Dynamics Laboratory',
+        },
       },
+
       // {
       //   startTime: 9,
       //   endTime: 10,
       //   title: 'Resumes and Cover Letters that Work!',
       //   type: eventTypes.workshop,
       // },
-      {
-        startTime: 10,
-        endTime: 11,
-        title: 'Wikipedia Race',
-        type: eventTypes.activity,
-      },
+      // {
+      //   startTime: 10,
+      //   endTime: 11,
+      //   title: 'Wikipedia Race',
+      //   type: eventTypes.activity,
+      // },
       {
         startTime: 13,
         endTime: 14,
@@ -370,7 +391,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       // },
       {
         startTime: 12,
-        endTime: 13.5,
+        endTime: 13,
         title: 'Lunch - Subs',
         description: 'Come get some lunch from Firehouse Subs!',
         type: eventTypes.food,
