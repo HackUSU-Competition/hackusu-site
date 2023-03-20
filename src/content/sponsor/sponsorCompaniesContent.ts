@@ -4,38 +4,54 @@ export interface Sponsor {
   url?: string;
 }
 
-export const sponsors2022: Sponsor[] = [
+export const sponsors2023: Sponsor[] = [
   {
-    name: 'Jon M. Huntsman School of Business',
-    logo: require('images/sponsors/huntsman-dais.png').default,
+    name: 'Nice',
+    logo: require('images/sponsors/nice.png').default,
   },
   {
     name: 'Lightning Kite',
     logo: require('images/sponsors/lightning-kite.svg').default,
   },
   {
-    name: 'Focused Support',
-    logo: require('images/sponsors/focused-support.png').default,
+    name: 'Space Dynamics Lab',
+    logo: require('images/sponsors/sdl.png').default,
+  },
+  {
+    name: 'Jon M. Huntsman School of Business',
+    logo: require('images/sponsors/huntsman-dais.png').default,
+  },
+  {
+    name: 'USU College of Engineering',
+    logo: require('images/sponsors/college-of-engineering.png').default,
   },
   {
     name: 'USU College of Science',
     logo: require('images/sponsors/college-of-science.png').default,
   },
   {
-    name: 'Space Dynamics Lab',
-    logo: require('images/sponsors/sdl.png').default,
+    name: 'Lucid',
+    logo: require('images/sponsors/lucid.png').default,
   },
   {
-    name: 'XMission',
-    logo: require('images/sponsors/xmission.png').default,
-  },
-  {
-    name: 'VLCM',
-    logo: require('images/sponsors/vlcm.png').default,
+    name: 'L3Harris',
+    logo: require('images/sponsors/l3harris.svg').default,
   },
 ];
 
 export const pastSponsors: Sponsor[] = [
+  {
+    name: 'Nice',
+    logo: require('images/sponsors/nice.png').default,
+  },
+  {
+    name: 'L3Harris',
+    logo: require('images/sponsors/l3harris.svg').default,
+  },
+  {
+    name: 'Lucid',
+    logo: require('images/sponsors/lucid.png').default,
+  },
   {
     name: 'Mozilla Foundation',
     logo: require('images/sponsors/mozilla.jpg').default,
