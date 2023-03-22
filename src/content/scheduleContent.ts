@@ -68,15 +68,6 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         coverImage: require('../images/scenes/huntsman-hall.jpg').default,
       },
       {
-        startTime: 18,
-        endTime: 19,
-        title: 'Dinner - Pizza',
-        type: eventTypes.food,
-        location: '2nd Floor',
-        description:
-          'After you check-in and find a spot for your group, come enjoy some pizza from Hungry Howie’s!',
-      },
-      {
         startTime: 17,
         endTime: 17.83,
         title: 'Opening Keynote - Quantum Computing',
@@ -91,6 +82,29 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
       },
       {
+        startTime: 18,
+        endTime: 19,
+        title: 'Dinner - Pizza',
+        type: eventTypes.food,
+        location: '2nd Floor',
+        description:
+          'After you check-in and find a spot for your group, come enjoy some pizza from Hungry Howie’s!',
+      },
+      {
+        startTime: 19,
+        endTime: 20,
+        title: 'The Kotlin Programming Language',
+        skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: '3rd Floor',
+        description: undefined,
+        presenter: {
+          name: 'Joseph Ivie',
+          profileImage: undefined,
+          organization: 'Lightning Kite',
+        },
+      },
+      {
         startTime: 19,
         endTime: 20,
         title: 'Intro to Systems Engineering',
@@ -102,20 +116,6 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
           name: 'Jaque Johansen',
           profileImage: require('images/schedule/jaque-johansen.jpg').default,
           organization: 'L3Harris',
-        },
-      },
-      {
-        startTime: 19,
-        endTime: 20,
-        title: 'Quantum Computing',
-        skillLevel: skillLevels.everyone,
-        type: eventTypes.workshop,
-        location: '3rd Floor',
-        description: undefined,
-        presenter: {
-          name: 'Sean Kirby',
-          profileImage: undefined,
-          organization: 'NICE',
         },
       },
       {
@@ -208,20 +208,6 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Pizza: Round 2',
         type: eventTypes.food,
         location: '2nd Floor',
-      },
-      {
-        startTime: 23,
-        endTime: 24,
-        title: 'The Kotlin Programming Language',
-        skillLevel: skillLevels.beginner,
-        type: eventTypes.workshop,
-        location: '3rd Floor',
-        description: undefined,
-        presenter: {
-          name: 'Joseph Ivie',
-          profileImage: undefined,
-          organization: 'Lightning Kite',
-        },
       },
     ],
   },
