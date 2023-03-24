@@ -96,7 +96,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'The Kotlin Programming Language',
         skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 320',
         description: undefined,
         presenter: {
           name: 'Joseph Ivie',
@@ -110,7 +110,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Intro to Systems Engineering',
         skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 322',
         description: undefined,
         presenter: {
           name: 'Jaque Johansen',
@@ -124,7 +124,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Intro to MBSE',
         skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 320',
         description: undefined,
         presenter: {
           name: 'Braydn Clark',
@@ -138,7 +138,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'How hackathon experiences lead to real-world projects',
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 322',
         description: undefined,
         presenter: {
           name: 'John Harrison',
@@ -152,7 +152,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Lightning Server: A simple, Kotlin server framework',
         skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 320',
         description: undefined,
         presenter: {
           name: 'Joseph Ivie',
@@ -166,7 +166,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'How to Fund Your Startup',
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 322',
         description: undefined,
         presenter: {
           name: 'Alfredo Solar',
@@ -180,7 +180,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Lightning Server: Deploying to AWS',
         skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 320',
         description: undefined,
         presenter: {
           name: 'Joseph Ivie',
@@ -194,7 +194,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Organizing Large Codebases with Dependency Injection',
         skillLevel: skillLevels.intermediate,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 322',
         description: undefined,
         presenter: {
           name: 'Hunter Henrichsen',
@@ -245,7 +245,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         skillLevel: skillLevels.everyone,
         description:
           'This presentation will take a dive into the corporate universe and provide you with a wholly remarkable orientation to help you understand what corporate life will be like. Should you work for that company? Diagnose and understand what life will be like for you as you pursue your successful career. Will you enjoy the fast paced company? or would you like something more structured? We will weigh the pros and cons of each and help you know before you go!',
-        location: '3rd Floor',
+        location: 'Room 320',
         presenter: {
           name: 'Mike Judy',
           profileImage: undefined,
@@ -258,7 +258,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Making a Kotlin Library',
         skillLevel: skillLevels.intermediate,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 320',
         description: undefined,
         presenter: {
           name: 'Joseph Ivie',
@@ -272,7 +272,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Technical Writing in STEM',
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 320',
         description: undefined,
         presenter: {
           name: 'Colin Geslin',
@@ -299,7 +299,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'How to Fund Your Startup',
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 320',
         description: undefined,
         presenter: {
           name: 'Alfredo Solar',
@@ -313,7 +313,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: 'Creating a Web Application with Docker and Node.js',
         skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: '3rd Floor',
+        location: 'Room 320',
         description: undefined,
         presenter: {
           name: 'Hunter Henrichsen',
@@ -384,20 +384,20 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         endTime: 17,
         title: 'Preliminary Judging',
         type: eventTypes.general,
-        location: '3rd Floor',
       },
       {
         startTime: 17,
         endTime: 18,
         title: 'Finalist Judging',
         type: eventTypes.general,
-        location: '3rd Floor',
       },
       {
         startTime: 18.5,
         endTime: 19.25,
         title: 'Award Ceremony',
         type: eventTypes.general,
+        location: '4th Floor',
+        locationVerbose: 'Perry Pavilion (4th floor)',
       },
     ],
   },
