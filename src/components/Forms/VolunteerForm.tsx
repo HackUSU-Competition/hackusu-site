@@ -54,7 +54,7 @@ const VolunteerForm: FC<ContainerProps> = (props) => {
           sendEmail({
             from: name,
             subject: "Volunteer Form Submission",
-            message: message,
+            message,
             data: {
               Name: name,
               Email: email,

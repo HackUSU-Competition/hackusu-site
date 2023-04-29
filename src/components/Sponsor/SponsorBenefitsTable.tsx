@@ -19,7 +19,7 @@ import {
 } from "content/sponsor/sponsorLevelsContent"
 import React, {FC} from "react"
 import {CircleCheck, InfoCircle, Star} from "tabler-icons-react"
-var abbreviate = require("number-abbreviate")
+const abbreviate = require("number-abbreviate")
 
 const useStyles = createStyles((t) => ({
   checkBoxCell: {

@@ -4,7 +4,7 @@ export interface SendEmailParams {
   message: string
   subject?: string
   from?: string
-  data?: Object
+  data?: Record<string, unknown>
 }
 
 export const sendEmail = async (params: SendEmailParams): Promise<void> => {
@@ -17,7 +17,7 @@ export const sendEmail = async (params: SendEmailParams): Promise<void> => {
       Accept: "application/json"
     },
     body: JSON.stringify({
-      message: message,
+      message,
       ...data,
       _email: {
         subject: subject || "HackUSU Contact Form Submission",
