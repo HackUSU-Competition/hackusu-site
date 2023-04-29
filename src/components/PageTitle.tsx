@@ -1,30 +1,32 @@
-import { Box, Container, createStyles, Title } from '@mantine/core';
-import React, { FC, ReactNode } from 'react';
+import {Box, Container, createStyles, Title} from "@mantine/core"
+import React, {FC, ReactNode} from "react"
 
 const useStyles = createStyles((theme) => ({
   container: {
-    backgroundImage: `url(${require('images/backgrounds/circuit-board.svg').default})`,
-    backgroundColor: theme.colors.navy[8],
+    backgroundImage: `url(${
+      require("images/backgrounds/circuit-board.svg").default
+    })`,
+    backgroundColor: theme.colors.navy[8]
     // backgroundImage: `linear-gradient(-60deg, ${theme.colors[theme.primaryColor][4]} 0%, ${
     //   theme.colors[theme.primaryColor][7]
     // } 100%)`,
   },
   text: {
     color: theme.white,
-    paddingTop: theme.spacing.xl * 5,
-    paddingBottom: theme.spacing.xl * 2,
-    letterSpacing: '0.05em',
-    fontSize: theme.fontSizes.xl * 2,
-    textAlign: 'center',
+    paddingTop: 120,
+    paddingBottom: 47,
+    letterSpacing: "0.05em",
+    fontSize: 40,
+    textAlign: "center",
 
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: theme.fontSizes.xl * 1.5,
-    },
-  },
-}));
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: 30
+    }
+  }
+}))
 
-const PageTitle: FC<{ children: ReactNode }> = ({ children }) => {
-  const { classes } = useStyles();
+const PageTitle: FC<{children: ReactNode}> = ({children}) => {
+  const {classes} = useStyles()
 
   return (
     <Box className={classes.container}>
@@ -34,7 +36,7 @@ const PageTitle: FC<{ children: ReactNode }> = ({ children }) => {
         </Title>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default PageTitle;
+export default PageTitle

@@ -1,36 +1,44 @@
-import { Anchor, Button, Container, createStyles, Group, Text, Title } from '@mantine/core';
-import Layout from 'components/Layout/Layout';
-import { paths } from 'content/navigationContent';
-import { Link } from 'gatsby';
-import React from 'react';
+import {
+  Anchor,
+  Button,
+  Container,
+  createStyles,
+  Group,
+  Text,
+  Title
+} from "@mantine/core"
+import Layout from "components/Layout/Layout"
+import {paths} from "content/navigationContent"
+import {Link} from "gatsby"
+import React from "react"
 
 const useStyles = createStyles((theme) => ({
   label: {
-    textAlign: 'center',
+    textAlign: "center",
     fontWeight: 900,
     fontSize: 220,
     lineHeight: 1,
     marginBottom: theme.spacing.xl * 1.5,
     color: theme.colors.gray[2],
 
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: 120,
-    },
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: 120
+    }
   },
 
   title: {
-    textAlign: 'center',
+    textAlign: "center",
     fontWeight: 900,
     fontSize: 38,
 
-    [theme.fn.smallerThan('sm')]: {
-      fontSize: 32,
-    },
-  },
-}));
+    [theme.fn.smallerThan("sm")]: {
+      fontSize: 32
+    }
+  }
+}))
 
 export default function NotFoundTitle() {
-  const { classes } = useStyles();
+  const {classes} = useStyles()
 
   return (
     <Layout>
@@ -38,8 +46,8 @@ export default function NotFoundTitle() {
         <div className={classes.label}>404</div>
         <Title className={classes.title}>You have found a hidden page.</Title>
         <Text color="dimmed" size="lg" align="center" mx="auto" my={20}>
-          Unfortunately, this is only a 404 page. You may have mistyped the address, or the page has
-          been moved to another URL.
+          Unfortunately, this is only a 404 page. You may have mistyped the
+          address, or the page has been moved to another URL.
         </Text>
         <Group position="center">
           <Anchor component={Link} to={paths.home}>
@@ -50,5 +58,5 @@ export default function NotFoundTitle() {
         </Group>
       </Container>
     </Layout>
-  );
+  )
 }

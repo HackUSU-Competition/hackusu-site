@@ -4,34 +4,34 @@ import {
   Box,
   Card,
   Group,
-  Modal,
   Image,
+  Modal,
   Text,
-  useMantineTheme,
-} from '@mantine/core';
-import { HackUSUCalendarEvent } from 'content/scheduleContent';
-import React, { FC } from 'react';
-import { themes } from 'react-schedule-view';
-import { Clock, Pin } from 'tabler-icons-react';
+  useMantineTheme
+} from "@mantine/core"
+import {HackUSUCalendarEvent} from "content/scheduleContent"
+import React, {FC} from "react"
+import {themes} from "react-schedule-view"
+import {Clock, Pin} from "tabler-icons-react"
 
 const getInitials = (name: string) => {
-  const names = name.split(' ');
-  const initials = names.map((n) => n[0]).join('');
-  return initials;
-};
+  const names = name.split(" ")
+  const initials = names.map((n) => n[0]).join("")
+  return initials
+}
 
 export interface EventModalProps {
-  event?: HackUSUCalendarEvent;
-  handleClose: () => void;
+  event?: HackUSUCalendarEvent
+  handleClose: () => void
 }
 
 const EventModal: FC<EventModalProps> = (props) => {
-  const { event, handleClose } = props;
-  const theme = useMantineTheme();
+  const {event, handleClose} = props
+  const theme = useMantineTheme()
 
-  if (!event) return null;
+  if (!event) return null
 
-  const location = event.locationVerbose ?? event.location;
+  const location = event.locationVerbose ?? event.location
 
   return (
     <Modal
@@ -39,18 +39,20 @@ const EventModal: FC<EventModalProps> = (props) => {
       opened={!!event}
       onClose={handleClose}
       withCloseButton={false}
-      overlayBlur={1}
-      styles={{
+      sx={{
         modal: {
-          padding: '0 !important',
-        },
+          padding: "0 !important"
+        }
       }}
     >
       <Card>
-        <Card.Section style={{ borderBottom: '1px solid #AAA' }}>
+        <Card.Section style={{borderBottom: "1px solid #AAA"}}>
           <Image
             withPlaceholder
-            src={event.coverImage || require('../../images/backgrounds/triangles.svg').default}
+            src={
+              event.coverImage ||
+              require("../../images/backgrounds/triangles.svg").default
+            }
             height={event.coverImage ? 160 : 80}
           />
         </Card.Section>
@@ -60,17 +62,17 @@ const EventModal: FC<EventModalProps> = (props) => {
             position="apart"
             style={{
               paddingBlock: 8,
-              marginBottom: '1rem',
-              backgroundColor: theme.colors.gray[2],
+              marginBottom: "1rem",
+              backgroundColor: theme.colors.gray[2]
             }}
           >
-            <Group spacing="xs" position="center" style={{ flexGrow: 1 }}>
+            <Group spacing="xs" position="center" style={{flexGrow: 1}}>
               <Clock size="1.2rem" color="grey" />
               {themes.apple.timeRangeFormatter(event.startTime, event.endTime)}
             </Group>
 
             {location && (
-              <Group spacing="xs" position="center" style={{ flexGrow: 1 }}>
+              <Group spacing="xs" position="center" style={{flexGrow: 1}}>
                 <Pin size="1.2rem" color="grey" />
                 {location}
               </Group>
@@ -79,7 +81,7 @@ const EventModal: FC<EventModalProps> = (props) => {
         </Card.Section>
 
         <Group noWrap position="apart" align="top">
-          <Text weight="bold" size="xl" style={{ lineHeight: 1.2 }}>
+          <Text weight="bold" size="xl" style={{lineHeight: 1.2}}>
             {event.title}
           </Text>
 
@@ -92,12 +94,12 @@ const EventModal: FC<EventModalProps> = (props) => {
           )}
         </Group>
 
-        <Text size="sm" style={{ lineHeight: 1.5, marginTop: '1rem' }}>
+        <Text size="sm" style={{lineHeight: 1.5, marginTop: "1rem"}}>
           {event.description}
         </Text>
 
         {event.presenter && (
-          <Group style={{ marginBlock: '1rem' }}>
+          <Group style={{marginBlock: "1rem"}}>
             <Avatar
               src={event.presenter.profileImage}
               radius="xl"
@@ -116,7 +118,7 @@ const EventModal: FC<EventModalProps> = (props) => {
         )}
       </Card>
     </Modal>
-  );
-};
+  )
+}
 
-export default EventModal;
+export default EventModal

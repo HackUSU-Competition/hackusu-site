@@ -1,51 +1,62 @@
-import { Box, BoxProps, Container, MantineNumberSize, MantineProvider, Sx } from '@mantine/core';
-import SectionHead from 'components/SectionHead';
-import React, { FC, ReactNode } from 'react';
+import {
+  Box,
+  BoxProps,
+  Container,
+  MantineNumberSize,
+  MantineProvider,
+  Sx
+} from "@mantine/core"
+import SectionHead from "components/SectionHead"
+import React, {FC, ReactNode} from "react"
 
-export interface SectionProps extends BoxProps<'div'> {
-  title?: string;
-  subtitle?: string;
-  children: ReactNode;
-  background?: 'white' | 'light' | 'pattern';
-  fullWidth?: boolean;
-  width?: MantineNumberSize;
+export interface SectionProps extends BoxProps {
+  title?: string
+  subtitle?: string
+  children: ReactNode
+  background?: "white" | "light" | "pattern"
+  fullWidth?: boolean
+  width?: MantineNumberSize
 }
 
-const boxSX: Record<SectionProps['background'], Sx> = {
+const boxSX: Record<SectionProps["background"], Sx> = {
   white: {},
   light: (theme) => ({
     backgroundColor: theme.colors.gray[1],
-    border: `1px solid ${theme.colors.gray[3]}`,
+    border: `1px solid ${theme.colors.gray[3]}`
   }),
   pattern: {
-    background: `url(${require('../../images/backgrounds/light-triangles-large.svg').default})`,
-    backgroundSize: 'cover',
-  },
-};
-
-const defaultProps: Record<SectionProps['background'], Record<string, Record<string, any>>> = {
-  white: {},
-  light: {},
-  pattern: {},
-};
+    background: `url(${
+      require("../../images/backgrounds/light-triangles-large.svg").default
+    })`,
+    backgroundSize: "cover"
+  }
+}
 
 const Section: FC<SectionProps> = (props) => {
-  const { title, subtitle, children, fullWidth, background = 'white', width, ...rest } = props;
+  const {
+    title,
+    subtitle,
+    children,
+    fullWidth,
+    background = "white",
+    width,
+    ...rest
+  } = props
 
   const contents = (
     <>
       {title && <SectionHead title={title}>{subtitle}</SectionHead>}
       {children}
     </>
-  );
+  )
 
   return (
     <Box sx={boxSX[background]} py={75} {...rest}>
-      <MantineProvider defaultProps={defaultProps[background]}>
+      <MantineProvider>
         {fullWidth ? contents : <Container size={width}>{contents}</Container>}
       </MantineProvider>
     </Box>
-  );
-};
+  )
+}
 
-export default Section;
+export default Section

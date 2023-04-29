@@ -1,184 +1,184 @@
 export interface Sponsor {
-  name: string;
-  logo?: string;
-  url?: string;
+  name: string
+  logo?: string
+  url?: string
 }
 
 export const sponsors2023: Sponsor[] = [
   {
-    name: 'Nice',
-    logo: require('images/sponsors/nice.png').default,
+    name: "Nice",
+    logo: require("images/sponsors/nice.png").default
   },
   {
-    name: 'Lightning Kite',
-    logo: require('images/sponsors/lightning-kite.svg').default,
+    name: "Lightning Kite",
+    logo: require("images/sponsors/lightning-kite.svg").default
   },
   {
-    name: 'Space Dynamics Lab',
-    logo: require('images/sponsors/sdl.png').default,
+    name: "Space Dynamics Lab",
+    logo: require("images/sponsors/sdl.png").default
   },
   {
-    name: 'Jon M. Huntsman School of Business',
-    logo: require('images/sponsors/huntsman-dais.png').default,
+    name: "Jon M. Huntsman School of Business",
+    logo: require("images/sponsors/huntsman-dais.png").default
   },
   {
-    name: 'USU College of Engineering',
-    logo: require('images/sponsors/college-of-engineering.png').default,
+    name: "USU College of Engineering",
+    logo: require("images/sponsors/college-of-engineering.png").default
   },
   {
-    name: 'USU College of Science',
-    logo: require('images/sponsors/college-of-science.png').default,
+    name: "USU College of Science",
+    logo: require("images/sponsors/college-of-science.png").default
   },
   {
-    name: 'Lucid',
-    logo: require('images/sponsors/lucid.png').default,
+    name: "Lucid",
+    logo: require("images/sponsors/lucid.png").default
   },
   {
-    name: 'L3Harris',
-    logo: require('images/sponsors/l3harris.svg').default,
-  },
-];
+    name: "L3Harris",
+    logo: require("images/sponsors/l3harris.svg").default
+  }
+]
 
 export const pastSponsors: Sponsor[] = [
   {
-    name: 'Nice',
-    logo: require('images/sponsors/nice.png').default,
+    name: "Nice",
+    logo: require("images/sponsors/nice.png").default
   },
   {
-    name: 'L3Harris',
-    logo: require('images/sponsors/l3harris.svg').default,
+    name: "L3Harris",
+    logo: require("images/sponsors/l3harris.svg").default
   },
   {
-    name: 'Lucid',
-    logo: require('images/sponsors/lucid.png').default,
+    name: "Lucid",
+    logo: require("images/sponsors/lucid.png").default
   },
   {
-    name: 'Mozilla Foundation',
-    logo: require('images/sponsors/mozilla.jpg').default,
+    name: "Mozilla Foundation",
+    logo: require("images/sponsors/mozilla.jpg").default
   },
   {
-    name: 'Venmo',
-    logo: require('images/sponsors/venmo.png').default,
+    name: "Venmo",
+    logo: require("images/sponsors/venmo.png").default
   },
   {
-    name: 'Digital Ocean',
-    logo: require('images/sponsors/digital-ocean.svg').default,
+    name: "Digital Ocean",
+    logo: require("images/sponsors/digital-ocean.svg").default
   },
   {
-    name: 'Conservice',
-    logo: require('images/sponsors/conservice.jpg').default,
+    name: "Conservice",
+    logo: require("images/sponsors/conservice.jpg").default
   },
   {
-    name: 'Major League Hacking',
-    logo: require('images/sponsors/mlh.svg').default,
+    name: "Major League Hacking",
+    logo: require("images/sponsors/mlh.svg").default
   },
   {
-    name: 'RethinkDB',
-    logo: require('images/sponsors/rethinkdb.svg').default,
+    name: "RethinkDB",
+    logo: require("images/sponsors/rethinkdb.svg").default
   },
   {
-    name: 'Purch',
-    logo: require('images/sponsors/purch.png').default,
+    name: "Purch",
+    logo: require("images/sponsors/purch.png").default
   },
   {
-    name: 'Twilio',
-    logo: require('images/sponsors/twilio.png').default,
+    name: "Twilio",
+    logo: require("images/sponsors/twilio.png").default
   },
   {
-    name: 'Lightning Kite',
-    logo: require('images/sponsors/lightning-kite.svg').default,
+    name: "Lightning Kite",
+    logo: require("images/sponsors/lightning-kite.svg").default
   },
   {
-    name: 'Utah Open Data',
-    logo: require('images/sponsors/ut-open-data.png').default,
+    name: "Utah Open Data",
+    logo: require("images/sponsors/ut-open-data.png").default
   },
   {
-    name: 'Jon M. Huntsman School of Business',
-    logo: require('images/sponsors/huntsman-dais.png').default,
+    name: "Jon M. Huntsman School of Business",
+    logo: require("images/sponsors/huntsman-dais.png").default
   },
   {
-    name: 'USU College of Science',
-    logo: require('images/sponsors/college-of-science.png').default,
+    name: "USU College of Science",
+    logo: require("images/sponsors/college-of-science.png").default
   },
   {
-    name: 'USU College of Engineering',
-    logo: require('images/sponsors/college-of-engineering.png').default,
+    name: "USU College of Engineering",
+    logo: require("images/sponsors/college-of-engineering.png").default
   },
   {
-    name: 'Focused Support',
-    logo: require('images/sponsors/focused-support.png').default,
+    name: "Focused Support",
+    logo: require("images/sponsors/focused-support.png").default
   },
   {
-    name: 'Space Dynamics Lab',
-    logo: require('images/sponsors/sdl.png').default,
+    name: "Space Dynamics Lab",
+    logo: require("images/sponsors/sdl.png").default
   },
   {
-    name: 'XMission',
-    logo: require('images/sponsors/xmission.png').default,
+    name: "XMission",
+    logo: require("images/sponsors/xmission.png").default
   },
   {
-    name: 'VLCM',
-    logo: require('images/sponsors/vlcm.png').default,
+    name: "VLCM",
+    logo: require("images/sponsors/vlcm.png").default
   },
   {
-    name: 'RR Donnelley',
-    logo: require('images/sponsors/rr-donnelly.png').default,
+    name: "RR Donnelley",
+    logo: require("images/sponsors/rr-donnelly.png").default
   },
   {
-    name: 'STG Consulting',
-    logo: require('images/sponsors/stg.png').default,
+    name: "STG Consulting",
+    logo: require("images/sponsors/stg.png").default
   },
   {
-    name: 'RStudio',
-    logo: require('images/sponsors/r-studio.png').default,
+    name: "RStudio",
+    logo: require("images/sponsors/r-studio.png").default
   },
   {
-    name: 'USURF',
-    logo: require('images/sponsors/usurf.png').default,
+    name: "USURF",
+    logo: require("images/sponsors/usurf.png").default
   },
   {
-    name: 'IMFlash',
-    logo: require('images/sponsors/imflash.png').default,
+    name: "IMFlash",
+    logo: require("images/sponsors/imflash.png").default
   },
   {
-    name: 'EForce',
-    logo: require('images/sponsors/eforce.png').default,
+    name: "EForce",
+    logo: require("images/sponsors/eforce.png").default
   },
   {
-    name: 'Domo',
-    logo: require('images/sponsors/domo.png').default,
+    name: "Domo",
+    logo: require("images/sponsors/domo.png").default
   },
   {
-    name: 'AnyPresence',
-    logo: require('images/sponsors/anypresence.webp').default,
+    name: "AnyPresence",
+    logo: require("images/sponsors/anypresence.webp").default
   },
   {
-    name: 'Centeva',
-    logo: require('images/sponsors/centeva.png').default,
+    name: "Centeva",
+    logo: require("images/sponsors/centeva.png").default
   },
   {
-    name: 'Atomic Jolt',
-    logo: require('images/sponsors/atomic-jolt.png').default,
+    name: "Atomic Jolt",
+    logo: require("images/sponsors/atomic-jolt.png").default
   },
   {
-    name: 'Girl Develop It',
+    name: "Girl Develop It"
   },
   {
-    name: 'Navitaire',
+    name: "Navitaire"
   },
   {
-    name: 'Raytheon',
+    name: "Raytheon"
   },
   {
-    name: 'Clarifai',
+    name: "Clarifai"
   },
   {
-    name: 'Qualtrics',
+    name: "Qualtrics"
   },
   {
-    name: 'JetBrains',
+    name: "JetBrains"
   },
   {
-    name: 'CloudFlare',
-  },
-];
+    name: "CloudFlare"
+  }
+]

@@ -9,12 +9,12 @@
 
 ### Using a compatable Node version
 
-Currently, Node 16 (16.15.0 LTS) is required for compatibility with Gatsby. Using NVM to manage Node versions is recommended.
+Currently, Node 18 is required for compatibility with Gatsby. Using NVM to manage Node versions is recommended.
 
 Install NVM: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 
-    $ nvm install 16
-    $ nvm use 16
+    $ nvm install 18
+    $ nvm use 18
 
 ### Start the project locally
 

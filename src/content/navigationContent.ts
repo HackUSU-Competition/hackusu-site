@@ -1,42 +1,42 @@
-export const DISCORD_INVITE = 'https://discord.gg/DpjrzqBwq5';
+export const DISCORD_INVITE = "https://discord.gg/DpjrzqBwq5"
 
 export enum paths {
-  home = '/',
-  location = '/location',
-  schedule = '/schedule',
-  sponsor = '/sponsor',
-  volunteer = '/volunteer',
-  press = '/press',
+  home = "/",
+  location = "/location",
+  schedule = "/schedule",
+  sponsor = "/sponsor",
+  volunteer = "/volunteer",
+  press = "/press",
   // pressPhotos = '/press/photos',
-  safety = '/safety',
+  safety = "/safety"
 }
 
 export const headerLinks: NavLink[] = [
-  { label: 'Home', href: paths.home },
+  {label: "Home", href: paths.home},
   // { label: 'Location', href: paths.location },
-  { label: 'Schedule', href: paths.schedule },
-  { label: 'Volunteer', href: paths.volunteer },
+  {label: "Schedule", href: paths.schedule},
+  {label: "Volunteer", href: paths.volunteer}
   // { label: 'Sponsor', href: paths.sponsor },
-];
+]
 
 export interface NavLink {
-  href: string;
-  label: string;
-  external?: boolean;
+  href: string
+  label: string
+  external?: boolean
 }
 
 export interface FooterLinkGroup {
-  title: string;
-  links: NavLink[];
+  title: string
+  links: NavLink[]
 }
 
 export const footerLinkGroups: FooterLinkGroup[] = [
   {
-    title: 'About',
+    title: "About",
     links: [
       {
-        label: 'Home',
-        href: paths.home,
+        label: "Home",
+        href: paths.home
       },
       // {
       //   label: 'About HackUSU',
@@ -47,49 +47,49 @@ export const footerLinkGroups: FooterLinkGroup[] = [
       //   href: paths.competition,
       // },
       {
-        label: 'Location',
-        href: paths.location,
+        label: "Location",
+        href: paths.location
       },
       {
-        label: 'Schedule',
-        href: paths.schedule,
+        label: "Schedule",
+        href: paths.schedule
       },
       {
-        label: 'Code of Conduct & Risk Management',
-        href: paths.safety,
-      },
-    ],
+        label: "Code of Conduct & Risk Management",
+        href: paths.safety
+      }
+    ]
   },
   {
-    title: 'Join Us',
+    title: "Join Us",
     links: [
       {
-        label: 'Sponsor',
-        href: paths.sponsor,
+        label: "Sponsor",
+        href: paths.sponsor
       },
       {
-        label: 'Volunteer',
-        href: paths.volunteer,
+        label: "Volunteer",
+        href: paths.volunteer
       },
       {
-        label: 'Press Resources',
-        href: paths.press,
-      },
-    ],
+        label: "Press Resources",
+        href: paths.press
+      }
+    ]
   },
   {
-    title: 'Community',
+    title: "Community",
     links: [
       {
-        label: 'Join Discord',
+        label: "Join Discord",
         href: DISCORD_INVITE,
-        external: true,
+        external: true
       },
       {
-        label: 'GitHub',
-        href: 'https://github.com/HackUSU-Competition',
-        external: true,
-      },
-    ],
-  },
-];
+        label: "GitHub",
+        href: "https://github.com/HackUSU-Competition",
+        external: true
+      }
+    ]
+  }
+]

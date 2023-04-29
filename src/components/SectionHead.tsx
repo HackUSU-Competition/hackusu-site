@@ -1,26 +1,26 @@
-import { Box, Container, createStyles, Divider, Text, Title } from '@mantine/core';
-import React, { FC } from 'react';
+import {Box, Container, createStyles, Divider, Text, Title} from "@mantine/core"
+import React, {FC} from "react"
 
 const useStyles = createStyles((theme) => ({
   title: {
     paddingBottom: theme.spacing.md,
-    letterSpacing: '0.05em',
+    letterSpacing: "0.05em",
     fontSize: theme.fontSizes.xl * 2,
-    textAlign: 'center',
+    textAlign: "center"
   },
 
   description: {
-    fontSize: theme.fontSizes.xl * 1.2,
-  },
-}));
+    fontSize: theme.fontSizes.xl * 1.2
+  }
+}))
 
 export interface SectionHeadProps {
-  title: string;
-  children?: React.ReactNode;
+  title: string
+  children?: React.ReactNode
 }
 
-const SectionHead: FC<SectionHeadProps> = ({ title, children }) => {
-  const { classes } = useStyles();
+const SectionHead: FC<SectionHeadProps> = ({title, children}) => {
+  const {classes} = useStyles()
 
   return (
     <Box mb={40}>
@@ -32,9 +32,9 @@ const SectionHead: FC<SectionHeadProps> = ({ title, children }) => {
           {children}
         </Text>
       </Container>
-      <Divider mt={30} size="md" mx="auto" sx={{ maxWidth: '200px' }} />
+      <Divider mt={30} size="md" mx="auto" sx={{maxWidth: "200px"}} />
     </Box>
-  );
-};
+  )
+}
 
-export default SectionHead;
+export default SectionHead

@@ -1,10 +1,13 @@
-import { Box, Group, List, RingProgress, ThemeIcon } from '@mantine/core';
-import { categorySpending } from 'content/sponsor/spendingContent';
-import React, { FC } from 'react';
-import { CircleCheck } from 'tabler-icons-react';
+import {Box, Group, List, RingProgress, ThemeIcon} from "@mantine/core"
+import {categorySpending} from "content/sponsor/spendingContent"
+import React, {FC} from "react"
+import {CircleCheck} from "tabler-icons-react"
 
 const BudgetChart: FC = () => {
-  const totalSpend = categorySpending.reduce((acc, curr) => acc + curr.amount, 0);
+  const totalSpend = categorySpending.reduce(
+    (acc, curr) => acc + curr.amount,
+    0
+  )
   return (
     <Group position="center" mb={50}>
       <Box>
@@ -13,7 +16,7 @@ const BudgetChart: FC = () => {
           thickness={50}
           sections={categorySpending.map((category) => ({
             color: category.color,
-            value: (100 * category.amount) / totalSpend,
+            value: (100 * category.amount) / totalSpend
           }))}
         />
       </Box>
@@ -43,7 +46,7 @@ const BudgetChart: FC = () => {
         </List>
       </Box>
     </Group>
-  );
-};
+  )
+}
 
-export default BudgetChart;
+export default BudgetChart

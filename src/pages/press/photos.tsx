@@ -10,30 +10,30 @@ import {
   Portal,
   SimpleGrid,
   Space,
-  Text,
-} from '@mantine/core';
-import Layout from 'components/Layout/Layout';
-import PageTitle from 'components/PageTitle';
-import { paths } from 'content/navigationContent';
-import { Link } from 'gatsby';
-import React, { useState } from 'react';
-import { Download } from 'tabler-icons-react';
+  Text
+} from "@mantine/core"
+import Layout from "components/Layout/Layout"
+import PageTitle from "components/PageTitle"
+import {paths} from "content/navigationContent"
+import {Link} from "gatsby"
+import React, {useState} from "react"
+import {Download} from "tabler-icons-react"
 
 const useStyles = createStyles((theme) => ({
   image: {
-    cursor: 'pointer',
+    cursor: "pointer",
 
-    '&:hover': {
-      opacity: 0.8,
-    },
-  },
-}));
+    "&:hover": {
+      opacity: 0.8
+    }
+  }
+}))
 
 export default function About() {
-  const { classes } = useStyles();
+  const {classes} = useStyles()
 
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = React.useState<string | undefined>();
+  const [modalOpen, setModalOpen] = useState(false)
+  const [selectedImage, setSelectedImage] = React.useState<string | undefined>()
 
   return (
     <Layout>
@@ -46,12 +46,15 @@ export default function About() {
         {/* TODO: Make images available for download */}
 
         <Text my={20}>
-          The following images can be used by members of the media for reporting about HackUSU.
+          The following images can be used by members of the media for reporting
+          about HackUSU.
         </Text>
 
         {/* TODO: Downlaod all images */}
         <Group position="right">
-          <Button rightIcon={<Download size={14} />}>Download All Images</Button>
+          <Button rightIcon={<Download size={14} />}>
+            Download All Images
+          </Button>
         </Group>
 
         <SimpleGrid
@@ -59,19 +62,19 @@ export default function About() {
           spacing="lg"
           mt={30}
           breakpoints={[
-            { maxWidth: 'md', cols: 2, spacing: 'md' },
-            { maxWidth: 'xs', cols: 1, spacing: 'sm' },
+            {maxWidth: "md", cols: 2, spacing: "md"},
+            {maxWidth: "xs", cols: 1, spacing: "sm"}
           ]}
         >
           {[...Array(10)].map((_, index) => {
-            const imageURL = require('images/scenes/huntsman-hall.jpg').default;
+            const imageURL = require("images/scenes/huntsman-hall.jpg").default
 
             return (
               <Paper shadow="sm" className={classes.image}>
                 <Image
                   onClick={() => {
-                    setSelectedImage(imageURL);
-                    setModalOpen(true);
+                    setSelectedImage(imageURL)
+                    setModalOpen(true)
                   }}
                   mx="auto"
                   key={index}
@@ -81,13 +84,12 @@ export default function About() {
                   withPlaceholder
                 />
               </Paper>
-            );
+            )
           })}
         </SimpleGrid>
       </Container>
       <Portal>
         <Modal
-          overflow="inside"
           opened={modalOpen}
           onClose={() => setModalOpen(false)}
           size="100vh"
@@ -103,13 +105,13 @@ export default function About() {
               Download
             </Button>
           }
-          styles={{
+          sx={{
             header: {
-              marginBottom: 10,
+              marginBottom: 10
             },
             close: {
-              marginRight: 15,
-            },
+              marginRight: 15
+            }
           }}
         >
           <Image
@@ -123,5 +125,5 @@ export default function About() {
         </Modal>
       </Portal>
     </Layout>
-  );
+  )
 }
