@@ -1,4 +1,4 @@
-import { Button, Card, Group, Image, SimpleGrid, Text, Title } from '@mantine/core';
+import { Button, Card, Group, Image, SimpleGrid, Text } from '@mantine/core';
 import Section from 'components/Layout/Section';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
@@ -127,14 +127,7 @@ const PressArticlesGrid: FC<{ articles: PressArticle[] }> = ({ articles }) => (
 const FeaturedArticles: FC = () => {
   return (
     <Section title="Featured Articles">
-      <Title order={3} my="xl">
-        HackUSU 2022
-      </Title>
-      <PressArticlesGrid articles={pressArticles.filter((article) => article.year === 2022)} />
-      <Title order={3} my="xl">
-        Previous Events
-      </Title>
-      <PressArticlesGrid articles={pressArticles.filter((article) => article.year < 2022)} />
+      <PressArticlesGrid articles={pressArticles} />
     </Section>
   );
 };

@@ -2,11 +2,15 @@ import { Image, List, Text, Title } from '@mantine/core';
 import Section from 'components/Layout/Section';
 import React, { FC } from 'react';
 import { ArrowRight } from 'tabler-icons-react';
+import { EVENT_DATES } from 'utils/constants';
 
 const About: FC = () => {
   return (
     <>
-      <Section title="What is HackUSU?" subtitle="300+ Students • 24 Hours • March 24-25, 2023">
+      <Section
+        title="What is HackUSU?"
+        subtitle={`400+ Students • 24 Hours • ${EVENT_DATES.monthYear}`}
+      >
         <Text size="xl" mt={10} weight={500}>
           We're HackUSU, Utah's largest and oldest student-run hackathon. Each year, hundreds of
           students and professionals meet at Utah State University for competitions and workshops

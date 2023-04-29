@@ -1,5 +1,4 @@
-import { Box, BoxProps, Container, MantineNumberSize, MantineProvider } from '@mantine/core';
-import { BoxSx } from '@mantine/core/lib/components/Box/use-sx/use-sx';
+import { Box, BoxProps, Container, MantineNumberSize, MantineProvider, Sx } from '@mantine/core';
 import SectionHead from 'components/SectionHead';
 import React, { FC, ReactNode } from 'react';
 
@@ -12,7 +11,7 @@ export interface SectionProps extends BoxProps<'div'> {
   width?: MantineNumberSize;
 }
 
-const boxSX: Record<SectionProps['background'], BoxSx> = {
+const boxSX: Record<SectionProps['background'], Sx> = {
   white: {},
   light: (theme) => ({
     backgroundColor: theme.colors.gray[1],

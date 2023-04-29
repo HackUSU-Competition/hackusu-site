@@ -31,37 +31,40 @@ export default function HomePage() {
           backgroundSize: 'cover',
         })}
       >
-        <Container size={800} pt={50} px={50}>
+        <Container size={800} pt={50} px={50} pb={100}>
           <Image
             src={require('images/logo-white.svg').default}
             alt="HackUSU Logo"
             fit="contain"
             width="100%"
           />
-          <Title order={2} align="center" pt={50} sx={{ color: 'white', fontSize: '2rem' }}>
-            {EVENT_DATES}
+          {/* <Title order={2} align="center" pt={50} sx={{ color: 'white', fontSize: '2rem' }}>
+            {EVENT_DATES.monthYear}
+          </Title> */}
+          <Title order={2} align="center" pt={50} sx={{ color: 'white', fontSize: '1.5rem' }}>
+            HackUSU 2023 has already happened, but we look forward to seeing you next year!
           </Title>
         </Container>
-        {/* <img
-            src={require('images/dividers/waves-opacity.svg').default}
-            alt="section divider"
-            style={{
-              width: '100%',
-              height: '10vw',
-              objectFit: 'fill',
-            }}
-          /> */}
         <img
+          src={require('images/dividers/waves-opacity.svg').default}
+          alt="section divider"
+          style={{
+            width: '100%',
+            height: '10vw',
+            objectFit: 'fill',
+          }}
+        />
+        {/* <img
           src={require('images/dividers/triangle-negative.svg').default}
           alt="section divider"
           style={{
             width: '100%',
             height: '10vw',
           }}
-        />
+        /> */}
       </Box>
 
-      <Section title="What is HackUSU?" subtitle="300+ Students • 24 Hours">
+      <Section title="What is HackUSU?" subtitle="400+ Students • 24 Hours">
         <SimpleGrid breakpoints={[{ maxWidth: 'xs', cols: 1 }]} cols={2} spacing="xl">
           {[
             {
@@ -168,8 +171,7 @@ export default function HomePage() {
         {[
           {
             question: 'When and where is HackUSU?',
-            answer:
-              'HackUSU is March 24-25 2023 in Huntsman Hall, Utah State University. Check-in will open at 4:00 pm.',
+            answer: `Our 2023 event has already happened, and we're looking forward to next year! HackUSU will be ${EVENT_DATES.monthYear} in Huntsman Hall, Utah State University.`,
           },
           {
             question: 'Are there other things to do besides the competition?',

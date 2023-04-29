@@ -5,7 +5,7 @@ import PageTitle from 'components/PageTitle';
 import SubSectionTitle from 'components/SubsectionTitle';
 import React from 'react';
 import { ArrowRight } from 'tabler-icons-react';
-import { HACKUSU_EMAIL } from 'utils/constants';
+import { HACKUSU_EMAIL, REGISTRATION_OPEN } from 'utils/constants';
 import Layout from '../components/Layout/Layout';
 
 export default function Registration() {
@@ -13,30 +13,40 @@ export default function Registration() {
     <Layout>
       <PageTitle>Register for Free!</PageTitle>
 
-      <Section width="sm" background="pattern" mt={60}>
-        <SubSectionTitle>Student registration is now open!</SubSectionTitle>
+      {REGISTRATION_OPEN ? (
+        <Section width="sm" background="pattern" mt={60}>
+          <SubSectionTitle>Student registration is now open!</SubSectionTitle>
 
-        <Text mt={10}>
-          If you are representing a company, would like to volunteer, or are a member of the press,
-          please email us at{' '}
-          <Anchor href={`mailto:${HACKUSU_EMAIL}`} target="_blank">
-            {HACKUSU_EMAIL}
-          </Anchor>
-          .
-        </Text>
+          <Text mt={10}>
+            If you are representing a company, would like to volunteer, or are a member of the
+            press, please email us at{' '}
+            <Anchor href={`mailto:${HACKUSU_EMAIL}`} target="_blank">
+              {HACKUSU_EMAIL}
+            </Anchor>
+            .
+          </Text>
 
-        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-          <GradientButton
-            component="a"
-            rightIcon={<ArrowRight />}
-            size="xl"
-            href="https://hackusu2023.eventbrite.com/?aff=hackususite"
-            target="_blank"
-          >
-            Register on Eventbrite
-          </GradientButton>
-        </div>
-      </Section>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <GradientButton
+              component="a"
+              rightIcon={<ArrowRight />}
+              size="xl"
+              href="https://hackusu2023.eventbrite.com/?aff=hackususite"
+              target="_blank"
+            >
+              Register on Eventbrite
+            </GradientButton>
+          </div>
+        </Section>
+      ) : (
+        <Section width="sm" background="pattern" mt={60}>
+          <SubSectionTitle>Registration not yet open</SubSectionTitle>
+
+          <Text mt={10}>
+            HackUSU 2023 has already happened! Check back later for information about HackUSU 2024.
+          </Text>
+        </Section>
+      )}
     </Layout>
   );
 }

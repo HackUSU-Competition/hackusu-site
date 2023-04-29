@@ -2,7 +2,6 @@ import { Box, Button, Container, Image, Paper, SimpleGrid, Text } from '@mantine
 import PageTitle from 'components/PageTitle';
 import { Link } from 'gatsby';
 import React from 'react';
-import { EVENT_DATES } from 'utils/constants';
 import Layout from '../components/Layout/Layout';
 
 export default function Location() {
@@ -14,11 +13,11 @@ export default function Location() {
       <Container size="lg">
         <SimpleGrid cols={2} spacing={36} breakpoints={[{ maxWidth: 650, cols: 1 }]} mt={60}>
           <Box>
-            <Text size="xl" weight={500}>
+            {/* <Text size="xl" weight={500}>
               HackUSU 2023 will be hosted in Huntsman Hall at Utah State University on {EVENT_DATES}
               .
-            </Text>
-            <Text mt={15}>
+            </Text> */}
+            <Text>
               Free overnight parking will be available in the Big Blue Parking Terrace. Staff
               parking lots on campus may be used for daytime parking on Saturday.
             </Text>

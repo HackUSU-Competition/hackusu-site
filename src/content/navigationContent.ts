@@ -2,8 +2,6 @@ export const DISCORD_INVITE = 'https://discord.gg/DpjrzqBwq5';
 
 export enum paths {
   home = '/',
-  // about = '/about',
-  // competition = '/competition',
   location = '/location',
   schedule = '/schedule',
   sponsor = '/sponsor',
@@ -15,12 +13,10 @@ export enum paths {
 
 export const headerLinks: NavLink[] = [
   { label: 'Home', href: paths.home },
-  // { label: 'About', href: paths.about },
-  // { label: 'Competition', href: paths.competition },
-  { label: 'Location', href: paths.location },
+  // { label: 'Location', href: paths.location },
   { label: 'Schedule', href: paths.schedule },
   { label: 'Volunteer', href: paths.volunteer },
-  { label: 'Sponsor', href: paths.sponsor },
+  // { label: 'Sponsor', href: paths.sponsor },
 ];
 
 export interface NavLink {
