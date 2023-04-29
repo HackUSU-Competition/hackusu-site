@@ -9,10 +9,7 @@ import HeaderNav from './Header';
 const Layout: FC<{ children: ReactNode }> = (props) => {
   return (
     <MantineProvider withNormalizeCSS withGlobalStyles theme={theme} styles={globalStyles}>
-      <Box
-        p="xs"
-        sx={(theme) => ({ backgroundColor: theme.colors.yellow[4], textAlign: 'center' })}
-      >
+      <Box p="xs" sx={(theme) => ({ backgroundColor: theme.colors.blue[2], textAlign: 'center' })}>
         <b>Information about HackUSU 2024 will be available this fall</b>
       </Box>
       <HeaderNav />
