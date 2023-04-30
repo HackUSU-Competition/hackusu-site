@@ -13,6 +13,14 @@ interface PressArticle {
 
 const pressArticles: PressArticle[] = [
   {
+    title: "USU hosts annual hackathon",
+    link: "https://usustatesman.com/usu-hosts-annual-hackathon/",
+    image:
+      "https://usustatesman.com/wp-content/uploads/2023/03/20230330_lifestyles_hackathon-1050x817.jpg",
+    source: "The Utah Statesman",
+    year: 2023
+  },
+  {
     title: "Aggies facilitate a 24-hour hacking event at Huntsman Hall",
     link: "https://usustatesman.com/aggies-facilitate-a-24-hour-hacking-event-at-huntsman-hall/",
     image:
