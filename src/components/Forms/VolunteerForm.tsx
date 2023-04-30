@@ -14,7 +14,7 @@ import {
 import {useForm, yupResolver} from "@mantine/form"
 import GradientButton from "components/GradientButton"
 import React, {FC} from "react"
-import {sendEmail} from "services/formspark"
+import {submitFormspark} from "services/formspark"
 import {AlertCircle} from "tabler-icons-react"
 import {HACKUSU_EMAIL} from "utils/constants"
 import * as Yup from "yup"
@@ -51,7 +51,7 @@ const VolunteerForm: FC<ContainerProps> = (props) => {
           setIsError(false)
           setDidSubmit(false)
           const {name, email, organization, volunteer, message} = values
-          sendEmail({
+          submitFormspark({
             from: name,
             subject: "Volunteer Form Submission",
             message,

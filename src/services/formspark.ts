@@ -1,13 +1,15 @@
 const FORMSPARK_ID = "A705f9bY"
 
-export interface SendEmailParams {
+export interface SubmitFormsparkParams {
   message: string
   subject?: string
   from?: string
   data?: Record<string, unknown>
 }
 
-export const sendEmail = async (params: SendEmailParams): Promise<void> => {
+export const submitFormspark = async (
+  params: SubmitFormsparkParams
+): Promise<void> => {
   const {message, subject, from, data} = params
 
   await fetch(`https://submit-form.com/${FORMSPARK_ID}`, {
@@ -20,8 +22,8 @@ export const sendEmail = async (params: SendEmailParams): Promise<void> => {
       message,
       ...data,
       _email: {
-        subject: subject || "HackUSU Contact Form Submission",
-        from: `${from || "Submission"} via Contact Form`
+        subject: subject ?? "HackUSU Contact Form Submission",
+        from: `${from ?? "Submission"} via Contact Form`
       }
     })
   })

@@ -8,8 +8,8 @@ const GetStarted: FC = () => {
   return (
     <Section title="Ready to Learn More?" background="pattern" width="sm">
       <Text size="xl" mt={10} weight={500} align="center">
-        Let us know which sponsorship package you're interested in, or work with
-        us to put together opportunities that work best for you!
+        Let us know which sponsorship package you&apos;re interested in, or work
+        with us to put together opportunities that work best for you!
       </Text>
       <Text mt={40} align="center">
         Email us at{" "}
@@ -22,7 +22,7 @@ const GetStarted: FC = () => {
           size="xl"
           mt={40}
         >
-          Let's Get Started!
+          Let&apos;s Get Started!
         </GradientButton>
       </Center>
     </Section>

@@ -60,7 +60,7 @@ const BenefitsTable: FC = () => {
       {levelNames.map((levelName) => (
         <td key={levelName} className={classes.checkBoxCell}>
           <Text size="xs" color="green">
-            {benefit.levelsDetails?.[levelName] ||
+            {benefit.levelsDetails?.[levelName] ??
               (benefit.levels.includes(levelName) && <CircleCheck size={20} />)}
           </Text>
         </td>
@@ -130,8 +130,8 @@ const BenefitsTable: FC = () => {
       </ScrollArea>
       <Alert icon={<Star size={16} />} title="Want something else?" mb={30}>
         Contact us to build a custom sponsorship plan. We want to work together
-        with you to help as many students as possible at this year's HackUSU
-        event!
+        with you to help as many students as possible at this year&apos;s
+        HackUSU event!
       </Alert>
     </Section>
   )

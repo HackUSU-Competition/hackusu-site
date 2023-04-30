@@ -1,4 +1,3 @@
-import {Container} from "@mantine/core"
 import Layout from "components/Layout/Layout"
 import PageTitle from "components/PageTitle"
 import About from "components/Press/About"

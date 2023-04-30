@@ -1,16 +1,15 @@
 import {Alert, ColorSwatch, Container, Group, Space, Text} from "@mantine/core"
-import {useMediaQuery} from "@mantine/hooks"
 import PageTitle from "components/PageTitle"
 import EventModal from "components/Schedule/EventModal"
 import EventTileContent from "components/Schedule/EventTileContent"
 import {
-  HackUSUCalendarEvent,
   eventTypes,
   fridaySchedule,
+  HackUSUCalendarEvent,
   saturdaySchedule
 } from "content/scheduleContent"
 import React, {useState} from "react"
-import {ScheduleView, createTheme, themes} from "react-schedule-view"
+import {createTheme, ScheduleView, themes} from "react-schedule-view"
 import {ScheduleViewProps} from "react-schedule-view/dist/ScheduleView"
 import Layout from "../components/Layout/Layout"
 
@@ -36,8 +35,6 @@ const customCalendarTheme = createTheme("apple", {
 })
 
 export default function Schedule() {
-  const smallScreen = useMediaQuery("screen and (max-width: 900px)")
-
   const [selectedEvent, setSelectedEvent] =
     useState<HackUSUCalendarEvent | null>(null)
 
@@ -56,7 +53,7 @@ export default function Schedule() {
           color="orange"
           mb={50}
         >
-          This year's event has already passed, but you can check out this
+          This year&apos;s event has already passed, but you can check out this
           schedule of what happened!
         </Alert>
 
@@ -93,7 +90,7 @@ export default function Schedule() {
       </Container>
 
       <EventModal
-        event={selectedEvent}
+        event={selectedEvent ?? undefined}
         handleClose={() => setSelectedEvent(null)}
       />
     </Layout>

@@ -87,7 +87,7 @@ export default function HomePage() {
             {
               title: "Workshops",
               description:
-                "We'll have many great workshops and tech talks on a variety of topics. Check back closer to the event for a complete list!"
+                "We&apos;ll have many great workshops and tech talks on a variety of topics. Check back closer to the event for a complete list!"
             },
             {
               title: "Networking",
@@ -97,7 +97,7 @@ export default function HomePage() {
             {
               title: "Free Food",
               description:
-                "We'll provide dinner on Friday, and breakfast, lunch, and dinner on Saturday. There will also be plenty of snacks available the entire event!"
+                "We&apos;ll provide dinner on Friday, and breakfast, lunch, and dinner on Saturday. There will also be plenty of snacks available the entire event!"
             }
           ].map(({title, description}, idx) => (
             <Box mx="auto" sx={{maxWidth: 300}} key={idx}>
@@ -127,7 +127,7 @@ export default function HomePage() {
               title: "Game Dev",
               icon: DeviceGamepad2,
               description:
-                "Any game, any technology. Try recreating a retro game, or design a brand new one we haven't seen before!"
+                "Any game, any technology. Try recreating a retro game, or design a brand new one we haven&apos;t seen before!"
             },
             {
               title: "Data Analytics & Visualization",
@@ -139,7 +139,7 @@ export default function HomePage() {
               title: "Hardware",
               icon: Robot,
               description:
-                "Show us your creation utilizing physical hardware including Raspberry Pi's, PCB's, or microcontrollers!"
+                "Show us your creation utilizing physical hardware including Raspberry Pi&apos;s, PCBs, or microcontrollers!"
             },
             {
               title: "AI & Machine Learning",
@@ -151,7 +151,7 @@ export default function HomePage() {
               title: "General",
               icon: Code,
               description:
-                "All projects that  are too unique and don't fit the other categories!"
+                "All projects that  are too unique and don&apos;t fit the other categories!"
             }
           ].map(({title, icon, description}) => (
             <Card
@@ -192,12 +192,12 @@ export default function HomePage() {
         {[
           {
             question: "When and where is HackUSU?",
-            answer: `Our 2023 event has already happened, and we're looking forward to next year! HackUSU will be ${EVENT_DATES.monthYear} in Huntsman Hall, Utah State University.`
+            answer: `Our 2023 event has already happened, and we&apos;re looking forward to next year! HackUSU will be ${EVENT_DATES.monthYear} in Huntsman Hall, Utah State University.`
           },
           {
             question: "Are there other things to do besides the competition?",
             answer:
-              "Yes, we'll have workshops and other activities running the whole time! You'll also be able to network with employers, and get help from experts on other projects."
+              "Yes, we&apos;ll have workshops and other activities running the whole time! You&apos;ll also be able to network with employers, and get help from experts on other projects."
           },
           {
             question: "Do I need to know how to code?",
@@ -207,7 +207,7 @@ export default function HomePage() {
           {
             question: "Can I start now?",
             answer:
-              "You can't use any code that was written before the start of the hackathon. However, you can form your team and begin thinking of ideas now!"
+              "You can&apos;t use any code that was written before the start of the hackathon. However, you can form your team and begin thinking of ideas now!"
           },
           {
             question: "What is the max team size?",
@@ -222,7 +222,7 @@ export default function HomePage() {
           {
             question: "Does it cost anything to attend?",
             answer:
-              "HackUSU is completely free! There's no entry fee, and we'll provide enough food and snacks for the entire 24 hours. How neat is that?"
+              "HackUSU is completely free! There&apos;s no entry fee, and we&apos;ll provide enough food and snacks for the entire 24 hours. How neat is that?"
           },
           {
             question: "Can I stay in the building overnight?",

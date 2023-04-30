@@ -12,23 +12,23 @@ const About: FC = () => {
         subtitle={`400+ Students • 24 Hours • ${EVENT_DATES.monthYear}`}
       >
         <Text size="xl" mt={10} weight={500}>
-          We're HackUSU, Utah's largest and oldest student-run hackathon. Each
-          year, hundreds of students and professionals meet at Utah State
-          University for competitions and workshops related software, data
-          analytics, hardware, and more!
+          We&apos;re HackUSU, Utah&apos;s largest and oldest student-run
+          hackathon. Each year, hundreds of students and professionals meet at
+          Utah State University for competitions and workshops related software,
+          data analytics, hardware, and more!
         </Text>
         <Text mt={40}>
-          You won't find malicious basement hackers trying to break into private
-          servers at hackathons. Hackathons are weekend-long events hosted by a
-          variety of universities and colleges across the country who pride
-          themselves in encouraging students to 'hack' a solution to difficult
-          technical problems. The 'hackathon' name has risen in recent years to
-          represent student collaboration and interaction around hardware and
-          software.
+          You won&apos;t find malicious basement hackers trying to break into
+          private servers at hackathons. Hackathons are weekend-long events
+          hosted by a variety of universities and colleges across the country
+          who pride themselves in encouraging students to &apos;hack&apos; a
+          solution to difficult technical problems. The &apos;hackathon&apos;
+          name has risen in recent years to represent student collaboration and
+          interaction around hardware and software.
         </Text>
 
         <Text mt={40} weight="bold" size="xl">
-          Here's what students will be doing at HackUSU 2023:
+          Here&apos;s what students will be doing at HackUSU 2023:
         </Text>
         <List icon={<ArrowRight />} mt={10}>
           <List.Item>
@@ -84,7 +84,7 @@ const About: FC = () => {
         </Title>
         <Text mt={10}>
           Sponsorship is a great way to accelerate brand recognition and allow
-          students to explore your product's potential. We have arranged a
+          students to explore your product&apos;s potential. We have arranged a
           variety of options for getting your name in front of our hackers
           including keynote presentations, swag, and custom competition
           categories!

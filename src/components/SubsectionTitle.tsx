@@ -1,12 +1,4 @@
-import {
-  Box,
-  Container,
-  createStyles,
-  Divider,
-  Text,
-  Title,
-  TitleProps
-} from "@mantine/core"
+import {createStyles, Title, TitleProps} from "@mantine/core"
 import React, {FC, ReactNode} from "react"
 
 const useStyles = createStyles((theme) => ({

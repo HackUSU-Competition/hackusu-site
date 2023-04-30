@@ -50,7 +50,7 @@ const EventModal: FC<EventModalProps> = (props) => {
           <Image
             withPlaceholder
             src={
-              event.coverImage ||
+              event.coverImage ??
               require("../../images/backgrounds/triangles.svg").default
             }
             height={event.coverImage ? 160 : 80}

@@ -36,7 +36,7 @@ export default function About() {
           limited to sharing sexual images, deliberate intimidation, stalking,
           following, brigading, doxxing, harassing photography or recording,
           sustained disruption of talks or other events, inappropriate physical
-          contact, and unwelcome sexual attention. If what you're doing is
+          contact, and unwelcome sexual attention. If what you&apos;re doing is
           making someone feel uncomfortable, that counts as harassment and is
           enough reason to stop doing it.
         </Text>

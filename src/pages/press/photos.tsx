@@ -70,7 +70,7 @@ export default function About() {
             const imageURL = require("images/scenes/huntsman-hall.jpg").default
 
             return (
-              <Paper shadow="sm" className={classes.image}>
+              <Paper shadow="sm" className={classes.image} key={index}>
                 <Image
                   onClick={() => {
                     setSelectedImage(imageURL)

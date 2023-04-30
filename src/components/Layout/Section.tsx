@@ -9,16 +9,18 @@ import {
 import SectionHead from "components/SectionHead"
 import React, {FC, ReactNode} from "react"
 
+type BackgroundOption = "white" | "light" | "pattern"
+
 export interface SectionProps extends BoxProps {
   title?: string
   subtitle?: string
   children: ReactNode
-  background?: "white" | "light" | "pattern"
+  background?: BackgroundOption
   fullWidth?: boolean
   width?: MantineNumberSize
 }
 
-const boxSX: Record<SectionProps["background"], Sx> = {
+const boxSX: Record<BackgroundOption, Sx> = {
   white: {},
   light: (theme) => ({
     backgroundColor: theme.colors.gray[1],

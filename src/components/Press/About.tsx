@@ -45,17 +45,16 @@ const useStyles = createStyles((theme) => ({
   },
 
   value: {
-    fontSize: theme.fontSizes.xl * 2,
+    fontSize: 50,
     fontWeight: 800,
-    marginTop: theme.spacing.xs,
-    marginBottom: theme.spacing.xs / 2
+    marginTop: theme.spacing.xs
   },
 
   label: {
     fontSize: theme.fontSizes.md,
     fontWeight: 600,
     textTransform: "uppercase",
-    marginBottom: theme.spacing.xs / 2
+    marginBottom: 8
   },
 
   description: {
@@ -96,9 +95,10 @@ const About: FC = () => {
         What is hacking?
       </Title>
       <Text mt={10}>
-        "Hacking" at this event isn't about breaking into computer systems, it's
-        about quickly building a project that showcases your skills and
-        demonstrates your ability to think outside the box.
+        &quot;Hacking&quot; at this event isn&apos;t about breaking into
+        computer systems, it&apos;s about quickly building a project that
+        showcases your skills and demonstrates your ability to think outside the
+        box.
       </Text>
 
       <Title order={3} mt={30}>
@@ -203,10 +203,10 @@ const About: FC = () => {
 
         <AnimateUpOnce>
           <Blockquote my={40} cite="– Cory Christensen, Student">
-            Hackathons aren't just about gaining programming skills. They are
-            about building up our communities, and becoming an innovative
-            generation. This is something awesome, and I'm proud to be a part of
-            it.
+            Hackathons aren&apos;t just about gaining programming skills. They
+            are about building up our communities, and becoming an innovative
+            generation. This is something awesome, and I&apos;m proud to be a
+            part of it.
           </Blockquote>
         </AnimateUpOnce>
       </Container>

@@ -22,11 +22,11 @@ export const levelData: Record<
 // Returns a list of the levels above the given level, including the level
 const levelsAbove = (minLevel: LevelName): LevelName[] => {
   const minAmount = levelData[minLevel].amount
-  return Object.keys(levelData).filter(
-    (level) =>
-      levelData[level].amount === undefined ||
-      levelData[level].amount >= minAmount
-  ) as LevelName[]
+  return Object.keys(levelData).filter((level) => {
+    const levelAmount = levelData[level as LevelName].amount
+    if (minAmount === undefined) return levelAmount === undefined
+    return levelAmount === undefined || levelAmount >= minAmount
+  }) as LevelName[]
 }
 
 export interface Benefit {

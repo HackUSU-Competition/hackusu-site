@@ -40,8 +40,8 @@ export default function Location() {
               parking on Saturday.
             </Text>
             <Text mt={15}>
-              After arriving, follow the signs to check in at Huntsman Hall's
-              north entrance.
+              After arriving, follow the signs to check in at Huntsman
+              Hall&apos;s north entrance.
             </Text>
             <Text size="xl" weight={500} mt={30}>
               Busses, Vans, and Accessible Parking

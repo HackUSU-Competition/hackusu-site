@@ -37,8 +37,8 @@ const volunteerOpportunities: VolunteerOpportunity[] = [
           include outreach, financial, and technology.
         </p>
         <p>
-          If you'd like to join us, you'll need 1-2 hours per week to work on
-          preparing for HackUSU.
+          If you&apos;d like to join us, you&apos;ll need 1-2 hours per week to
+          work on preparing for HackUSU.
         </p>
       </>
     )
@@ -50,15 +50,15 @@ const volunteerOpportunities: VolunteerOpportunity[] = [
     description: (
       <>
         <p>
-          If you're an experienced industry professional, we'd love to have you
-          run a workshop! Topics could be in the areas of software development,
-          data science, hardware engineering, or anything else interesting to
-          the HackUSU community!
+          If you&apos;re an experienced industry professional, we&apos;d love to
+          have you run a workshop! Topics could be in the areas of software
+          development, data science, hardware engineering, or anything else
+          interesting to the HackUSU community!
         </p>
         <p>
           Workshops should be on topics generally applicable to many students.
-          If you'd instead like to promote your own company's products, check
-          out our several{" "}
+          If you&apos;d instead like to promote your own company&apos;s
+          products, check out our several{" "}
           <Anchor href={paths.sponsor}>sponsorship options</Anchor>.
         </p>
       </>
@@ -70,9 +70,9 @@ const volunteerOpportunities: VolunteerOpportunity[] = [
     cta: "Become a Project Judge",
     description: (
       <p>
-        As a judge, you'll review all project submissions for a specific
-        category to select the winners! As the event gets closer, we'll provide
-        specific instructions on the judging process.
+        As a judge, you&apos;ll review all project submissions for a specific
+        category to select the winners! As the event gets closer, we&apos;ll
+        provide specific instructions on the judging process.
       </p>
     )
   },
@@ -82,8 +82,8 @@ const volunteerOpportunities: VolunteerOpportunity[] = [
     cta: "Become a Mentor",
     description: (
       <p>
-        We'll have mentors available throughout the competition whenever teams
-        need help on their project or need to learn more about a specific
+        We&apos;ll have mentors available throughout the competition whenever
+        teams need help on their project or need to learn more about a specific
         technology.
       </p>
     )
