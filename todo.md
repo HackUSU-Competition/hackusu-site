@@ -1,6 +1,6 @@
 # TODO
 
-- View event photos, see press photos component
+- View event photos, see press photos component (https://www.mikejohnsonphoto.com/2023/3-March/USU-Hackathon/n-Bckpnc/)
 - Update the location page
 - Update quotes on the press page with feedback from 2023
 - Update the sponsor page with information from 2023
