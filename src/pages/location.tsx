@@ -18,7 +18,6 @@ export default function Location() {
       <PageTitle>LOCATION</PageTitle>
 
       <Image
-        fit="cover"
         height={500}
         src={require("images/scenes/huntsman-hall.jpg").default}
       />
