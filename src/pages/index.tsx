@@ -1,4 +1,5 @@
 import {
+  AspectRatio,
   Avatar,
   Box,
   Card,
@@ -110,6 +111,14 @@ export default function HomePage() {
         </SimpleGrid>
       </Section>
 
+      <AspectRatio ratio={25 / 10}>
+        <Image
+          src={
+            require("images/event-photos/Mike Johnson Photo-04439.jpg").default
+          }
+        />
+      </AspectRatio>
+
       <Section
         title="Competition Categories"
         subtitle="We'll award separate prizes for both beginner and experienced teams in each cateogry!"
@@ -187,6 +196,14 @@ export default function HomePage() {
           ))}
         </Stack>
       </Section>
+
+      <AspectRatio ratio={17 / 10}>
+        <Image
+          src={
+            require("images/event-photos/Mike Johnson Photo-04404.jpg").default
+          }
+        />
+      </AspectRatio>
 
       <Section title="FAQ" width="sm">
         {[
