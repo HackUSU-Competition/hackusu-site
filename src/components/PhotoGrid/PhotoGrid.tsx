@@ -1,13 +1,15 @@
 import {SimpleGrid, Paper} from "@mantine/core"
 import React, {FC, useState} from "react"
-import Img, {FluidObject} from "gatsby-image"
+import {GatsbyImage, IGatsbyImageData} from "gatsby-plugin-image"
 
 export interface PhotoGridProps {
-  photos: FluidObject[]
+  photos: (IGatsbyImageData | undefined)[]
 }
 
 export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
-  const [selectedImage, setSelectedImage] = useState<FluidObject>()
+  const [selectedImage, setSelectedImage] = useState<IGatsbyImageData>()
+
+  console.log("photos", photos)
 
   return (
     <SimpleGrid
@@ -19,7 +21,7 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
         {maxWidth: "xs", cols: 1, spacing: "sm"}
       ]}
     >
-      {photos.map((photo) => (
+      {(photos.filter(Boolean) as IGatsbyImageData[]).map((photo, index) => (
         <Paper
           shadow="sm"
           sx={{
@@ -27,17 +29,14 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
             // "&:hover": {opacity: 0.8},
             overflow: "hidden"
           }}
-          key={photo.src}
+          key={index}
           radius="md"
         >
-          {/* <AspectRatio ratio={1.62 / 1}> */}
-          <Img
+          <GatsbyImage
             // onClick={() => setSelectedImage(imageURL)}
-            fluid={photo}
+            image={photo}
             alt="With default placeholder"
-            // withPlaceholder
           />
-          {/* </AspectRatio> */}
         </Paper>
       ))}
     </SimpleGrid>

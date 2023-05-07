@@ -5,6 +5,7 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import {PhotoGrid} from "components/PhotoGrid"
 import {FilesystemQueryResult} from "utils/helpers"
+import {getImage} from "gatsby-plugin-image"
 
 interface EventPhotosProps {
   data: {
@@ -15,12 +16,16 @@ interface EventPhotosProps {
 }
 
 export default function EventPhotos({data}: EventPhotosProps) {
+  console.log("data", data)
+
   return (
     <Layout>
       <PageTitle>HackUSU 2023 Photos</PageTitle>
       <Container style={{marginTop: "3rem"}} size="xl">
         <PhotoGrid
-          photos={data.allFile.edges.map((e) => e.node.childImageSharp.fluid)}
+          photos={data.allFile.edges
+            .map((e) => getImage(e.node.childImageSharp.gatsbyImageData))
+            .filter(Boolean)}
         />
       </Container>
     </Layout>
@@ -34,9 +39,7 @@ export const portfolioQuery = graphql`
         node {
           id
           childImageSharp {
-            fluid(maxWidth: 500) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(width: 1920)
           }
         }
       }
