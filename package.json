@@ -20,6 +20,8 @@
     "@parcel/namer-default": "^2.8.3",
     "animate.css": "^4.1.1",
     "dayjs": "^1.11.7",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-image": "^3.9.0",
     "number-abbreviate": "^2.0.0",
     "react": "^18.2.0",
     "react-animation-on-scroll": "^5.1.0",
@@ -40,6 +42,9 @@
     "gatsby": "^5.9.0",
     "gatsby-plugin-mantine": "5.0.0",
     "gatsby-plugin-root-import": "^2.0.9",
+    "gatsby-plugin-sharp": "^5.9.0",
+    "gatsby-source-filesystem": "^5.9.0",
+    "gatsby-transformer-sharp": "^5.9.0",
     "gh-pages": "^5.0.0",
     "prettier": "^2.8.8",
     "typescript": "^5.0.4"
