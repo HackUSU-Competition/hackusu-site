@@ -1,4 +1,4 @@
-import {SimpleGrid, Paper} from "@mantine/core"
+import {SimpleGrid, useMantineTheme} from "@mantine/core"
 import React, {FC, useState} from "react"
 import {GatsbyImage, IGatsbyImageData} from "gatsby-plugin-image"
 
@@ -9,7 +9,7 @@ export interface PhotoGridProps {
 export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
   const [selectedImage, setSelectedImage] = useState<IGatsbyImageData>()
 
-  console.log("photos", photos)
+  const theme = useMantineTheme()
 
   return (
     <SimpleGrid
@@ -22,22 +22,18 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
       ]}
     >
       {(photos.filter(Boolean) as IGatsbyImageData[]).map((photo, index) => (
-        <Paper
-          shadow="sm"
-          sx={{
-            // cursor: "pointer",
-            // "&:hover": {opacity: 0.8},
-            overflow: "hidden"
-          }}
+        <GatsbyImage
           key={index}
-          radius="md"
-        >
-          <GatsbyImage
-            // onClick={() => setSelectedImage(imageURL)}
-            image={photo}
-            alt="With default placeholder"
-          />
-        </Paper>
+          // onClick={() => setSelectedImage(imageURL)}
+          image={photo}
+          alt="With default placeholder"
+          style={{
+            aspectRatio: "1.62 / 1",
+            borderRadius: theme.radius.md
+            // cursor: "pointer"
+            // "&:hover": {opacity: 0.8},
+          }}
+        />
       ))}
     </SimpleGrid>
   )

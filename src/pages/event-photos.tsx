@@ -39,7 +39,7 @@ export const portfolioQuery = graphql`
         node {
           id
           childImageSharp {
-            gatsbyImageData(width: 1920)
+            gatsbyImageData(width: 500)
           }
         }
       }
