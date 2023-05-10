@@ -8,10 +8,7 @@ import {FilesystemQueryResult} from "utils/helpers"
 
 interface EventPhotosProps {
   data: {
-    full: {
-      edges: FilesystemQueryResult[]
-    }
-    thumbnails: {
+    photos: {
       edges: FilesystemQueryResult[]
     }
   }
@@ -22,7 +19,7 @@ export default function EventPhotos({data}: EventPhotosProps) {
     <Layout>
       <PageTitle>HackUSU 2023 Photos</PageTitle>
       <Container style={{marginTop: "3rem"}} size="xl">
-        <PhotoGrid full={data.full.edges} thumbnails={data.thumbnails.edges} />
+        <PhotoGrid photos={data.photos.edges} />
       </Container>
     </Layout>
   )
@@ -30,24 +27,13 @@ export default function EventPhotos({data}: EventPhotosProps) {
 
 export const portfolioQuery = graphql`
   {
-    thumbnails: allFile {
+    photos: allFile {
       edges {
         node {
           id
           base
           childImageSharp {
-            gatsbyImageData(width: 300)
-          }
-        }
-      }
-    }
-    full: allFile {
-      edges {
-        node {
-          id
-          base
-          childImageSharp {
-            gatsbyImageData(width: 2000)
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
