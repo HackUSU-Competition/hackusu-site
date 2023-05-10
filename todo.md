@@ -1,5 +1,7 @@
 # TODO
 
+- Gatsby useStaticQuery
+- Use StaticImage to render images on the home page / other pages
 - View event photos, see press photos component (https://www.mikejohnsonphoto.com/2023/3-March/USU-Hackathon/n-Bckpnc/)
 - Import images dynamically from a resource folder
 - Remove the createStyles() styling

@@ -1,13 +1,17 @@
 import {SimpleGrid, useMantineTheme} from "@mantine/core"
 import React, {FC, useState} from "react"
-import {GatsbyImage, IGatsbyImageData} from "gatsby-plugin-image"
+import {GatsbyImage, IGatsbyImageData, getImage} from "gatsby-plugin-image"
+import {FilesystemQueryResult} from "utils/helpers"
 
 export interface PhotoGridProps {
-  photos: (IGatsbyImageData | undefined)[]
+  full: FilesystemQueryResult[]
+  thumbnails: FilesystemQueryResult[]
 }
 
-export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
-  const [selectedImage, setSelectedImage] = useState<IGatsbyImageData>()
+export const PhotoGrid: FC<PhotoGridProps> = ({full, thumbnails}) => {
+  const [selectedId, setSelectedId] = useState<string>()
+
+  console.log(full.find((p) => p.node.id === selectedId))
 
   const theme = useMantineTheme()
 
@@ -21,19 +25,23 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
         {maxWidth: "xs", cols: 1, spacing: "sm"}
       ]}
     >
-      {(photos.filter(Boolean) as IGatsbyImageData[]).map((photo, index) => (
-        <GatsbyImage
-          key={index}
-          // onClick={() => setSelectedImage(imageURL)}
-          image={photo}
-          alt="With default placeholder"
-          style={{
-            aspectRatio: "1.62 / 1",
-            borderRadius: theme.radius.md
-            // cursor: "pointer"
-            // "&:hover": {opacity: 0.8},
-          }}
-        />
+      {thumbnails.map((photo, index) => (
+        <div key={index} onClick={() => setSelectedId(photo.node.id)}>
+          <GatsbyImage
+            image={
+              getImage(
+                photo.node.childImageSharp.gatsbyImageData
+              ) as IGatsbyImageData
+            }
+            alt={`HackUSU event photo: ${photo.node.base}`}
+            style={{
+              aspectRatio: "1.62 / 1",
+              borderRadius: theme.radius.sm,
+              cursor: "pointer"
+              // "&:hover": {opacity: 0.8},
+            }}
+          />
+        </div>
       ))}
     </SimpleGrid>
   )
