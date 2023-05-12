@@ -31,7 +31,7 @@ export const portfolioQuery = graphql`
       edges {
         node {
           id
-          base
+          name
           childImageSharp {
             gatsbyImageData(layout: FULL_WIDTH)
           }

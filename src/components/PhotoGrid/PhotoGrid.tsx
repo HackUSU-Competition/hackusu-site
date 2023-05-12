@@ -8,7 +8,7 @@ export interface PhotoGridProps {
 }
 
 export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
-  const [selectedId, setSelectedId] = useState<FilesystemQueryResult>()
+  const [selectedPhoto, setSelectedPhoto] = useState<FilesystemQueryResult>()
 
   const theme = useMantineTheme()
 
@@ -24,14 +24,14 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
         ]}
       >
         {photos.map((photo, index) => (
-          <div key={index} onClick={() => setSelectedId(photo)}>
+          <div key={index} onClick={() => setSelectedPhoto(photo)}>
             <GatsbyImage
               image={
                 getImage(
                   photo.node.childImageSharp.gatsbyImageData
                 ) as IGatsbyImageData
               }
-              alt={`HackUSU event photo: ${photo.node.base}`}
+              alt={`HackUSU event photo: ${photo.node.name}`}
               style={{
                 aspectRatio: "1.62 / 1",
                 borderRadius: theme.radius.sm,
@@ -44,18 +44,24 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
       </SimpleGrid>
 
       <Modal
-        opened={!!selectedId}
-        onClose={() => setSelectedId(undefined)}
-        title={selectedId?.node.base}
+        opened={!!selectedPhoto}
+        onClose={() => setSelectedPhoto(undefined)}
+        title={selectedPhoto?.node.name}
         fullScreen
         transitionProps={{transition: "fade", duration: 200}}
       >
         {(() => {
-          const image = selectedId && getImage(selectedId.node.childImageSharp)
+          const image =
+            selectedPhoto && getImage(selectedPhoto.node.childImageSharp)
 
           if (!image) return null
 
-          return <GatsbyImage alt="" image={image} />
+          return (
+            <GatsbyImage
+              alt={`HackUSU event photo: ${selectedPhoto.node.name}`}
+              image={image}
+            />
+          )
         })()}
       </Modal>
     </>
