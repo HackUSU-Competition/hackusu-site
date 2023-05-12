@@ -9,14 +9,28 @@ export interface PhotoGridProps {
 }
 
 export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
-  const [selectedPhoto, setSelectedPhoto] = useState<FilesystemQueryResult>()
+  const [selectedIndex, setSelectedIndex] = useState<number>()
 
   const theme = useMantineTheme()
 
   useHotkeys([
-    ["Escape", () => setSelectedPhoto(undefined)],
-    ["ArrowRight", () => console.log("right")],
-    ["ArrowLeft", () => console.log("left")]
+    ["Escape", () => setSelectedIndex(undefined)],
+    [
+      "ArrowRight",
+      () => {
+        setSelectedIndex((i) =>
+          i === undefined ? undefined : (i + 1) % photos.length
+        )
+      }
+    ],
+    [
+      "ArrowLeft",
+      () => {
+        setSelectedIndex((i) =>
+          i === undefined ? undefined : (i - 1 + photos.length) % photos.length
+        )
+      }
+    ]
   ])
 
   return (
@@ -31,7 +45,7 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
         ]}
       >
         {photos.map((photo, index) => (
-          <div key={index} onClick={() => setSelectedPhoto(photo)}>
+          <div key={index} onClick={() => setSelectedIndex(index)}>
             <GatsbyImage
               image={
                 getImage(
@@ -50,42 +64,41 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
         ))}
       </SimpleGrid>
 
-      {!!selectedPhoto && (
-        <Modal.Root
-          opened={!!selectedPhoto}
-          onClose={() => setSelectedPhoto(undefined)}
-          onClick={() => setSelectedPhoto(undefined)}
-        >
-          <Modal.Overlay blur={3} fixed />
+      <Modal.Root
+        opened={selectedIndex !== undefined}
+        onClose={() => setSelectedIndex(undefined)}
+        onClick={() => setSelectedIndex(undefined)}
+      >
+        <Modal.Overlay blur={3} fixed />
 
-          {(() => {
-            const image =
-              selectedPhoto && getImage(selectedPhoto.node.childImageSharp)
+        {(() => {
+          const image =
+            selectedIndex !== undefined &&
+            getImage(photos[selectedIndex].node.childImageSharp)
 
-            if (!image) return null
+          if (!image) return null
 
-            return (
-              <Box
-                sx={(theme) => ({
-                  position: "fixed",
-                  inset: 0,
-                  zIndex: 201,
-                  margin: theme.spacing.xl
-                })}
-              >
-                <GatsbyImage
-                  alt={`HackUSU event photo: ${selectedPhoto.node.name}`}
-                  image={image}
-                  imgStyle={{
-                    objectFit: "contain",
-                    maxHeight: `calc(100vh - 2 * ${theme.spacing.xl})`
-                  }}
-                />
-              </Box>
-            )
-          })()}
-        </Modal.Root>
-      )}
+          return (
+            <Box
+              sx={(theme) => ({
+                position: "fixed",
+                inset: 0,
+                zIndex: 201,
+                margin: theme.spacing.xl
+              })}
+            >
+              <GatsbyImage
+                alt={`HackUSU event photo: ${photos[selectedIndex].node.name}`}
+                image={image}
+                imgStyle={{
+                  objectFit: "contain",
+                  maxHeight: `calc(100vh - 2 * ${theme.spacing.xl})`
+                }}
+              />
+            </Box>
+          )
+        })()}
+      </Modal.Root>
     </>
   )
 }
