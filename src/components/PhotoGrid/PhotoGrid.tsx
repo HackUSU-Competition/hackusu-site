@@ -1,7 +1,8 @@
-import {Modal, SimpleGrid, useMantineTheme} from "@mantine/core"
+import {Box, Modal, SimpleGrid, useMantineTheme} from "@mantine/core"
 import React, {FC, useState} from "react"
 import {GatsbyImage, IGatsbyImageData, getImage} from "gatsby-plugin-image"
 import {FilesystemQueryResult} from "utils/helpers"
+import {useHotkeys} from "@mantine/hooks"
 
 export interface PhotoGridProps {
   photos: FilesystemQueryResult[]
@@ -11,6 +12,12 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
   const [selectedPhoto, setSelectedPhoto] = useState<FilesystemQueryResult>()
 
   const theme = useMantineTheme()
+
+  useHotkeys([
+    ["Escape", () => setSelectedPhoto(undefined)],
+    ["ArrowRight", () => console.log("right")],
+    ["ArrowLeft", () => console.log("left")]
+  ])
 
   return (
     <>
@@ -43,28 +50,42 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
         ))}
       </SimpleGrid>
 
-      <Modal
-        centered
-        opened={!!selectedPhoto}
-        onClose={() => setSelectedPhoto(undefined)}
-        title={selectedPhoto?.node.name}
-        size="100%"
-        transitionProps={{transition: "fade", duration: 200}}
-      >
-        {(() => {
-          const image =
-            selectedPhoto && getImage(selectedPhoto.node.childImageSharp)
+      {!!selectedPhoto && (
+        <Modal.Root
+          opened={!!selectedPhoto}
+          onClose={() => setSelectedPhoto(undefined)}
+          onClick={() => setSelectedPhoto(undefined)}
+        >
+          <Modal.Overlay blur={3} fixed />
 
-          if (!image) return null
+          {(() => {
+            const image =
+              selectedPhoto && getImage(selectedPhoto.node.childImageSharp)
 
-          return (
-            <GatsbyImage
-              alt={`HackUSU event photo: ${selectedPhoto.node.name}`}
-              image={image}
-            />
-          )
-        })()}
-      </Modal>
+            if (!image) return null
+
+            return (
+              <Box
+                sx={(theme) => ({
+                  position: "fixed",
+                  inset: 0,
+                  zIndex: 201,
+                  margin: theme.spacing.xl
+                })}
+              >
+                <GatsbyImage
+                  alt={`HackUSU event photo: ${selectedPhoto.node.name}`}
+                  image={image}
+                  imgStyle={{
+                    objectFit: "contain",
+                    maxHeight: `calc(100vh - 2 * ${theme.spacing.xl})`
+                  }}
+                />
+              </Box>
+            )
+          })()}
+        </Modal.Root>
+      )}
     </>
   )
 }
