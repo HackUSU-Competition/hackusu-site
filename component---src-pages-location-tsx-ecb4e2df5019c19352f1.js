@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmantine_gatsby_template=self.webpackChunkmantine_gatsby_template||[]).push([[119],{17728:function(e,t,n){n.r(t),n.d(t,{default:function(){return c}});var a=n(92230),l=n(24458),u=n(67294),r=n(49981);function c(){return u.createElement(r.Z,null,u.createElement(a.W,null,u.createElement(l.D,{align:"center"},"LOCATION")))}}}]);
-//# sourceMappingURL=component---src-pages-location-tsx-ecb4e2df5019c19352f1.js.map
