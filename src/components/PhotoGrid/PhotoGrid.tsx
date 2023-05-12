@@ -33,7 +33,7 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
               }
               alt={`HackUSU event photo: ${photo.node.name}`}
               style={{
-                aspectRatio: "1.62 / 1",
+                aspectRatio: "1 / 1",
                 borderRadius: theme.radius.sm,
                 cursor: "pointer"
                 // "&:hover": {opacity: 0.8},
@@ -44,10 +44,11 @@ export const PhotoGrid: FC<PhotoGridProps> = ({photos}) => {
       </SimpleGrid>
 
       <Modal
+        centered
         opened={!!selectedPhoto}
         onClose={() => setSelectedPhoto(undefined)}
         title={selectedPhoto?.node.name}
-        fullScreen
+        size="100%"
         transitionProps={{transition: "fade", duration: 200}}
       >
         {(() => {
