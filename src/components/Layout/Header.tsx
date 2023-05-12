@@ -19,9 +19,9 @@ import {REGISTRATION_OPEN} from "utils/constants"
 
 const HEADER_HEIGHT = 80
 
-const useStyles = createStyles((t) => ({
+const useStyles = createStyles((theme) => ({
   header: {
-    backgroundColor: t.colors.navy[9],
+    backgroundColor: theme.colors.navy[9],
     border: 0
   },
 
@@ -33,27 +33,27 @@ const useStyles = createStyles((t) => ({
   },
 
   links: {
-    [t.fn.smallerThan("sm")]: {
+    [theme.fn.smallerThan("sm")]: {
       display: "none"
     }
   },
 
   burger: {
-    [t.fn.largerThan("sm")]: {
+    [theme.fn.largerThan("sm")]: {
       display: "none"
     }
   },
 
   link: {
-    color: t.colors.gray[4],
+    color: theme.colors.gray[4],
     padding: "8px 12px",
-    borderRadius: t.radius.sm,
-    fontSize: t.fontSizes.sm,
+    borderRadius: theme.radius.sm,
+    fontSize: theme.fontSizes.sm,
     fontWeight: 500,
     textDecoration: "none !important",
 
     "&:hover": {
-      backgroundColor: t.colors.navy[8]
+      backgroundColor: theme.colors.navy[8]
     }
   },
 
@@ -116,12 +116,7 @@ const HeaderNav: FC = () => {
           onClose={handlers.close}
           padding="xl"
           size="sm"
-          sx={(theme) => ({
-            drawer: {
-              backgroundColor: theme.colors.navy[9],
-              color: theme.colors.gray[4]
-            }
-          })}
+          closeButtonProps={{iconSize: "xl"}}
         >
           <Stack>
             {headerLinks.map((link) => (
@@ -129,7 +124,7 @@ const HeaderNav: FC = () => {
                 component={Link}
                 key={link.label}
                 to={link.href}
-                className={classes.link}
+                sx={{textDecoration: "none !important"}}
               >
                 {link.label}
               </Anchor>
