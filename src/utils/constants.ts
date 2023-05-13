@@ -9,5 +9,6 @@ export const USU_POLICE_PHONE = "435-797-1939"
 
 export const PREV_YEAR_STATS = {
   numStudents: 420,
-  numProjects: 70
+  numProjects: 70,
+  numSchools: 12
 }

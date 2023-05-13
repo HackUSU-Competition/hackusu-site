@@ -11,6 +11,7 @@ import {
 import AnimateUpOnce from "components/AnimateUpOnce"
 import Section from "components/Layout/Section"
 import React, {FC} from "react"
+import {PREV_YEAR_STATS} from "utils/constants"
 
 const useStyles = createStyles((theme) => ({
   stats: {
@@ -130,7 +131,7 @@ const About: FC = () => {
             Network with employers to find out about internship and career
             opportunities
           </li>
-          <li>Free food and unlimited snacks!</li>
+          <li>Free food and snacks!</li>
         </ul>
       </Text>
 
@@ -156,7 +157,7 @@ const About: FC = () => {
 
       <Paper shadow="sm" className={classes.stats} radius="lg" my={40}>
         <Title order={3} align="center" mb="lg">
-          HackUSU 2022 Stats
+          HackUSU 2023 Stats
         </Title>
         <SimpleGrid
           cols={3}
@@ -166,19 +167,19 @@ const About: FC = () => {
           {[
             {
               label: "Students",
-              value: "279",
+              value: PREV_YEAR_STATS.numStudents,
               description:
                 "From high school seniors, all the way to Ph.D. students!"
             },
             {
               label: "Schools",
-              value: "12",
+              value: PREV_YEAR_STATS.numSchools,
               description:
                 "Students attended from 12 different universities, community colleges, and high schools from across Utah and Idaho"
             },
             {
               label: "Projects",
-              value: "80",
+              value: PREV_YEAR_STATS.numProjects,
               description:
                 "Competition categories included game development, security, data analytics, and more!"
             }

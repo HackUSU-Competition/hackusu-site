@@ -76,11 +76,11 @@ export const footerLinkGroups: FooterLinkGroup[] = [
       {
         label: "Volunteer",
         href: paths.volunteer
+      },
+      {
+        label: "Press Resources",
+        href: paths.press
       }
-      // {
-      //   label: "Press Resources",
-      //   href: paths.press
-      // }
     ]
   },
   {

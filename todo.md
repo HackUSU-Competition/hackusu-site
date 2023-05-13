@@ -1,7 +1,7 @@
 # TODO
 
 - Update the location page
-- Update quotes on the press page with feedback from 2023
+- Update quotes on the press page and sponsor page with feedback from 2023
 - Update the sponsor page with information from 2023
 - Update the press page with information from 2023
 - View past projects
