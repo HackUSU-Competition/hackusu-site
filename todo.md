@@ -7,5 +7,5 @@
 - Update the press page with information from 2023
 - View past projects
 - Create page with more detailed competition info (rules, judging, etc.)
-- Registration pricing, what's included in registration
+- Registration pricing, what's included in registration (remove references to free event)
 - Downloadable images for press use
