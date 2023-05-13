@@ -96,9 +96,9 @@ const VolunteerForm: FC<ContainerProps> = (props) => {
           >
             <Stack mt="sm">
               <Checkbox value="Event Organizer" label="Event Organizer" />
-              <Checkbox value="Workshop Host" label="Workshop Host" />
+              <Checkbox value="Workshop Presenter" label="Workshop Presenter" />
               <Checkbox value="Project Judge" label="Project Judge" />
-              <Checkbox value="Mentor" label="Mentor" />
+              {/* <Checkbox value="Mentor" label="Mentor" /> */}
             </Stack>
           </Checkbox.Group>
         </SimpleGrid>

@@ -33,18 +33,22 @@ const volunteerOpportunities: VolunteerOpportunity[] = [
     description: (
       <>
         <p>
-          Our amazing organizers spend all year planning HackUSU! Our committees
-          include outreach, financial, and technology.
+          Our amazing organizers spend all year planning HackUSU! We need
+          volunteers to work on the following projects:
         </p>
-        <p>
-          If you&apos;d like to join us, you&apos;ll need 1-2 hours per week to
-          work on preparing for HackUSU.
-        </p>
+        <ul>
+          <li>Work with companies to coordinate sponsorships</li>
+          <li>Schedule workshops, judges, and speakers</li>
+          <li>
+            Organize other volunteers who will help us on the day of the event
+          </li>
+          <li>Coordinate catering</li>
+        </ul>
       </>
     )
   },
   {
-    title: "Workshop Host",
+    title: "Workshop Presenter",
     image: require("images/illustrations/teaching.svg").default,
     cta: "Host a Workshop",
     description: (
@@ -75,19 +79,19 @@ const volunteerOpportunities: VolunteerOpportunity[] = [
         provide specific instructions on the judging process.
       </p>
     )
-  },
-  {
-    title: "Mentor",
-    image: require("images/illustrations/pair-programming.svg").default,
-    cta: "Become a Mentor",
-    description: (
-      <p>
-        We&apos;ll have mentors available throughout the competition whenever
-        teams need help on their project or need to learn more about a specific
-        technology.
-      </p>
-    )
   }
+  // {
+  //   title: "Mentor",
+  //   image: require("images/illustrations/pair-programming.svg").default,
+  //   cta: "Become a Mentor",
+  //   description: (
+  //     <p>
+  //       We&apos;ll have mentors available throughout the competition whenever
+  //       teams need help on their project or need to learn more about a specific
+  //       technology.
+  //     </p>
+  //   )
+  // }
 ]
 
 const useStyles = createStyles((theme) => ({

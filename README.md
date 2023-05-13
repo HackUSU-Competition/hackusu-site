@@ -1,5 +1,8 @@
 # HackUSU Site
 
+Questions?
+Contact Troy DeSpain, despaintroy@gmail.com
+
 ## Installing and Running Locally
 
 ### Clone the repository
@@ -7,7 +10,7 @@
     $ git clone git@github.com:HackUSU-Competition/hackusu-site.git
     $ cd hackusu-site
 
-### Using a compatable Node version
+### Using a compatible Node version
 
 Currently, Node 18 is required for compatibility with Gatsby. Using NVM to manage Node versions is recommended.
 
@@ -26,3 +29,4 @@ Install NVM: [https://github.com/nvm-sh/nvm](https://github.com/nvm-sh/nvm)
 - `npm start` – start project locally
 - `npm run build` – export project for production
 - `npm run serve` – serve production build locally
+- `npm run deploy` – deploy the site to Github Pages
