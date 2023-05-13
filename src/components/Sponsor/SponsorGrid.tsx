@@ -14,7 +14,6 @@ const SponsorGrid: FC<{sponsors: Sponsor[]}> = ({sponsors}) => {
         {maxWidth: "xs", cols: 1, spacing: "sm"}
       ]}
     >
-      {" "}
       {sponsors
         .filter((sponsor) => sponsor.logo)
         .map((sponsor) => (

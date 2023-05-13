@@ -5,12 +5,12 @@ const useStyles = createStyles((theme) => ({
   title: {
     paddingBottom: theme.spacing.md,
     letterSpacing: "0.05em",
-    fontSize: theme.fontSizes.xl * 2,
+    fontSize: `calc(${theme.fontSizes.xl} * 2)`,
     textAlign: "center"
   },
 
   description: {
-    fontSize: theme.fontSizes.xl * 1.2
+    fontSize: `calc(${theme.fontSizes.xl} * 1.2)`
   }
 }))
 
@@ -28,7 +28,7 @@ const SectionHead: FC<SectionHeadProps> = ({title, children}) => {
         {title}
       </Title>
       <Container size="sm">
-        <Text align="center" weight="300" className={classes.description}>
+        <Text align="center" weight={300} className={classes.description}>
           {children}
         </Text>
       </Container>
