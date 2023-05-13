@@ -1,5 +1,6 @@
 # TODO
 
+- Dynamically load current and previous sponsor logos
 - Use StaticImage to render images on the home page / other pages
 - Remove the createStyles() styling
 - Update the location page

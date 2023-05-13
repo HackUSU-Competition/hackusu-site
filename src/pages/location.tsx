@@ -1,26 +1,31 @@
-import {
-  Box,
-  Button,
-  Container,
-  Image,
-  Paper,
-  SimpleGrid,
-  Text
-} from "@mantine/core"
+import {Box, Button, Container, Paper, SimpleGrid, Text} from "@mantine/core"
 import PageTitle from "components/PageTitle"
 import {Link} from "gatsby"
 import React from "react"
 import Layout from "../components/Layout/Layout"
+import {StaticImage} from "gatsby-plugin-image"
+import {useMediaQuery} from "@mantine/hooks"
 
 export default function Location() {
+  const isMobile = useMediaQuery("(max-width: 700px)")
+
   return (
     <Layout>
       <PageTitle>LOCATION</PageTitle>
 
-      <Image
-        height={500}
-        src={require("images/scenes/huntsman-hall.jpg").default}
-      />
+      {isMobile ? (
+        <StaticImage
+          layout="fullWidth"
+          src={"../images/scenes/huntsman-hall.jpg"}
+          alt="Huntsman Hall building"
+        />
+      ) : (
+        <StaticImage
+          layout="fullWidth"
+          src={"../images/scenes/huntsman-hall-banner.jpg"}
+          alt="Huntsman Hall building"
+        />
+      )}
       <Container size="lg">
         <SimpleGrid
           cols={2}

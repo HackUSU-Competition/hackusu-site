@@ -20,6 +20,7 @@ import React from "react"
 import {Bulb, ChartDots, Code, DeviceGamepad2, Robot} from "tabler-icons-react"
 import {EVENT_DATES} from "utils/constants"
 import "../css/main.css"
+import {StaticImage} from "gatsby-plugin-image"
 
 export default function HomePage() {
   return (
@@ -112,10 +113,9 @@ export default function HomePage() {
       </Section>
 
       <AspectRatio ratio={25 / 10}>
-        <Image
-          src={
-            require("images/event-photos/Mike Johnson Photo-04439.jpg").default
-          }
+        <StaticImage
+          src="../images/event-photos/Mike Johnson Photo-04439.jpg"
+          alt="Students working on a project at HackUSU"
         />
       </AspectRatio>
 
@@ -198,10 +198,9 @@ export default function HomePage() {
       </Section>
 
       <AspectRatio ratio={17 / 10}>
-        <Image
-          src={
-            require("images/event-photos/Mike Johnson Photo-04404.jpg").default
-          }
+        <StaticImage
+          src="../images/event-photos/Mike Johnson Photo-04404.jpg"
+          alt="A group of students wearing HackUSU shirts"
         />
       </AspectRatio>
 
