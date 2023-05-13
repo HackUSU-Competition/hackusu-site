@@ -17,8 +17,8 @@ export const headerLinks: NavLink[] = [
   {label: "2023 Photos", href: paths.photos},
   // { label: 'Location', href: paths.location },
   {label: "Schedule", href: paths.schedule},
-  {label: "Volunteer", href: paths.volunteer}
-  // { label: 'Sponsor', href: paths.sponsor },
+  {label: "Volunteer", href: paths.volunteer},
+  {label: "Sponsor", href: paths.sponsor}
 ]
 
 export interface NavLink {
@@ -69,10 +69,10 @@ export const footerLinkGroups: FooterLinkGroup[] = [
   {
     title: "Join Us",
     links: [
-      // {
-      //   label: "Sponsor",
-      //   href: paths.sponsor
-      // },
+      {
+        label: "Sponsor",
+        href: paths.sponsor
+      },
       {
         label: "Volunteer",
         href: paths.volunteer

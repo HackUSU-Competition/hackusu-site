@@ -11,7 +11,7 @@ export default function Location() {
 
   return (
     <Layout>
-      <PageTitle>LOCATION</PageTitle>
+      <PageTitle>Location</PageTitle>
 
       {isMobile ? (
         <StaticImage

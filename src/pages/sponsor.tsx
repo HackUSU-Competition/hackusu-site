@@ -11,7 +11,7 @@ import Layout from "../components/Layout/Layout"
 export default function Sponsor() {
   return (
     <Layout>
-      <PageTitle>SPONSOR HACKUSU</PageTitle>
+      <PageTitle>Sponsor HackUSU 2024</PageTitle>
       <About />
       <BenefitsTable />
       <GetStarted />

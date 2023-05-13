@@ -32,7 +32,7 @@ const About: FC = () => {
         </Text>
 
         <Text mt={40} weight="bold" size="xl">
-          Here&apos;s what students will be doing at HackUSU 2023:
+          Here&apos;s what students will be doing at HackUSU 2024:
         </Text>
         <List icon={<ArrowRight />} mt={10}>
           <List.Item>

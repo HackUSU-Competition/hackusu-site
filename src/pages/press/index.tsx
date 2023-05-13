@@ -8,7 +8,7 @@ import React from "react"
 export default function Press() {
   return (
     <Layout>
-      <PageTitle>PRESS RESOURCES</PageTitle>
+      <PageTitle>Press Resources</PageTitle>
       <About />
       <Attending />
       <FeaturedArticles />

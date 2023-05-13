@@ -129,7 +129,7 @@ export default function Volunteer() {
   const {classes} = useStyles()
   return (
     <Layout>
-      <PageTitle>VOLUNTEER OPPORTUNITIES</PageTitle>
+      <PageTitle>Volunteer Opportunities</PageTitle>
       <Container>
         <Box>
           {volunteerOpportunities.map((opportunity, idx) => {

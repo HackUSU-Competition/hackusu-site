@@ -46,7 +46,7 @@ export default function Schedule() {
 
   return (
     <Layout>
-      <PageTitle>2023 SCHEDULE</PageTitle>
+      <PageTitle>2023 Schedule</PageTitle>
       <Container style={{marginTop: "3rem"}} size="sm">
         <Alert
           title="Thanks for attending HackUSU 2023!"
