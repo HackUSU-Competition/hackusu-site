@@ -1,10 +1,14 @@
-import {Image, List, Text, Title} from "@mantine/core"
+import {List, Text, Title} from "@mantine/core"
+import {useMediaQuery} from "@mantine/hooks"
 import Section from "components/Layout/Section"
+import {StaticImage} from "gatsby-plugin-image"
 import React, {FC} from "react"
 import {ArrowRight} from "tabler-icons-react"
 import {EVENT_DATES} from "utils/constants"
 
 const About: FC = () => {
+  const isMobile = useMediaQuery("(max-width: 700px)")
+
   return (
     <>
       <Section
@@ -54,20 +58,18 @@ const About: FC = () => {
           Midwest. Here are 3 ways that our sponsors benefit the most by getting
           involved:
         </Text>
-        <Image
-          src={require("images/maiden-voyage-table.jpeg").default}
-          mt={30}
-          ml="lg"
-          mb="lg"
-          sx={(theme) => ({
-            borderRadius: 10,
+        <StaticImage
+          src={"../../images/maiden-voyage-table.jpeg"}
+          alt="Picture of Maiden Voyage table at HackUSU"
+          layout="constrained"
+          style={{
+            margin: isMobile ? "30px auto" : "30px 0 30px 30px",
+            borderRadius: 5,
             overflow: "hidden",
-            float: "right",
-            width: "50%",
-            "@media (max-width: 755px)": {
-              width: "100%"
-            }
-          })}
+            maxWidth: 400,
+            float: isMobile ? "none" : "right",
+            display: isMobile ? "block" : "inline-block"
+          }}
         />
         <Title order={3} mt={30}>
           Recruiting
