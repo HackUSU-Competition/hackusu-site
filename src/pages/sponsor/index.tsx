@@ -1,12 +1,12 @@
 import Section from "components/Layout/Section"
 import PageTitle from "components/PageTitle"
-import About from "components/Sponsor/About"
-import GetStarted from "components/Sponsor/GetStarted"
-import BenefitsTable from "components/Sponsor/SponsorBenefitsTable"
-import SponsorGrid from "components/Sponsor/SponsorGrid"
 import {pastSponsors} from "content/sponsor/sponsorCompaniesContent"
 import React from "react"
-import Layout from "../components/Layout/Layout"
+import Layout from "../../components/Layout/Layout"
+import About from "./_About"
+import GetStarted from "./_GetStarted"
+import BenefitsTable from "./_SponsorBenefitsTable"
+import SponsorGrid from "../../components/SponsorGrid"
 
 export default function Sponsor() {
   return (
