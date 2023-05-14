@@ -68,7 +68,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         type: eventTypes.general,
         description:
           "Check-in will be inside the north entrance of Huntsman Hall, Utah State University. Follow the signs to the front desk to get your swag!",
-        coverImage: require("../images/scenes/huntsman-hall.jpg").default
+        coverImage: require("images/scenes/huntsman-hall-banner.jpg").default
       },
       {
         startTime: 17,

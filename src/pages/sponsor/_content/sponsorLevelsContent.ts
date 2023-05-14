@@ -93,11 +93,11 @@ export const sponsorLevelTableData: BenefitGroup[] = [
       {
         name: "Logo on event t-shirts",
         levels: levelsAbove(LevelName.PARTNER),
-        levelsDetails: {
-          [LevelName.PARTNER]: "Small",
-          [LevelName.TRACK]: "Medium",
-          [LevelName.TITLE]: "Large"
-        },
+        // levelsDetails: {
+        //   [LevelName.PARTNER]: "Small",
+        //   [LevelName.TRACK]: "Medium",
+        //   [LevelName.TITLE]: "Large"
+        // },
         tooltip:
           "Your sponsorship must be confirmed at least 6 weeks prior to the event to include your logo on t-shirts"
       },

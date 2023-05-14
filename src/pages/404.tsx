@@ -8,7 +8,7 @@ import {
   Title
 } from "@mantine/core"
 import Layout from "components/Layout/Layout"
-import {paths} from "content/navigationContent"
+import {paths} from "utils/navigationContent"
 import {Link} from "gatsby"
 import React from "react"
 

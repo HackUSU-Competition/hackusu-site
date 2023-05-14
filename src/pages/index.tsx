@@ -15,12 +15,12 @@ import ContactForm from "components/ContactForm"
 import Layout from "components/Layout/Layout"
 import Section from "components/Layout/Section"
 import SponsorGrid from "components/SponsorGrid"
-import {sponsors2023} from "content/sponsor/sponsorCompaniesContent"
 import React from "react"
 import {Bulb, ChartDots, Code, DeviceGamepad2, Robot} from "tabler-icons-react"
 import {EVENT_DATES} from "utils/constants"
 import "../css/main.css"
 import {StaticImage} from "gatsby-plugin-image"
+import {sponsors2023} from "./sponsor/_content/sponsorCompaniesContent"
 
 export default function HomePage() {
   return (

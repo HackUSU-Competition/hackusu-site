@@ -1,5 +1,5 @@
 import {Group} from "@mantine/core"
-import {HackUSUCalendarEvent} from "content/scheduleContent"
+import {HackUSUCalendarEvent} from "pages/schedule/scheduleContent"
 import React, {FC, useContext} from "react"
 import {ThemeContext} from "react-schedule-view"
 

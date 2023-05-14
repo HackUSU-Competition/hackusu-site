@@ -9,7 +9,7 @@ import {
   Text,
   useMantineTheme
 } from "@mantine/core"
-import {HackUSUCalendarEvent} from "content/scheduleContent"
+import {HackUSUCalendarEvent} from "pages/schedule/scheduleContent"
 import React, {FC} from "react"
 import {themes} from "react-schedule-view"
 import {Clock, Pin} from "tabler-icons-react"

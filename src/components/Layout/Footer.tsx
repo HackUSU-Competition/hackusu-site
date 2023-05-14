@@ -7,7 +7,7 @@ import {
   Text,
   Title
 } from "@mantine/core"
-import {footerLinkGroups} from "content/navigationContent"
+import {footerLinkGroups} from "utils/navigationContent"
 import {Link} from "gatsby"
 import React from "react"
 import {Mail} from "tabler-icons-react"

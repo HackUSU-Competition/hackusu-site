@@ -1,5 +1,5 @@
 import {Box, Group, List, RingProgress, ThemeIcon} from "@mantine/core"
-import {categorySpending} from "content/sponsor/spendingContent"
+import {categorySpending} from "pages/sponsor/_content/spendingContent"
 import React, {FC} from "react"
 import {CircleCheck} from "tabler-icons-react"
 

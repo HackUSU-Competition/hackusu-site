@@ -12,7 +12,7 @@ import {
 } from "@mantine/core"
 import {useDisclosure} from "@mantine/hooks"
 import GradientButton from "components/GradientButton"
-import {headerLinks, NavLink, paths} from "content/navigationContent"
+import {headerLinks, NavLink, paths} from "utils/navigationContent"
 import {Link} from "gatsby"
 import React, {FC} from "react"
 import {REGISTRATION_OPEN} from "utils/constants"
