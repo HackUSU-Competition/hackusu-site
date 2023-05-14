@@ -4,6 +4,7 @@ import React, {FC, ReactNode} from "react"
 import theme from "theme"
 import FooterLinks from "./Footer"
 import HeaderNav from "./Header"
+import {SEO} from "components/seo"
 
 const Layout: FC<{children: ReactNode}> = (props) => {
   return (

@@ -11,11 +11,9 @@ import {
   Stack
 } from "@mantine/core"
 import {useDisclosure} from "@mantine/hooks"
-import GradientButton from "components/GradientButton"
 import {headerLinks, NavLink, paths} from "utils/navigationContent"
 import {Link} from "gatsby"
 import React, {FC} from "react"
-import {REGISTRATION_OPEN} from "utils/constants"
 
 const HEADER_HEIGHT = 80
 
@@ -80,6 +78,7 @@ const HeaderNav: FC = () => {
             className={classes.burger}
             size="sm"
             color="white"
+            name="burger-menu"
           />
           <Anchor component={Link} to={paths.home}>
             <Image
@@ -104,11 +103,11 @@ const HeaderNav: FC = () => {
           ))}
         </Group>
 
-        {REGISTRATION_OPEN && (
+        {/* {REGISTRATION_OPEN && (
           <GradientButton component={Link} to="/registration" sx={{height: 30}}>
             Register
           </GradientButton>
-        )}
+        )} */}
       </Container>
       <Portal>
         <Drawer

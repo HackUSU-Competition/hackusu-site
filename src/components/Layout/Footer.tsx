@@ -81,12 +81,9 @@ export default function FooterLinks() {
         <Group align="start" className={classes.groups}>
           {footerLinkGroups.map((group) => (
             <div className={classes.wrapper} key={group.title}>
-              <Title
-                order={5}
-                sx={{fontWeight: 800, textTransform: "uppercase"}}
-              >
+              <Text sx={{fontWeight: 800, textTransform: "uppercase"}}>
                 {group.title}
-              </Title>
+              </Text>
               {group.links.map((link, index) =>
                 link.external ? (
                   <Anchor

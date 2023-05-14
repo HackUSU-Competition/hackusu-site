@@ -24,6 +24,7 @@ const SponsorGrid: FC<{sponsors: Sponsor[]}> = ({sponsors}) => {
             width={150}
             height={70}
             mx="auto"
+            alt={`${sponsor.name} logo`}
             // withPlaceholder
           />
         ))}

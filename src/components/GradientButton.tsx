@@ -1,7 +1,9 @@
-import {Button, ButtonProps} from "@mantine/core"
-import React, {FC} from "react"
+import {Button} from "@mantine/core"
+import React, {FC, PropsWithChildren} from "react"
 
-const GradientButton: FC<ButtonProps> = (props) => {
+type ButtonProps = React.ComponentProps<typeof Button>
+
+const GradientButton: FC<PropsWithChildren<ButtonProps>> = (props) => {
   const {children, ...rest} = props
 
   return (

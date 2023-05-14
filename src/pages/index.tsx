@@ -21,6 +21,7 @@ import {EVENT_DATES} from "utils/constants"
 import "../css/main.css"
 import {StaticImage} from "gatsby-plugin-image"
 import {sponsors2023} from "./sponsor/_sponsorCompaniesContent"
+import {SEO} from "components/seo"
 
 export default function HomePage() {
   return (
@@ -116,6 +117,7 @@ export default function HomePage() {
         <StaticImage
           src="../images/event-photos/Mike Johnson Photo-04439.jpg"
           alt="Students working on a project at HackUSU"
+          layout="fullWidth"
         />
       </AspectRatio>
 
@@ -189,7 +191,7 @@ export default function HomePage() {
                   <Text weight="bold" size="lg">
                     {title}
                   </Text>
-                  <Text color="gray">{description}</Text>
+                  <Text>{description}</Text>
                 </Box>
               </Group>
             </Card>
@@ -201,6 +203,7 @@ export default function HomePage() {
         <StaticImage
           src="../images/event-photos/Mike Johnson Photo-04404.jpg"
           alt="A group of students wearing HackUSU shirts"
+          layout="fullWidth"
         />
       </AspectRatio>
 
@@ -261,3 +264,5 @@ export default function HomePage() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO />

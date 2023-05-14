@@ -3,11 +3,12 @@
 }
 
 @font-face {
-  font-family: 'Roboto Slab';
-  src: local('Roboto Slab'), url('../fonts/roboto-slab.ttf') format('truetype');
+  font-family: "Roboto Slab";
+  src: local("Roboto Slab"), url("../fonts/roboto-slab.ttf") format("truetype");
   font-weight: bold;
+  font-display: swap;
 }
 
 .mantine-Title-root {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: "Roboto Slab", sans-serif;
 }
