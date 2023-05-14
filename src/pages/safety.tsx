@@ -7,6 +7,7 @@ import React from "react"
 import {ArrowRight, Download} from "tabler-icons-react"
 import {HACKUSU_EMAIL, USU_POLICE_PHONE} from "utils/constants"
 import Layout from "../components/Layout/Layout"
+import {SEO} from "components/seo"
 
 export default function About() {
   return (
@@ -112,3 +113,5 @@ export default function About() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO />

@@ -4,6 +4,7 @@ import About from "pages/press/_About"
 import React from "react"
 import Attending from "./_Attending"
 import FeaturedArticles from "./_FeaturedArticles"
+import {SEO} from "components/seo"
 
 export default function Press() {
   return (
@@ -15,3 +16,5 @@ export default function Press() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO />

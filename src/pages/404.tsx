@@ -11,6 +11,7 @@ import Layout from "components/Layout/Layout"
 import {paths} from "utils/navigationContent"
 import {Link} from "gatsby"
 import React from "react"
+import {SEO} from "components/seo"
 
 const useStyles = createStyles((theme) => ({
   label: {
@@ -60,3 +61,5 @@ export default function NotFoundTitle() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO />

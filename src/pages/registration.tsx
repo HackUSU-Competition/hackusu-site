@@ -7,6 +7,7 @@ import React from "react"
 import {ArrowRight} from "tabler-icons-react"
 import {HACKUSU_EMAIL, REGISTRATION_OPEN} from "utils/constants"
 import Layout from "../components/Layout/Layout"
+import {SEO} from "components/seo"
 
 export default function Registration() {
   return (
@@ -51,3 +52,5 @@ export default function Registration() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO />

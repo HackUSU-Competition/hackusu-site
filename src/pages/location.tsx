@@ -5,6 +5,7 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import {StaticImage} from "gatsby-plugin-image"
 import {useMediaQuery} from "@mantine/hooks"
+import {SEO} from "components/seo"
 
 export default function Location() {
   const isMobile = useMediaQuery("(max-width: 700px)")
@@ -82,3 +83,5 @@ export default function Location() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO />

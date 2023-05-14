@@ -5,6 +5,7 @@ import React from "react"
 import Layout from "../components/Layout/Layout"
 import {PhotoGrid} from "components/PhotoGrid"
 import {FilesystemQueryResult} from "utils/helpers"
+import {SEO} from "components/seo"
 
 interface EventPhotosProps {
   data: {
@@ -40,3 +41,5 @@ export const portfolioQuery = graphql`
     }
   }
 `
+
+export const Head = () => <SEO />

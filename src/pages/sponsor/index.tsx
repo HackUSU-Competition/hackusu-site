@@ -7,6 +7,7 @@ import GetStarted from "./_GetStarted"
 import BenefitsTable from "./_SponsorBenefitsTable"
 import SponsorGrid from "../../components/SponsorGrid"
 import {pastSponsors} from "./_sponsorCompaniesContent"
+import {SEO} from "components/seo"
 
 export default function Sponsor() {
   return (
@@ -21,3 +22,5 @@ export default function Sponsor() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO />

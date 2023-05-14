@@ -12,6 +12,7 @@ import React, {useState} from "react"
 import {createTheme, ScheduleView, themes} from "react-schedule-view"
 import {ScheduleViewProps} from "react-schedule-view/dist/ScheduleView"
 import EventTileContent from "./_EventTileContent"
+import {SEO} from "components/seo"
 
 const customCalendarTheme = createTheme("apple", {
   hourHeight: "75px",
@@ -96,3 +97,5 @@ export default function Schedule() {
     </Layout>
   )
 }
+
+export const Head = () => <SEO />
