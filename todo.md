@@ -11,6 +11,7 @@
 - Update with information involving business students' proposals
 - Photos probably won't be a top level page, link to it from somewhere else
 - Update logo to say 2024
-- Lighthouse score testing
+- Figure out why gatsby-plugin-mantine isn't working, had to add gatsby-ssr.js manually
+- Add favicon
 
 - ? Dynamically load current and previous sponsor logos
