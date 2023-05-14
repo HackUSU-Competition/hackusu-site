@@ -1,6 +1,5 @@
 # TODO
 
-- Update the location page
 - Update quotes on the press page and sponsor page with feedback from 2023
 - View past projects
 - Create page with more detailed competition info (rules, judging, etc.)
@@ -10,6 +9,6 @@
 - Add Social Share Preview file
 - Update volunteer opportunities when we determine how to pick president and vice president
 - Update with information involving business students' proposals
-- Put page-specific components in directory with page index
+- Photos probably won't be a top level page, link to it from somewhere else
 
 - ? Dynamically load current and previous sponsor logos
