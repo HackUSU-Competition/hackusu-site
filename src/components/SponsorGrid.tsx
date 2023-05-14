@@ -1,5 +1,5 @@
 import {Image, SimpleGrid} from "@mantine/core"
-import {Sponsor} from "pages/sponsor/_content/sponsorCompaniesContent"
+import {Sponsor} from "pages/sponsor/_sponsorCompaniesContent"
 import React, {FC} from "react"
 
 const SponsorGrid: FC<{sponsors: Sponsor[]}> = ({sponsors}) => {
