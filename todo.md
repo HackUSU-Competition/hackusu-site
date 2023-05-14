@@ -10,5 +10,6 @@
 - Update volunteer opportunities when we determine how to pick president and vice president
 - Update with information involving business students' proposals
 - Photos probably won't be a top level page, link to it from somewhere else
+- Update logo to say 2024
 
 - ? Dynamically load current and previous sponsor logos
