@@ -39,13 +39,9 @@ const EventModal: FC<EventModalProps> = (props) => {
       opened={!!event}
       onClose={handleClose}
       withCloseButton={false}
-      sx={{
-        modal: {
-          padding: "0 !important"
-        }
-      }}
+      padding={0}
     >
-      <Card>
+      <Card padding="lg">
         <Card.Section style={{borderBottom: "1px solid #AAA"}}>
           <Image
             withPlaceholder

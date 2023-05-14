@@ -11,7 +11,7 @@ import {
   Text,
   Title
 } from "@mantine/core"
-import ContactForm from "components/Forms/ContactForm"
+import ContactForm from "components/ContactForm"
 import Layout from "components/Layout/Layout"
 import Section from "components/Layout/Section"
 import SponsorGrid from "components/Sponsor/SponsorGrid"

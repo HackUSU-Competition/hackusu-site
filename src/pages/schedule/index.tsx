@@ -1,7 +1,7 @@
 import {Alert, ColorSwatch, Container, Group, Space, Text} from "@mantine/core"
+import Layout from "components/Layout/Layout"
 import PageTitle from "components/PageTitle"
-import EventModal from "components/Schedule/EventModal"
-import EventTileContent from "components/Schedule/EventTileContent"
+import EventModal from "pages/schedule/_EventModal"
 import {
   eventTypes,
   fridaySchedule,
@@ -11,7 +11,7 @@ import {
 import React, {useState} from "react"
 import {createTheme, ScheduleView, themes} from "react-schedule-view"
 import {ScheduleViewProps} from "react-schedule-view/dist/ScheduleView"
-import Layout from "../components/Layout/Layout"
+import EventTileContent from "./_EventTileContent"
 
 const customCalendarTheme = createTheme("apple", {
   hourHeight: "75px",

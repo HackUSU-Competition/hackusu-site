@@ -10,13 +10,13 @@ import {
   Title
 } from "@mantine/core"
 import AnimateUpOnce from "components/AnimateUpOnce"
-import VolunteerForm from "components/Forms/VolunteerForm"
 import GradientButton from "components/GradientButton"
+import Layout from "components/Layout/Layout"
 import PageTitle from "components/PageTitle"
 import {paths} from "content/navigationContent"
 import React, {ReactElement} from "react"
 import {ChevronDown} from "tabler-icons-react"
-import Layout from "../components/Layout/Layout"
+import VolunteerForm from "./_VolunteerForm"
 
 interface VolunteerOpportunity {
   title: string
