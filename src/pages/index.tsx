@@ -20,7 +20,7 @@ import {Bulb, ChartDots, Code, DeviceGamepad2, Robot} from "tabler-icons-react"
 import {EVENT_DATES} from "utils/constants"
 import "../css/main.css"
 import {StaticImage} from "gatsby-plugin-image"
-import {sponsors2023} from "./sponsor/_content/sponsorCompaniesContent"
+import {sponsors2023} from "./sponsor/_sponsorCompaniesContent"
 
 export default function HomePage() {
   return (

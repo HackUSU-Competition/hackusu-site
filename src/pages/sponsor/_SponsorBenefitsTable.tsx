@@ -16,7 +16,7 @@ import {
   levelData,
   LevelName,
   sponsorLevelTableData
-} from "./_content/sponsorLevelsContent"
+} from "./_sponsorLevelsContent"
 import React, {FC} from "react"
 import {CircleCheck, InfoCircle, Star} from "tabler-icons-react"
 const abbreviate = require("number-abbreviate")

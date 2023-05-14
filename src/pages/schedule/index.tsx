@@ -7,7 +7,7 @@ import {
   fridaySchedule,
   HackUSUCalendarEvent,
   saturdaySchedule
-} from "pages/schedule/scheduleContent"
+} from "pages/schedule/_scheduleContent"
 import React, {useState} from "react"
 import {createTheme, ScheduleView, themes} from "react-schedule-view"
 import {ScheduleViewProps} from "react-schedule-view/dist/ScheduleView"

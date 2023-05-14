@@ -6,7 +6,7 @@ import About from "./_About"
 import GetStarted from "./_GetStarted"
 import BenefitsTable from "./_SponsorBenefitsTable"
 import SponsorGrid from "../../components/SponsorGrid"
-import {pastSponsors} from "./_content/sponsorCompaniesContent"
+import {pastSponsors} from "./_sponsorCompaniesContent"
 
 export default function Sponsor() {
   return (
