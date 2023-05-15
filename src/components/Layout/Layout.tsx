@@ -4,7 +4,6 @@ import React, {FC, ReactNode} from "react"
 import theme from "theme"
 import FooterLinks from "./Footer"
 import HeaderNav from "./Header"
-import {SEO} from "components/seo"
 
 const Layout: FC<{children: ReactNode}> = (props) => {
   return (
@@ -16,7 +15,10 @@ const Layout: FC<{children: ReactNode}> = (props) => {
           textAlign: "center"
         })}
       >
-        <b>Information about HackUSU 2024 will be available this fall</b>
+        <b>
+          Information about HackUSU 2024 will be available this fall! &nbsp;
+          &#127881;
+        </b>
       </Box>
       <HeaderNav />
       {props.children}
