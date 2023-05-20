@@ -1,5 +1,6 @@
 # TODO
 
+- main.css isn't being used everywhere
 - Downloadable images for press use
 - Add Social Share Preview file
 - Update logo to say 2024

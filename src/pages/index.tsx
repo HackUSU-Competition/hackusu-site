@@ -16,12 +16,22 @@ import Layout from "components/Layout/Layout"
 import Section from "components/Layout/Section"
 import SponsorGrid from "components/SponsorGrid"
 import React from "react"
-import {Bulb, ChartDots, Code, DeviceGamepad2, Robot} from "tabler-icons-react"
+import {
+  ArrowRight,
+  Bulb,
+  ChartDots,
+  Code,
+  DeviceGamepad2,
+  Robot
+} from "tabler-icons-react"
 import {EVENT_DATES} from "utils/constants"
 import "../css/main.css"
 import {StaticImage} from "gatsby-plugin-image"
 import {sponsors2023} from "./sponsor/_sponsorCompaniesContent"
 import {SEO} from "components/seo"
+import GradientButton from "components/GradientButton"
+import {Link} from "gatsby"
+import {paths} from "utils/navigationContent"
 
 export default function HomePage() {
   return (
@@ -36,7 +46,7 @@ export default function HomePage() {
           backgroundSize: "cover"
         })}
       >
-        <Container size={800} pt={50} px={50} pb={100}>
+        <Container size={600} pt={50} px={50} pb={100}>
           <Image
             src={require("images/logo-white.svg").default}
             alt="HackUSU Logo"
@@ -55,6 +65,15 @@ export default function HomePage() {
             HackUSU 2023 has already happened, but we look forward to seeing you
             next year!
           </Title>
+          <Box mt="xl" sx={{textAlign: "center"}}>
+            <GradientButton
+              component={Link}
+              to={paths.photos}
+              rightIcon={<ArrowRight size={16} />}
+            >
+              View event photos
+            </GradientButton>
+          </Box>
         </Container>
         <img
           src={require("images/dividers/waves-opacity.svg").default}
@@ -123,7 +142,7 @@ export default function HomePage() {
 
       <Section
         title="Competition Categories"
-        subtitle="We'll award separate prizes for both beginner and experienced teams in each cateogry!"
+        subtitle="We'll award separate prizes for both beginner and experienced teams in each category!"
         background="pattern"
         width="sm"
       >
