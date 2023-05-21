@@ -10,7 +10,7 @@ import {
 import {footerLinkGroups} from "utils/navigationContent"
 import {Link} from "gatsby"
 import React from "react"
-import {Mail} from "tabler-icons-react"
+import {Code, CodePlus, Mail, SourceCode} from "tabler-icons-react"
 import {HACKUSU_EMAIL} from "utils/constants"
 
 const useStyles = createStyles((theme) => ({
@@ -77,7 +77,23 @@ export default function FooterLinks() {
             />
             {HACKUSU_EMAIL}
           </Text>
+          <Text
+            component="a"
+            href={`mailto:despaintroy@gmail.com`}
+            color="dimmed"
+            size="sm"
+            sx={{":hover": {textDecoration: "underline"}}}
+          >
+            <Group noWrap spacing={0} align="flex-start">
+              <Code
+                size={16}
+                style={{position: "relative", top: 4, marginRight: 6}}
+              />
+              Contact Troy DeSpain for website changes at despaintroy@gmail.com
+            </Group>
+          </Text>
         </Stack>
+
         <Group align="start" className={classes.groups}>
           {footerLinkGroups.map((group) => (
             <div className={classes.wrapper} key={group.title}>
