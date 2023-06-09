@@ -3,7 +3,7 @@ type ProjectCategory = "hardware" | "game dev"
 export interface FeaturedProject {
   title: string
   category: ProjectCategory
-  video: {type: "youtube"; embedId: string} | {type: "other"; url: string}
+  video: {type: "youtube"; embedId: string} | {type: "link"; url: string}
   description: string
   sourceCodeUrl: string
   teamMembers: string[]
@@ -33,8 +33,8 @@ export const featuredProjects: FeaturedProject[] = [
     title: "Bloons Tower Defense 1 Clone",
     category: "game dev",
     video: {
-      type: "other",
-      url: "https://drive.google.com/file/d/14R-HZYNPK8FdrtLpZXiT5St24TGm-P1B/preview"
+      type: "link",
+      url: "https://drive.google.com/file/d/14R-HZYNPK8FdrtLpZXiT5St24TGm-P1B/view"
     },
     description:
       "I recreated an Adobe Flash game from my childhood, Bloons Tower Defense 1! I used the assets from the original game. It's built using TypeScript and renders to an HTML canvas.",
