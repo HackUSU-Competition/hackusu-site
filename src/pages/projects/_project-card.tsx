@@ -44,6 +44,7 @@ export const ProjectCard: FC<{project: FeaturedProject}> = ({project}) => {
             fullWidth
             size="xl"
             radius={0}
+            variant="light"
           >
             Watch Demo
           </Button>
@@ -75,17 +76,19 @@ export const ProjectCard: FC<{project: FeaturedProject}> = ({project}) => {
             <Text>{project.tools.join(", ")}</Text>
           </Group>
 
-          <Group noWrap align="flex-start">
-            <ThemeIcon>
-              <Code />
-            </ThemeIcon>
-            <Anchor href={project.sourceCodeUrl} target="_blank">
-              {(() => {
-                const {hostname, pathname} = new URL(project.sourceCodeUrl)
-                return hostname + pathname
-              })()}
-            </Anchor>
-          </Group>
+          {project.sourceCodeUrl && (
+            <Group noWrap align="flex-start">
+              <ThemeIcon>
+                <Code />
+              </ThemeIcon>
+              <Anchor href={project.sourceCodeUrl} target="_blank">
+                {(() => {
+                  const {hostname, pathname} = new URL(project.sourceCodeUrl)
+                  return hostname + pathname
+                })()}
+              </Anchor>
+            </Group>
+          )}
         </Stack>
 
         <Box sx={{flexGrow: 1, flexBasis: 0, minWidth: 250}}>

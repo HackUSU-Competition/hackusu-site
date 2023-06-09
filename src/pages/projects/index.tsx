@@ -3,9 +3,10 @@ import React from "react"
 import {SEO} from "components/seo"
 import Layout from "components/Layout/Layout"
 import Section from "components/Layout/Section"
-import {SimpleGrid} from "@mantine/core"
+import {Alert, SimpleGrid} from "@mantine/core"
 import {featuredProjects, grandChampion} from "./_project-data"
 import {ProjectCard} from "./_project-card"
+import {HACKUSU_EMAIL} from "utils/constants"
 
 export default function Projects() {
   return (
@@ -17,6 +18,10 @@ export default function Projects() {
       </Section>
 
       <Section title="Featured 2023 Submissions">
+        <Alert title="Want your project featured?" mb="xl" variant="filled">
+          Email {HACKUSU_EMAIL} with your name and project category
+        </Alert>
+
         <SimpleGrid
           cols={2}
           breakpoints={[{maxWidth: 800, cols: 1, spacing: "md"}]}
