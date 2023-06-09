@@ -16,6 +16,7 @@ export enum paths {
 export const headerLinks: NavLink[] = [
   {label: "Home", href: paths.home},
   // { label: 'Location', href: paths.location },
+  {label: "Photos", href: paths.photos},
   {label: "Featured Projects", href: paths.projects},
   {label: "Schedule", href: paths.schedule},
   {label: "Volunteer", href: paths.volunteer},
