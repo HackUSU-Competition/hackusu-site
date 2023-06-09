@@ -7,13 +7,12 @@ import {
   Title,
   ThemeIcon,
   Badge,
-  List,
   Stack,
   Text,
   Anchor,
   Box
 } from "@mantine/core"
-import {User, Code, Tools} from "tabler-icons-react"
+import {User, Code, Tools, PlayerPlay} from "tabler-icons-react"
 
 export const ProjectCard: FC<{project: FeaturedProject}> = ({project}) => {
   return (
@@ -21,7 +20,7 @@ export const ProjectCard: FC<{project: FeaturedProject}> = ({project}) => {
       <CardSection>
         <iframe
           width="100%"
-          src={`https://www.youtube-nocookie.com/embed/${project.youtubeEmbedId}`}
+          src={getEmbedURL(project.video)}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
@@ -72,4 +71,11 @@ export const ProjectCard: FC<{project: FeaturedProject}> = ({project}) => {
       </Group>
     </Card>
   )
+}
+
+function getEmbedURL(video: FeaturedProject["video"]) {
+  if (video.type === "youtube")
+    return `https://www.youtube-nocookie.com/embed/${video.embedId}`
+
+  return video.url
 }
