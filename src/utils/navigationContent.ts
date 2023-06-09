@@ -18,7 +18,7 @@ export const headerLinks: NavLink[] = [
   // { label: 'Location', href: paths.location },
   {label: "Photos", href: paths.photos},
   {label: "Featured Projects", href: paths.projects},
-  {label: "Schedule", href: paths.schedule},
+  {label: "2023 Schedule", href: paths.schedule},
   {label: "Volunteer", href: paths.volunteer},
   {label: "Sponsor", href: paths.sponsor}
 ]
@@ -97,7 +97,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
         label: "GitHub",
         href: "https://github.com/HackUSU-Competition",
         external: true
-      }
+      },
+      {label: "Featured Projects", href: paths.projects}
     ]
   }
 ]
