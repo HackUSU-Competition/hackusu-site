@@ -1,4 +1,4 @@
-import React, {FC} from "react"
+import React, {FC, useState} from "react"
 import {FeaturedProject} from "./_project-data"
 import {
   Card,
@@ -10,19 +10,19 @@ import {
   Text,
   Anchor,
   Box,
-  useMantineTheme,
   Button
 } from "@mantine/core"
 import {User, Code, Tools, PlayerPlay} from "tabler-icons-react"
 
+const DESCRIPTION_LIMIT = 300
+
 export const ProjectCard: FC<{project: FeaturedProject}> = ({project}) => {
-  const theme = useMantineTheme()
-  console.log(theme)
+  const [showFull, setShowFull] = useState(false)
+
+  const hasLongDescription = project.description.length > DESCRIPTION_LIMIT
+
   return (
-    <Card
-      shadow="sm"
-      // sx={{borderTop: `7px solid #0E1927`}}
-    >
+    <Card shadow="sm">
       {project.video.type === "youtube" ? (
         <CardSection>
           <iframe
@@ -44,7 +44,7 @@ export const ProjectCard: FC<{project: FeaturedProject}> = ({project}) => {
             fullWidth
             size="xl"
             radius={0}
-            variant='filled'
+            variant="filled"
           >
             Watch Demo
           </Button>
@@ -92,7 +92,22 @@ export const ProjectCard: FC<{project: FeaturedProject}> = ({project}) => {
         </Stack>
 
         <Box sx={{flexGrow: 1, flexBasis: 0, minWidth: 250}}>
-          <Text>{project.description}</Text>
+          <Text>
+            {project.description.slice(
+              0,
+              showFull ? undefined : DESCRIPTION_LIMIT
+            )}
+            {hasLongDescription && !showFull && "..."}
+          </Text>
+
+          {hasLongDescription && (
+            <Anchor
+              onClick={() => setShowFull(!showFull)}
+              style={{cursor: "pointer"}}
+            >
+              {showFull ? "Show Less" : "Show More"}
+            </Anchor>
+          )}
         </Box>
       </Group>
     </Card>
