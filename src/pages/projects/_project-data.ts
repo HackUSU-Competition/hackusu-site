@@ -59,6 +59,7 @@ export const featuredProjects: FeaturedProject[] = [
       "generate-ical"
     ]
   },
+
   {
     title: "Bloons Tower Defense 1 Clone",
     category: "game dev",
@@ -73,6 +74,7 @@ export const featuredProjects: FeaturedProject[] = [
     teamMembers: ["Kollin Murphy"],
     tools: ["TypeScript", "Vite"]
   },
+
   {
     title: "Shakespearean English Translator and Generator",
     category: "ai & ml",
@@ -85,6 +87,7 @@ export const featuredProjects: FeaturedProject[] = [
     teamMembers: ["Cailean Bushnell", "Landon Work"],
     tools: ["Pandas", "Numpy", "torch", "tqdm", "GPT2"]
   },
+
   {
     title: "National Parks Interactive Planning",
     category: "data analytics",
@@ -98,6 +101,82 @@ export const featuredProjects: FeaturedProject[] = [
       "https://drive.google.com/file/d/1CUb-W-SqxEJIqdChvg4cGwKroGwKfOds/view?usp=sharing",
     teamMembers: ["Isaac Holcomb", "Isaac Black", "Tom Waite", "Kaden Yardley"],
     tools: ["Streamlit", "Pandas", "OpenAI", "Plotly", "Numpy", "LeafMap"]
+  },
+
+  {
+    title: "MINDful Hand",
+    category: "hardware",
+    video: {
+      type: "link",
+      url: "https://drive.google.com/file/d/1tys-Eq0Ul1Rv0Oboey_nwtMVoASc8zKw/view"
+    },
+    description:
+      "This project involves creating a mechanical hand using recycled materials that can be controlled by the user's thoughts using brain control technology. The hand is controlled using machine learning algorithms based on data acquired from the user's brain signals. The project uses Python and scikit-learn for machine learning, the Lab Streaming Layer for data acquisition, and an Arduino for hardware control. Pyserial is used to send commands from the Python code to the Arduino to control the movement of the hand. The project aims to promote sustainability by using recycled materials and cutting-edge technology to create a more innovative and sustainable future.",
+    sourceCodeUrl: "https://github.com/AlexBerryhill/MINDful-Hand",
+    teamMembers: ["Alexander Berryhill"],
+    tools: ["ScikitLearn", "Pyserial", "Muse2", "pyLSL", "BlueMuse"]
+  },
+
+  {
+    title: "Crime",
+    category: "data analytics",
+    video: {
+      type: "link",
+      url: "https://drive.google.com/file/d/1Wbwk4coIygeOMv9RPreURawQFHFQPOwj/view"
+    },
+    description:
+      "Los Angeles has a reputation for being one of the most crime-ridden cities in the United States. While the city has made significant progress in reducing crime rates in recent years, it still struggles with a variety of criminal activities, including gang violence, drug trafficking, theft, and property crimes. The city's high population density, economic inequality, and the large number of tourists contribute to the challenges law enforcement faces in maintaining public safety. Despite the efforts of law enforcement agencies and community organizations, crime in Los Angeles remains a serious concern for residents and visitors alike.",
+    sourceCodeUrl:
+      "https://storymaps.arcgis.com/stories/04f0a81a3af84462a6d1dc6ef935e9c3",
+    teamMembers: ["Sigmund Seranilla", "Trevor Neri"],
+    tools: ["ArcGIS", "Google Colab", "Python", "Pandas"]
+  },
+
+  {
+    title: "Graph Neural Network for Drug Discovery",
+    category: "ai & ml",
+    video: {
+      type: "link",
+      url: "https://drive.google.com/file/d/154VbLJV0i6hrDdtcazp9r1vVdMq4d2Wv/view"
+    },
+    description:
+      "Our project uses a Graph Neural Network, or GNN, to analyze the Zinc database and identify potential drug candidates. The Zinc database is a large collection of purchasable compounds that can be used for drug discovery. Traditional methods for identifying potential drug candidates from this database don't work well, though, because the compounds are represented as nodes in a graph with various relationships represented as edges in the graph, such as similarity or chemical properties. By using a GNN and leveraging the graph structure of the database, we aim to overcome these limitations and discover new drugs that could save lives.",
+    sourceCodeUrl: "https://github.com/TylerEnglish/GP_Graph_Net",
+    teamMembers: [
+      "Logan Ray",
+      "Tyler English",
+      "Randy Pierce",
+      "Michael Harris"
+    ],
+    tools: ["Streamlit", "Pytorch Geometric", "Pickle", "Torch", "Matplotlib"]
+  },
+
+  {
+    title: "The Matrix IRL",
+    category: "game dev",
+    video: {
+      type: "link",
+      url: "https://drive.google.com/file/d/1sXz27F1hYYAGuCZp9h4p216AxI_gBQHD/view"
+    },
+    description:
+      "Networking between multiple VR HMDs to support multiple concurrent users in a single Virtual Environment interacting with each other and the environment. To showcase this feature, we built a nice park scene complete with a ping-pong table, football, mini golf course, basketball court, and a maze. Users can enjoy playing these games with up to 10 total users. Our scene also included relaxing background music which was filtered out by our recording software so is not found in the video.",
+    sourceCodeUrl: "https://github.com/logan-nielsen/The-Matrix-IRL-HackUSU",
+    teamMembers: ["Justin Roylance", "Logan Nielsen"],
+    tools: ["Normcore"]
+  },
+
+  {
+    title: "EasyHeal",
+    category: "general",
+    video: {
+      type: "link",
+      url: "https://drive.google.com/file/d/1aH3FRPi5G5gkKxlMccXwh63gwCH6PwcY/view"
+    },
+    description:
+      "Coping with loss can be a daily challenge, and many people struggle to find ways to honor and remember their loved ones. Our web application is designed to provide personalized support and companionship for those experiencing loss. Through our platform, users can celebrate the lives of their loved ones and express their feelings in a way that feels authentic and meaningful to them. Our aim is to offer a space of comfort and healing for individuals who are navigating this difficult journey.",
+    sourceCodeUrl: "",
+    teamMembers: ["Lesliee Cruz", "Na Rah"],
+    tools: ["React", "MUI", "Firebase", "MongoDB"]
   }
 
   // {

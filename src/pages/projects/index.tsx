@@ -17,14 +17,28 @@ export default function Projects() {
         <ProjectCard project={grandChampion} />
       </Section>
 
-      <Section title="Featured 2023 Submissions">
-        <Alert title="Want your project featured?" mb="xl" variant="filled">
+      <Section
+        title="Featured 2023 Submissions"
+        subtitle="These are just some of the great projects teams have created at HackUSU!"
+        width="xl"
+      >
+        <Alert
+          title="Want your project featured?"
+          mb="xl"
+          variant="filled"
+          maw={700}
+          mx="auto"
+          color="green"
+        >
           Email {HACKUSU_EMAIL} with your name and project category
         </Alert>
 
         <SimpleGrid
-          cols={2}
-          breakpoints={[{maxWidth: 800, cols: 1, spacing: "md"}]}
+          cols={3}
+          breakpoints={[
+            {maxWidth: 1000, cols: 2, spacing: "md"},
+            {maxWidth: 800, cols: 1, spacing: "md"}
+          ]}
           spacing="xl"
         >
           {featuredProjects.map((project, index) => (

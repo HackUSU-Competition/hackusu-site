@@ -44,7 +44,7 @@ export const ProjectCard: FC<{project: FeaturedProject}> = ({project}) => {
             fullWidth
             size="xl"
             radius={0}
-            variant="light"
+            variant='filled'
           >
             Watch Demo
           </Button>
