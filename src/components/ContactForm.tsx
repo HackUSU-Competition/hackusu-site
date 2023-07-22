@@ -72,7 +72,7 @@ const ContactForm: FC<ContainerProps> = (props) => {
           <TextInput required label="Email" {...form.getInputProps("email")} />
           <Textarea
             required
-            placeholder="Your message..."
+            placeholder="How can we help?"
             label="Message"
             autosize
             minRows={3}

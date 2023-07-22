@@ -103,7 +103,7 @@ const VolunteerForm: FC<ContainerProps> = (props) => {
           </Checkbox.Group>
         </SimpleGrid>
         <Textarea
-          placeholder="Your message..."
+          placeholder="Anything you'd like to tell us?"
           label="Message"
           autosize
           minRows={3}
