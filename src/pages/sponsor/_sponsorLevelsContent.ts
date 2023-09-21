@@ -111,10 +111,10 @@ export const sponsorLevelTableData: BenefitGroup[] = [
         tooltip:
           "Track sponsors may each name and sponsor one competition category, including providing judges"
       },
-      {
-        name: "Keynote presentation",
-        levels: levelsAbove(LevelName.TITLE)
-      },
+      // {
+      //   name: "Keynote presentation",
+      //   levels: levelsAbove(LevelName.TITLE)
+      // },
       {
         name: "Prominent company branding at check-in, keynote, and awards ceremony",
         levels: levelsAbove(LevelName.TITLE),

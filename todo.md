@@ -1,9 +1,12 @@
 # TODO
 
+- more photos from last year, sponsor page
+- add information about new business category
+- Date of hackathon, March 1-2
+- Update logo to say 2024
 - main.css isn't being used everywhere
 - Downloadable images for press use
 - Add Social Share Preview file
-- Update logo to say 2024
 - Add favicon
 - Update quotes on the press page and sponsor page with feedback from 2023
 - Create page with more detailed competition info (rules, judging, etc.)

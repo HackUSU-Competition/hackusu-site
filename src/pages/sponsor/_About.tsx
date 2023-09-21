@@ -55,7 +55,7 @@ const About: FC = () => {
         <Text size="xl" mt={10} weight={500}>
           HackUSU provides a unique medium to bring your company to center stage
           and interact with the next generation of innovators from around the
-          Midwest. Here are 3 ways that our sponsors benefit the most by getting
+          west. Here are 3 ways that our sponsors benefit the most by getting
           involved:
         </Text>
         <StaticImage
@@ -88,8 +88,7 @@ const About: FC = () => {
           Sponsorship is a great way to accelerate brand recognition and allow
           students to explore your product&apos;s potential. We have arranged a
           variety of options for getting your name in front of our hackers
-          including keynote presentations, swag, and custom competition
-          categories!
+          including presentations, swag, and custom competition categories!
         </Text>
         <Title order={3} mt={30}>
           Appraisal
