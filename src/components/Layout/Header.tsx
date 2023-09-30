@@ -84,11 +84,12 @@ const HeaderNav: FC = () => {
           />
           <Anchor component={Link} to={paths.home}>
             <Image
-              src={require("images/logo-white.svg").default}
+              src={require("images/logo-base.svg").default}
               alt="HackUSU Logo"
               fit="contain"
               height={HEADER_HEIGHT * 0.6}
               width="auto"
+              style={{filter: "invert(1)"}}
             />
           </Anchor>
         </Group>

@@ -16,8 +16,7 @@ const Layout: FC<{children: ReactNode}> = (props) => {
         })}
       >
         <b>
-          Information about HackUSU 2024 will be available this fall! &nbsp;
-          &#127881;
+          Registration for HackUSU 2024 will open in January! &nbsp; &#127881;
         </b>
       </Box>
       <HeaderNav />

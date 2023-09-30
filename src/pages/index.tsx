@@ -22,7 +22,8 @@ import {
   ChartDots,
   Code,
   DeviceGamepad2,
-  Robot
+  Robot,
+  Spy
 } from "tabler-icons-react"
 import {EVENT_DATES} from "utils/constants"
 import "../css/main.css"
@@ -48,32 +49,32 @@ export default function HomePage() {
       >
         <Container size={600} pt={50} px={50} pb={100}>
           <Image
-            src={require("images/logo-white.svg").default}
+            src={require("images/logo-base.svg").default}
             alt="HackUSU Logo"
             fit="contain"
             width="100%"
+            style={{filter: "invert(1)"}}
           />
-          {/* <Title order={2} align="center" pt={50} sx={{ color: 'white', fontSize: '2rem' }}>
-            {EVENT_DATES.monthYear}
-          </Title> */}
           <Title
             order={2}
             align="center"
             pt={50}
-            sx={{color: "white", fontSize: "1.5rem"}}
+            sx={{color: "white", fontSize: "2rem"}}
           >
-            HackUSU 2023 has already happened, but we look forward to seeing you
-            next year!
+            {EVENT_DATES.monthDateRangeYear}
           </Title>
-          <Box mt="xl" sx={{textAlign: "center"}}>
-            <GradientButton
-              component={Link}
-              to={paths.photos}
-              rightIcon={<ArrowRight size={16} />}
-            >
-              View event photos
-            </GradientButton>
-          </Box>
+          <Text align="center" color="white" opacity={0.7} italic>
+            Registration opens in January
+          </Text>
+          {/* <Title */}
+          {/*   order={2} */}
+          {/*   align="center" */}
+          {/*   pt={50} */}
+          {/*   sx={{color: "white", fontSize: "1.5rem"}} */}
+          {/* > */}
+          {/*   HackUSU 2023 has already happened, but we look forward to seeing you */}
+          {/*   next year! */}
+          {/* </Title> */}
         </Container>
         <img
           src={require("images/dividers/waves-opacity.svg").default}
@@ -104,7 +105,7 @@ export default function HomePage() {
             {
               title: "24-hr Hackathon",
               description:
-                "Build a software or hardware project to compete against other teams. All college students and high school seniors are invited!"
+                "Craft a software, hardware, or business proposal project to compete against other teams. All college students and high school seniors are invited!"
             },
             {
               title: "Workshops",
@@ -117,7 +118,7 @@ export default function HomePage() {
                 "Come network with our sponsors and potential employers. There will be many industry experts to learn from and learn more about their companies!"
             },
             {
-              title: "Free Food",
+              title: "Food",
               description:
                 "We'll provide dinner on Friday, and breakfast, lunch, and dinner on Saturday. There will also be plenty of snacks available the entire event!"
             }
@@ -130,6 +131,16 @@ export default function HomePage() {
             </Box>
           ))}
         </SimpleGrid>
+
+        <Box mt="xl" sx={{textAlign: "center"}}>
+          <GradientButton
+            component={Link}
+            to={paths.photos}
+            rightIcon={<ArrowRight size={16} />}
+          >
+            Check out last year's photos
+          </GradientButton>
+        </Box>
       </Section>
 
       <AspectRatio ratio={25 / 10}>
@@ -160,28 +171,28 @@ export default function HomePage() {
                 "Any game, any technology. Try recreating a retro game, or design a brand new one we haven't seen before!"
             },
             {
-              title: "Data Analytics & Visualization",
-              icon: ChartDots,
+              title: "Cybersecurity",
+              icon: Spy,
               description:
-                "Find a dataset online, then demonstrate ways of gaining interesting insights or displaying data in a creative way!"
+                "Flex your cybersecurity skills by finding and fixing vulnerabilities, creating solid defense plans, or crafting nifty security solutions to keep digital stuff safe!"
+            },
+            {
+              title: "Business Solutions",
+              icon: Bulb,
+              description:
+                "Craft a great business proposal for a cool app, platform, or system that tackles real-world issues. No technical expertise needed!"
             },
             {
               title: "Hardware",
               icon: Robot,
               description:
-                "Show us your creation utilizing physical hardware including Raspberry Pi's, PCBs, or microcontrollers!"
+                "Get hands-on with cool gadgets — create something amazing using Raspberry Pi's, PCBs, or microcontrollers."
             },
             {
               title: "AI & Machine Learning",
               icon: Bulb,
               description:
-                "Can you write a program that learns how to solve a problem?"
-            },
-            {
-              title: "General",
-              icon: Code,
-              description:
-                "All projects that  are too unique and don't fit the other categories!"
+                "Create a program to problem-solve — explore AI, machine learning, and code that adapts to tackle real-world challenges."
             }
           ].map(({title, icon, description}) => (
             <Card
@@ -230,7 +241,7 @@ export default function HomePage() {
         {[
           {
             question: "When and where is HackUSU?",
-            answer: `Our 2023 event has already happened, and we're looking forward to next year! HackUSU will be ${EVENT_DATES.monthYear} in Huntsman Hall, Utah State University.`
+            answer: `HackUSU 2024 will be ${EVENT_DATES.monthDateRange}! The event will take place in Huntsman Hall, Utah State University.`
           },
           {
             question: "Are there other things to do besides the competition?",
@@ -240,7 +251,7 @@ export default function HomePage() {
           {
             question: "Do I need to know how to code?",
             answer:
-              "Nope, there will be workshops for all skill levels from introductory to graduate level."
+              "Nope, there will be workshops for all skill levels from introductory to graduate level. This year, we are also introducing the business solutions category for non-technical projects!"
           },
           {
             question: "Can I start now?",
@@ -258,11 +269,6 @@ export default function HomePage() {
               "All university or college students and high school seniors are welcome! Participants must be current students or have graduated in the last 12 months. There is no restriction on major."
           },
           {
-            question: "Does it cost anything to attend?",
-            answer:
-              "HackUSU is completely free! There's no entry fee, and we'll provide enough food and snacks for the entire 24 hours. How neat is that?"
-          },
-          {
             question: "Can I stay in the building overnight?",
             answer:
               "Absolutely! You can stay up all night working, bring a sleeping bag, or leave to sleep off-campus."
@@ -275,7 +281,7 @@ export default function HomePage() {
         ))}
       </Section>
 
-      <Section title="2023 Sponsors" width="md">
+      <Section title="Last Year's Sponsors" width="md">
         <SponsorGrid sponsors={sponsors2023} />
       </Section>
 
