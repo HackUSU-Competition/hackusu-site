@@ -16,15 +16,7 @@ import Layout from "components/Layout/Layout"
 import Section from "components/Layout/Section"
 import SponsorGrid from "components/SponsorGrid"
 import React from "react"
-import {
-  ArrowRight,
-  Bulb,
-  ChartDots,
-  Code,
-  DeviceGamepad2,
-  Robot,
-  Spy
-} from "tabler-icons-react"
+import {ArrowRight, Bulb, DeviceGamepad2, Robot, Spy} from "tabler-icons-react"
 import {EVENT_DATES} from "utils/constants"
 import "../css/main.css"
 import {StaticImage} from "gatsby-plugin-image"
@@ -37,6 +29,9 @@ import {paths} from "utils/navigationContent"
 export default function HomePage() {
   return (
     <Layout>
+      <Title order={1} sx={{position: "absolute", zIndex: -1, inset: 0}}>
+        HackUSU
+      </Title>
       <Box
         pt={50}
         sx={(theme) => ({
@@ -138,7 +133,7 @@ export default function HomePage() {
             to={paths.photos}
             rightIcon={<ArrowRight size={16} />}
           >
-            Check out last year's photos
+            {"Check out last year's photos"}
           </GradientButton>
         </Box>
       </Section>

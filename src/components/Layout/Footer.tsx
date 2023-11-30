@@ -4,13 +4,12 @@ import {
   createStyles,
   Group,
   Stack,
-  Text,
-  Title
+  Text
 } from "@mantine/core"
 import {footerLinkGroups} from "utils/navigationContent"
 import {Link} from "gatsby"
 import React from "react"
-import {Code, CodePlus, Mail, SourceCode} from "tabler-icons-react"
+import {Code, Mail} from "tabler-icons-react"
 import {HACKUSU_EMAIL} from "utils/constants"
 
 const useStyles = createStyles((theme) => ({

@@ -17,7 +17,7 @@ import {paths} from "utils/navigationContent"
 import React, {ReactElement} from "react"
 import {ChevronDown} from "tabler-icons-react"
 import VolunteerForm from "./_VolunteerForm"
-import { SEO } from "components/seo"
+import {SEO} from "components/seo"
 
 interface VolunteerOpportunity {
   title: string
