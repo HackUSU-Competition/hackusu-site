@@ -11,6 +11,9 @@ srcDirs.forEach((srcDir) => {
 })
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://www.hackusu.com`
+  },
   // pathPrefix: "/hackusu-site",
   // pathPrefix: "/",
   plugins: [
@@ -18,6 +21,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-root-import",
       options: rootDirsConfig
@@ -28,6 +32,12 @@ module.exports = {
         // eslint-disable-next-line n/no-path-concat
         path: `${__dirname}/src/images/event-photos`,
         name: "eventPhotos"
+      }
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.hackusu.com`
       }
     }
   ]

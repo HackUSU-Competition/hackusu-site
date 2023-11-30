@@ -130,7 +130,7 @@ export default function HomePage() {
         <Box mt="xl" sx={{textAlign: "center"}}>
           <GradientButton
             component={Link}
-            to={paths.photos}
+            to={paths.photos} 
             rightIcon={<ArrowRight size={16} />}
           >
             {"Check out last year's photos"}
