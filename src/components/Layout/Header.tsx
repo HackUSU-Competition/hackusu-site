@@ -81,6 +81,7 @@ const HeaderNav: FC = () => {
             size="sm"
             color="white"
             name="burger-menu"
+            aria-label="Open navigation menu"
           />
           <Anchor component={Link} to={paths.home}>
             <Image
