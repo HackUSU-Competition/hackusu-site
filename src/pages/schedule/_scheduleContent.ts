@@ -71,145 +71,160 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         coverImage: require("images/scenes/huntsman-hall-banner.jpg").default
       },
       {
+        startTime: 16,
+        endTime: 17,
+        title: "Employer Networking Event",
+        type: eventTypes.general,
+        location: "2nd Floor"
+      },
+      {
         startTime: 17,
         endTime: 17.83,
-        title: "Opening Keynote - Quantum Computing",
+        title: "Opening Keynote - TBA",
         location: "4th Floor",
         locationVerbose: "Perry Pavilion (4th floor)",
-        type: eventTypes.general,
-        description:
-          "We'll kick off the event with a keynote from our title sponsor!",
-        presenter: {
-          name: "Sean Kirby",
-          profileImage: undefined,
-          organization: "NICE"
-        }
+        type: eventTypes.general
+        // description:
+        //   "We'll kick off the event with a keynote from our title sponsor!",
+        // presenter: {
+        //   name: "Sean Kirby",
+        //   profileImage: undefined,
+        //   organization: "NICE"
+        // }
       },
       {
         startTime: 18,
         endTime: 19,
-        title: "Dinner - Pizza",
+        title: "Dinner",
         type: eventTypes.food,
-        location: "2nd Floor",
-        description:
-          "After you check-in and find a spot for your group, come enjoy some pizza from Hungry Howie’s!"
+        location: "2nd Floor"
+        // description:
+        //   "After you check-in and find a spot for your group, come enjoy some pizza from Hungry Howie’s!"
       },
       {
         startTime: 19,
-        endTime: 20,
-        title: "The Kotlin Programming Language",
-        skillLevel: skillLevels.beginner,
-        type: eventTypes.workshop,
-        location: "Room 320",
-        description: undefined,
-        presenter: {
-          name: "Joseph Ivie",
-          profileImage: undefined,
-          organization: "Lightning Kite"
-        }
-      },
-      {
-        startTime: 19,
-        endTime: 20,
-        title: "Intro to Systems Engineering",
-        skillLevel: skillLevels.beginner,
-        type: eventTypes.workshop,
-        location: "Room 322",
-        description: undefined,
-        presenter: {
-          name: "Jaque Johansen",
-          profileImage: require("images/schedule/jaque-johansen.jpg").default,
-          organization: "L3Harris"
-        }
-      },
-      {
-        startTime: 20,
-        endTime: 21,
-        title: "Intro to MBSE",
-        skillLevel: skillLevels.beginner,
-        type: eventTypes.workshop,
-        location: "Room 320",
-        description: undefined,
-        presenter: {
-          name: "Braydn Clark",
-          profileImage: require("images/schedule/braydn-clark.jpg").default,
-          organization: "L3Harris"
-        }
-      },
-      {
-        startTime: 20,
-        endTime: 21,
-        title: "How hackathon experiences lead to real-world projects",
-        skillLevel: skillLevels.everyone,
-        type: eventTypes.workshop,
-        location: "Room 322",
-        description: undefined,
-        presenter: {
-          name: "John Harrison",
-          profileImage: undefined,
-          organization: "Lucid"
-        }
-      },
-      {
-        startTime: 21,
-        endTime: 22,
-        title: "Lightning Server: A simple, Kotlin server framework",
-        skillLevel: skillLevels.beginner,
-        type: eventTypes.workshop,
-        location: "Room 320",
-        description: undefined,
-        presenter: {
-          name: "Joseph Ivie",
-          profileImage: undefined,
-          organization: "Lightning Kite"
-        }
-      },
-      {
-        startTime: 21,
-        endTime: 22,
-        title: "How to Fund Your Startup",
-        skillLevel: skillLevels.everyone,
-        type: eventTypes.workshop,
-        location: "Room 322",
-        description: undefined,
-        presenter: {
-          name: "Alfredo Solar",
-          profileImage: undefined,
-          organization: undefined
-        }
-      },
-      {
-        startTime: 22,
         endTime: 23,
-        title: "Lightning Server: Deploying to AWS",
-        skillLevel: skillLevels.beginner,
+        title: "Friday Evening Workshops",
+        // skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: "Room 320",
-        description: undefined,
-        presenter: {
-          name: "Joseph Ivie",
-          profileImage: undefined,
-          organization: "Lightning Kite"
-        }
+        location: "3rd Floor"
       },
-      {
-        startTime: 22,
-        endTime: 23,
-        title: "Organizing Large Codebases with Dependency Injection",
-        skillLevel: skillLevels.intermediate,
-        type: eventTypes.workshop,
-        location: "Room 322",
-        description: undefined,
-        presenter: {
-          name: "Hunter Henrichsen",
-          profileImage: undefined,
-          organization: "Lucid"
-        }
-      },
+      // {
+      //   startTime: 19,
+      //   endTime: 20,
+      //   title: "The Kotlin Programming Language",
+      //   skillLevel: skillLevels.beginner,
+      //   type: eventTypes.workshop,
+      //   location: "Room 320",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Joseph Ivie",
+      //     profileImage: undefined,
+      //     organization: "Lightning Kite"
+      //   }
+      // },
+      // {
+      //   startTime: 19,
+      //   endTime: 20,
+      //   title: "Intro to Systems Engineering",
+      //   skillLevel: skillLevels.beginner,
+      //   type: eventTypes.workshop,
+      //   location: "Room 322",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Jaque Johansen",
+      //     profileImage: require("images/schedule/jaque-johansen.jpg").default,
+      //     organization: "L3Harris"
+      //   }
+      // },
+      // {
+      //   startTime: 20,
+      //   endTime: 21,
+      //   title: "Intro to MBSE",
+      //   skillLevel: skillLevels.beginner,
+      //   type: eventTypes.workshop,
+      //   location: "Room 320",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Braydn Clark",
+      //     profileImage: require("images/schedule/braydn-clark.jpg").default,
+      //     organization: "L3Harris"
+      //   }
+      // },
+      // {
+      //   startTime: 20,
+      //   endTime: 21,
+      //   title: "How hackathon experiences lead to real-world projects",
+      //   skillLevel: skillLevels.everyone,
+      //   type: eventTypes.workshop,
+      //   location: "Room 322",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "John Harrison",
+      //     profileImage: undefined,
+      //     organization: "Lucid"
+      //   }
+      // },
+      // {
+      //   startTime: 21,
+      //   endTime: 22,
+      //   title: "Lightning Server: A simple, Kotlin server framework",
+      //   skillLevel: skillLevels.beginner,
+      //   type: eventTypes.workshop,
+      //   location: "Room 320",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Joseph Ivie",
+      //     profileImage: undefined,
+      //     organization: "Lightning Kite"
+      //   }
+      // },
+      // {
+      //   startTime: 21,
+      //   endTime: 22,
+      //   title: "How to Fund Your Startup",
+      //   skillLevel: skillLevels.everyone,
+      //   type: eventTypes.workshop,
+      //   location: "Room 322",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Alfredo Solar",
+      //     profileImage: undefined,
+      //     organization: undefined
+      //   }
+      // },
+      // {
+      //   startTime: 22,
+      //   endTime: 23,
+      //   title: "Lightning Server: Deploying to AWS",
+      //   skillLevel: skillLevels.beginner,
+      //   type: eventTypes.workshop,
+      //   location: "Room 320",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Joseph Ivie",
+      //     profileImage: undefined,
+      //     organization: "Lightning Kite"
+      //   }
+      // },
+      // {
+      //   startTime: 22,
+      //   endTime: 23,
+      //   title: "Organizing Large Codebases with Dependency Injection",
+      //   skillLevel: skillLevels.intermediate,
+      //   type: eventTypes.workshop,
+      //   location: "Room 322",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Hunter Henrichsen",
+      //     profileImage: undefined,
+      //     organization: "Lucid"
+      //   }
+      // },
       {
         startTime: 23,
         endTime: 24,
-        title: "Pizza: Round 2",
+        title: "Dinner: Round 2",
         type: eventTypes.food,
         location: "2nd Floor"
       }
@@ -228,120 +243,68 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         type: eventTypes.food,
         location: "2nd Floor"
       },
-      {
-        startTime: 0.5,
-        endTime: 1.75,
-        title: "Movie",
-        type: eventTypes.activity
-      },
+      // {
+      //   startTime: 0.5,
+      //   endTime: 1.75,
+      //   title: "Movie",
+      //   type: eventTypes.activity
+      // },
       {
         startTime: 8,
         endTime: 9,
-        title: "Breakfast - Bagels & Breakfast Sandwiches",
-        description: "Come get some breakfast from Einstein Bros. Bagels!",
+        title: "Breakfast",
+        // description: "Come get some breakfast from Einstein Bros. Bagels!",
         type: eventTypes.food
       },
       {
         startTime: 9,
-        endTime: 10,
-        title: "A Wholly Remarkable Orientation to the Corporate Universe",
-        type: eventTypes.workshop,
-        skillLevel: skillLevels.everyone,
-        description:
-          "This presentation will take a dive into the corporate universe and provide you with a wholly remarkable orientation to help you understand what corporate life will be like. Should you work for that company? Diagnose and understand what life will be like for you as you pursue your successful career. Will you enjoy the fast paced company? or would you like something more structured? We will weigh the pros and cons of each and help you know before you go!",
-        location: "Room 320",
-        presenter: {
-          name: "Mike Judy",
-          profileImage: undefined,
-          organization: "iFit"
-        }
-      },
-      {
-        startTime: 10,
-        endTime: 11,
-        title: "Making a Kotlin Library",
-        skillLevel: skillLevels.intermediate,
-        type: eventTypes.workshop,
-        location: "Room 320",
-        description: undefined,
-        presenter: {
-          name: "Joseph Ivie",
-          profileImage: undefined,
-          organization: "Lightning Kite"
-        }
-      },
-      {
-        startTime: 11,
         endTime: 12,
-        title: "Technical Writing in STEM",
-        skillLevel: skillLevels.everyone,
+        title: "Saturday Morning Workshops",
         type: eventTypes.workshop,
-        location: "Room 320",
-        description: undefined,
-        presenter: {
-          name: "Colin Geslin",
-          profileImage: undefined,
-          organization: "Space Dynamics Laboratory"
-        }
+        location: "3rd Floor"
       },
-
       // {
       //   startTime: 9,
       //   endTime: 10,
-      //   title: 'Resumes and Cover Letters that Work!',
+      //   title: "A Wholly Remarkable Orientation to the Corporate Universe",
       //   type: eventTypes.workshop,
+      //   skillLevel: skillLevels.everyone,
+      //   description:
+      //     "This presentation will take a dive into the corporate universe and provide you with a wholly remarkable orientation to help you understand what corporate life will be like. Should you work for that company? Diagnose and understand what life will be like for you as you pursue your successful career. Will you enjoy the fast paced company? or would you like something more structured? We will weigh the pros and cons of each and help you know before you go!",
+      //   location: "Room 320",
+      //   presenter: {
+      //     name: "Mike Judy",
+      //     profileImage: undefined,
+      //     organization: "iFit"
+      //   }
       // },
       // {
       //   startTime: 10,
       //   endTime: 11,
-      //   title: 'Wikipedia Race',
-      //   type: eventTypes.activity,
-      // },
-      {
-        startTime: 13,
-        endTime: 14,
-        title: "How to Fund Your Startup",
-        skillLevel: skillLevels.everyone,
-        type: eventTypes.workshop,
-        location: "Room 320",
-        description: undefined,
-        presenter: {
-          name: "Alfredo Solar",
-          profileImage: undefined,
-          organization: undefined
-        }
-      },
-      {
-        startTime: 14,
-        endTime: 15,
-        title: "Creating a Web Application with Docker and Node.js",
-        skillLevel: skillLevels.beginner,
-        type: eventTypes.workshop,
-        location: "Room 320",
-        description: undefined,
-        presenter: {
-          name: "Hunter Henrichsen",
-          profileImage: undefined,
-          organization: "Lucid"
-        }
-      },
-      // {
-      //   startTime: 10,
-      //   endTime: 11,
-      //   title: 'How to Build Awesome Web APIs',
+      //   title: "Making a Kotlin Library",
+      //   skillLevel: skillLevels.intermediate,
       //   type: eventTypes.workshop,
-      // },
-      // {
-      //   startTime: 10,
-      //   endTime: 11,
-      //   title: 'Effective Interviewing Skills',
-      //   type: eventTypes.workshop,
+      //   location: "Room 320",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Joseph Ivie",
+      //     profileImage: undefined,
+      //     organization: "Lightning Kite"
+      //   }
       // },
       // {
       //   startTime: 11,
       //   endTime: 12,
-      //   title: 'Career & Internship Search Strategies',
+      //   title: "Technical Writing in STEM",
+      //   skillLevel: skillLevels.everyone,
       //   type: eventTypes.workshop,
+      //   location: "Room 320",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Colin Geslin",
+      //     profileImage: undefined,
+      //     organization: "Space Dynamics Laboratory"
+      //   }
       // },
       {
         startTime: 12,
@@ -351,50 +314,79 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         type: eventTypes.food,
         location: "2nd Floor"
       },
+      {
+        startTime: 13,
+        endTime: 15,
+        title: "Saturday Afternoon Workshops",
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
       // {
       //   startTime: 13,
       //   endTime: 14,
-      //   title: 'Kotlin Server',
+      //   title: "How to Fund Your Startup",
+      //   skillLevel: skillLevels.everyone,
       //   type: eventTypes.workshop,
+      //   location: "Room 320",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Alfredo Solar",
+      //     profileImage: undefined,
+      //     organization: undefined
+      //   }
       // },
       // {
       //   startTime: 14,
       //   endTime: 15,
-      //   title: 'Reactive Programming with RX',
+      //   title: "Creating a Web Application with Docker and Node.js",
+      //   skillLevel: skillLevels.beginner,
       //   type: eventTypes.workshop,
+      //   location: "Room 320",
+      //   description: undefined,
+      //   presenter: {
+      //     name: "Hunter Henrichsen",
+      //     profileImage: undefined,
+      //     organization: "Lucid"
+      //   }
       // },
       {
         startTime: 15.25,
         endTime: 16,
-        title: "Final Project Submission",
+        title: "Project Submission",
         type: eventTypes.general
       },
+      // {
+      //   startTime: 15.25,
+      //   endTime: 16,
+      //   title: "Final Project Submission",
+      //   type: eventTypes.general
+      // },
       {
         startTime: 16,
         endTime: 18,
-        title: "Dinner - Mo' Bettahs",
+        title: "Dinner",
         type: eventTypes.food,
         location: "1st Floor"
       },
       {
         startTime: 16,
         endTime: 18,
-        title: "Networking Event",
+        title: "Project Showcase",
         type: eventTypes.general,
         location: "2nd Floor"
       },
-      {
-        startTime: 16,
-        endTime: 17,
-        title: "Preliminary Judging",
-        type: eventTypes.general
-      },
-      {
-        startTime: 17,
-        endTime: 18,
-        title: "Finalist Judging",
-        type: eventTypes.general
-      },
+      // {
+      //   startTime: 16,
+      //   endTime: 17,
+      //   title: "Preliminary Judging",
+      //   type: eventTypes.general
+      // },
+      // {
+      //   startTime: 17,
+      //   endTime: 18,
+      //   title: "Finalist Judging",
+      //   type: eventTypes.general
+      // },
       {
         startTime: 18.5,
         endTime: 19.25,

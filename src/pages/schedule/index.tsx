@@ -47,16 +47,16 @@ export default function Schedule() {
 
   return (
     <Layout>
-      <PageTitle>2023 Schedule</PageTitle>
+      <PageTitle>Schedule</PageTitle>
       <Container style={{marginTop: "3rem"}} size="sm">
-        <Alert
+        {/* <Alert
           title="Thanks for attending HackUSU 2023!"
           color="orange"
           mb={50}
         >
           This year&apos;s event has already passed, but you can check out this
           schedule of what happened!
-        </Alert>
+        </Alert> */}
 
         <Group spacing="xl" position="center">
           {Object.values(eventTypes).map((event) => (

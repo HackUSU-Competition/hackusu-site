@@ -18,7 +18,7 @@ export const headerLinks: NavLink[] = [
   // { label: 'Location', href: paths.location },
   {label: "Photos", href: paths.photos},
   {label: "Featured Projects", href: paths.projects},
-  {label: "2023 Schedule", href: paths.schedule},
+  {label: "Schedule", href: paths.schedule},
   {label: "Volunteer", href: paths.volunteer},
   {label: "Sponsor", href: paths.sponsor}
 ]
