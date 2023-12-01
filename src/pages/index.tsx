@@ -150,6 +150,7 @@ export default function HomePage() {
           src="../images/event-photos/Mike Johnson Photo-04439.jpg"
           alt="Students working on a project at HackUSU"
           layout="fullWidth"
+          loading="lazy"
         />
       </AspectRatio>
 
@@ -242,6 +243,7 @@ export default function HomePage() {
           src="../images/event-photos/Mike Johnson Photo-04404.jpg"
           alt="A group of students wearing HackUSU shirts"
           layout="fullWidth"
+          loading="lazy"
         />
       </AspectRatio>
 
