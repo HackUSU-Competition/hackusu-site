@@ -16,7 +16,14 @@ import Layout from "components/Layout/Layout"
 import Section from "components/Layout/Section"
 import SponsorGrid from "components/SponsorGrid"
 import React from "react"
-import {ArrowRight, Bulb, DeviceGamepad2, Robot, Spy} from "tabler-icons-react"
+import {
+  ArrowRight,
+  Bulb,
+  DeviceGamepad2,
+  Robot,
+  Spy,
+  ChartBubble
+} from "tabler-icons-react"
 import {EVENT_DATES} from "utils/constants"
 import "../css/main.css"
 import {StaticImage} from "gatsby-plugin-image"
@@ -130,7 +137,7 @@ export default function HomePage() {
         <Box mt="xl" sx={{textAlign: "center"}}>
           <GradientButton
             component={Link}
-            to={paths.photos} 
+            to={paths.photos}
             rightIcon={<ArrowRight size={16} />}
           >
             {"Check out last year's photos"}
@@ -164,6 +171,12 @@ export default function HomePage() {
               icon: DeviceGamepad2,
               description:
                 "Any game, any technology. Try recreating a retro game, or design a brand new one we haven't seen before!"
+            },
+            {
+              title: "Data Analytics & Visualization",
+              icon: ChartBubble,
+              description:
+                "Analyze a dataset and present your interesting findings!"
             },
             {
               title: "Cybersecurity",
