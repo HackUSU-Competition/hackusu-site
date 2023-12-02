@@ -18,7 +18,7 @@ interface EventPhotosProps {
 export default function EventPhotos({data}: EventPhotosProps) {
   return (
     <Layout>
-      <PageTitle>HackUSU 2023 Photos</PageTitle>
+      <PageTitle>HackUSU Photos</PageTitle>
       <Container style={{marginTop: "3rem"}} size="xl">
         <PhotoGrid photos={data.photos.edges} />
       </Container>

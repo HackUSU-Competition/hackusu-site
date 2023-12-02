@@ -44,8 +44,8 @@ export default function Registration() {
           <SubSectionTitle>Registration not yet open</SubSectionTitle>
 
           <Text mt={10}>
-            HackUSU 2023 has already happened! Check back later for information
-            about HackUSU 2024.
+            Registration for HackUSU 2024 will open in January. Check back later
+            for information!
           </Text>
         </Section>
       )}

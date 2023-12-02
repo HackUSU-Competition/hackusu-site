@@ -15,9 +15,7 @@ export enum paths {
 
 export const headerLinks: NavLink[] = [
   {label: "Home", href: paths.home},
-  // { label: 'Location', href: paths.location },
-  {label: "Photos", href: paths.photos},
-  {label: "Featured Projects", href: paths.projects},
+  {label: "Location", href: paths.location},
   {label: "Schedule", href: paths.schedule},
   {label: "Volunteer", href: paths.volunteer},
   {label: "Sponsor", href: paths.sponsor}
@@ -55,7 +53,7 @@ export const footerLinkGroups: FooterLinkGroup[] = [
       //   href: paths.location
       // },
       {
-        label: "2023 Photos",
+        label: "Photos",
         href: paths.photos
       },
       {
