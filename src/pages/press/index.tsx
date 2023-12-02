@@ -5,6 +5,7 @@ import React from "react"
 import Attending from "./_Attending"
 import FeaturedArticles from "./_FeaturedArticles"
 import {SEO} from "components/seo"
+import ContactForm from "components/ContactForm"
 
 export default function Press() {
   return (
@@ -13,6 +14,7 @@ export default function Press() {
       <About />
       <Attending />
       <FeaturedArticles />
+      <ContactForm />
     </Layout>
   )
 }

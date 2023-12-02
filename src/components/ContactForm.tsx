@@ -9,7 +9,7 @@ import {
 } from "@mantine/core"
 import {useForm, yupResolver} from "@mantine/form"
 import GradientButton from "components/GradientButton"
-import Section from "components/Layout/Section"
+import Section, {SectionProps} from "components/Layout/Section"
 import React, {FC} from "react"
 import {submitFormspark} from "services/formspark"
 import {AlertCircle} from "tabler-icons-react"
@@ -22,7 +22,9 @@ const schema = Yup.object().shape({
   message: Yup.string().required("Required")
 })
 
-const ContactForm: FC<ContainerProps> = (props) => {
+type ContactFormProps = Pick<SectionProps, "background">
+
+const ContactForm: FC<ContactFormProps> = (props) => {
   const form = useForm({
     validate: yupResolver(schema),
     initialValues: {

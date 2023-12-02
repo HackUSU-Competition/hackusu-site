@@ -6,6 +6,8 @@ import Layout from "../components/Layout/Layout"
 import {StaticImage} from "gatsby-plugin-image"
 import {useMediaQuery} from "@mantine/hooks"
 import {SEO} from "components/seo"
+import Section from "components/Layout/Section"
+import ContactForm from "components/ContactForm"
 
 export default function Location() {
   const isMobile = useMediaQuery("(max-width: 700px)")
@@ -27,12 +29,12 @@ export default function Location() {
           alt="Huntsman Hall building"
         />
       )}
-      <Container size="lg">
+
+      <Section width="lg">
         <SimpleGrid
           cols={2}
           spacing={36}
           breakpoints={[{maxWidth: 650, cols: 1}]}
-          mt={60}
         >
           <Box>
             {/* <Text size="xl" weight={500}>
@@ -79,7 +81,9 @@ export default function Location() {
             />
           </Paper>
         </SimpleGrid>
-      </Container>
+      </Section>
+
+      <ContactForm />
     </Layout>
   )
 }

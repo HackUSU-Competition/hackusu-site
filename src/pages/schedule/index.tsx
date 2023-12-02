@@ -13,6 +13,8 @@ import {createTheme, ScheduleView, themes} from "react-schedule-view"
 import {ScheduleViewProps} from "react-schedule-view/dist/ScheduleView"
 import EventTileContent from "./_EventTileContent"
 import {SEO} from "components/seo"
+import Section from "components/Layout/Section"
+import ContactForm from "components/ContactForm"
 
 const customCalendarTheme = createTheme("apple", {
   hourHeight: "75px",
@@ -48,16 +50,7 @@ export default function Schedule() {
   return (
     <Layout>
       <PageTitle>Schedule</PageTitle>
-      <Container style={{marginTop: "3rem"}} size="sm">
-        {/* <Alert
-          title="Thanks for attending HackUSU 2023!"
-          color="orange"
-          mb={50}
-        >
-          This year&apos;s event has already passed, but you can check out this
-          schedule of what happened!
-        </Alert> */}
-
+      <Section width="sm">
         <Group spacing="xl" position="center">
           {Object.values(eventTypes).map((event) => (
             <Group key={event.name} spacing="xs">
@@ -88,7 +81,9 @@ export default function Schedule() {
           daySchedules={saturdaySchedule}
           {...commonScheduleProps}
         />
-      </Container>
+      </Section>
+
+      <ContactForm />
 
       <EventModal
         event={selectedEvent ?? undefined}
