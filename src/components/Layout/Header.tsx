@@ -16,6 +16,7 @@ import {Link} from "gatsby"
 import React, {FC} from "react"
 import GradientButton from "components/GradientButton"
 import {REGISTRATION_OPEN} from "utils/constants"
+import {Home} from "tabler-icons-react"
 
 const HEADER_HEIGHT = 80
 
@@ -78,7 +79,7 @@ const HeaderNav: FC = () => {
         <Group grow={false}>
           <Burger
             opened={opened}
-            onClick={handlers.open}
+            onClick={handlers.toggle}
             className={classes.burger}
             size="sm"
             color="white"
@@ -97,16 +98,21 @@ const HeaderNav: FC = () => {
           </Anchor>
         </Group>
         <Group spacing={5} className={classes.links}>
-          {headerLinks.map((link) => (
-            <Anchor
-              component={Link}
-              key={link.label}
-              to={link.href}
-              className={classes.link}
-            >
-              {link.label}
-            </Anchor>
-          ))}
+          {headerLinks.map((link) => {
+            const isHome = link.label === "Home"
+
+            return (
+              <Anchor
+                component={Link}
+                key={link.label}
+                to={link.href}
+                className={classes.link}
+                lh={isHome ? 0 : undefined}
+              >
+                {isHome ? <Home key={link.label} size={20} /> : link.label}
+              </Anchor>
+            )
+          })}
         </Group>
 
         {REGISTRATION_OPEN && (
@@ -122,6 +128,7 @@ const HeaderNav: FC = () => {
           padding="xl"
           size="sm"
           closeButtonProps={{iconSize: "xl"}}
+          zIndex={1002}
         >
           <Stack>
             {headerLinks.map((link) => (

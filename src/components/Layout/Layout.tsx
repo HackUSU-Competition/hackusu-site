@@ -12,7 +12,9 @@ const Layout: FC<{children: ReactNode}> = (props) => {
         p="xs"
         sx={(theme) => ({
           backgroundColor: theme.colors.blue[2],
-          textAlign: "center"
+          textAlign: "center",
+          zIndex: 1001,
+          position: "relative"
         })}
       >
         <b>
