@@ -4,6 +4,8 @@ export enum paths {
   home = "/",
   location = "/location",
   schedule = "/schedule",
+  competition = "/competition",
+  presenters = "/presenters",
   photos = "/event-photos",
   projects = "/projects",
   sponsor = "/sponsor",
@@ -16,6 +18,8 @@ export enum paths {
 export const headerLinks: NavLink[] = [
   {label: "Home", href: paths.home},
   {label: "Location", href: paths.location},
+  // {label: "Competition", href: paths.competition},
+  // {label: "Presenters", href: paths.presenters},
   {label: "Schedule", href: paths.schedule},
   {label: "Volunteer", href: paths.volunteer},
   {label: "Sponsor", href: paths.sponsor}

@@ -3,6 +3,7 @@ import {
   Avatar,
   Box,
   Card,
+  Center,
   Container,
   Group,
   Image,
@@ -134,15 +135,16 @@ export default function HomePage() {
           ))}
         </SimpleGrid>
 
-        <Box mt="xl" sx={{textAlign: "center"}}>
+        <Center mt="xl">
           <GradientButton
             component={Link}
             to={paths.photos}
             rightIcon={<ArrowRight size={16} />}
+            size="lg"
           >
-            {"Check out last year's photos"}
+            {"See last year's photos"}
           </GradientButton>
-        </Box>
+        </Center>
       </Section>
 
       <AspectRatio ratio={25 / 10}>
@@ -160,11 +162,6 @@ export default function HomePage() {
         background="pattern"
         width="sm"
       >
-        {/* <Center>
-          <GradientButton component={Link} to={paths.competition} variant="gradient">
-            Competition Details
-          </GradientButton>
-        </Center> */}
         <Stack spacing="xl">
           {[
             {
@@ -236,6 +233,19 @@ export default function HomePage() {
             </Card>
           ))}
         </Stack>
+
+        {/* <Center>
+          <GradientButton
+            component={Link}
+            rightIcon={<ArrowRight size={16} />}
+            to={paths.competition}
+            variant="gradient"
+            size="lg"
+            mt="xl"
+          >
+            Competition Details
+          </GradientButton>
+        </Center> */}
       </Section>
 
       <AspectRatio ratio={17 / 10}>

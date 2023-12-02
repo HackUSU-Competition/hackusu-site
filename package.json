@@ -19,6 +19,7 @@
     "@mantine/form": "^6.0.21",
     "@mantine/hooks": "^6.0.10",
     "@mantine/ssr": "^6.0.21",
+    "@ngneat/falso": "^7.1.1",
     "@parcel/namer-default": "^2.10.3",
     "animate.css": "^4.1.1",
     "dayjs": "^1.11.10",
