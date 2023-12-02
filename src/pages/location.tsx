@@ -1,4 +1,4 @@
-import {Box, Button, Container, Paper, SimpleGrid, Text} from "@mantine/core"
+import {Box, Button, Paper, SimpleGrid, Text, Title} from "@mantine/core"
 import PageTitle from "components/PageTitle"
 import {Link} from "gatsby"
 import React from "react"
@@ -8,13 +8,15 @@ import {useMediaQuery} from "@mantine/hooks"
 import {SEO} from "components/seo"
 import Section from "components/Layout/Section"
 import ContactForm from "components/ContactForm"
+import {EVENT_DATES} from "utils/constants"
+import {ExternalLink} from "tabler-icons-react"
 
 export default function Location() {
   const isMobile = useMediaQuery("(max-width: 700px)")
 
   return (
     <Layout>
-      <PageTitle>Location</PageTitle>
+      <PageTitle>Location and Parking</PageTitle>
 
       {isMobile ? (
         <StaticImage
@@ -30,44 +32,62 @@ export default function Location() {
         />
       )}
 
-      <Section width="lg">
+      <Section
+        width="lg"
+        title="Huntsman Hall"
+        subtitle={`HackUSU 2024 will be in Huntsman Hall at Utah State University on ${EVENT_DATES.monthDateRange}`}
+      >
         <SimpleGrid
           cols={2}
           spacing={36}
-          breakpoints={[{maxWidth: 650, cols: 1}]}
+          breakpoints={[{maxWidth: 800, cols: 1}]}
         >
           <Box>
-            {/* <Text size="xl" weight={500}>
-              HackUSU 2023 will be hosted in Huntsman Hall at Utah State University on {EVENT_DATES}
-              .
-            </Text> */}
-            <Text>
-              Free overnight parking will be available in the Big Blue Parking
+            <Title order={3}>Student Parking</Title>
+            <Text mt="xs">
+              Overnight parking will be available in the Big Blue Parking
               Terrace. Staff parking lots on campus may be used for daytime
               parking on Saturday.
             </Text>
-            <Text mt={15}>
-              After arriving, follow the signs to check in at Huntsman
-              Hall&apos;s north entrance.
-            </Text>
-            <Text size="xl" weight={500} mt={30}>
+            <Button
+              component={Link}
+              variant="light"
+              to="https://maps.app.goo.gl/UdKdd5Ti9kDbCLA28"
+              mt="md"
+              fullWidth
+              target="_blank"
+              rightIcon={<ExternalLink size={16} />}
+            >
+              Google Maps: Parking Terrace
+            </Button>
+
+            <Title order={3} mt="xl">
               Busses, Vans, and Accessible Parking
-            </Text>
-            <Text mt={15}>
+            </Title>
+            <Text mt="xs">
               The overnight parking terrace has a maximum clearance of 7 ft. For
               schools bringing busses or large vans, please contact us in
               advance for details on alternate parking. If accessible parking is
               required, we can provide a permit from the USU Parking Office.
             </Text>
+
+            <Title order={3} mt="xl">
+              Check-in
+            </Title>
+            <Text mt="xs">
+              Check-in will open at 4:00 PM on Friday at the Huntsman Hall north
+              entrance.
+            </Text>
             <Button
               component={Link}
               variant="light"
-              to="https://goo.gl/maps/sWuht9HKoxj7rqyL9"
-              mt={20}
+              to="https://maps.app.goo.gl/aJv3ULjRqzUpUDqQ9"
+              mt="md"
               fullWidth
               target="_blank"
+              rightIcon={<ExternalLink size={16} />}
             >
-              Open in Google Maps
+              Google Maps: Huntsman Hall
             </Button>
           </Box>
           <Paper shadow="sm" withBorder p="0" sx={{minHeight: "400px"}}>
