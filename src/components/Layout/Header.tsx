@@ -22,7 +22,9 @@ const HEADER_HEIGHT = 80
 const useStyles = createStyles((theme) => ({
   header: {
     backgroundColor: theme.colors.navy[9],
-    border: 0
+    border: 0,
+    position: "sticky",
+    boxShadow: theme.shadows.lg
   },
 
   container: {
