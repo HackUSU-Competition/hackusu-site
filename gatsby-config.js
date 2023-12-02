@@ -39,6 +39,27 @@ module.exports = {
       options: {
         siteUrl: `https://www.hackusu.com`
       }
+    },
+    {
+      // https://www.gatsbyjs.com/plugins/gatsby-plugin-google-gtag/
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-D90DZ7Q263"],
+        // gtagConfig: {
+        //   optimize_id: "OPT_CONTAINER_ID",
+        //   anonymize_ip: true,
+        //   cookie_expires: 0
+        // },
+        pluginConfig: {
+          head: true
+          // Avoids sending pageview hits from custom paths
+          // exclude: ["/preview/**", "/do-not-track/me/too/"],
+          // Defaults to https://www.googletagmanager.com
+          // origin: "YOUR_SELF_HOSTED_ORIGIN",
+          // Delays processing pageview events on route update (in milliseconds)
+          // delayOnRouteUpdate: 0
+        }
+      }
     }
   ]
 }
