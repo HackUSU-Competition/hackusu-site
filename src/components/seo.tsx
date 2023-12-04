@@ -8,5 +8,6 @@ export const SEO = () => (
       name="description"
       content="We're HackUSU, Utah's largest and oldest student-run hackathon. Join hundreds of students and professionals at Utah State University for competitions and workshops related software, data analytics, hardware, and more!"
     />
+    <meta name="theme-color" content="#0b1928" />
   </>
 )
