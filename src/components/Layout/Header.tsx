@@ -1,6 +1,7 @@
 import {
   Anchor,
   Burger,
+  CloseButton,
   Container,
   createStyles,
   Drawer,
@@ -127,17 +128,15 @@ const HeaderNav: FC = () => {
           onClose={handlers.close}
           padding="xl"
           size="sm"
-          closeButtonProps={{iconSize: "xl"}}
+          withCloseButton={false}
           zIndex={1002}
         >
+          <Group position="right">
+            <CloseButton onClick={handlers.close} size="md" />
+          </Group>
           <Stack>
             {headerLinks.map((link) => (
-              <Anchor
-                component={Link}
-                key={link.label}
-                to={link.href}
-                sx={{textDecoration: "none !important"}}
-              >
+              <Anchor component={Link} key={link.label} to={link.href}>
                 {link.label}
               </Anchor>
             ))}
