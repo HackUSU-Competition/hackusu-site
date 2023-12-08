@@ -7,6 +7,7 @@
 - favicon
 - registration pricing, what's included in registration (remove references to free event)
 - slide down mobile menu
+- presenters page
 
 # P2
 - README, my contact information
