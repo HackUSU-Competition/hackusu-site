@@ -2,13 +2,12 @@
 
 ## P1
 
-- photos from last year, including sponsor page
 - competition page, including info about b-sol category, rules, judging, team forming
+- registration pricing, what's included in registration (remove references to free event)
 - social preview file
 - favicon
-- registration pricing, what's included in registration (remove references to free event)
-- slide down mobile menu
 - presenters page
+- photos from last year, including sponsor page
 
 ## P2
 

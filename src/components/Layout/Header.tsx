@@ -1,7 +1,6 @@
 import {
   Anchor,
   Burger,
-  CloseButton,
   Container,
   createStyles,
   Drawer,
@@ -9,7 +8,8 @@ import {
   Header,
   Image,
   Portal,
-  Stack
+  Stack,
+  Text
 } from "@mantine/core"
 import {useDisclosure} from "@mantine/hooks"
 import {headerLinks, NavLink, paths} from "utils/navigationContent"
@@ -17,7 +17,7 @@ import {Link} from "gatsby"
 import React, {FC} from "react"
 import GradientButton from "components/GradientButton"
 import {REGISTRATION_OPEN} from "utils/constants"
-import {Home} from "tabler-icons-react"
+import {ChevronRight, Home} from "tabler-icons-react"
 
 const HEADER_HEIGHT = 80
 
@@ -63,6 +63,28 @@ const useStyles = createStyles((theme) => ({
 
   linkLabel: {
     marginRight: 5
+  },
+
+  drawerContent: {
+    backgroundColor: theme.colors.navy[9],
+    height: "unset",
+    paddingTop: "45px"
+  },
+
+  drawerInner: {
+    top: HEADER_HEIGHT,
+    a: {
+      color: theme.colors.navy[2],
+      fontWeight: 500,
+      fontSize: "1.3rem",
+      padding: "1rem 0",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      "+ a": {
+        borderTop: `1px solid ${theme.colors.navy[8]}`
+      }
+    }
   }
 }))
 
@@ -129,16 +151,20 @@ const HeaderNav: FC = () => {
           padding="xl"
           size="sm"
           withCloseButton={false}
-          zIndex={1002}
+          zIndex={1000}
+          position="top"
+          variant="filled"
+          classNames={{
+            content: classes.drawerContent,
+            inner: classes.drawerInner
+          }}
         >
-          <Group position="right">
-            <CloseButton onClick={handlers.close} size="md" />
-          </Group>
-          <Stack>
+          <Stack spacing={0} onClick={handlers.close}>
             {headerLinks.map((link) => (
-              <Anchor component={Link} key={link.label} to={link.href}>
+              <Text component={Link} key={link.label} to={link.href}>
                 {link.label}
-              </Anchor>
+                <ChevronRight size={20} />
+              </Text>
             ))}
           </Stack>
         </Drawer>
