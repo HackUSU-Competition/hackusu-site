@@ -4,6 +4,7 @@ export const EVENT_DATES = {
   monthDateRange: "March 1st and 2nd",
   monthYear: "March 2024"
 }
+export const REGISTRATION_LINK = "https://www.example.com"
 
 export const HACKUSU_EMAIL = "hackusu@aggies.usu.edu"
 export const USU_POLICE_PHONE = "435-797-1939"

@@ -139,7 +139,11 @@ const HeaderNav: FC = () => {
         </Group>
 
         {REGISTRATION_OPEN && (
-          <GradientButton component={Link} to="/registration" sx={{height: 30}}>
+          <GradientButton
+            component={Link}
+            to={paths.registration}
+            sx={{height: 30}}
+          >
             Register
           </GradientButton>
         )}

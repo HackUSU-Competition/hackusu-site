@@ -1,9 +1,10 @@
-import {Box, MantineProvider} from "@mantine/core"
+import {Box, MantineProvider, Text} from "@mantine/core"
 import "animate.css/animate.min.css"
 import React, {FC, ReactNode} from "react"
 import theme from "theme"
 import FooterLinks from "./Footer"
 import HeaderNav from "./Header"
+import {REGISTRATION_OPEN} from "utils/constants"
 
 const Layout: FC<{children: ReactNode}> = (props) => {
   return (
@@ -17,9 +18,16 @@ const Layout: FC<{children: ReactNode}> = (props) => {
           position: "relative"
         })}
       >
-        <b>
-          Registration for HackUSU 2024 will open in January! &nbsp; &#127881;
-        </b>
+        <Text weight="bold">
+          {REGISTRATION_OPEN ? (
+            <>Early registration is now open!</>
+          ) : (
+            <>
+              Registration for HackUSU 2024 will open in January! &nbsp;
+              &#127881;
+            </>
+          )}
+        </Text>
       </Box>
       <HeaderNav />
       {props.children}

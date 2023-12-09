@@ -25,7 +25,7 @@ import {
   Spy,
   ChartBubble
 } from "tabler-icons-react"
-import {EVENT_DATES} from "utils/constants"
+import {EVENT_DATES, REGISTRATION_OPEN} from "utils/constants"
 import "../css/main.css"
 import {StaticImage} from "gatsby-plugin-image"
 import {sponsors2023} from "./sponsor/_sponsorCompaniesContent"
@@ -50,7 +50,7 @@ export default function HomePage() {
           backgroundSize: "cover"
         })}
       >
-        <Container size={600} pt={50} px={50} pb={100}>
+        <Container size={600} pt={50} px={50} pb={100} ta="center">
           <Image
             src={require("images/logo-base.svg").default}
             alt="HackUSU Logo"
@@ -58,20 +58,26 @@ export default function HomePage() {
             width="100%"
             style={{filter: "invert(1)"}}
           />
-          <Title
-            order={2}
-            align="center"
-            pt={50}
-            sx={{color: "white", fontSize: "2rem"}}
-          >
+          <Title order={2} pt={50} sx={{color: "white", fontSize: "2rem"}}>
             {EVENT_DATES.monthDateRangeYear}
           </Title>
-          <Text align="center" color="white" opacity={0.7} italic>
-            Registration opens in January
-          </Text>
+          {REGISTRATION_OPEN ? (
+            <GradientButton
+              size="xl"
+              component={Link}
+              to={paths.registration}
+              mt="xl"
+              mx="auto"
+            >
+              Register Now &rarr;
+            </GradientButton>
+          ) : (
+            <Text color="white" opacity={0.7} italic>
+              Registration opens in January
+            </Text>
+          )}
           {/* <Title */}
           {/*   order={2} */}
-          {/*   align="center" */}
           {/*   pt={50} */}
           {/*   sx={{color: "white", fontSize: "1.5rem"}} */}
           {/* > */}
