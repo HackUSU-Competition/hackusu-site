@@ -61,7 +61,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
     events: [
       {
         title: "Check-in",
-        startTime: 16,
+        startTime: 15,
         endTime: 17,
         location: "N. Entrance",
         locationVerbose: "North Entrance",
@@ -71,7 +71,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         coverImage: require("images/scenes/huntsman-hall-banner.jpg").default
       },
       {
-        startTime: 16,
+        startTime: 15,
         endTime: 17,
         title: "Employer Networking Event",
         type: eventTypes.general,
@@ -95,7 +95,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 18,
         endTime: 19,
-        title: "Dinner",
+        title: "Pizza",
         type: eventTypes.food,
         location: "2nd Floor"
         // description:
@@ -224,7 +224,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 23,
         endTime: 24,
-        title: "Dinner: Round 2",
+        title: "Pizza: Round 2",
         type: eventTypes.food,
         location: "2nd Floor"
       }
@@ -309,7 +309,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 12,
         endTime: 13,
-        title: "Lunch - Subs",
+        title: "Sandwiches",
         description: "Come get some lunch from Firehouse Subs!",
         type: eventTypes.food,
         location: "2nd Floor"
@@ -349,12 +349,12 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       //     organization: "Lucid"
       //   }
       // },
-      {
-        startTime: 15.25,
-        endTime: 16,
-        title: "Project Submission",
-        type: eventTypes.general
-      },
+      // {
+      //   startTime: 15.25,
+      //   endTime: 16,
+      //   title: "Project Submission",
+      //   type: eventTypes.general
+      // },
       // {
       //   startTime: 15.25,
       //   endTime: 16,
@@ -364,16 +364,16 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 16,
         endTime: 18,
-        title: "Dinner",
+        title: "Chick-fil-a",
         type: eventTypes.food,
         location: "1st Floor"
       },
       {
         startTime: 16,
         endTime: 18,
-        title: "Project Showcase",
+        title: "Project Showcase & Judging",
         type: eventTypes.general,
-        location: "2nd Floor"
+        location: "2nd & 3rd Floors"
       },
       // {
       //   startTime: 16,

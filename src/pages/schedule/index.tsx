@@ -71,7 +71,7 @@ export default function Schedule() {
         <Space h="xl" />
 
         <ScheduleView
-          viewStartTime={15}
+          viewStartTime={14}
           daySchedules={fridaySchedule}
           {...commonScheduleProps}
         />
