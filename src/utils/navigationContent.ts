@@ -19,7 +19,7 @@ export enum paths {
 export const headerLinks: NavLink[] = [
   {label: "Home", href: paths.home},
   {label: "Location", href: paths.location},
-  // {label: "Competition", href: paths.competition},
+  {label: "Competition", href: paths.competition},
   // {label: "Presenters", href: paths.presenters},
   {label: "Schedule", href: paths.schedule},
   {label: "Volunteer", href: paths.volunteer},
@@ -49,10 +49,10 @@ export const footerLinkGroups: FooterLinkGroup[] = [
       //   label: 'About HackUSU',
       //   href: paths.about,
       // },
-      // {
-      //   label: 'Competition',
-      //   href: paths.competition,
-      // },
+      {
+        label: "Competition",
+        href: paths.competition
+      },
       // {
       //   label: "Location",
       //   href: paths.location

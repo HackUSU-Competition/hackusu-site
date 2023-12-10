@@ -17,16 +17,14 @@ export default function About() {
         <SubSectionTitle>TL;DR.</SubSectionTitle>
         <Text component="p">
           Be respectful. Harassment and abuse are never tolerated. If you are in
-          a situation that makes you uncomfortable at HackUSU, if the event
-          itself is creating an unsafe or inappropriate environment, or if
-          interacting with a HackUSU representative or event organizer makes you
-          uncomfortable, please report it using the procedures below.
+          a situation that makes you uncomfortable at HackUSU please report it
+          using the procedures below.
         </Text>
 
         <SubSectionTitle mt={30}>Harassment</SubSectionTitle>
         <Text component="p">
-          We believe that every single person has the right to hack in a safe
-          and welcoming environment.
+          Every person has the right to hack in a safe and welcoming
+          environment.
         </Text>
 
         <Text component="p">
@@ -66,9 +64,8 @@ export default function About() {
         <SubSectionTitle mt={30}>Reporting</SubSectionTitle>
 
         <Text component="p">
-          If you are being harassed, notice that someone else is being harassed,
-          or have any other concerns, please talk to a HackUSU organizer or send
-          them a direct message over Discord.
+          If you notice an unsafe environment or have any other concerns, please
+          talk to a HackUSU organizer or call USU Police.
         </Text>
 
         <Text component="p">

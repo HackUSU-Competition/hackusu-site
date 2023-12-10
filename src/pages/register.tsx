@@ -197,7 +197,6 @@ export default function Registration() {
               <Check size="1rem" />
             </ThemeIcon>
           }
-          center
         >
           <List.Item>
             Entry to the hackathon competition with prizes for top teams from

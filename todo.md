@@ -2,7 +2,6 @@
 
 ## P1
 
-- competition page, including info about b-sol category, rules, judging, team forming
 - social preview file
 - SEO elements on all pages
 - favicon
