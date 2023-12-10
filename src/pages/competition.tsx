@@ -5,11 +5,12 @@ import {SEO} from "components/seo"
 import ContactForm from "components/ContactForm"
 import Section from "components/Layout/Section"
 import CategoryList from "components/CategoryList"
-import {Anchor, List, Text, ThemeIcon} from "@mantine/core"
+import {Anchor, Center, List, Text, ThemeIcon} from "@mantine/core"
 import {ArrowRight} from "tabler-icons-react"
 import {Link} from "gatsby"
 import {paths} from "utils/navigationContent"
 import SubSectionTitle from "components/SubsectionTitle"
+import GradientButton from "components/GradientButton"
 
 export default function Registration() {
   return (
@@ -31,6 +32,19 @@ export default function Registration() {
 
       <Section title="Categories" background="light" width="sm">
         <CategoryList />
+
+        <Center>
+          <GradientButton
+            component={Link}
+            rightIcon={<ArrowRight size={16} />}
+            to={paths.projects}
+            variant="gradient"
+            size="lg"
+            mt="xl"
+          >
+            See past featured projects
+          </GradientButton>
+        </Center>
       </Section>
 
       <Section title="Rules">
