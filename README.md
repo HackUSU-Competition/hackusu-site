@@ -1,7 +1,7 @@
 # HackUSU Site
 
 Questions?
-Contact Troy DeSpain, despaintroy@gmail.com
+Contact Troy DeSpain, <despaintroy@gmail.com>
 
 ## Installing and Running Locally
 

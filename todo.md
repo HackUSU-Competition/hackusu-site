@@ -3,8 +3,8 @@
 ## P1
 
 - competition page, including info about b-sol category, rules, judging, team forming
-- registration pricing, what's included in registration (remove references to free event)
 - social preview file
+- SEO elements on all pages
 - favicon
 - presenters page
 - photos from last year, including sponsor page
