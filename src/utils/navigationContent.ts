@@ -13,7 +13,7 @@ export enum paths {
   press = "/press",
   // pressPhotos = '/press/photos',
   safety = "/safety",
-  registration = "/registration"
+  register = "/register"
 }
 
 export const headerLinks: NavLink[] = [

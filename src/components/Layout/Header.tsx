@@ -141,7 +141,7 @@ const HeaderNav: FC = () => {
         {REGISTRATION_OPEN && (
           <GradientButton
             component={Link}
-            to={paths.registration}
+            to={paths.register}
             sx={{height: 30}}
           >
             Register

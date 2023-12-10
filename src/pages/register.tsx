@@ -2,7 +2,6 @@ import {Anchor, Box, Stack, Text, Timeline, createStyles} from "@mantine/core"
 import GradientButton from "components/GradientButton"
 import Section from "components/Layout/Section"
 import PageTitle from "components/PageTitle"
-import SubSectionTitle from "components/SubsectionTitle"
 import React from "react"
 import {ArrowRight} from "tabler-icons-react"
 import {

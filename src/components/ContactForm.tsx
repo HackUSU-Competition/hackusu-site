@@ -1,12 +1,4 @@
-import {
-  Alert,
-  Anchor,
-  ContainerProps,
-  Group,
-  Stack,
-  Textarea,
-  TextInput
-} from "@mantine/core"
+import {Alert, Anchor, Group, Stack, Textarea, TextInput} from "@mantine/core"
 import {useForm, yupResolver} from "@mantine/form"
 import GradientButton from "components/GradientButton"
 import Section, {SectionProps} from "components/Layout/Section"

@@ -1,4 +1,4 @@
-import {Alert, ColorSwatch, Container, Group, Space, Text} from "@mantine/core"
+import {ColorSwatch, Group, Space, Text} from "@mantine/core"
 import Layout from "components/Layout/Layout"
 import PageTitle from "components/PageTitle"
 import EventModal from "pages/schedule/_EventModal"

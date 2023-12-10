@@ -65,7 +65,7 @@ export default function HomePage() {
             <GradientButton
               size="xl"
               component={Link}
-              to={paths.registration}
+              to={paths.register}
               mt="xl"
               mx="auto"
             >
