@@ -1,9 +1,18 @@
-import {Anchor, Box, Stack, Text, Timeline, createStyles} from "@mantine/core"
+import {
+  Anchor,
+  Box,
+  List,
+  Stack,
+  Text,
+  ThemeIcon,
+  Timeline,
+  createStyles
+} from "@mantine/core"
 import GradientButton from "components/GradientButton"
 import Section from "components/Layout/Section"
 import PageTitle from "components/PageTitle"
 import React from "react"
-import {ArrowRight} from "tabler-icons-react"
+import {ArrowRight, Check} from "tabler-icons-react"
 import {
   HACKUSU_EMAIL,
   REGISTRATION_LINK,
@@ -53,10 +62,7 @@ export default function Registration() {
       <Section width="sm">
         <SectionHead title="Student Registration">
           {REGISTRATION_OPEN ? (
-            <>
-              Early registration is currently limited to business and
-              engineering students attending USU
-            </>
+            <>Now open!</>
           ) : (
             <>
               Opens January 1<sup>st</sup>
@@ -64,7 +70,16 @@ export default function Registration() {
           )}
         </SectionHead>
 
-        <Stack align="center" maw={425} m="auto" spacing={8}>
+        {REGISTRATION_OPEN && (
+          <Text size="lg">
+            Early registration is limited to USU students attending the Huntsman
+            School of Business or College of Engineering. General registration
+            for all students will be available beginning February 1<sup>st</sup>
+            .
+          </Text>
+        )}
+
+        <Stack align="center" maw={425} m="auto" spacing={8} mt={48}>
           <GradientButton
             component="a"
             rightIcon={<ArrowRight />}
@@ -172,11 +187,41 @@ export default function Registration() {
       </Section>
 
       <Section width="sm" background="light">
+        <SectionHead title="What's Included?" />
+
+        <List
+          spacing="md"
+          size="lg"
+          icon={
+            <ThemeIcon size={24} radius="xl">
+              <Check size="1rem" />
+            </ThemeIcon>
+          }
+          center
+        >
+          <List.Item>
+            Entry to the hackathon competition with prizes for top teams from
+            each category
+          </List.Item>
+          <List.Item>
+            Entry to all workshops, presentations, and keynotes
+          </List.Item>
+          <List.Item>
+            4 catered meals and plenty of snacks throughout HackUSU
+          </List.Item>
+          <List.Item>
+            Networking event to meet with recruiters and engineers from our
+            sponsors
+          </List.Item>
+        </List>
+      </Section>
+
+      <Section width="sm">
         <SectionHead title="Guest Registration">
           Presenters, judges, sponsors, and media
         </SectionHead>
 
-        <Text>
+        <Text size="lg">
           If you are representing a company, would like to volunteer, or are a
           member of the press, please email us at{" "}
           <Anchor href={`mailto:${HACKUSU_EMAIL}`} target="_blank">
