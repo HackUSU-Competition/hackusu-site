@@ -50,4 +50,4 @@ export default function Projects() {
   )
 }
 
-export const Head = () => <SEO />
+export const Head = () => <SEO title="Featured Projects" />

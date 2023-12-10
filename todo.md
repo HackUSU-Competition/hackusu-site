@@ -2,6 +2,7 @@
 
 ## P1
 
+- add photos to the competition page
 - social preview file
 - SEO elements on all pages
 - favicon

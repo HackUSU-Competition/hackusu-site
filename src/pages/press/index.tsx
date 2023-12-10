@@ -19,4 +19,4 @@ export default function Press() {
   )
 }
 
-export const Head = () => <SEO />
+export const Head = () => <SEO title="Press Resources" />

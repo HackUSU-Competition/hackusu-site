@@ -108,4 +108,4 @@ export default function Location() {
   )
 }
 
-export const Head = () => <SEO />
+export const Head = () => <SEO title="Location & Parking" />

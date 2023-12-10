@@ -42,4 +42,4 @@ export const portfolioQuery = graphql`
   }
 `
 
-export const Head = () => <SEO />
+export const Head = () => <SEO title="Photos" />

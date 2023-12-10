@@ -93,4 +93,4 @@ export default function Schedule() {
   )
 }
 
-export const Head = () => <SEO />
+export const Head = () => <SEO title="Event Schedule" />

@@ -23,4 +23,4 @@ export default function Sponsor() {
   )
 }
 
-export const Head = () => <SEO />
+export const Head = () => <SEO title="Sponsor" />

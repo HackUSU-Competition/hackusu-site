@@ -113,4 +113,4 @@ export default function Registration() {
   )
 }
 
-export const Head = () => <SEO />
+export const Head = () => <SEO title="About the Competition" />

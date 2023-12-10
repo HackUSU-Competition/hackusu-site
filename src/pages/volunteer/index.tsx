@@ -168,4 +168,4 @@ export default function Volunteer() {
   )
 }
 
-export const Head = () => <SEO />
+export const Head = () => <SEO title="Volunteer" />
