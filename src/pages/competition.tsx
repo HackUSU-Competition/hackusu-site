@@ -5,19 +5,36 @@ import {SEO} from "components/seo"
 import ContactForm from "components/ContactForm"
 import Section from "components/Layout/Section"
 import CategoryList from "components/CategoryList"
-import {Anchor, Center, List, Text, ThemeIcon} from "@mantine/core"
+import {Anchor, Center, List, SimpleGrid, Text, ThemeIcon} from "@mantine/core"
 import {ArrowRight} from "tabler-icons-react"
 import {Link} from "gatsby"
 import {paths} from "utils/navigationContent"
 import SubSectionTitle from "components/SubsectionTitle"
 import GradientButton from "components/GradientButton"
+import {StaticImage} from "gatsby-plugin-image"
+import {useMediaQuery} from "@mantine/hooks"
 
 export default function Registration() {
+  const isMobile = useMediaQuery("(max-width: 800px)")
+
   return (
     <Layout>
       <PageTitle>About the Competition</PageTitle>
 
       <Section title="Registration & Teams">
+        <StaticImage
+          src={"../images/event-photos/team-1.jpg"}
+          alt="Picture of Maiden Voyage table at HackUSU"
+          layout="constrained"
+          style={{
+            margin: isMobile ? "30px auto" : "0 0 30px 30px",
+            borderRadius: 5,
+            overflow: "hidden",
+            maxWidth: 400,
+            float: isMobile ? "none" : "right",
+            display: isMobile ? "block" : "inline-block"
+          }}
+        />
         <Text size="xl">
           Get ready for the hackathon! Whether you prefer to compete solo or
           team up with a group of up to 4 people, the choice is yours. Everyone
@@ -90,36 +107,53 @@ export default function Registration() {
           and advanced winners in each category.
         </Text>
 
-        <SubSectionTitle size="xl" mb="md" mt="xl">
-          Judging Criteria:
-        </SubSectionTitle>
-        <List
-          spacing="md"
-          size="lg"
-          icon={
-            <ThemeIcon size={24} radius="xl">
-              <ArrowRight size="1rem" />
-            </ThemeIcon>
-          }
-        >
-          <List.Item>
-            <b>TECHNOLOGY:</b> How technically impressive was the project? Was
-            the problem difficult? Did the team use a clever technique?
-          </List.Item>
-          <List.Item>
-            <b>DESIGN:</b> How well designed is the user interface / experience?
-            Are the graphics impressive?
-          </List.Item>
-          <List.Item>
-            <b>COMPLETION:</b> Does the project work? Did the team achieve what
-            they wanted?
-          </List.Item>
-          <List.Item>
-            <b>LEARNING:</b> Did team members try to learn something new? Did
-            they attempt something different than they had worked on before?
-            This is especially important for the beginner prize.
-          </List.Item>
-        </List>
+        <SimpleGrid cols={isMobile ? 1 : 2} spacing="xl" mt="xl">
+          <div>
+            <SubSectionTitle size="xl" mb="md">
+              Judging Criteria:
+            </SubSectionTitle>
+            <List
+              spacing="md"
+              size="lg"
+              icon={
+                <ThemeIcon size={24} radius="xl">
+                  <ArrowRight size="1rem" />
+                </ThemeIcon>
+              }
+            >
+              <List.Item>
+                <b>TECHNOLOGY:</b> How technically impressive was the project?
+                Was the problem difficult? Did the team use a clever technique?
+              </List.Item>
+              <List.Item>
+                <b>DESIGN:</b> How well designed is the user
+                interface/experience? Are the graphics impressive?
+              </List.Item>
+              <List.Item>
+                <b>COMPLETION:</b> Does the project work? Did the team achieve
+                what they wanted?
+              </List.Item>
+              <List.Item>
+                <b>LEARNING:</b> Did team members try to learn something new?
+                Did they attempt something different than they had worked on
+                before? This is especially important for the beginner prize.
+              </List.Item>
+            </List>
+          </div>
+
+          <StaticImage
+            src={"../images/event-photos/judging-1.jpg"}
+            alt="Team members presenting project to judges"
+            layout="constrained"
+            style={{
+              borderRadius: 5,
+              overflow: "hidden",
+              maxWidth: 500,
+              justifySelf: "center",
+              order: isMobile ? -1 : 1
+            }}
+          />
+        </SimpleGrid>
       </Section>
 
       <ContactForm />
