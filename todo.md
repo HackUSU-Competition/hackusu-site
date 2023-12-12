@@ -2,8 +2,9 @@
 
 ## P1
 
-- add photos to the competition page
-- social preview file
+- google search console
+- font missing on mobile?
+- google analytics track clicks, registrations
 - SEO elements on all pages
 - favicon
 - presenters page
