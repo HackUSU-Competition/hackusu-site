@@ -2,11 +2,9 @@
 
 ## P1
 
-- google search console
 - font missing on mobile?
 - google analytics track clicks, registrations
 - SEO elements on all pages
-- favicon
 - presenters page
 - photos from last year, including sponsor page
 
