@@ -5,6 +5,18 @@ import theme from "theme"
 import FooterLinks from "./Footer"
 import HeaderNav from "./Header"
 import {REGISTRATION_OPEN} from "utils/constants"
+import LogRocket from "logrocket"
+import setupLogRocketReact from "logrocket-react"
+
+const ENABLE_LOGROCKET =
+  process.env.NODE_ENV !== "development" && typeof window !== "undefined"
+
+console.debug("LogRocket enabled:", ENABLE_LOGROCKET)
+
+if (ENABLE_LOGROCKET) {
+  LogRocket.init("hackusu/hackusu-marketing-site")
+  setupLogRocketReact(LogRocket)
+}
 
 const Layout: FC<{children: ReactNode}> = (props) => {
   return (

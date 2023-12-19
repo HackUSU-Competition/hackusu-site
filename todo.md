@@ -2,6 +2,8 @@
 
 ## P1
 
+- scroll padding on volunteer page
+- update press page, press kit, key times, press release
 - font missing on mobile?
 - google analytics track clicks, registrations
 - SEO elements on all pages
