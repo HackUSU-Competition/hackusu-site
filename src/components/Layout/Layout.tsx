@@ -14,7 +14,7 @@ const ENABLE_LOGROCKET =
 console.debug("LogRocket enabled:", ENABLE_LOGROCKET)
 
 if (ENABLE_LOGROCKET) {
-  LogRocket.init("hackusu/hackusu-marketing-site")
+  LogRocket.init("hackusu-5gobn/hackusu-website")
   setupLogRocketReact(LogRocket)
 }
 
