@@ -51,7 +51,7 @@ export default function Registration() {
         ) : (
           <>
             <Text size="lg" weight="bold">
-              Limited early registration opens January 1<sup>st</sup>
+              Limited early registration opens January 8<sup>th</sup>
             </Text>
             Early registration will be available to business and engineering
             students attending USU
@@ -65,7 +65,7 @@ export default function Registration() {
             <>Now open!</>
           ) : (
             <>
-              Opens January 1<sup>st</sup>
+              $5 • Opens January 8<sup>th</sup>
             </>
           )}
         </SectionHead>
@@ -101,7 +101,7 @@ export default function Registration() {
               </>
             ) : (
               <>
-                Opens January 1<sup>st</sup>
+                Opens January 8<sup>th</sup>
               </>
             )}
           </Text>
@@ -128,7 +128,7 @@ export default function Registration() {
               </>
             ) : (
               <>
-                Opens January 1<sup>st</sup>
+                Opens January 8<sup>th</sup>
               </>
             )}
           </Text>
@@ -150,7 +150,7 @@ export default function Registration() {
           </Text>
         </Stack>
 
-        <Timeline bulletSize={30} lineWidth={3} mt={60}>
+        {/* <Timeline bulletSize={30} lineWidth={3} mt={60}>
           <Timeline.Item
             active={REGISTRATION_OPEN}
             bullet={1}
@@ -183,7 +183,7 @@ export default function Registration() {
               event
             </Text>
           </Timeline.Item>
-        </Timeline>
+        </Timeline> */}
       </Section>
 
       <Section width="sm" background="light">

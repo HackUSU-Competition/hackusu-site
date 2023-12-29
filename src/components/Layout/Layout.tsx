@@ -32,11 +32,11 @@ const Layout: FC<{children: ReactNode}> = (props) => {
       >
         <Text weight="bold">
           {REGISTRATION_OPEN ? (
-            <>Early registration is now open!</>
+            <>Early registration is now open! &#127881;</>
           ) : (
             <>
-              Registration for HackUSU 2024 will open in January! &nbsp;
-              &#127881;
+              Registration for HackUSU 2024 will open January 8<sup>th</sup>{" "}
+              &nbsp; &#127881;
             </>
           )}
         </Text>
