@@ -64,7 +64,7 @@ export default function HomePage() {
             </GradientButton>
           ) : (
             <Text color="white" opacity={0.7} italic>
-              Registration opens in January
+              Registration opens January 8<sup>th</sup>
             </Text>
           )}
           {/* <Title */}
