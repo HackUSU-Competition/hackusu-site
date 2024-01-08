@@ -62,7 +62,7 @@ export default function Registration() {
       <Section width="sm">
         <SectionHead title="Student Registration">
           {REGISTRATION_OPEN ? (
-            <>Now open!</>
+            <>$5 for early registration</>
           ) : (
             <>
               $5 • Opens January 8<sup>th</sup>
