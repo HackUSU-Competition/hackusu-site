@@ -7,6 +7,7 @@ import HeaderNav from "./Header"
 import {REGISTRATION_OPEN} from "utils/constants"
 import LogRocket from "logrocket"
 import setupLogRocketReact from "logrocket-react"
+import {navigate} from "gatsby"
 
 const ENABLE_LOGROCKET =
   process.env.NODE_ENV !== "development" && typeof window !== "undefined"
@@ -27,8 +28,12 @@ const Layout: FC<{children: ReactNode}> = (props) => {
           backgroundColor: theme.colors.blue[2],
           textAlign: "center",
           zIndex: 1001,
-          position: "relative"
+          position: "relative",
+          cursor: "pointer"
         })}
+        onClick={() => {
+          navigate("/register")
+        }}
       >
         <Text weight="bold">
           {REGISTRATION_OPEN ? (
