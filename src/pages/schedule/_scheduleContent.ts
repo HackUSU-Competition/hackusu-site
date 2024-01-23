@@ -97,17 +97,68 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         endTime: 19,
         title: "Pizza",
         type: eventTypes.food,
-        location: "2nd Floor"
-        // description:
-        //   "After you check-in and find a spot for your group, come enjoy some pizza from Hungry Howie’s!"
+        location: "2nd Floor",
+        description:
+          "After the opening keynote come enjoy some pizza from Hungry Howie’s!"
       },
       {
         startTime: 19,
-        endTime: 23,
-        title: "Friday Evening Workshops",
+        endTime: 20,
+        title: "TBA (NICE)",
         // skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
         location: "3rd Floor"
+      },
+      {
+        startTime: 19,
+        endTime: 20,
+        title: "TBA (L3 Harris)",
+        // skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
+        startTime: 20,
+        endTime: 21,
+        title: "TBA (Doug Derrick)",
+        skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        presenter: {
+          name: "Doug Derrick",
+          profileImage: require("images/schedule/doug-derrick.png").default,
+          organization: "Analytics Solutions Center"
+        }
+      },
+      {
+        startTime: 20,
+        endTime: 21,
+        title: "TBA (Women in Tech)",
+        // skillLevel: skillLevels.everyone,
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
+        startTime: 21,
+        endTime: 22,
+        title: "TBA (Women in Tech)",
+        // skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
+        startTime: 22,
+        endTime: 23,
+        title: "Building your first React App",
+        skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        description: undefined,
+        presenter: {
+          name: "Troy DeSpain",
+          profileImage: require("images/schedule/troy-despain.png").default,
+          organization: "Evidently"
+        }
       },
       // {
       //   startTime: 19,
@@ -253,13 +304,27 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         startTime: 8,
         endTime: 9,
         title: "Breakfast",
-        // description: "Come get some breakfast from Einstein Bros. Bagels!",
+        description: "Come get some breakfast from Einstein Bros. Bagels!",
         type: eventTypes.food
       },
       {
         startTime: 9,
+        endTime: 10,
+        title: "TBA (NICE)",
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
+        startTime: 10,
+        endTime: 11,
+        title: "TBA (Mason Francis)",
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
+        startTime: 11,
         endTime: 12,
-        title: "Saturday Morning Workshops",
+        title: "TBA (L3 Harris)",
         type: eventTypes.workshop,
         location: "3rd Floor"
       },
@@ -316,8 +381,15 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       },
       {
         startTime: 13,
+        endTime: 14,
+        title: "TBA (Hill Air Force Base)",
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
+        startTime: 14,
         endTime: 15,
-        title: "Saturday Afternoon Workshops",
+        title: "TBA (Hill Air Force Base)",
         type: eventTypes.workshop,
         location: "3rd Floor"
       },
@@ -364,7 +436,8 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 16,
         endTime: 18,
-        title: "Chick-fil-a",
+        title: "Dinner",
+        description: "Come get some dinner from Raising Cane's!",
         type: eventTypes.food,
         location: "1st Floor"
       },
