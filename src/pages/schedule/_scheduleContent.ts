@@ -80,17 +80,17 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 17,
         endTime: 17.83,
-        title: "Opening Keynote - TBA",
+        title: "Opening Keynote",
         location: "4th Floor",
         locationVerbose: "Perry Pavilion (4th floor)",
-        type: eventTypes.general
+        type: eventTypes.general,
         // description:
         //   "We'll kick off the event with a keynote from our title sponsor!",
-        // presenter: {
-        //   name: "Sean Kirby",
-        //   profileImage: undefined,
-        //   organization: "NICE"
-        // }
+        presenter: {
+          name: "Betsy Cantwell",
+          profileImage: require("images/schedule/elizabeth-cantwell.jpg").default,
+          organization: "President, Utah State University"
+        }
       },
       {
         startTime: 18,
