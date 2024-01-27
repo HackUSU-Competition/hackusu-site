@@ -4,24 +4,30 @@ export interface Sponsor {
   url?: string
 }
 
+export const sponsorCenterForAnticipatoryIntelligence: Sponsor = {
+  name: "Center for Anticipatory Intelligence",
+  logo: require("images/sponsors/center-for-anticipatory-intelligence.png")
+    .default
+}
+
+export const sponsorLightningKite: Sponsor = {
+  name: "Lightning Kite",
+  logo: require("images/sponsors/lightning-kite.svg").default
+}
+
+export const sponsorL3Harris: Sponsor = {
+  name: "L3Harris",
+  logo: require("images/sponsors/l3harris.svg").default
+}
+
 export const sponsors2024: Sponsor[] = [
-  {
-    name: "Center for Anticipatory Intelligence",
-    logo: require("images/sponsors/center-for-anticipatory-intelligence.png")
-      .default
-  },
+  sponsorCenterForAnticipatoryIntelligence,
   {
     name: "Space Dynamics Lab",
     logo: require("images/sponsors/sdl.png").default
   },
-  {
-    name: "Lightning Kite",
-    logo: require("images/sponsors/lightning-kite.svg").default
-  },
-  {
-    name: "L3Harris",
-    logo: require("images/sponsors/l3harris.svg").default
-  },
+  sponsorLightningKite,
+  sponsorL3Harris,
   {
     name: "Jon M. Huntsman School of Business",
     logo: require("images/sponsors/huntsman-dais.png").default

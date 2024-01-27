@@ -1,4 +1,10 @@
-import {Avatar, Box, Card, Group, Stack, Text} from "@mantine/core"
+import {Avatar, Box, Card, Group, Image, Stack, Text} from "@mantine/core"
+import {
+  Sponsor,
+  sponsorCenterForAnticipatoryIntelligence,
+  sponsorL3Harris,
+  sponsorLightningKite
+} from "pages/sponsor/_sponsorCompaniesContent"
 import React, {FC} from "react"
 import {
   Bulb,
@@ -13,14 +19,30 @@ interface Category {
   title: string
   icon: Icon
   description: string
+  sponsor?: Sponsor
 }
 
 const categories: Category[] = [
   {
+    title: "Cybersecurity",
+    icon: Spy,
+    description:
+      "Flex your cybersecurity skills by finding and fixing vulnerabilities, creating solid defense plans, or crafting nifty security solutions to keep digital stuff safe!",
+    sponsor: sponsorCenterForAnticipatoryIntelligence
+  },
+  {
     title: "Game Dev",
     icon: DeviceGamepad2,
     description:
-      "Any game, any technology. Try recreating a retro game, or design a brand new one we haven't seen before!"
+      "Any game, any technology. Try recreating a retro game, or design a brand new one we haven't seen before!",
+    sponsor: sponsorLightningKite
+  },
+  {
+    title: "Hardware",
+    icon: Robot,
+    description:
+      "Get hands-on with cool gadgets — create something amazing using Raspberry Pi's, PCBs, or microcontrollers.",
+    sponsor: sponsorL3Harris
   },
   {
     title: "Data Analytics & Visualization",
@@ -28,22 +50,10 @@ const categories: Category[] = [
     description: "Analyze a dataset and present your interesting findings!"
   },
   {
-    title: "Cybersecurity",
-    icon: Spy,
-    description:
-      "Flex your cybersecurity skills by finding and fixing vulnerabilities, creating solid defense plans, or crafting nifty security solutions to keep digital stuff safe!"
-  },
-  {
     title: "Business Solutions",
     icon: Bulb,
     description:
       "Craft a great business proposal for a cool app, platform, or system that tackles real-world issues. No technical expertise needed!"
-  },
-  {
-    title: "Hardware",
-    icon: Robot,
-    description:
-      "Get hands-on with cool gadgets — create something amazing using Raspberry Pi's, PCBs, or microcontrollers."
   },
   {
     title: "AI & Machine Learning",
@@ -56,7 +66,7 @@ const categories: Category[] = [
 const CategoryList: FC = () => {
   return (
     <Stack spacing="xl">
-      {categories.map(({title, icon, description}) => (
+      {categories.map(({title, icon, description, sponsor}) => (
         <Card
           key={title}
           sx={{overflow: "visible"}}
@@ -84,6 +94,23 @@ const CategoryList: FC = () => {
                 {title}
               </Text>
               <Text>{description}</Text>
+              {sponsor ? (
+                <Stack mt="lg" spacing="xs">
+                  <Text size="xs" c="dimmed">
+                    Presented by:
+                  </Text>
+                  <Image
+                    fit="contain"
+                    src={sponsor.logo}
+                    height={40}
+                    alt={`${sponsor.name} logo`}
+                    imageProps={{
+                      loading: "lazy",
+                      style: {objectPosition: "left"}
+                    }}
+                  />
+                </Stack>
+              ) : null}
             </Box>
           </Group>
         </Card>
