@@ -17,7 +17,7 @@ import {ArrowRight} from "tabler-icons-react"
 import {EVENT_DATES, REGISTRATION_OPEN} from "utils/constants"
 import "../css/main.css"
 import {StaticImage} from "gatsby-plugin-image"
-import {sponsors2023} from "./sponsor/_sponsorCompaniesContent"
+import {sponsors2024} from "./sponsor/_sponsorCompaniesContent"
 import {SEO} from "components/seo"
 import GradientButton from "components/GradientButton"
 import {Link} from "gatsby"
@@ -228,8 +228,8 @@ export default function HomePage() {
         ))}
       </Section>
 
-      <Section title="Last Year's Sponsors" width="md">
-        <SponsorGrid sponsors={sponsors2023} />
+      <Section title="HackUSU 2024 Sponsors" width="md">
+        <SponsorGrid sponsors={sponsors2024} />
       </Section>
 
       <ContactForm />

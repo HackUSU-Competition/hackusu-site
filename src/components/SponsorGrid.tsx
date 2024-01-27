@@ -5,11 +5,11 @@ import React, {FC} from "react"
 const SponsorGrid: FC<{sponsors: Sponsor[]}> = ({sponsors}) => {
   return (
     <SimpleGrid
-      cols={4}
-      spacing="lg"
+      cols={3}
+      spacing="xl"
+      verticalSpacing={50}
       mt={30}
       breakpoints={[
-        {maxWidth: "md", cols: 3, spacing: "md"},
         {maxWidth: "sm", cols: 2, spacing: "sm"},
         {maxWidth: "xs", cols: 1, spacing: "sm"}
       ]}
@@ -21,7 +21,7 @@ const SponsorGrid: FC<{sponsors: Sponsor[]}> = ({sponsors}) => {
             fit="contain"
             key={sponsor.name}
             src={sponsor.logo}
-            width={150}
+            width={200}
             height={70}
             mx="auto"
             alt={`${sponsor.name} logo`}
