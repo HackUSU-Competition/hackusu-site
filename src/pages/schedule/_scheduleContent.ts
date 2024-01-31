@@ -88,7 +88,8 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         //   "We'll kick off the event with a keynote from our title sponsor!",
         presenter: {
           name: "Betsy Cantwell",
-          profileImage: require("images/schedule/elizabeth-cantwell.jpg").default,
+          profileImage: require("images/schedule/elizabeth-cantwell.jpg")
+            .default,
           organization: "President, Utah State University"
         }
       },
@@ -104,8 +105,14 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 19,
         endTime: 20,
-        title: "TBA (NICE)",
-        // skillLevel: skillLevels.beginner,
+        title: "How to stand out in the interview process",
+        presenter: {
+          name: "Jordan Sinquefield",
+          profileImage: require("images/schedule/jordan_sinquefield.jpeg")
+            .default,
+          organization: "NICE"
+        },
+        skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
         location: "3rd Floor"
       },
@@ -306,13 +313,6 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "Breakfast",
         description: "Come get some breakfast from Einstein Bros. Bagels!",
         type: eventTypes.food
-      },
-      {
-        startTime: 9,
-        endTime: 10,
-        title: "TBA (NICE)",
-        type: eventTypes.workshop,
-        location: "3rd Floor"
       },
       {
         startTime: 10,

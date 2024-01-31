@@ -37,6 +37,10 @@ export const sponsors2024: Sponsor[] = [
     logo: require("images/sponsors/college-of-science.png").default
   },
   {
+    name: "Nice",
+    logo: require("images/sponsors/nice.png").default
+  },
+  {
     name: "USU College of Engineering",
     logo: require("images/sponsors/college-of-engineering.png").default
   },
@@ -59,6 +63,7 @@ export const pastSponsors: Sponsor[] = [
     name: "Lucid",
     logo: require("images/sponsors/lucid.png").default
   },
+  sponsorCenterForAnticipatoryIntelligence,
   {
     name: "Mozilla Foundation",
     logo: require("images/sponsors/mozilla.jpg").default
