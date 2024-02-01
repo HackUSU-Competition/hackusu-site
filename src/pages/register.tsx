@@ -5,7 +5,6 @@ import {
   Stack,
   Text,
   ThemeIcon,
-  Timeline,
   createStyles
 } from "@mantine/core"
 import GradientButton from "components/GradientButton"
@@ -46,7 +45,7 @@ export default function Registration() {
             <Text size="lg" weight="bold">
               Limited early registration is open!
             </Text>
-            Prices increase on February 1<sup>st</sup>
+            General registration opens February 5<sup>th</sup>
           </>
         ) : (
           <>
@@ -74,7 +73,7 @@ export default function Registration() {
           <Text size="lg">
             Early registration is limited to USU students attending the Huntsman
             School of Business or College of Engineering. General registration
-            for all students will be available beginning February 1<sup>st</sup>
+            for all students will be available beginning February 5<sup>th</sup>
             .
           </Text>
         )}
@@ -146,7 +145,7 @@ export default function Registration() {
             General Registration
           </GradientButton>
           <Text size="sm" color="dimmed" align="center">
-            Opens February 1<sup>st</sup>
+            Opens February 5<sup>th</sup>
           </Text>
         </Stack>
 
