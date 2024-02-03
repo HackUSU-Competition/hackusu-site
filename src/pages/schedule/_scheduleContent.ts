@@ -140,10 +140,27 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 20,
         endTime: 21,
-        title: "TBA (Women in Tech)",
+        title: "How to Develop Your Idea into a Business",
+        skillLevel: skillLevels.everyone,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        presenter: {
+          name: "Alfredo Solar",
+          profileImage: require("images/schedule/alfredo-solar.jpeg").default
+        }
+      },
+      {
+        startTime: 20,
+        endTime: 21,
+        title: "Reinforcement Learning for Fintech",
         // skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "3rd Floor",
+        presenter: {
+          name: "Dr. Tyler Brough",
+          profileImage: require("images/schedule/tyler-brough.jpg").default,
+          organization: "Academic Director, The Analytics Solutions Center"
+        }
       },
       {
         startTime: 21,
@@ -317,9 +334,14 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 10,
         endTime: 11,
-        title: "TBA (Mason Francis)",
+        title: "How to get your dream job",
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        skillLevel: skillLevels.everyone,
+        location: "3rd Floor",
+        presenter: {
+          name: "Mason Francis",
+          profileImage: require("images/schedule/mason-francis.jpeg").default
+        }
       },
       {
         startTime: 11,

@@ -95,7 +95,7 @@ const EventModal: FC<EventModalProps> = (props) => {
         </Text>
 
         {event.presenter && (
-          <Group style={{marginBlock: "1rem"}}>
+          <Group style={{marginBlock: "1rem"}} noWrap>
             <Avatar
               src={event.presenter.profileImage}
               radius="xl"
