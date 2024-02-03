@@ -1,4 +1,4 @@
-import {ColorSwatch, Group, Space, Text} from "@mantine/core"
+import {ColorSwatch, Container, Group, Space, Text} from "@mantine/core"
 import Layout from "components/Layout/Layout"
 import PageTitle from "components/PageTitle"
 import EventModal from "pages/schedule/_EventModal"
@@ -19,7 +19,7 @@ import ContactForm from "components/ContactForm"
 const customCalendarTheme = createTheme("apple", {
   hourHeight: "75px",
   style: {
-    timeScaleLabels: {color: "#555"},
+    timeScaleLabels: {color: "#555", paddingRight: "0.5rem"},
     dayLabels: {
       fontWeight: "bold",
       fontFamily: "Roboto Slab",
@@ -32,7 +32,7 @@ const customCalendarTheme = createTheme("apple", {
     }
   },
   timeFormatter: (time: number) =>
-    time === 0 || time === 24 ? "Midnight" : themes.apple.timeFormatter(time),
+    time === 0 || time === 24 ? "Mid." : themes.apple.timeFormatter(time),
   themeTileContent: EventTileContent,
   defaultTileColor: (event: HackUSUCalendarEvent) => event.type.color
 })

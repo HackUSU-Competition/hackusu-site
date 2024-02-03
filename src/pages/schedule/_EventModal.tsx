@@ -108,7 +108,9 @@ const EventModal: FC<EventModalProps> = (props) => {
               <Text size="lg" weight="bold">
                 {event.presenter.name}
               </Text>
-              <Text color="dimmed">{event.presenter.organization}</Text>
+              <Text color="dimmed" sx={{lineHeight: 1.2}}>
+                {event.presenter.organization}
+              </Text>
             </Box>
           </Group>
         )}
