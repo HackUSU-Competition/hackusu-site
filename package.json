@@ -6,9 +6,9 @@
   "author": "Troy DeSpain <despaintroy@gmail.com>",
   "scripts": {
     "build": "gatsby build",
-    "start": "gatsby develop -H 0.0.0.0 -p 3000",
+    "start": "npm run clean && gatsby develop -H 0.0.0.0 -p 3000",
     "serve": "gatsby serve -H 0.0.0.0 -p 3000",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public",
     "clean": "gatsby clean",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",

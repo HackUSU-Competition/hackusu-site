@@ -95,7 +95,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       },
       {
         startTime: 18,
-        endTime: 19,
+        endTime: 20,
         title: "Pizza",
         type: eventTypes.food,
         location: "2nd Floor",
@@ -165,9 +165,9 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 21,
         endTime: 22,
-        title: "TBA (Women in Tech)",
-        // skillLevel: skillLevels.beginner,
-        type: eventTypes.workshop,
+        title: "Women in Tech Activity (Everyone Welcome!)",
+        skillLevel: skillLevels.everyone,
+        type: eventTypes.activity,
         location: "3rd Floor"
       },
       {
