@@ -43,9 +43,9 @@ export default function Registration() {
         {REGISTRATION_OPEN ? (
           <>
             <Text size="lg" weight="bold">
-              Limited early registration is open!
+              General registration is now open!
             </Text>
-            General registration opens February 5<sup>th</sup>
+            Register before prices increase on Feb 26<sup>th</sup>
           </>
         ) : (
           <>
@@ -61,7 +61,7 @@ export default function Registration() {
       <Section width="sm">
         <SectionHead title="Student Registration">
           {REGISTRATION_OPEN ? (
-            <>$5 for early registration</>
+            <>$10 for general registration</>
           ) : (
             <>
               $5 • Opens January 8<sup>th</sup>
@@ -71,15 +71,15 @@ export default function Registration() {
 
         {REGISTRATION_OPEN && (
           <Text size="lg">
-            Early registration is limited to USU students attending the Huntsman
-            School of Business or College of Engineering. General registration
-            for all students will be available beginning February 5<sup>th</sup>
-            .
+            General registration is available to all college students and high
+            school seniors from any school (including boot camps, community
+            colleges, and technical schools). Registration prices will increase
+            on February 26<sup>th</sup>.
           </Text>
         )}
 
         <Stack align="center" maw={425} m="auto" spacing={8} mt={48}>
-          <GradientButton
+          {/* <GradientButton
             component="a"
             rightIcon={<ArrowRight />}
             size="xl"
@@ -130,6 +130,22 @@ export default function Registration() {
                 Opens January 8<sup>th</sup>
               </>
             )}
+          </Text> */}
+
+          <GradientButton
+            component="a"
+            rightIcon={<ArrowRight />}
+            size="xl"
+            href={REGISTRATION_LINK}
+            target="_blank"
+            fullWidth
+            mt="xl"
+            // disabled
+          >
+            General Registration
+          </GradientButton>
+          <Text size="sm" color="dimmed" align="center">
+            Ends February 26<sup>th</sup>
           </Text>
 
           <GradientButton
@@ -142,10 +158,10 @@ export default function Registration() {
             mt="xl"
             disabled
           >
-            General Registration
+            Late Registration
           </GradientButton>
           <Text size="sm" color="dimmed" align="center">
-            Opens February 5<sup>th</sup>
+            Prices increase when registering the week of the event
           </Text>
         </Stack>
 
