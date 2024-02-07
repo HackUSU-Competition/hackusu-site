@@ -200,6 +200,20 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         }
       },
       {
+        startTime: 21,
+        endTime: 22,
+        title: "Code organization and dependency injection",
+        // skillLevel: skillLevels.everyone,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        presenter: {
+          name: "Hunter Henrichsen",
+          profileImage: require("images/schedule/hunter-henrichsen.jpg")
+            .default,
+          organization: "Lucid"
+        }
+      },
+      {
         startTime: 22,
         endTime: 23,
         title: "Building your first React app",
@@ -313,6 +327,33 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         description: "Come get some lunch from Firehouse Subs!",
         type: eventTypes.food,
         location: "2nd Floor"
+      },
+      {
+        startTime: 13,
+        endTime: 14,
+        title: "Contributing to open source software",
+        // skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        presenter: {
+          name: "Hunter Henrichsen",
+          profileImage: require("images/schedule/hunter-henrichsen.jpg")
+            .default,
+          organization: "Lucid"
+        }
+      },
+      {
+        startTime: 14,
+        endTime: 15,
+        title: "AWS infrastructure with Terraform",
+        // skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        presenter: {
+          name: "Dalyn Dalton",
+          profileImage: require("images/schedule/dalyn-dalton.jpg").default,
+          organization: "Lucid"
+        }
       },
       // {
       //   startTime: 13,
