@@ -79,7 +79,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       },
       {
         startTime: 17,
-        endTime: 17.83,
+        endTime: 17.75,
         title: "Opening Keynote",
         location: "4th Floor",
         locationVerbose: "Perry Pavilion (4th floor)",
@@ -94,8 +94,8 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         }
       },
       {
-        startTime: 18,
-        endTime: 20,
+        startTime: 17.75,
+        endTime: 19,
         title: "Pizza",
         type: eventTypes.food,
         location: "2nd Floor",
@@ -126,6 +126,19 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
           organization: "Lightning Kite"
         },
         skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
+        startTime: 19,
+        endTime: 20,
+        title: "Home security: How safe are you?",
+        presenter: {
+          name: "Garrett Kuns",
+          profileImage: require("images/schedule/garrett-kuns.jpeg").default,
+          organization: "309 Software Engineering Group"
+        },
+        skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
         location: "3rd Floor"
       },
@@ -202,6 +215,20 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 21,
         endTime: 22,
+        title: "Building your first React app",
+        skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        description: undefined,
+        presenter: {
+          name: "Troy DeSpain",
+          profileImage: require("images/schedule/troy-despain.png").default,
+          organization: "Evidently"
+        }
+      },
+      {
+        startTime: 21,
+        endTime: 22,
         title: "Code organization and dependency injection",
         // skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
@@ -216,16 +243,10 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 22,
         endTime: 23,
-        title: "Building your first React app",
-        skillLevel: skillLevels.beginner,
+        title: "TBA (Center for Anticipatory Intelligence)",
+        // skillLevel: skillLevels.intermediate,
         type: eventTypes.workshop,
-        location: "3rd Floor",
-        description: undefined,
-        presenter: {
-          name: "Troy DeSpain",
-          profileImage: require("images/schedule/troy-despain.png").default,
-          organization: "Evidently"
-        }
+        location: "3rd Floor"
       },
       {
         startTime: 22,
@@ -310,6 +331,18 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
           organization: "Lightning Kite"
         },
         skillLevel: skillLevels.everyone,
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
+        startTime: 11,
+        endTime: 12,
+        title: "Time Traveling Databases",
+        presenter: {
+          name: "Logan Rios",
+          organization: "309 Software Engineering Group"
+        },
+        // skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
         location: "3rd Floor"
       },

@@ -33,6 +33,10 @@ export const sponsors2024: Sponsor[] = [
     logo: require("images/sponsors/huntsman-dais.png").default
   },
   {
+    name: "309 Software Maintenance Group",
+    logo: require("images/sponsors/309-sweg.png").default
+  },
+  {
     name: "USU College of Science",
     logo: require("images/sponsors/college-of-science.png").default
   },
@@ -45,8 +49,8 @@ export const sponsors2024: Sponsor[] = [
     logo: require("images/sponsors/college-of-engineering.png").default
   },
   {
-    name: "Hill Air Force Base",
-    logo: require("images/sponsors/hill-afb.jpg").default
+    name: "ASI",
+    logo: require("images/sponsors/asi.png").default
   }
 ]
 
@@ -67,6 +71,14 @@ export const pastSponsors: Sponsor[] = [
   {
     name: "Mozilla Foundation",
     logo: require("images/sponsors/mozilla.jpg").default
+  },
+  {
+    name: "Hill Air Force Base",
+    logo: require("images/sponsors/hill-afb.jpg").default
+  },
+  {
+    name: "309 Software Maintenance Group",
+    logo: require("images/sponsors/309-sweg.png").default
   },
   {
     name: "Venmo",
