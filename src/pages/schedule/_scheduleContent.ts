@@ -150,19 +150,6 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       //   type: eventTypes.workshop,
       //   location: "3rd Floor"
       // },
-      // {
-      //   startTime: 20,
-      //   endTime: 21,
-      //   title: "TBA (Doug Derrick)",
-      //   skillLevel: skillLevels.beginner,
-      //   type: eventTypes.workshop,
-      //   location: "3rd Floor",
-      //   presenter: {
-      //     name: "Doug Derrick",
-      //     profileImage: require("images/schedule/doug-derrick.png").default,
-      //     organization: "Analytics Solutions Center"
-      //   }
-      // },
       {
         startTime: 20,
         endTime: 21,
@@ -386,6 +373,19 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
           name: "Dalyn Dalton",
           profileImage: require("images/schedule/dalyn-dalton.jpg").default,
           organization: "Lucid"
+        }
+      },
+      {
+        startTime: 15,
+        endTime: 16,
+        title: "TBA (Doug Derrick)",
+        // skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        presenter: {
+          name: "Doug Derrick",
+          profileImage: require("images/schedule/doug-derrick.png").default,
+          organization: "Analytics Solutions Center"
         }
       },
       // {
