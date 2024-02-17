@@ -1,4 +1,14 @@
-import {Avatar, Box, Card, Group, Image, Stack, Text} from "@mantine/core"
+import {
+  Alert,
+  Avatar,
+  Box,
+  Card,
+  Chip,
+  Group,
+  Image,
+  Stack,
+  Text
+} from "@mantine/core"
 import {
   Sponsor,
   sponsorCenterForAnticipatoryIntelligence,
@@ -11,6 +21,7 @@ import {
   ChartBubble,
   DeviceGamepad2,
   Icon,
+  InfoCircle,
   Robot,
   Spy
 } from "tabler-icons-react"
@@ -27,21 +38,21 @@ const categories: Category[] = [
     title: "Cybersecurity",
     icon: Spy,
     description:
-      "Flex your cybersecurity skills by finding and fixing vulnerabilities, creating solid defense plans, or crafting nifty security solutions to keep digital stuff safe!",
+      "Flex your cybersecurity skills by finding and fixing vulnerabilities, creating solid defense plans, or crafting nifty security solutions to protect and strengthen critical infrastructure!",
     sponsor: sponsorCenterForAnticipatoryIntelligence
   },
   {
     title: "Game Dev",
     icon: DeviceGamepad2,
     description:
-      "Any game, any technology. Try recreating a retro game, or design a brand new one we haven't seen before!",
+      "Multiple-use mechanics: Slashing with your sword in Hollow Knight builds up your magic power. Mario's jump acts as both a navigation ability and as an attack. How many uses for a mechanic can you roll together?",
     sponsor: sponsorLightningKite
   },
   {
     title: "Hardware",
     icon: Robot,
     description:
-      "Get hands-on with cool gadgets — create something amazing using Raspberry Pi's, PCBs, or microcontrollers.",
+      "Get hands-on with cool gadgets – Create an edge node passive RADAR using microcontrollers. Microcontrollers (limit of 8 teams) and challenge details to be provided at the event.",
     sponsor: sponsorL3Harris
   },
   {
@@ -66,13 +77,17 @@ const categories: Category[] = [
 const CategoryList: FC = () => {
   return (
     <Stack spacing="xl">
+      <Alert variant="filled" icon={<InfoCircle />}>
+        For sponsored categories, extra points will be awarded for projects that
+        follow the prompt!
+      </Alert>
+
       {categories.map(({title, icon, description, sponsor}) => (
         <Card
           key={title}
           sx={{overflow: "visible"}}
           shadow="sm"
           ml={25}
-          mr={10}
           py="lg"
         >
           <Group>
@@ -89,15 +104,22 @@ const CategoryList: FC = () => {
             >
               {icon({size: 24})}
             </Avatar>
-            <Box pl={30}>
-              <Text weight="bold" size="lg">
-                {title}
-              </Text>
+            <Box pl={30} w="100%">
+              <Group position="apart">
+                <Text weight="bold" size="lg">
+                  {title}
+                </Text>
+                {sponsor ? (
+                  <Chip checked variant="filled" size="xs">
+                    Sponsored
+                  </Chip>
+                ) : null}
+              </Group>
               <Text>{description}</Text>
               {sponsor ? (
                 <Stack mt="lg" spacing="xs">
                   <Text size="xs" c="dimmed">
-                    Presented by:
+                    Sponsored by:
                   </Text>
                   <Image
                     fit="contain"
