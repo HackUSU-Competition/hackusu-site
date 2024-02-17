@@ -309,6 +309,21 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         location: "3rd Floor"
       },
       {
+        startTime: 10,
+        endTime: 11,
+        title: "The Psychology behind App Designs",
+        description:
+          "Dark Patterns and Design Principles that can help sell more apps and also help you avoid being manipulated",
+        presenter: {
+          name: "Adrian Musters",
+          profileImage: require("images/schedule/adrian-musters.jpeg").default,
+          organization: "L3 Harris"
+        },
+        skillLevel: skillLevels.everyone,
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
         startTime: 11,
         endTime: 12,
         title: "Basic UX concepts",
