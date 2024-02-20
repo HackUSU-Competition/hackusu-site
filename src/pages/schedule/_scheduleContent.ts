@@ -153,7 +153,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 20,
         endTime: 21,
-        title: "Kolin basics",
+        title: "Kotlin basics",
         presenter: {
           name: "Brady Svedin",
           profileImage: require("images/schedule/brady-svedin.jpg").default,
@@ -343,6 +343,19 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         presenter: {
           name: "Logan Rios",
           organization: "309 Software Engineering Group"
+        },
+        // skillLevel: skillLevels.everyone,
+        type: eventTypes.workshop,
+        location: "3rd Floor"
+      },
+      {
+        startTime: 11,
+        endTime: 12,
+        title: "An Introduction to Anomaly Detection",
+        presenter: {
+          name: "Eric McKinney",
+          organization: "Space Dynamics Laboratory",
+          profileImage: require("images/schedule/eric-mckinney.jpeg").default
         },
         // skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
