@@ -11,6 +11,8 @@ import {
 } from "@mantine/core"
 import {
   Sponsor,
+  koch,
+  snowflake,
   sponsorCenterForAnticipatoryIntelligence,
   sponsorL3Harris,
   sponsorLightningKite
@@ -30,7 +32,7 @@ interface Category {
   title: string
   icon: Icon
   description: string
-  sponsor?: Sponsor
+  sponsors?: Sponsor[]
 }
 
 const categories: Category[] = [
@@ -39,26 +41,28 @@ const categories: Category[] = [
     icon: Spy,
     description:
       "Flex your cybersecurity skills by finding and fixing vulnerabilities, creating solid defense plans, or crafting nifty security solutions to protect and strengthen critical infrastructure!",
-    sponsor: sponsorCenterForAnticipatoryIntelligence
+    sponsors: [sponsorCenterForAnticipatoryIntelligence]
   },
   {
     title: "Game Dev",
     icon: DeviceGamepad2,
     description:
       "Multiple-use mechanics: Slashing with your sword in Hollow Knight builds up your magic power. Mario's jump acts as both a navigation ability and as an attack. How many uses for a mechanic can you roll together?",
-    sponsor: sponsorLightningKite
+    sponsors: [sponsorLightningKite]
   },
   {
     title: "Hardware",
     icon: Robot,
     description:
       "Get hands-on with cool gadgets – Create an edge node passive RADAR using microcontrollers. Microcontrollers (limit of 8 teams) and challenge details to be provided at the event.",
-    sponsor: sponsorL3Harris
+    sponsors: [sponsorL3Harris]
   },
   {
     title: "Data Analytics & Visualization",
     icon: ChartBubble,
-    description: "Analyze a dataset and present your interesting findings!"
+    description:
+      "Do you know SQL? Do you know Python? Perfect! Give this competition a try at HackUSU on March 1-2, 2024. Koch (a strong USU corporate partner) + Snowflake (a leading cloud data warehousing tool) have joined forces to sponsor an AI & Machine Learning track at HackUSU. You'll be given a real dataset, access to Snowflake, and a task to build ML model to answer a specific business question. And guess what? The judges are on the lookout for talent + there are some awesome prizes up for grabs.",
+    sponsors: [koch, snowflake]
   },
   {
     title: "Business Solutions",
@@ -82,7 +86,7 @@ const CategoryList: FC = () => {
         follow the prompt!
       </Alert>
 
-      {categories.map(({title, icon, description, sponsor}) => (
+      {categories.map(({title, icon, description, sponsors}) => (
         <Card
           key={title}
           sx={{overflow: "visible"}}
@@ -109,28 +113,34 @@ const CategoryList: FC = () => {
                 <Text weight="bold" size="lg">
                   {title}
                 </Text>
-                {sponsor ? (
+                {sponsors ? (
                   <Chip checked variant="filled" size="xs">
                     Sponsored
                   </Chip>
                 ) : null}
               </Group>
               <Text>{description}</Text>
-              {sponsor ? (
+              {sponsors ? (
                 <Stack mt="lg" spacing="xs">
                   <Text size="xs" c="dimmed">
                     Sponsored by:
                   </Text>
-                  <Image
-                    fit="contain"
-                    src={sponsor.logo}
-                    height={40}
-                    alt={`${sponsor.name} logo`}
-                    imageProps={{
-                      loading: "lazy",
-                      style: {objectPosition: "left"}
-                    }}
-                  />
+                  <Group spacing="xl">
+                    {sponsors.map((sponsor) => (
+                      <div key={sponsor.name}>
+                        <Image
+                          fit="contain"
+                          src={sponsor.logo}
+                          height={40}
+                          alt={`${sponsor.name} logo`}
+                          imageProps={{
+                            loading: "lazy",
+                            style: {objectPosition: "left"}
+                          }}
+                        />
+                      </div>
+                    ))}
+                  </Group>
                 </Stack>
               ) : null}
             </Box>

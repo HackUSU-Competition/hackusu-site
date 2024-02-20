@@ -20,6 +20,16 @@ export const sponsorL3Harris: Sponsor = {
   logo: require("images/sponsors/l3harris.svg").default
 }
 
+export const koch: Sponsor = {
+  name: "Koch",
+  logo: require("images/sponsors/koch.png").default
+}
+
+export const snowflake: Sponsor = {
+  name: "Snowflake",
+  logo: require("images/sponsors/snowflake.png").default
+}
+
 export const sponsors2024: Sponsor[] = [
   sponsorCenterForAnticipatoryIntelligence,
   {
@@ -28,6 +38,8 @@ export const sponsors2024: Sponsor[] = [
   },
   sponsorLightningKite,
   sponsorL3Harris,
+  koch,
+  snowflake,
   {
     name: "Jon M. Huntsman School of Business",
     logo: require("images/sponsors/huntsman-dais.png").default
@@ -68,6 +80,8 @@ export const pastSponsors: Sponsor[] = [
     logo: require("images/sponsors/lucid.png").default
   },
   sponsorCenterForAnticipatoryIntelligence,
+  koch,
+  snowflake,
   {
     name: "Mozilla Foundation",
     logo: require("images/sponsors/mozilla.jpg").default

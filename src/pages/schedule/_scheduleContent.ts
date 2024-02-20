@@ -391,6 +391,18 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         }
       },
       {
+        startTime: 13,
+        endTime: 14,
+        title: "TBA (Earl Carlisle)",
+        // skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        presenter: {
+          name: "Earl Carlisle"
+          // organization: ""
+        }
+      },
+      {
         startTime: 14,
         endTime: 15,
         title: "AWS infrastructure with Terraform",
