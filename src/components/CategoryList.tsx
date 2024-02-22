@@ -58,23 +58,23 @@ const categories: Category[] = [
     sponsors: [sponsorL3Harris]
   },
   {
+    title: "AI & Machine Learning",
+    icon: Bulb,
+    description:
+      "Create a program to problem-solve — explore AI, machine learning, and code that adapts to tackle real-world challenges.",
+    sponsors: [koch, snowflake]
+  },
+  {
     title: "Data Analytics & Visualization",
     icon: ChartBubble,
     description:
-      "Do you know SQL? Do you know Python? Perfect! Give this competition a try at HackUSU on March 1-2, 2024. Koch (a strong USU corporate partner) + Snowflake (a leading cloud data warehousing tool) have joined forces to sponsor an AI & Machine Learning track at HackUSU. You'll be given a real dataset, access to Snowflake, and a task to build ML model to answer a specific business question. And guess what? The judges are on the lookout for talent + there are some awesome prizes up for grabs.",
-    sponsors: [koch, snowflake]
+      "Do you know SQL? Do you know Python? Perfect! Give this competition a try at HackUSU on March 1-2, 2024. Koch (a strong USU corporate partner) + Snowflake (a leading data platform solution) have joined forces to sponsor an AI & Machine Learning track at HackUSU. You'll be given a real dataset, access to Snowflake, and a task to build ML model to answer a specific business question. And guess what? The judges are on the lookout for talent + there are some awesome prizes up for grabs."
   },
   {
     title: "Business Solutions",
     icon: Bulb,
     description:
       "Craft a great business proposal for a cool app, platform, or system that tackles real-world issues. No technical expertise needed!"
-  },
-  {
-    title: "AI & Machine Learning",
-    icon: Bulb,
-    description:
-      "Create a program to problem-solve — explore AI, machine learning, and code that adapts to tackle real-world challenges."
   }
 ]
 
