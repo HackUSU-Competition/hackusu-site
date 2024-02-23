@@ -284,6 +284,19 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         type: eventTypes.food
       },
       {
+        startTime: 9,
+        endTime: 10,
+        title: "Sandbox Technical Entrepreneurial Experience",
+        // skillLevel: skillLevels.beginner,
+        type: eventTypes.workshop,
+        location: "3rd Floor",
+        presenter: {
+          name: "Doug Derrick",
+          profileImage: require("images/schedule/doug-derrick.png").default,
+          organization: "Analytics Solutions Center"
+        }
+      },
+      {
         startTime: 10,
         endTime: 11,
         title: "How to get your dream job",
@@ -413,19 +426,6 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
           name: "Dalyn Dalton",
           profileImage: require("images/schedule/dalyn-dalton.jpg").default,
           organization: "Lucid"
-        }
-      },
-      {
-        startTime: 15,
-        endTime: 16,
-        title: "TBA (Doug Derrick)",
-        // skillLevel: skillLevels.beginner,
-        type: eventTypes.workshop,
-        location: "3rd Floor",
-        presenter: {
-          name: "Doug Derrick",
-          profileImage: require("images/schedule/doug-derrick.png").default,
-          organization: "Analytics Solutions Center"
         }
       },
       // {
