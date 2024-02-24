@@ -23,6 +23,7 @@ import GradientButton from "components/GradientButton"
 import {Link} from "gatsby"
 import {paths} from "utils/navigationContent"
 import CategoryList from "components/CategoryList"
+import OrganizerTeam from "components/OrganizerTeam"
 
 export default function HomePage() {
   return (
@@ -184,7 +185,11 @@ export default function HomePage() {
         />
       </AspectRatio>
 
-      <Section title="FAQ" width="sm">
+      <Section title="HackUSU 2024 Sponsors" width="md">
+        <SponsorGrid sponsors={sponsors2024} />
+      </Section>
+
+      <Section title="FAQ" width="sm" background="light">
         {[
           {
             question: "When and where is HackUSU?",
@@ -228,9 +233,7 @@ export default function HomePage() {
         ))}
       </Section>
 
-      <Section title="HackUSU 2024 Sponsors" width="md">
-        <SponsorGrid sponsors={sponsors2024} />
-      </Section>
+      <OrganizerTeam />
 
       <ContactForm />
     </Layout>
