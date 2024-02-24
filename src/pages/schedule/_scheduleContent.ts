@@ -385,7 +385,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         startTime: 12,
         endTime: 13,
         title: "Lunch",
-        description: "Come get some lunch from Raising Cane's!",
+        description: "Come get some lunch from Mo' Bettahs!",
         type: eventTypes.food,
         location: "2nd Floor"
       },
@@ -446,7 +446,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         startTime: 16,
         endTime: 18,
         title: "Dinner",
-        description: "Come get some dinner from Mo' Bettahs!",
+        description: "Come get some dinner from Raising Cane's!",
         type: eventTypes.food,
         location: "1st Floor"
       },
