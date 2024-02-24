@@ -21,6 +21,12 @@ const teamMembers: TeamMember[] = [
     profileImage: require("images/team/troy-despain.jpg").default
   },
   {
+    name: "Brian Weller",
+    subtitle:
+      "Corporate Relations Specialist, Huntsman School of Business, USU",
+    profileImage: require("images/team/brian-weller.jpg").default
+  },
+  {
     name: "Kayli Clegg",
     subtitle: "Data Analytics Student, USU",
     profileImage: require("images/team/kayli-clegg.jpg").default
