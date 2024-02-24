@@ -142,14 +142,17 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         type: eventTypes.workshop,
         location: "3rd Floor"
       },
-      // {
-      //   startTime: 19,
-      //   endTime: 20,
-      //   title: "TBA (L3 Harris)",
-      //   // skillLevel: skillLevels.beginner,
-      //   type: eventTypes.workshop,
-      //   location: "3rd Floor"
-      // },
+      {
+        startTime: 20,
+        endTime: 22,
+        title: "Beads and binary activity",
+        skillLevel: skillLevels.everyone,
+        type: eventTypes.activity,
+        location: "3rd Floor",
+        presenter: {
+          name: "Women in Tech"
+        }
+      },
       {
         startTime: 20,
         endTime: 21,
@@ -191,12 +194,15 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 21,
         endTime: 22,
-        title: "Binary keychains activity",
-        skillLevel: skillLevels.everyone,
-        type: eventTypes.activity,
+        title: "Code organization and dependency injection",
+        // skillLevel: skillLevels.everyone,
+        type: eventTypes.workshop,
         location: "3rd Floor",
         presenter: {
-          name: "Women in Tech"
+          name: "Hunter Henrichsen",
+          profileImage: require("images/schedule/hunter-henrichsen.jpg")
+            .default,
+          organization: "Lucid"
         }
       },
       {
@@ -211,20 +217,6 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
           name: "Troy DeSpain",
           profileImage: require("images/schedule/troy-despain.png").default,
           organization: "Evidently"
-        }
-      },
-      {
-        startTime: 21,
-        endTime: 22,
-        title: "Code organization and dependency injection",
-        // skillLevel: skillLevels.everyone,
-        type: eventTypes.workshop,
-        location: "3rd Floor",
-        presenter: {
-          name: "Hunter Henrichsen",
-          profileImage: require("images/schedule/hunter-henrichsen.jpg")
-            .default,
-          organization: "Lucid"
         }
       },
       {
