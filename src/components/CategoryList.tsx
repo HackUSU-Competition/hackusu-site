@@ -6,6 +6,7 @@ import {
   Chip,
   Group,
   Image,
+  SimpleGrid,
   Stack,
   Text
 } from "@mantine/core"
@@ -77,13 +78,23 @@ const categories: Category[] = [
   }
 ]
 
-const CategoryList: FC = () => {
+interface CategoryListProps {
+  compact?: boolean
+}
+
+const CategoryList: FC<CategoryListProps> = ({compact}) => {
   return (
-    <Stack spacing="xl">
-      <Alert variant="filled" icon={<InfoCircle />}>
-        For sponsored categories, extra points will be awarded for projects that
-        follow the prompt!
-      </Alert>
+    <SimpleGrid
+      spacing="xl"
+      cols={compact?2:1}
+      breakpoints={[{maxWidth: "40rem", cols: 1}]}
+    >
+      {compact ? null : (
+        <Alert variant="filled" icon={<InfoCircle />}>
+          For sponsored categories, extra points will be awarded for projects
+          that follow the prompt!
+        </Alert>
+      )}
 
       {categories.map(({title, icon, description, sponsors}) => (
         <Card
@@ -93,7 +104,7 @@ const CategoryList: FC = () => {
           ml={25}
           py="lg"
         >
-          <Group>
+          <Group h="100%">
             <Avatar
               color="blue"
               size="lg"
@@ -112,14 +123,14 @@ const CategoryList: FC = () => {
                 <Text weight="bold" size="lg">
                   {title}
                 </Text>
-                {sponsors ? (
+                {sponsors && !compact ? (
                   <Chip checked variant="filled" size="xs">
                     Sponsored
                   </Chip>
                 ) : null}
               </Group>
-              <Text>{description}</Text>
-              {sponsors ? (
+              {compact ? null : <Text>{description}</Text>}
+              {sponsors && !compact ? (
                 <Stack mt="lg" spacing="xs">
                   <Text size="xs" c="dimmed">
                     Sponsored by:
@@ -146,7 +157,7 @@ const CategoryList: FC = () => {
           </Group>
         </Card>
       ))}
-    </Stack>
+    </SimpleGrid>
   )
 }
 

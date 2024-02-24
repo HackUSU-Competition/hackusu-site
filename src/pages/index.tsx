@@ -159,7 +159,7 @@ export default function HomePage() {
         background="pattern"
         width="sm"
       >
-        <CategoryList />
+        <CategoryList compact />
 
         <Center>
           <GradientButton
@@ -170,7 +170,7 @@ export default function HomePage() {
             size="lg"
             mt="xl"
           >
-            Competition Details
+            More Details
           </GradientButton>
         </Center>
       </Section>
