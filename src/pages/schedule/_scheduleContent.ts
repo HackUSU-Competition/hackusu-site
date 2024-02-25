@@ -75,7 +75,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         endTime: 17,
         title: "Employer Networking Event",
         type: eventTypes.general,
-        location: "2nd Floor"
+        location: "1st Floor"
       },
       {
         startTime: 17,
@@ -98,7 +98,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         endTime: 19,
         title: "Pizza",
         type: eventTypes.food,
-        location: "2nd Floor",
+        location: "1st Floor",
         description:
           "After the opening keynote come enjoy some pizza from Hungry Howie’s!"
       },
@@ -145,10 +145,11 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 20,
         endTime: 22,
-        title: "Beads and binary activity",
+        title: "Beads and Binary",
         skillLevel: skillLevels.everyone,
         type: eventTypes.activity,
-        location: "3rd Floor",
+        location: "4th Floor",
+        locationVerbose: "Perry Pavilion (4th floor)",
         presenter: {
           name: "Women in Tech"
         }
@@ -245,7 +246,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         endTime: 24,
         title: "Pizza: Round 2",
         type: eventTypes.food,
-        location: "2nd Floor"
+        location: "1st Floor"
       }
     ]
   }
@@ -260,7 +261,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         endTime: 1,
         title: "Aggie Ice Cream",
         type: eventTypes.food,
-        location: "2nd Floor"
+        location: "1st Floor"
       },
       // {
       //   startTime: 0.5,
@@ -272,6 +273,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         startTime: 8,
         endTime: 9,
         title: "Breakfast",
+        location: "1st Floor",
         description: "Come get some breakfast from Einstein Bros. Bagels!",
         type: eventTypes.food
       },
@@ -379,7 +381,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "Lunch",
         description: "Come get some lunch from Mo' Bettahs!",
         type: eventTypes.food,
-        location: "2nd Floor"
+        location: "1st Floor"
       },
       {
         startTime: 13,
@@ -445,7 +447,14 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 16,
         endTime: 18,
-        title: "Project Showcase & Judging",
+        title: "Project Showcase",
+        type: eventTypes.activity,
+        location: "1st & 2nd Floors"
+      },
+      {
+        startTime: 16,
+        endTime: 18,
+        title: "Judging",
         type: eventTypes.general,
         location: "2nd & 3rd Floors"
       },
