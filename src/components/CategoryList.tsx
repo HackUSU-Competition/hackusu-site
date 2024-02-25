@@ -1,5 +1,6 @@
 import {
   Alert,
+  Anchor,
   Avatar,
   Box,
   Card,
@@ -18,7 +19,7 @@ import {
   sponsorL3Harris,
   sponsorLightningKite
 } from "pages/sponsor/_sponsorCompaniesContent"
-import React, {FC} from "react"
+import React, {FC, ReactNode} from "react"
 import {
   Bulb,
   ChartBubble,
@@ -32,7 +33,7 @@ import {
 interface Category {
   title: string
   icon: Icon
-  description: string
+  description: ReactNode
   sponsors?: Sponsor[]
 }
 
@@ -61,8 +62,25 @@ const categories: Category[] = [
   {
     title: "AI & Machine Learning",
     icon: Bulb,
-    description:
-      "Do you know SQL? Do you know Python? Perfect! Give this competition a try at HackUSU on March 1-2, 2024. Koch (a strong USU corporate partner) + Snowflake (a leading data platform solution) have joined forces to sponsor an AI & Machine Learning track at HackUSU. You'll be given a real dataset, access to Snowflake, and a task to build ML model to answer a specific business question. And guess what? The judges are on the lookout for talent + there are some awesome prizes up for grabs.",
+    description: (
+      <>
+        Do you know SQL? Do you know Python? Perfect! Give this competition a
+        try at HackUSU on March 1-2, 2024. Koch (a strong USU corporate partner)
+        + Snowflake (a leading data platform solution) have joined forces to
+        sponsor an AI & Machine Learning track at HackUSU. You&apos;ll be given
+        a real dataset, access to Snowflake, and a task to build ML model to
+        answer a specific business question. And guess what? The judges are on
+        the lookout for talent + there are some awesome prizes up for grabs.
+        <Anchor
+          component="a"
+          href="https://medium.com/snowflake/ci-cd-for-machine-learning-within-snowflake-a-simple-approach-390cc4cbf8ef"
+          target="_blank"
+          sx={{display: "block", marginTop: 8}}
+        >
+          Read an overview of Snowflake &rarr;
+        </Anchor>
+      </>
+    ),
     sponsors: [koch, snowflake]
   },
   {
@@ -86,7 +104,7 @@ const CategoryList: FC<CategoryListProps> = ({compact}) => {
   return (
     <SimpleGrid
       spacing="xl"
-      cols={compact?2:1}
+      cols={compact ? 2 : 1}
       breakpoints={[{maxWidth: "40rem", cols: 1}]}
     >
       {compact ? null : (
