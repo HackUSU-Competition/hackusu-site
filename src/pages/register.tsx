@@ -28,7 +28,8 @@ const useStyles = createStyles((theme) => ({
     color: theme.colors.orange[9],
     borderBottom: `1px solid ${theme.colors.orange[4]}`,
     textAlign: "center",
-    padding: theme.spacing.xs
+    padding: theme.spacing.xs,
+    display: "none"
   }
 }))
 
@@ -61,7 +62,7 @@ export default function Registration() {
       <Section width="sm">
         <SectionHead title="Student Registration">
           {REGISTRATION_OPEN ? (
-            <>$10 for general registration</>
+            <>$15 for same-week registration</>
           ) : (
             <>
               $5 • Opens January 8<sup>th</sup>
@@ -73,8 +74,7 @@ export default function Registration() {
           <Text size="lg">
             General registration is available to all college students and high
             school seniors from any school (including boot camps, community
-            colleges, and technical schools). Registration prices will increase
-            on February 26<sup>th</sup>.
+            colleges, and technical schools).
           </Text>
         )}
 
@@ -132,7 +132,7 @@ export default function Registration() {
             )}
           </Text> */}
 
-          <GradientButton
+          {/* <GradientButton
             component="a"
             rightIcon={<ArrowRight />}
             size="xl"
@@ -146,7 +146,7 @@ export default function Registration() {
           </GradientButton>
           <Text size="sm" color="dimmed" align="center">
             Ends February 26<sup>th</sup>
-          </Text>
+          </Text> */}
 
           <GradientButton
             component="a"
@@ -156,13 +156,9 @@ export default function Registration() {
             target="_blank"
             fullWidth
             mt="xl"
-            disabled
           >
-            Late Registration
+            Register now!
           </GradientButton>
-          <Text size="sm" color="dimmed" align="center">
-            Prices increase when registering the week of the event
-          </Text>
         </Stack>
 
         {/* <Timeline bulletSize={30} lineWidth={3} mt={60}>

@@ -25,7 +25,9 @@ const Layout: FC<{children: ReactNode}> = (props) => {
       <Box
         p="xs"
         sx={(theme) => ({
-          backgroundColor: theme.colors.blue[2],
+          // backgroundColor: theme.colors.blue[2],
+          backgroundColor: theme.colors.orange[2],
+          color: theme.colors.orange[9],
           textAlign: "center",
           zIndex: 1001,
           position: "relative",
@@ -37,7 +39,7 @@ const Layout: FC<{children: ReactNode}> = (props) => {
       >
         <Text weight="bold">
           {REGISTRATION_OPEN ? (
-            <>General registration is now open! &#127881;</>
+            <>Last week to register! &#9200;</>
           ) : (
             <>
               Registration for HackUSU 2024 will open January 8<sup>th</sup>{" "}
