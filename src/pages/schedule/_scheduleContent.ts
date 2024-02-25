@@ -114,7 +114,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "220"
       },
       {
         startTime: 19,
@@ -127,7 +127,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "222"
       },
       {
         startTime: 19,
@@ -140,7 +140,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "226"
       },
       {
         startTime: 20,
@@ -165,7 +165,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "220"
       },
       {
         startTime: 20,
@@ -173,7 +173,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "How to Develop Your Idea into a Business",
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor",
+        location: "222",
         presenter: {
           name: "Alfredo Solar",
           profileImage: require("images/schedule/alfredo-solar.jpeg").default
@@ -185,7 +185,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "Reinforcement Learning for Fintech",
         // skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor",
+        location: "226",
         presenter: {
           name: "Dr. Tyler Brough",
           profileImage: require("images/schedule/tyler-brough.jpg").default,
@@ -198,7 +198,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "Code organization and dependency injection",
         // skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor",
+        location: "220",
         presenter: {
           name: "Hunter Henrichsen",
           profileImage: require("images/schedule/hunter-henrichsen.jpg")
@@ -212,7 +212,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "Building your first React app",
         skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: "3rd Floor",
+        location: "222",
         description: undefined,
         presenter: {
           name: "Troy DeSpain",
@@ -226,7 +226,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "TBA (Center for Anticipatory Intelligence)",
         // skillLevel: skillLevels.intermediate,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "220"
       },
       {
         startTime: 22,
@@ -239,10 +239,10 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         skillLevel: skillLevels.intermediate,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "226"
       },
       {
-        startTime: 23,
+        startTime: 23.333,
         endTime: 24,
         title: "Pizza: Round 2",
         type: eventTypes.food,
@@ -258,7 +258,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
     events: [
       {
         startTime: 0,
-        endTime: 1,
+        endTime: 0.75,
         title: "Aggie Ice Cream",
         type: eventTypes.food,
         location: "1st Floor"
@@ -283,7 +283,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "Sandbox Technical Entrepreneurial Experience",
         // skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: "3rd Floor",
+        location: "220",
         presenter: {
           name: "Doug Derrick",
           profileImage: require("images/schedule/doug-derrick.png").default,
@@ -296,7 +296,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "How to get your dream job",
         type: eventTypes.workshop,
         skillLevel: skillLevels.everyone,
-        location: "3rd Floor",
+        location: "220",
         presenter: {
           name: "Mason Francis",
           profileImage: require("images/schedule/mason-francis.jpeg").default
@@ -313,7 +313,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "222"
       },
       {
         startTime: 10,
@@ -328,7 +328,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "226"
       },
       {
         startTime: 11,
@@ -341,7 +341,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "220"
       },
       {
         startTime: 11,
@@ -353,7 +353,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         // skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "222"
       },
       {
         startTime: 11,
@@ -366,7 +366,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         },
         // skillLevel: skillLevels.everyone,
         type: eventTypes.workshop,
-        location: "3rd Floor"
+        location: "226"
       },
       // {
       //   startTime: 11,
@@ -389,7 +389,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "Contributing to open source software",
         // skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: "3rd Floor",
+        location: "220",
         presenter: {
           name: "Hunter Henrichsen",
           profileImage: require("images/schedule/hunter-henrichsen.jpg")
@@ -403,7 +403,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "TBA (Earl Carlisle)",
         // skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: "3rd Floor",
+        location: "222",
         presenter: {
           name: "Earl Carlisle"
           // organization: ""
@@ -415,27 +415,13 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "AWS infrastructure with Terraform",
         // skillLevel: skillLevels.beginner,
         type: eventTypes.workshop,
-        location: "3rd Floor",
+        location: "226",
         presenter: {
           name: "Dalyn Dalton",
           profileImage: require("images/schedule/dalyn-dalton.jpg").default,
           organization: "Lucid"
         }
       },
-      // {
-      //   startTime: 13,
-      //   endTime: 14,
-      //   title: "TBA (Hill Air Force Base)",
-      //   type: eventTypes.workshop,
-      //   location: "3rd Floor"
-      // },
-      // {
-      //   startTime: 14,
-      //   endTime: 15,
-      //   title: "TBA (Hill Air Force Base)",
-      //   type: eventTypes.workshop,
-      //   location: "3rd Floor"
-      // },
       {
         startTime: 16,
         endTime: 18,
