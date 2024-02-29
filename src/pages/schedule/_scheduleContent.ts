@@ -223,7 +223,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
       {
         startTime: 22,
         endTime: 23,
-        title: "TBA (Center for Anticipatory Intelligence)",
+        title: "Anticipatory Intelligence",
         // skillLevel: skillLevels.intermediate,
         type: eventTypes.workshop,
         location: "220"
