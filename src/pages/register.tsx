@@ -45,7 +45,7 @@ export default function Registration() {
             <Text size="lg" weight="bold">
               Online Registration is Closed
             </Text>
-            Register in-person today after 3:00 PM at the check-in desk
+            Register in-person today at the check-in desk
           </>
         ) : (
           <>
