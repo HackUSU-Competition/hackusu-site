@@ -28,8 +28,7 @@ const useStyles = createStyles((theme) => ({
     color: theme.colors.orange[9],
     borderBottom: `1px solid ${theme.colors.orange[4]}`,
     textAlign: "center",
-    padding: theme.spacing.xs,
-    display: "none"
+    padding: theme.spacing.xs
   }
 }))
 
@@ -44,9 +43,9 @@ export default function Registration() {
         {REGISTRATION_OPEN ? (
           <>
             <Text size="lg" weight="bold">
-              General registration is now open!
+              Online Registration is Closed
             </Text>
-            Register before prices increase on Feb 26<sup>th</sup>
+            Register in-person today after 3:00 PM at the check-in desk
           </>
         ) : (
           <>
