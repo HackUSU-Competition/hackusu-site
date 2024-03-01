@@ -73,11 +73,11 @@ const categories: Category[] = [
         the lookout for talent + there are some awesome prizes up for grabs.
         <Anchor
           component="a"
-          href="https://medium.com/snowflake/ci-cd-for-machine-learning-within-snowflake-a-simple-approach-390cc4cbf8ef"
+          href={require("files/ai-ml-prompt.pdf").default}
           target="_blank"
           sx={{display: "block", marginTop: 8}}
         >
-          Read an overview of Snowflake &rarr;
+          Read the getting started guide &rarr;
         </Anchor>
       </>
     ),
