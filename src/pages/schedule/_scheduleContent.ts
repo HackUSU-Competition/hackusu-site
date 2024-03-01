@@ -246,7 +246,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         endTime: 24,
         title: "Pizza: Round 2",
         type: eventTypes.food,
-        location: "1st Floor"
+        location: "2nd Floor"
       }
     ]
   }
@@ -261,7 +261,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         endTime: 0.75,
         title: "Aggie Ice Cream",
         type: eventTypes.food,
-        location: "1st Floor"
+        location: "2nd Floor"
       },
       // {
       //   startTime: 0.5,
@@ -273,7 +273,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         startTime: 8,
         endTime: 9,
         title: "Breakfast",
-        location: "1st Floor",
+        location: "2nd Floor",
         description: "Come get some breakfast from Einstein Bros. Bagels!",
         type: eventTypes.food
       },
@@ -381,7 +381,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "Lunch",
         description: "Come get some lunch from Mo' Bettahs!",
         type: eventTypes.food,
-        location: "1st Floor"
+        location: "2nd Floor"
       },
       {
         startTime: 13,
@@ -428,7 +428,7 @@ export const saturdaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         title: "Dinner",
         description: "Come get some dinner from Raising Cane's!",
         type: eventTypes.food,
-        location: "1st Floor"
+        location: "2nd Floor"
       },
       {
         startTime: 16,
