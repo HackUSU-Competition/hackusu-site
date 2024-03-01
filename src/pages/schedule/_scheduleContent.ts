@@ -98,7 +98,7 @@ export const fridaySchedule: DaySchedule<HackUSUCalendarEvent>[] = [
         endTime: 19,
         title: "Pizza",
         type: eventTypes.food,
-        location: "1st Floor",
+        location: "2nd Floor",
         description:
           "After the opening keynote come enjoy some pizza from Hungry Howie’s!"
       },
