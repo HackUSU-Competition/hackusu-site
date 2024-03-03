@@ -15,8 +15,6 @@ import {useDisclosure} from "@mantine/hooks"
 import {headerLinks, NavLink, paths} from "utils/navigationContent"
 import {Link} from "gatsby"
 import React, {FC} from "react"
-import GradientButton from "components/GradientButton"
-import {REGISTRATION_OPEN} from "utils/constants"
 import {ChevronRight, Home} from "tabler-icons-react"
 
 const HEADER_HEIGHT = 80
@@ -138,15 +136,17 @@ const HeaderNav: FC = () => {
           })}
         </Group>
 
-        {REGISTRATION_OPEN && (
-          <GradientButton
-            component={Link}
-            to={paths.register}
-            sx={{height: 30}}
-          >
-            Register
-          </GradientButton>
-        )}
+        {
+          // REGISTRATION_OPEN && (
+          //   <GradientButton
+          //     component={Link}
+          //     to={paths.register}
+          //     sx={{height: 30}}
+          //   >
+          //     Register
+          //   </GradientButton>
+          // )
+        }
       </Container>
       <Portal>
         <Drawer

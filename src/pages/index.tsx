@@ -14,7 +14,7 @@ import Section from "components/Layout/Section"
 import SponsorGrid from "components/SponsorGrid"
 import React from "react"
 import {ArrowRight} from "tabler-icons-react"
-import {EVENT_DATES, REGISTRATION_OPEN} from "utils/constants"
+import {EVENT_DATES} from "utils/constants"
 import "../css/main.css"
 import {StaticImage} from "gatsby-plugin-image"
 import {sponsors2024} from "./sponsor/_sponsorCompaniesContent"
@@ -49,10 +49,10 @@ export default function HomePage() {
             width="100%"
             style={{filter: "invert(1)"}}
           />
-          <Title order={2} pt={50} sx={{color: "white", fontSize: "2rem"}}>
+          {/* <Title order={2} pt={50} sx={{color: "white", fontSize: "2rem"}}>
             {EVENT_DATES.monthDateRangeYear}
-          </Title>
-          {REGISTRATION_OPEN ? (
+          </Title> */}
+          {/* {REGISTRATION_OPEN ? (
             <GradientButton
               size="xl"
               component={Link}
@@ -67,15 +67,11 @@ export default function HomePage() {
             <Text color="white" opacity={0.7} italic>
               Registration opens January 8<sup>th</sup>
             </Text>
-          )}
-          {/* <Title */}
-          {/*   order={2} */}
-          {/*   pt={50} */}
-          {/*   sx={{color: "white", fontSize: "1.5rem"}} */}
-          {/* > */}
-          {/*   HackUSU 2023 has already happened, but we look forward to seeing you */}
-          {/*   next year! */}
-          {/* </Title> */}
+          )} */}
+          <Text pt={50} sx={{color: "white", fontSize: "1.5rem"}}>
+            HackUSU 2024 has already happened, but we look forward to seeing you
+            next year!
+          </Text>
         </Container>
         <img
           src={require("images/dividers/waves-opacity.svg").default}

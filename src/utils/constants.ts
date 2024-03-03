@@ -1,4 +1,4 @@
-export const REGISTRATION_OPEN = true
+export const REGISTRATION_OPEN = false
 export const EVENT_DATES = {
   monthDateRangeYear: "March 1-2, 2024",
   monthDateRange: "March 1st and 2nd",
